@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UI/UX Tips</title>
     <link rel="stylesheet" href="./styles/index.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
   </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   <body>
     <section class="top">
       <header class="bg-primary text-light mb-4 py-3 flex-row align-center">
@@ -15,10 +23,14 @@
           <h1 class="m-0">UI/UX Tips</h1>
           <p class="m-0">Get practical advice from other developers.</p>
           <a href="/feedback" class="m-0">Submit Feedback</a>
+          <p>Date: <input type="text" id="datepicker" onchange = 'selectGame();'></p>
+          <button id = 'gameData'>Get Game Data</button>
         </div>
       </header>
     </section>
-    <section class="tip-form">
+
+    
+    <section class="tip-form" id = 'schedule'>
       <form
         class="flex-row justify-center justify-space-between-md align-center"
         id="tip-form"
@@ -51,5 +63,9 @@
     </section>
     <section class="tips" id="tip-container"></section>
     <script src="./scripts/index.js"></script>
+    <div style="margin-left: 160px;" id = 'goalsChart'>
+      <h2>goals chart lives here home team on the right</h2>
+    <canvas id="myChart" style="width:100%;max-width:500px"></canvas>
+    <div>
   </body>
 </html>

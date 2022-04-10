@@ -185,8 +185,8 @@ function selectGame() {
                     document.getElementById(Goalie).appendChild(goal);
                   }
                 }
-                var goalDescr = document.createElement('input');
-                document.getElementById('gameInfo').appendChild(goalDescr);
+            //    var goalDescr = document.createElement('input');
+            //    document.getElementById('gameInfo').appendChild(goalDescr);
               }
               console.log(arrayGoals);
 
@@ -271,7 +271,13 @@ function selectGame() {
               console.log(awayRosterArray);
             });
         }
+        var reviewButton = document.createElement('button');
+        reviewButton.innerHTML = 'Submit';
+               document.getElementById('schedule').appendChild(reviewButton);
+                    var gameDescr = document.createElement('input');
+                document.getElementById('schedule').appendChild(gameDescr);
       }
+
     }
     );
 }
