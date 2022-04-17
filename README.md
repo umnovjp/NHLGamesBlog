@@ -1,0 +1,2 @@
+# NHLGamesBlog
+This code allows user to post NHL game reviews online. First a user will select date then select a game from list. JavaScript code will add game title and summary of goals to the webpage. A user then will enter description of each goal and overall game description in two input located one above another. User cal also click button Print Roster to find players list, who scored or assisted on a goal.  
