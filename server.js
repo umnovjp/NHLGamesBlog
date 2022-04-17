@@ -68,10 +68,11 @@ app.get('/api/tips', (req, res) => {
 app.post('/api/tips', (req, res) => {
   console.info(`${req.method} request received to add a tip`);
 
-  const { username, topic, tip } = req.body;
+  const { title, username, topic, tip } = req.body;
 
   if (req.body) {
     const newTip = {
+      title,
       username,
       tip,
       topic,

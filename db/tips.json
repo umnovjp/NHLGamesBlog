@@ -1,38 +1,37 @@
 [
     {
-        "username": "j",
+        "title": "stars win 1",
+        "username": "Alexxx",
+        "tip": "trying again, not sure why it disappears",
         "topic": "UX",
-        "tip": "Don't use comic sans",
-        "tip_id": "37t8"
+        "tip_id": "d1f0"
     },
     {
-        "username": "Sarah",
-        "topic": "UI",
-        "tip": "Make your application accessible by adding alt properties to elements",
-        "tip_id": "701e"
+        "title": "stars win 2",
+        "username": "Alexander U",
+        "tip": "Stars played good game last night. score was 3:3 in the middle then robertson #21 scored twice quickly. CHI did not try to come back",
+        "topic": "UX",
+        "tip_id": "9fdd"
     },
     {
-        "username": "CoolGuy1",
-        "tip": "Don't use three different fonts on the same page",
+        "title": "stars win 3",
+        "username": "alex",
+        "tip": "did not watch",
         "topic": "UX",
-        "tip_id": "0a46"
+        "tip_id": "8bce"
     },
     {
-        "username": "alejandro",
-        "tip": "Checking if it works",
+        "title": "stars win",
+        "username": "alex the great",
+        "tip": "boring game to fill the review",
         "topic": "UX",
-        "tip_id": "7c42"
+        "tip_id": "a3e1"
     },
     {
-        "username": "Mila",
-        "tip": "Hockey is great game",
+        "title": "Game 0: Ottawa Senators 28W 40L 6O vs Boston Bruins 45W 24L 5O ",
+        "username": "alex",
+        "tip": "stars get 1 point",
         "topic": "UX",
-        "tip_id": "5b01"
-    },
-    {
-        "username": "",
-        "tip": "",
-        "topic": "UX",
-        "tip_id": "e1eb"
+        "tip_id": "7091"
     }
 ]

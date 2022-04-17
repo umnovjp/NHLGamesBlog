@@ -181,57 +181,11 @@ function selectGame() {
             gameTitle.textContent = '';
             gameTitle.innerHTML = 'You are watching stats for ' + data.gameData.teams.away.name + ' at ' + data.gameData.teams.home.name + ' game';
             document.getElementById('gameInfo').appendChild(gameTitle);
-            
-            const arrayGoals = [];
-
-            for (i = 0; i < data.liveData.plays.scoringPlays.length; i++) {
-              scoringPlay = data.liveData.plays.scoringPlays[i];
-              var newGoal = document.createElement('p');
-              // for future input
-              const xCoord1 = data.liveData.plays.allPlays[scoringPlay].coordinates.x;
-              const yCoord1 = data.liveData.plays.allPlays[scoringPlay].coordinates.y;
-              var period = data.liveData.plays.allPlays[scoringPlay].about.period;
-              console.log(period)
-              if (period == 1)
-              {xCoord = xCoord1;
-                yCoord = yCoord1;
-                newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
-              document.getElementById('gameInfo').appendChild(newGoal);
-            //  console.log(period)
-            }
-              else if (period == 2)
-              {xCoord = - xCoord1;
-                yCoord = -yCoord1;
-                newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
-              document.getElementById('gameInfo').appendChild(newGoal);
-          //  console.log(period)
-          }
-          else if (period == 3)
-              {xCoord = xCoord1;
-                yCoord = yCoord1;
-                newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
-              document.getElementById('gameInfo').appendChild(newGoal);
-          //  console.log(period)
-          }
-          else if (period == 4)
-              {xCoord = - xCoord1;
-                yCoord = -yCoord1;
-                newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
-              document.getElementById('gameInfo').appendChild(newGoal);
-          //  console.log(period)
-          }
-          else {console.log('error in periods')}
-    
-              var coordinates = { x: xCoord, y: yCoord };
-              arrayGoals.push(coordinates);
-    
-              for (j = 0; j < data.liveData.plays.allPlays[scoringPlay].players.length; j++) {
-                var goalEvent = document.createElement('span');
-    
-                goalEvent.innerHTML = 'Name: ' + data.liveData.plays.allPlays[scoringPlay].players[j].player.fullName + ' Type: ' + data.liveData.plays.allPlays[scoringPlay].players[j].playerType;
-                document.getElementById('gameInfo').appendChild(goalEvent);
-              }
-            }
+            // var penaltyButton = document.createElement('button');
+            // penaltyButton.setAttribute('class', 'searchParameter');
+            // penaltyButton.textContent = 'Print Penalties';
+            // document.getElementById('gameInfo').appendChild(penaltyButton);
+            // penaltyButton.addEventListener('click', getPenalties);
 
             var goalButton = document.createElement('button');
             goalButton.setAttribute('class', 'searchParameter');
