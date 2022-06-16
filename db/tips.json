@@ -166,5 +166,19 @@
         "tip": "(1) after winning FO on PP pass from right right circle by #11 to right dot scored on one timer by #28",
         "topic": "UX",
         "tip_id": "f0dc"
+    },
+    {
+        "title": "You are watching stats for Dallas Stars at Calgary Flames gamePeriod: 1 Time: 07:47 Score: 1 : 0 Shot Location: 68 : -5Name: Joe Pavelski Type: ScorerName: Jason Robertson Type: AssistName: Jacob Markstrom Type: GoaliePeriod: 3 Time: 18:51 Score: 2 : 0 Shot Location: 79 : -2Name: Michael Raffl Type: ScorerName: Tyler Seguin Type: AssistName: Jani Hakanpaa Type: AssistPrint Rosters",
+        "username": "Game 05/05/22. Mirror of game #1. Stars scored early in 1st then no goals except EN goals. Shots differential was almost equal late in 3rd 17:19 but it was 22:29 final",
+        "tip": "(1) 1:0 tip from left blue line by #21 scored on deflection by unguarded #16; (2) 2:0 EN stars won puck near boards #18 scored to EN",
+        "topic": "UX",
+        "tip_id": "fd6d"
+    },
+    {
+        "title": "You are watching stats for Tampa Bay Lightning at Colorado Avalanche gamePrint Rosters",
+        "username": "COL had 15x6 shot advantage in first; #88 vasi had 2 soft goals followed by 3x5 goal in first; then Tampa score 2 quicks to equal in 2ndl easy G in OT for COL",
+        "tip": "game 06/15/2022. (1) shot by #96 rantanen slips through G scored by #92 by touch soft goal for vasi; (2) pass from right blue line to mid scored by #13 val another soft goal for vasi; (3) sudden turnover by COL in M-zone scored by #20 paul almost 1x1; (4) 5x3 goal pass from right circle by #96 deflected from left point by #62; (5) pass by #86 kucherov from right circle to dot scored by #18 palat; (6) #98 sergachev scored from right blue line their G was screened by many; (7) in OT pass from left circle by #13 val scored on one timer by #95 birakowski another soft goal for #88 vasu",
+        "topic": "UX",
+        "tip_id": "5d18"
     }
 ]
