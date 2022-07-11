@@ -194,5 +194,12 @@
         "tip": "(1) on PP, pass from left blue line to right circle, shot deflected scored on rebound from point by #92 landeskog; (2) right after PK fast attack by TBL shot from left point scored by #71 cirelli; (3) after turnover in A-zone by COL fast attack by TBL pass from right dot by #91 to bottom left circle scored by #18 palat; they switch D-men; (4) turnover by COL behind G line followed by pass from #79 colton from left corner to middle scored by #20; (5) on PP pass by #8 makar from right blue line to top left circle scored by #92 landeskog; (6) pass from top left circle to middle scored by #91 stamkos who was uncovered; (7) right after PK #14 maroon came from box to score from left point; (8) on PP shot by #77 hedman deflected by #18 palat deflected from post but #10 perry scored on rebound",
         "topic": "UX",
         "tip_id": "a154"
+    },
+    {
+        "title": "You are watching stats for Colorado Avalanche at Tampa Bay Lightning gamePeriod: 1 Time: 00:36 Score: 0 : 1 Shot Location: 80 : 2Name: Anthony Cirelli Type: ScorerName: Erik Cernak Type: AssistName: Darcy Kuemper Type: GoaliePeriod: 2 Time: 05:17 Score: 1 : 1 Shot Location: -77 : -1Name: Nathan MacKinnon Type: ScorerName: Mikko Rantanen Type: AssistName: Cale Makar Type: AssistName: Andrei Vasilevskiy Type: GoaliePeriod: 2 Time: 10:42 Score: 1 : 2 Shot Location: 67 : -18Name: Victor Hedman Type: ScorerName: Jan Rutta Type: AssistName: Darcy Kuemper Type: GoaliePeriod: 3 Time: 02:53 Score: 2 : 2 Shot Location: -74 : 3Name: Andrew Cogliano Type: ScorerName: Nico Sturm Type: AssistName: Darren Helm Type: AssistName: Andrei Vasilevskiy Type: GoaliePeriod: 4 Time: 12:02 Score: 3 : 2 Shot Location: -68 : 7Name: Nazem Kadri Type: ScorerName: Artturi Lehkonen Type: AssistName: Darcy Kuemper Type: AssistName: Andrei Vasilevskiy Type: GoaliePrint Rosters",
+        "username": "Game on 06/22. no real pressure from either team. they got to OT then COL dictated.",
+        "tip": "(1) after shot from blue line 3 rebounds until #71 cirelli scored from point; (2) on PP, shot from right dot deflected to skate of #29 mckinnon scored from point not really a rebound; (3) individual effort by #77 hedman scored with backhand from right point; (4) shot from blue line by #43 helm scored on rebound by leg of cogliano from point; (5) pass from M-zone to blue line #91 kadri easy overplayed #98 sergachev scored from point",
+        "topic": "UX",
+        "tip_id": "c4bd"
     }
 ]
