@@ -113,12 +113,11 @@ function selectGame() {
   var date = inputVal.split('/');
   console.log(date);
   var formatted = date[2] + '-' + date[0] + '-' + date[1];
-  console.log(formatted)
+  console.log(formatted);
   var requestURL = 'https://statsapi.web.nhl.com/api/v1/schedule/?date=' + formatted;
   console.log(requestURL);
   fetch(requestURL, {
-    "method": "GET", "headers": {
-    }
+    "method": "GET", "headers": {    }
   })
 
     .then(function (response) {
@@ -129,8 +128,6 @@ function selectGame() {
       console.log(data.dates[0].games);
       console.log(data.dates[0].games[0].teams.away.leagueRecord);
       var numberOfGames = data.dates[0].games.length;
-      // var obj = data.gameData.players;
-      // var keys = Object.keys(obj);
       //scheduleContent.textContent = '';
       for (var i = 0; i < numberOfGames; i++) {
 
@@ -195,10 +192,10 @@ function selectGame() {
                 yCoord = yCoord1;
                 newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
               document.getElementById('gameInfo').appendChild(newGoal);
-            //  console.log(period)
+              //  console.log(period)
             }
               else if (period == 2)
-              {xCoord = - xCoord1;
+              {xCoord = -xCoord1;
                 yCoord = -yCoord1;
                 newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
               document.getElementById('gameInfo').appendChild(newGoal);
@@ -212,7 +209,7 @@ function selectGame() {
           //  console.log(period)
           }
           else if (period == 4)
-              {xCoord = - xCoord1;
+              {xCoord = -xCoord1;
                 yCoord = -yCoord1;
                 newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
               document.getElementById('gameInfo').appendChild(newGoal);
