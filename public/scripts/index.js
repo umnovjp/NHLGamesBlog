@@ -1,10 +1,8 @@
-// const getShots = require("./getShots");
-
 const tipForm = document.getElementById('tip-form');
 const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
 //const gameId = 2021021133;
-var scheduleContent = document.getElementById('tip-form');
+// var scheduleContent = document.getElementById('tip-form');
 var game0 = document.getElementById('game0');
 
 const createCard = (tip) => {
@@ -254,7 +252,7 @@ function selectGame() {
             rosterButton.addEventListener('click', getRoster);
           });
  
-        function getRoster(event) {
+        function getRoster(event) { // this function is not used for now
           var genre = event.currentTarget.value;
           console.log('u r in get roster');
 
