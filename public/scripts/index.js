@@ -1,3 +1,6 @@
+// const Console1 = require('Console');
+// import Console1 from "./Console";
+
 const tipForm = document.getElementById('tip-form');
 const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
@@ -128,11 +131,9 @@ function selectGame() {
       var numberOfGames = data.dates[0].games.length;
       //scheduleContent.textContent = '';
       for (var i = 0; i < numberOfGames; i++) {
-
         var gameName = document.createElement('button');
         gameName.setAttribute('id', 'game' + i);
         var idx = gameName.getAttribute('id');
-       // console.log(idx);
         gameName.innerHTML = 'Game ' + i + ': ' + data.dates[0].games[i].teams.away.team.name + ' ' + data.dates[0].games[i].teams.away.leagueRecord.wins + 'W ' + data.dates[0].games[i].teams.away.leagueRecord.losses + 'L ' + data.dates[0].games[i].teams.away.leagueRecord.ot + 'O vs ' + data.dates[0].games[i].teams.home.team.name + ' ' + data.dates[0].games[i].teams.home.leagueRecord.wins + 'W ' + data.dates[0].games[i].teams.home.leagueRecord.losses + 'L ' + data.dates[0].games[i].teams.home.leagueRecord.ot + 'O ';
         document.getElementById('gamesPlayed').appendChild(gameName);
         gameName.addEventListener('click', displayGameData);
@@ -140,7 +141,6 @@ function selectGame() {
 
       function displayGameData(event) {
         idx = event.currentTarget;
-        // console.log(typeof idx)
         idxString = event.currentTarget.textContent;
         idxArray = idxString.split(':');
         idxNumber = idxArray[0].split(' ');
@@ -184,7 +184,7 @@ function selectGame() {
               const xCoord1 = data.liveData.plays.allPlays[scoringPlay].coordinates.x;
               const yCoord1 = data.liveData.plays.allPlays[scoringPlay].coordinates.y;
               var period = data.liveData.plays.allPlays[scoringPlay].about.period;
-              console.log(period)
+         //     console.log(period)
               if (period == 1)
               {xCoord = xCoord1;
                 yCoord = yCoord1;
@@ -252,6 +252,7 @@ function selectGame() {
             rosterButton.addEventListener('click', getRoster);
           });
  
+    //      console1();
         function getRoster(event) { // this function is not used for now
           var genre = event.currentTarget.value;
           console.log('u r in get roster');
