@@ -6,4 +6,4 @@ This script has been developed after another NHL stats page I created earlier: h
 There is no live page version. At least for now. If you would like to use it, download from github to local folder, then run it from your laptop. Still this repo has great examples of fs.readfile and fs.writefile. 
 
 ## Future development
-Current version was developed to use express.js to create a new blog. Later, I used current files to use databases instead of writing to file. Here is new repo: https://github.com/umnovjp/NHLGamesBlog. 
+Current version was developed to use express.js to create a new blog. Later, I used current files to use databases instead of writing to file. Here is new repo: https://github.com/umnovjp/NHLGamesBlog. And in more distant future I will use REACt>js for live updates. 

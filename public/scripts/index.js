@@ -1,11 +1,7 @@
-// const Console1 = require('Console');
-// import Console1 from "./Console";
-
 const tipForm = document.getElementById('tip-form');
 const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
 //const gameId = 2021021133;
-// var scheduleContent = document.getElementById('tip-form');
 var game0 = document.getElementById('game0');
 
 const createCard = (tip) => {
