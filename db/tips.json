@@ -1,11 +1,16 @@
 [
-    
-    
-        {
+    {
         "title": "You are watching stats for Dallas Stars at Nashville Predators gamePeriod: 1 Time: 02:31 Score: 1 : 0 Shot Location: -70 : -2Name: Mason Marchment Type: ScorerName: Tyler Seguin Type: AssistName: Juuse Saros Type: GoaliePeriod: 1 Time: 18:56 Score: 2 : 0 Shot Location: -83 : 6Name: Mason Marchment Type: ScorerName: Nils Lundkvist Type: AssistName: Tyler Seguin Type: AssistName: Juuse Saros Type: GoaliePeriod: 2 Time: 19:09 Score: 3 : 0 Shot Location: -79 : -8Name: Joe Pavelski Type: ScorerName: Roope Hintz Type: AssistName: Jason Robertson Type: AssistName: Juuse Saros Type: GoaliePeriod: 3 Time: 04:22 Score: 4 : 0 Shot Location: -77 : -16Name: Wyatt Johnston Type: ScorerName: Tyler Seguin Type: AssistName: Ryan Suter Type: AssistName: Juuse Saros Type: GoaliePeriod: 3 Time: 04:53 Score: 4 : 1 Shot Location: 66 : -4Name: Ryan Johansen Type: ScorerName: Eeli Tolvanen Type: AssistName: Jake Oettinger Type: GoaliePrint Rosters",
         "username": "we scored 1x1, two power play goals. goals 2 and 3 and maybe 4 look similar. Our F were uncovered. NAS did not score",
         "tip": "(1) 91-11-12-27 4 after block #91 passed to #27 who scored 1x1; (2) 27-91-53 5-20 on PP, after shot from right circle by #91, #5 grabbed rebound passed to right dot to #27; (3) 16-24-21 4-6 #24 took puck on rebound pass to left dot to #16; (4) 53-91-27 5-20 on PP pass from right dot to left scored by #53 from sharp angle to easy uncovered; (5) 91-34-27 23-2 shot from blue line redirected from center dot #23 was there",
         "topic": "UX",
         "tip_id": "20f6"
+    },
+    {
+        "title": "You are watching stats for Nashville Predators at Dallas Stars gamePeriod: 1 Time: 04:46 Score: 0 : 1 Shot Location: -74 : 2Name: Roope Hintz Type: ScorerName: Miro Heiskanen Type: AssistName: Juuse Saros Type: GoaliePeriod: 2 Time: 00:39 Score: 0 : 2 Shot Location: -78 : -13Name: Roope Hintz Type: ScorerName: Joe Pavelski Type: AssistName: Jason Robertson Type: AssistName: Juuse Saros Type: GoaliePeriod: 2 Time: 07:48 Score: 0 : 3 Shot Location: -82 : -6Name: Miro Heiskanen Type: ScorerName: Jason Robertson Type: AssistName: Juuse Saros Type: GoaliePeriod: 2 Time: 18:20 Score: 1 : 3 Shot Location: 79 : -1Name: Nino Niederreiter Type: ScorerName: Mikael Granlund Type: AssistName: Ryan Johansen Type: AssistName: Jake Oettinger Type: GoaliePeriod: 3 Time: 03:13 Score: 1 : 4 Shot Location: -66 : -1Name: Jason Robertson Type: ScorerName: Roope Hintz Type: AssistName: Joe Pavelski Type: AssistName: Juuse Saros Type: GoaliePeriod: 3 Time: 18:47 Score: 1 : 5 Shot Location: 37 : -4Name: Mason Marchment Type: ScorerPrint Rosters",
+        "username": "second game with NAS again we scored SH, 4x4, we were outshot 20x30 they played well but there was disorder in their defense. Again #59 Josi screwed up early.",
+        "tip": "(1) 24-10 4-23 on PK #59 was dispossessed pass by #4 to #24 led to 1x1 early; (2) 24-16-21 2-6 2x1 pass by #24 to #16 deflected from #14 ekholm's hand to the net; (3) 16-21 4-2 4x4 fast breakthrough from $4 to #21 his pass from right circle to left dot scored by #4; (4) 12-20 2-23 just after 3x5, pass from blue line redirected from mid dot between 2 and 23; (5) 16-21-24 2-20 fast attack pass from bottom right circle by #24 to the middle scored by uncovered #21; (6) 10-91-27 6-23 EN pass intercepted by #27 scored from D zone",
+        "topic": "UX",
+        "tip_id": "dec9"
     }
 ]
