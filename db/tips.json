@@ -75,5 +75,12 @@
         "tip": "(1) Blues lost puck in the left corner quick pass to left blue line then quick pass to left dot to scheifele who overplayed G; (2) backhand pass from behind the G line to right circle scored with second touch; (3) backhand pass from behind the goal scored one timer from point; (4) EN goal from center; ",
         "topic": "UX",
         "tip_id": "48ee"
+    },
+    {
+        "title": "You are watching stats for Edmonton Oilers at St. Louis Blues gamePeriod: 1 Time: 06:07 Score: 1 : 0 Shot Location: -72 : -2Name: Jesse Puljujarvi Type: ScorerName: Darnell Nurse Type: AssistName: Warren Foegele Type: AssistName: Jordan Binnington Type: GoaliePeriod: 2 Time: 19:55 Score: 1 : 1 Shot Location: 82 : 8Name: Ryan O'Reilly Type: ScorerName: Justin Faulk Type: AssistName: Brayden Schenn Type: AssistName: Stuart Skinner Type: GoaliePeriod: 3 Time: 13:44 Score: 2 : 1 Shot Location: -86 : -6Name: Ryan Nugent-Hopkins Type: ScorerName: Connor McDavid Type: AssistName: Zach Hyman Type: AssistName: Jordan Binnington Type: GoaliePeriod: 3 Time: 19:33 Score: 3 : 1 Shot Location: -77 : -1Name: Zach Hyman Type: ScorerName: Leon Draisaitl Type: AssistName: Evander Kane Type: AssistPrint Rosters",
+        "username": "Both teams played really well. Blues had many chances but scored only once. For EDM Draisaitl and McDavid played well. Unclear how to stop them.",
+        "tip": "(1) pass from behind the goal shot from mid redirected at point; (2) with 5 seconds remaining, pass from blue line redirected at right point but deflected by G scored on rebound from mid-air from left point; (3) pass from bottom right circle to left dot not blocked or intercepted scored one touch from left dot; (4) Blues turned the puck over in A-zone EDM scored to EN",
+        "topic": "UX",
+        "tip_id": "05c2"
     }
 ]
