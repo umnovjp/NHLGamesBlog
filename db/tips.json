@@ -138,5 +138,12 @@
         "tip": "(1) 91-34-27 2-23 pass by #91 to point deflected off #27 skate #34 scored on rebound from point; (2) 53-10-14 2-23 bad turnover in D-zone by ARI led to 1x1 by #53 who scored from point; (3) 16-10-25 4-6 shot from blue line by #6 redirected from point by #10 who battled D-man; (4) 16-21-24 2-23 pass by #24 from left boards to left dot #16 who passed to right circle to #21 who scored on one touch; (5) 16-21-24-14 4 on PP, multiple shot attempts during scramble near point, finally #21 scored; (6) 10-53-14 5-20 bad turnover by G who passed puck straight to #14 stick Jamie scored from left circle to EN; (7) 11-12-25 5-20 pass from left circle to right G line scored from very sharp angle, #25 did not intercept #5 did not block; (8) 10-53-14 4-6 stars lost puck in M-zone then individual effort by their F, #4 and #6 were not aggressive stopping him; (9) 53-14-10 pass by #14 from left board to top right circle scored quietly by #2 who had time to handle the puck",
         "topic": "UX",
         "tip_id": "bddb"
+    },
+    {
+        "title": "You are watching stats for Chicago Blackhawks at Winnipeg Jets gamePeriod: 2 Time: 10:04 Score: 0 : 1 Shot Location: -40 : 8Name: Josh Morrissey Type: ScorerName: Mark Scheifele Type: AssistName: Pierre-Luc Dubois Type: AssistName: Arvid Soderblom Type: GoaliePeriod: 2 Time: 13:33 Score: 0 : 2 Shot Location: -60 : 7Name: Adam Lowry Type: ScorerName: Dylan DeMelo Type: AssistName: Brenden Dillon Type: AssistName: Arvid Soderblom Type: GoaliePeriod: 2 Time: 17:55 Score: 0 : 3 Shot Location: -78 : -12Name: Pierre-Luc Dubois Type: ScorerName: Kyle Connor Type: AssistName: Josh Morrissey Type: AssistName: Arvid Soderblom Type: GoaliePeriod: 3 Time: 04:59 Score: 0 : 4 Shot Location: -65 : 16Name: Nate Schmidt Type: ScorerName: Cole Perfetti Type: AssistName: Dylan Wells Type: GoaliePrint Rosters",
+        "username": "CHI played their backup goalie #40 soderblom, but jets plat #37. CHI G was replaced after 2nd. WIN had very active beginning of 1st and 2nd. They scored 3 in 7+ minutes of 2nd. CHI had G problem",
+        "tip": "(1) shot from blue line after few passes goes through G was screened; (2) on PP, CHI D fell in A-zone WIN F picked up the puck almost 1x1 he scored; (3) pass from right circle to left circle F had time to trim the puck the score; (4) pass from left board to right circle scored one touch",
+        "topic": "UX",
+        "tip_id": "621d"
     }
 ]
