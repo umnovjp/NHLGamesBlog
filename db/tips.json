@@ -292,5 +292,12 @@
         "tip": "(1) 24=14 23-2 on PK, #14 overskated the puck during 2x1 chance, #29 took the puck, scored from left-right circle; (2) 10-53-14 4-6 shot from blue line redirected at point but deflected by #41, scored on rebound from left point; (3) 16-21-24-14 4 PP goal, shot from blue line deflected twice by stars players; (4) 53-25-14 4-20 their F skated behind the goal, made wraparound shot which was deflected by #41, COL scored on rebound from point with no defense; (5) 91-16-21 5-20 fast attack by COL, shot from right circle deflected by #41, but COL scored on rebound from point. ",
         "topic": "UX",
         "tip_id": "d6d3"
+    },
+    {
+        "title": "You are watching stats for Anaheim Ducks at Dallas Stars gamePeriod: 1 Time: 04:13 Score: 0 : 1 Shot Location: -93 : 10Name: Jason Robertson Type: ScorerName: Roope Hintz Type: AssistName: Colin Miller Type: AssistName: Anthony Stolarz Type: GoaliePeriod: 2 Time: 07:43 Score: 0 : 2 Shot Location: -56 : 2Name: Jason Robertson Type: ScorerName: Miro Heiskanen Type: AssistName: Joe Pavelski Type: AssistName: Anthony Stolarz Type: GoaliePeriod: 2 Time: 11:09 Score: 0 : 3 Shot Location: -82 : -4Name: Joel Kiviranta Type: ScorerName: Miro Heiskanen Type: AssistName: Tyler Seguin Type: AssistName: Anthony Stolarz Type: GoaliePeriod: 3 Time: 01:23 Score: 0 : 4 Shot Location: -53 : 17Name: Jason Robertson Type: ScorerName: Miro Heiskanen Type: AssistName: Roope Hintz Type: AssistName: Anthony Stolarz Type: GoaliePeriod: 3 Time: 11:23 Score: 0 : 5 Shot Location: -78 : -2Name: Wyatt Johnston Type: ScorerName: Jani Hakanpaa Type: AssistName: Anthony Stolarz Type: GoaliePrint Rosters",
+        "username": "game on 12/01. Klinger did not play for ANA. Otty had shutout because we played at home against one of weakest teams in the league. Stars dominated the game. They scored five. And late in the game #14 had a penalty shot that he did not score. #21 had hat trick. Was it real?",
+        "tip": "(1) 16-21-24 4-44 #21 won puck battle behind the goal line scored off D rebound unassisted; (2) 16-21-24-14 4 on PP, shot from top right circle by #21 screened by #24; (3) 91-12-25 4-20 shot from blue line by #4 scored on rebound by #25; (4) 16-21-24-14 4 on PP, shot from #21 from top right circle scored by #21; (5) 53-10-14 23-2 he overplayed their D scored from left point from backhand",
+        "topic": "UX",
+        "tip_id": "c603"
     }
 ]
