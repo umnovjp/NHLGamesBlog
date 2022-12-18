@@ -320,5 +320,12 @@
         "tip": "(1) 16-21-24 4-5 after draw, shot by #4 from left dot was uncovered; (2) 10-53-14 4-5 shot by #4 from bottom left circle should not go in but it was goal; (3) 53-34-14 4-5 #4 lost puck in left corner shot from right-left circle scored on one-timer; (4) 11-34-25 4-5 multiple turnovers lead to multiple shot by OTT then shot from blue line deflected to net by #11; (5) 16-21 4-5-20 pass from bottom right circle to middle scored on one touch caught on bad change; (6) 16-21-24 4-5 right after FO win shot from blue line deflected; (7) 53-91 23 #53 stole puck near left corner pass to #91 who was undefended at point",
         "topic": "UX",
         "tip_id": "79c2"
+    },
+    {
+        "title": "You are watching stats for Detroit Red Wings at Dallas Stars gamePeriod: 1 Time: 09:48 Score: 1 : 0 Shot Location: 54 : 21Name: Dylan Larkin Type: ScorerName: Austin Czarnik Type: AssistName: Jake Oettinger Type: GoaliePeriod: 1 Time: 18:06 Score: 1 : 1 Shot Location: -81 : -4Name: Denis Gurianov Type: ScorerName: Mason Marchment Type: AssistName: Tyler Seguin Type: AssistName: Ville Husso Type: GoaliePeriod: 2 Time: 16:00 Score: 1 : 2 Shot Location: -64 : 7Name: Jamie Benn Type: ScorerName: Jason Robertson Type: AssistName: Miro Heiskanen Type: AssistName: Ville Husso Type: GoaliePeriod: 2 Time: 19:00 Score: 2 : 2 Shot Location: 86 : 4Name: David Perron Type: ScorerName: Ben Chiarot Type: AssistName: Moritz Seider Type: AssistName: Jake Oettinger Type: GoaliePeriod: 4 Time: 04:29 Score: 2 : 3 Shot Location: -80 : 4Name: Nils Lundkvist Type: ScorerName: Mason Marchment Type: AssistName: Ville Husso Type: GoaliePrint Rosters",
+        "username": "game on 12/10. All our goals scored when 91-34-27 (2:1) or 16-21-24 (1:) lines played. First DET goal was stoppable. Second goal scored by Perron who played 1000th game. Stars won second straight home game in OT.",
+        "tip": "(1) 16-21-24 4-5 stars lost puck in A-zone, fast attack by DET, shot from top left circle not blocked by #24, looked like stoppable shot; (2) 91-34-27 5-6 fast attack by Stars, great pass by #27 to #34 scored from point; (3) 16-21-24-14 4 on PP, pass from right dot to left right circle scored by uncovered #14; (4) 12-91-27 2-23 right after FO win shot from blue line redirected from left point by a guy who played 1000th game; (5) 91-27 5 in OT, fast 2x1 attack on tired DET, pass not intercepted from bottom left circle to uncovered #5 who scored from right point ",
+        "topic": "UX",
+        "tip_id": "9df0"
     }
 ]
