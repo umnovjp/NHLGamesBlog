@@ -327,5 +327,12 @@
         "tip": "(1) 16-21-24 4-5 stars lost puck in A-zone, fast attack by DET, shot from top left circle not blocked by #24, looked like stoppable shot; (2) 91-34-27 5-6 fast attack by Stars, great pass by #27 to #34 scored from point; (3) 16-21-24-14 4 on PP, pass from right dot to left right circle scored by uncovered #14; (4) 12-91-27 2-23 right after FO win shot from blue line redirected from left point by a guy who played 1000th game; (5) 91-27 5 in OT, fast 2x1 attack on tired DET, pass not intercepted from bottom left circle to uncovered #5 who scored from right point ",
         "topic": "UX",
         "tip_id": "9df0"
+    },
+    {
+        "title": "You are watching stats for Dallas Stars at Pittsburgh Penguins gamePeriod: 1 Time: 00:19 Score: 1 : 0 Shot Location: -79 : 19Name: Roope Hintz Type: ScorerName: Nils Lundkvist Type: AssistName: Tristan Jarry Type: GoaliePeriod: 1 Time: 13:14 Score: 1 : 1 Shot Location: 63 : 22Name: Pierre-Olivier Joseph Type: ScorerName: Kasperi Kapanen Type: AssistName: Jason Zucker Type: AssistName: Jake Oettinger Type: GoaliePeriod: 3 Time: 19:25 Score: 1 : 2 Shot Location: 75 : 6Name: Evgeni Malkin Type: ScorerName: Bryan Rust Type: AssistName: Jason Zucker Type: AssistName: Jake Oettinger Type: GoaliePrint Rosters",
+        "username": "game on 12/10. Stars scored 19 seconds into first. They did not score after. PIT scored with 35 seconds remaining. very disappointing to lose this game to start 5 games road trip",
+        "tip": "(1) 16-21-24 4-5 #24 scored on rebound off PIT D from bottom right circle; (2) 91-14 4-2 on our PK, shot from left dot was screened so #29 did not see it; (3) 16-21-24 2-20 #71 malkin scored off rebound from point with 35 seconds remaining ",
+        "topic": "UX",
+        "tip_id": "1403"
     }
 ]
