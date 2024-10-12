@@ -3,7 +3,7 @@ This code allows user to post NHL game reviews online. First a user will select 
 
 This script has been developed after another NHL stats page I created earlier: https://github.com/umnovjp/NHLStats. But it is built to post blog online. It has less stats functionality built in. Only goals, also goal shot locations chart. Website above has data for penalties, faceoffs, shots, blocked shots, goals, missed shots. And it could have more. But index.js file had 800 lines. I will redesign it to make files more manageable. Also, I will add team rosters and more stats data like hits, penalties, shots number, shot locations, including missed shots. 
 
-There is no live page version. At least for now. If you would like to use it, download from github to local folder, then run it from your laptop. Still this repo has great examples of fs.readfile and fs.writefile.
+There is no live page version. At least for now. If you would like to use it, download from github to local folder, then run it from your laptop. Still this repo has great examples of fs.readfile and fs.writefile. To start program, type node server.js in terminal. Then open http://localhost:3001 in your browser. 
 
 ## Future development
 Current version was developed to use express.js to create a new blog. Later, I used current files to use databases instead of writing to file. Here is new repo: https://github.com/umnovjp/NHLGamesBlog. And in the future I will use REACT.js for live updates. And another plan in the future is to add shift chart analytics. 

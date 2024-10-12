@@ -111,7 +111,8 @@ function selectGame() {
   console.log(date);
   var formatted = date[2] + '-' + date[0] + '-' + date[1];
   console.log(formatted);
-  var requestURL = 'https://statsapi.web.nhl.com/api/v1/schedule/?date=' + formatted;
+  var requestURL = 'https://cors-anywhere.herokuapp.com/https://api-web.nhle.com/v1/schedule/'+ formatted;
+  //'https://statsapi.web.nhl.com/api/v1/schedule/?date=' 
   console.log(requestURL);
   fetch(requestURL, {
     "method": "GET", "headers": {    }
@@ -122,15 +123,15 @@ function selectGame() {
     })
     .then(function (data) {
       console.log('I am in schedule then')
-      console.log(data.dates[0].games);
-      console.log(data.dates[0].games[0].teams.away.leagueRecord);
-      var numberOfGames = data.dates[0].games.length;
+      console.log(data.gameWeek[0].games);
+      console.log(data.gameWeek[0].games[0].awayTeam.abbrev);
+      var numberOfGames = data.gameWeek[0].games.length;
       //scheduleContent.textContent = '';
       for (var i = 0; i < numberOfGames; i++) {
         var gameName = document.createElement('button');
         gameName.setAttribute('id', 'game' + i);
         var idx = gameName.getAttribute('id');
-        gameName.innerHTML = 'Game ' + i + ': ' + data.dates[0].games[i].teams.away.team.name + ' ' + data.dates[0].games[i].teams.away.leagueRecord.wins + 'W ' + data.dates[0].games[i].teams.away.leagueRecord.losses + 'L ' + data.dates[0].games[i].teams.away.leagueRecord.ot + 'O vs ' + data.dates[0].games[i].teams.home.team.name + ' ' + data.dates[0].games[i].teams.home.leagueRecord.wins + 'W ' + data.dates[0].games[i].teams.home.leagueRecord.losses + 'L ' + data.dates[0].games[i].teams.home.leagueRecord.ot + 'O ';
+        gameName.innerHTML = 'Game ' + i + ': ' + data.gameWeek[0].games[i].awayTeam.abbrev + ' ' + data.gameWeek[0].games[i].homeTeam.abbrev;
         document.getElementById('gamesPlayed').appendChild(gameName);
         gameName.addEventListener('click', displayGameData);
       }
@@ -143,9 +144,9 @@ function selectGame() {
         console.log(idxNumber);
         gameNumber = idxNumber[1];
 
-        const gameId = data.dates[0].games[gameNumber].gamePk;
+        const gameId = data.gameWeek[0].games[gameNumber].id;
         console.log(gameId);
-        var requestURL = 'https://statsapi.web.nhl.com/api/v1/game/' + gameId + '/feed/live';
+        var requestURL = 'https://cors-anywhere.herokuapp.com/api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
         fetch(requestURL, {
           "method": "GET", "headers": {
           }
@@ -168,77 +169,106 @@ function selectGame() {
             document.getElementById('schedule').appendChild(gameInfoAway);
             var gameTitle = document.createElement('h2');
             gameTitle.textContent = '';
-            gameTitle.innerHTML = 'You are watching stats for ' + data.gameData.teams.away.name + ' at ' + data.gameData.teams.home.name + ' game';
+            gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game';
             document.getElementById('gameInfo').appendChild(gameTitle);
             
             const arrayGoals = [];
 
-            for (i = 0; i < data.liveData.plays.scoringPlays.length; i++) {
-              scoringPlay = data.liveData.plays.scoringPlays[i];
-              var newGoal = document.createElement('p');
-              // for future input
-              const xCoord1 = data.liveData.plays.allPlays[scoringPlay].coordinates.x;
-              const yCoord1 = data.liveData.plays.allPlays[scoringPlay].coordinates.y;
-              var period = data.liveData.plays.allPlays[scoringPlay].about.period;
-         //     console.log(period)
-              if (period == 1)
-              {xCoord = xCoord1;
-                yCoord = yCoord1;
-                newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
-              document.getElementById('gameInfo').appendChild(newGoal);
-              //  console.log(period)
-            }
-              else if (period == 2)
-              {xCoord = -xCoord1;
-                yCoord = -yCoord1;
-                newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
-              document.getElementById('gameInfo').appendChild(newGoal);
-          //  console.log(period)
-          }
-          else if (period == 3)
-              {xCoord = xCoord1;
-                yCoord = yCoord1;
-                newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
-              document.getElementById('gameInfo').appendChild(newGoal);
-          //  console.log(period)
-          }
-          else if (period == 4)
-              {xCoord = -xCoord1;
-                yCoord = -yCoord1;
-                newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
-              document.getElementById('gameInfo').appendChild(newGoal);
-          //  console.log(period)
-          }
-          else {console.log('error in periods')}
-    
-              var coordinates = { x: xCoord, y: yCoord };
-              arrayGoals.push(coordinates);
-              console.log(arrayGoals);
-
-              new Chart("myChart", {
-                type: "scatter",
-                data: {
-                  datasets: [{
-                    pointRadius: 4,
-                    pointBackgroundColor: "rgb(0,0,255)",
-                    data: arrayGoals
-                  }]
-                },
-                options: {
-                  legend: { display: false },
-                  scales: {
-                    xAxes: [{ ticks: { min: -100, max: 100 } }],
-                    yAxes: [{ ticks: { min: -42.5, max: 42.5 } }],
-                  }
-                }
-              });
-    
-              for (j = 0; j < data.liveData.plays.allPlays[scoringPlay].players.length; j++) {
+            for (i = 0; i < data.plays.length; i++) { //177-243
+              if (data.plays[i].typeDescKey==='goal') {
+                scoringPlay = data.plays[i];
+                var newGoal = document.createElement('p');
+                newGoal.innerHTML = 'Period: ' + data.plays[i].periodDescriptor.number + ' Time: ' + data.plays[i].timeInPeriod + ' Score: ' + data.plays[i].details.awayScore + ' : ' + data.plays[i].details.homeScore;
+                document.getElementById('gameInfo').appendChild(newGoal);
                 var goalEvent = document.createElement('span');
-    
-                goalEvent.innerHTML = 'Name: ' + data.liveData.plays.allPlays[scoringPlay].players[j].player.fullName + ' Type: ' + data.liveData.plays.allPlays[scoringPlay].players[j].playerType;
-                document.getElementById('gameInfo').appendChild(goalEvent);
+                for (j=0; j<data.rosterSpots.length; j++) {if (data.rosterSpots[j].playerId === data.plays[i].details.scoringPlayerId) {
+                  var goalScorer = document.createElement('span');
+                  goalScorer.innerHTML = 'goal: ' + data.rosterSpots[j].firstName.default + ' ' + data.rosterSpots[j].lastName.default + ' ';
+                  // console.log(goalScorer)
+                  // var goal = document.createElement('span');
+                  // goal.innerHTML = 'GO,';
+                  document.getElementById('gameInfo').appendChild(goalScorer);
+                }
+              else if ((data.plays[i].details.assist1PlayerId>1000)&&(data.rosterSpots[j].playerId === data.plays[i].details.assist1PlayerId)) {
+                var assist1 = document.createElement('span');
+                assist1.innerHTML = 'assist 1 ' + data.rosterSpots[j].firstName.default + ' ' + data.rosterSpots[j].lastName.default + ' ';
+                  // var assist = document.createElement('span');
+                  // assist.innerHTML = 'AS1,';
+                  document.getElementById('gameInfo').appendChild(assist1);
               }
+              else if (data.rosterSpots[j].playerId === data.plays[i].details.assist2PlayerId) {
+                var assist2 = document.createElement('span');
+                assist2.innerHTML = 'assist 2 ' + data.rosterSpots[j].firstName.default + ' ' + data.rosterSpots[j].lastName.default + ' ';
+                // var assist = document.createElement('span');
+                // assist.innerHTML = 'AS2,';
+                document.getElementById('gameInfo').appendChild(assist2);
+              }}
+              }
+        //       scoringPlay = data.liveData.plays.scoringPlays[i];
+        //       var newGoal = document.createElement('p');
+        //       // for future input
+        //       const xCoord1 = data.liveData.plays.allPlays[scoringPlay].coordinates.x;
+        //       const yCoord1 = data.liveData.plays.allPlays[scoringPlay].coordinates.y;
+        //       var period = data.liveData.plays.allPlays[scoringPlay].about.period;
+        //  //     console.log(period)
+        //       if (period == 1)
+        //       {xCoord = xCoord1;
+        //         yCoord = yCoord1;
+        //         newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
+        //       document.getElementById('gameInfo').appendChild(newGoal);
+        //       //  console.log(period)
+        //     }
+        //       else if (period == 2)
+        //       {xCoord = -xCoord1;
+        //         yCoord = -yCoord1;
+        //         newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
+        //       document.getElementById('gameInfo').appendChild(newGoal);
+        //   //  console.log(period)
+        //   }
+        //   else if (period == 3)
+        //       {xCoord = xCoord1;
+        //         yCoord = yCoord1;
+        //         newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
+        //       document.getElementById('gameInfo').appendChild(newGoal);
+        //   //  console.log(period)
+        //   }
+        //   else if (period == 4)
+        //       {xCoord = -xCoord1;
+        //         yCoord = -yCoord1;
+        //         newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
+        //       document.getElementById('gameInfo').appendChild(newGoal);
+        //   //  console.log(period)
+        //   }
+        //   else {console.log('error in periods')}
+    
+        //       var coordinates = { x: xCoord, y: yCoord };
+        //       arrayGoals.push(coordinates);
+        //       console.log(arrayGoals);
+
+        //       new Chart("myChart", {
+        //         type: "scatter",
+        //         data: {
+        //           datasets: [{
+        //             pointRadius: 4,
+        //             pointBackgroundColor: "rgb(0,0,255)",
+        //             data: arrayGoals
+        //           }]
+        //         },
+        //         options: {
+        //           legend: { display: false },
+        //           scales: {
+        //             xAxes: [{ ticks: { min: -100, max: 100 } }],
+        //             yAxes: [{ ticks: { min: -42.5, max: 42.5 } }],
+        //           }
+        //         }
+        //       });
+    
+        //       for (j = 0; j < data.liveData.plays.allPlays[scoringPlay].players.length; j++) {
+        //         var goalEvent = document.createElement('span');
+    
+        //         goalEvent.innerHTML = 'Name: ' + data.liveData.plays.allPlays[scoringPlay].players[j].player.fullName + ' Type: ' + data.liveData.plays.allPlays[scoringPlay].players[j].playerType;
+        //         document.getElementById('gameInfo').appendChild(goalEvent);
+        //       }
             }
 
             var rosterButton = document.createElement('button');
