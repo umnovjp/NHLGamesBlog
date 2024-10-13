@@ -97,7 +97,6 @@ const handleFormSubmit = (e) => {
     topic: 'UX',
     tip: tipContent,
   };
-
   // Make a fetch POST request to the server
   postTip(newTip);
 };
@@ -105,10 +104,10 @@ const handleFormSubmit = (e) => {
 function selectGame() {
   // var inputVal = document.getElementById('myInput').value;
   var inputVal = document.getElementById('datepicker').value;
-  console.log('inputVal= ' + inputVal);
+ // console.log('inputVal= ' + inputVal);
 
   var date = inputVal.split('/');
-  console.log(date);
+  // console.log(date);
   var formatted = date[2] + '-' + date[0] + '-' + date[1];
   console.log(formatted);
   var requestURL = 'https://cors-anywhere.herokuapp.com/https://api-web.nhle.com/v1/schedule/'+ formatted;
@@ -124,9 +123,8 @@ function selectGame() {
     .then(function (data) {
       console.log('I am in schedule then')
       console.log(data.gameWeek[0].games);
-      console.log(data.gameWeek[0].games[0].awayTeam.abbrev);
+    //  console.log(data.gameWeek[0].games[0].awayTeam.abbrev);
       var numberOfGames = data.gameWeek[0].games.length;
-      //scheduleContent.textContent = '';
       for (var i = 0; i < numberOfGames; i++) {
         var gameName = document.createElement('button');
         gameName.setAttribute('id', 'game' + i);
@@ -172,7 +170,7 @@ function selectGame() {
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game';
             document.getElementById('gameInfo').appendChild(gameTitle);
             
-            const arrayGoals = [];
+            // const arrayGoals = [];
 
             for (i = 0; i < data.plays.length; i++) { //177-243
               if (data.plays[i].typeDescKey==='goal') {
@@ -273,7 +271,7 @@ function selectGame() {
 
             var rosterButton = document.createElement('button');
             rosterButton.setAttribute('class', 'searchParameter');
-            rosterButton.textContent = 'Print Rosters';
+            rosterButton.textContent = 'Not currently used';
             document.getElementById('gameInfo').appendChild(rosterButton);
             rosterButton.addEventListener('click', getRoster);
           });
