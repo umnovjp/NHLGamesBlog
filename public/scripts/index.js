@@ -271,7 +271,7 @@ function selectGame() {
 
             var rosterButton = document.createElement('button');
             rosterButton.setAttribute('class', 'searchParameter');
-            rosterButton.textContent = 'Not currently used';
+            rosterButton.textContent = 'Button ot currently used';
             document.getElementById('gameInfo').appendChild(rosterButton);
             rosterButton.addEventListener('click', getRoster);
           });
