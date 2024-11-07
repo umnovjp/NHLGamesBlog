@@ -124,5 +124,12 @@
         "tip": "(1) very bad turnover in D zone by EDM shot from left under sharp angle saved but scored on rebound; (2) fast attack pass from right top circle to left circle this F was uncovered; (3) pass from left board to right circle to uncovered F who scored one timer; (4) fast attack with 3 passes EDM Ds did not cover WPG Fs; (5) on PP, shot from right circle used D as screen; (6) on PP, centering pass from left circle deflected on point",
         "topic": "UX",
         "tip_id": "602f"
+    },
+    {
+        "title": "You are watching stats for CHI at WPG gamePeriod: 2 Time: 16:52 Score: 1 : 0assist 1 Patrick Maroon goal: Ryan Donato Period: 3 Time: 18:56 Score: 1 : 1goal: Mark Scheifele assist 1 Nikolaj Ehlers Period: 4 Time: 00:38 Score: 1 : 2goal: Mark Scheifele assist 2 Josh Morrissey assist 1 Kyle Connor Button ot currently used",
+        "username": "I do not believe WPG tried to score until last minute. They were confident they can score. Many shots right to the belly of CHI G. Then they scored quickly in OT",
+        "tip": "(1) turnover in attack zone led to almost 1x1 CHI scored; (2) with about a minute left and 6x5 shot from right sharp angle saved but scored on rebound; (3) in OT, pass from left board to center redirected",
+        "topic": "UX",
+        "tip_id": "8bc9"
     }
 ]
