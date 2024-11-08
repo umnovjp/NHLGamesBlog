@@ -131,5 +131,12 @@
         "tip": "(1) turnover in attack zone led to almost 1x1 CHI scored; (2) with about a minute left and 6x5 shot from right sharp angle saved but scored on rebound; (3) in OT, pass from left board to center redirected",
         "topic": "UX",
         "tip_id": "8bc9"
+    },
+    {
+        "title": "You are watching stats for COL at WPG gamePeriod: 1 Time: 01:06 Score: 0 : 1assist 1 Mark Scheifele goal: Gabriel Vilardi Button ot currently used",
+        "username": "WPG scored after one minute. No more goals. But both teams tried to score.",
+        "tip": "COL mishandled park in WPG zone, fast pass 2x1, pass from left circle to bottom right circle hold and release ",
+        "topic": "UX",
+        "tip_id": "7f80"
     }
 ]
