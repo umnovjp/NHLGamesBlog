@@ -138,5 +138,12 @@
         "tip": "COL mishandled park in WPG zone, fast pass 2x1, pass from left circle to bottom right circle hold and release ",
         "topic": "UX",
         "tip_id": "7f80"
+    },
+    {
+        "title": "You are watching stats for MIN at WPG gamePeriod: 1 Time: 04:06 Score: 1 : 0goal: Jake Middleton assist 1 Marco Rossi Period: 1 Time: 19:58 Score: 1 : 1assist 1 Adam Lowry goal: Mark Scheifele Period: 4 Time: 00:51 Score: 1 : 2assist 1 Mark Scheifele assist 2 Josh Morrissey goal: Kyle Connor Button ot currently used",
+        "username": "Gustafsson was G for Wild. Is he #1 these days? Both teams played well. Jets scored in OT. Lines addition does not work yet",
+        "tip": "(1) innocent shot from blue line G was not even screened; (2) with 1 second left Jets played 6x5 they won draw scored from top right circle after quick pass; (3) pass from left circle to right circle in OT",
+        "topic": "UX",
+        "tip_id": "0304"
     }
 ]
