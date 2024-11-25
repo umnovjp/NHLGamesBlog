@@ -7,3 +7,6 @@ There is no live page version. At least for now. If you would like to use it, do
 
 ## Future development
 Current version was developed to use express.js to create a new blog. Later, I used current files to use databases instead of writing to file. Here is new repo: https://github.com/umnovjp/NHLGamesBlog. And in the future I will use REACT.js for live updates. And another plan in the future is to add shift chart analytics. 
+
+## Games to run
+WPG lines: 10/30, 11/01, 11/03, 11/05, 11/14, 11/16, 11/19 FLA, 11/22 PIT, 11/23 NSH 7-27-91 9-15-36 13-55-81 17-22-62, data missing 11/07, 11/09,11/12, 
