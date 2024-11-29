@@ -174,7 +174,7 @@ function selectGame() {
                 var newGoal = document.createElement('p');
                 newGoal.innerHTML = 'Period: ' + data.plays[i].periodDescriptor.number + ' Time: ' + data.plays[i].timeInPeriod + ' Score: ' + data.plays[i].details.awayScore + ' : ' + data.plays[i].details.homeScore;
                 document.getElementById('gameInfo').appendChild(newGoal);
-                var goalEvent = document.createElement('span');
+                // var goalEvent = document.createElement('span');
                 for (j=0; j<data.rosterSpots.length; j++) {if (data.rosterSpots[j].playerId === data.plays[i].details.scoringPlayerId) {
                   var goalScorer = document.createElement('span');
                   goalScorer.innerHTML = 'goal: ' + data.rosterSpots[j].firstName.default + ' ' + data.rosterSpots[j].lastName.default + ' ';
@@ -189,25 +189,25 @@ function selectGame() {
                 var assist2 = document.createElement('span');
                 assist2.innerHTML = 'assist 2 ' + data.rosterSpots[j].firstName.default + ' ' + data.rosterSpots[j].lastName.default + ' ';
                 document.getElementById('gameInfo').appendChild(assist2);
-              }}}}
-
+              }}
               var requestURL1 = 'https://cors-anywhere.herokuapp.com/api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
-        fetch(requestURL1, {"method": "GET", "headers": { }
-        })
-          .then(function (response) {
-            return response.json();
-          })
-          .then(function (data) {
-            console.log('I am in third then')
-            console.log(data);
-          });
+              fetch(requestURL1, {"method": "GET", "headers": { }
+              })
+              .then(function (response) {
+                 return response.json();
+                })
+                .then(function (data) {
+                console.log('I am in third then', data)
+                // console.log(data);
+                });         
+            
+            }
 
-            // var rosterButton = document.createElement('button');
-            // rosterButton.setAttribute('class', 'searchParameter');
-            // rosterButton.textContent = 'Button not currently used';
-            // document.getElementById('gameInfo').appendChild(rosterButton);
-            // rosterButton.addEventListener('click', getRoster);
-          });
+
+            }
+
+      
+                  });
 
         // function getRoster(event) { // this function is not used for now
         //   var genre = event.currentTarget.value;
