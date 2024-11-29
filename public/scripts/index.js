@@ -172,6 +172,8 @@ function selectGame() {
               if (data.plays[i].typeDescKey==='goal') {
                 scoringPlay = data.plays[i];
                 var newGoal = document.createElement('p');
+                periodNumber = data.plays[i].periodDescriptor.number;
+                goalTime = data.plays[i].timeInPeriod;
                 newGoal.innerHTML = 'Period: ' + data.plays[i].periodDescriptor.number + ' Time: ' + data.plays[i].timeInPeriod + ' Score: ' + data.plays[i].details.awayScore + ' : ' + data.plays[i].details.homeScore;
                 document.getElementById('gameInfo').appendChild(newGoal);
                 // var goalEvent = document.createElement('span');
@@ -198,7 +200,7 @@ function selectGame() {
                 })
                 .then(function (data) {
                 console.log('I am in third then', data)
-                // console.log(data);
+                for (j=0; j<data.length;j++) {if (data.typeCode===505) {}}
                 });         
             
             }
