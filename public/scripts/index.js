@@ -213,10 +213,7 @@ function selectGame() {
               console.log(onIceArray)
             }
           }
-                });  
-                
-                
-                 
+                });                 
             }
           
           }
