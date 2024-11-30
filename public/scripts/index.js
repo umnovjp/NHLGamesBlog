@@ -168,7 +168,7 @@ function selectGame() {
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game';
             document.getElementById('gameInfo').appendChild(gameTitle);
 
-            for (i = 0; i < data.plays.length; i++) { //177-243
+            for (i = 0; i < data.plays.length; i++) { //171-213
               if (data.plays[i].typeDescKey==='goal') {
                 scoringPlay = data.plays[i];
                 var newGoal = document.createElement('p');
@@ -192,24 +192,35 @@ function selectGame() {
                 assist2.innerHTML = 'assist 2 ' + data.rosterSpots[j].firstName.default + ' ' + data.rosterSpots[j].lastName.default + ' ';
                 document.getElementById('gameInfo').appendChild(assist2);
               }}
+              onIceArray = []
               var requestURL1 = 'https://cors-anywhere.herokuapp.com/api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
-              fetch(requestURL1, {"method": "GET", "headers": { }
+              fetch(requestURL1, {"method": "GET", "headers": {}
               })
               .then(function (response) {
                  return response.json();
                 })
                 .then(function (data) {
                 console.log('I am in third then', data)
-                for (j=0; j<data.length;j++) {if (data.typeCode===505) {}}
-                });         
-            
+                for (j=0; j<data.data.length;j++) {
+                  // if (j<5) {console.log(j, data.data.length)}
+                  if (data.data[j].typeCode===517) {shiftStart = data.data[j].startTime.split(":");
+              shiftStartSeconds=shiftStart[0]*60+shiftStart[1];
+              shiftEnd = data.data[j].endTime.split(':');  
+              shiftEndSeconds=shiftEnd[0]*60+shiftEnd[1];
+              
+              goalTimeSeconds=goalTime.split(':')[0]*60+goalTime.split(':')[1]
+              if ((shiftStartSeconds<goalTimeSeconds)&&(goalTimeSeconds>=goalTimeSeconds)) {onIceArray.push(data.data[j].lastName)}
+              console.log(onIceArray)
             }
-
-
+          }
+                });  
+                
+                
+                 
             }
-
-      
-                  });
+          
+          }
+          });
 
         // function getRoster(event) { // this function is not used for now
         //   var genre = event.currentTarget.value;
