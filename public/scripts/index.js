@@ -1,7 +1,7 @@
 const tipForm = document.getElementById('tip-form');
 const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
-//const gameId = 2021021133;
+onIceArray = []
 var game0 = document.getElementById('game0');
 
 const createCard = (tip) => {
@@ -167,6 +167,7 @@ function selectGame() {
             gameTitle.textContent = '';
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game';
             document.getElementById('gameInfo').appendChild(gameTitle);
+            
 
             for (i = 0; i < data.plays.length; i++) { //171-213
               if (data.plays[i].typeDescKey==='goal') {
@@ -176,7 +177,6 @@ function selectGame() {
                 goalTime = data.plays[i].timeInPeriod;
                 newGoal.innerHTML = 'Period: ' + data.plays[i].periodDescriptor.number + ' Time: ' + data.plays[i].timeInPeriod + ' Score: ' + data.plays[i].details.awayScore + ' : ' + data.plays[i].details.homeScore;
                 document.getElementById('gameInfo').appendChild(newGoal);
-                // var goalEvent = document.createElement('span');
                 for (j=0; j<data.rosterSpots.length; j++) {if (data.rosterSpots[j].playerId === data.plays[i].details.scoringPlayerId) {
                   var goalScorer = document.createElement('span');
                   goalScorer.innerHTML = 'goal: ' + data.rosterSpots[j].firstName.default + ' ' + data.rosterSpots[j].lastName.default + ' ';
@@ -192,7 +192,7 @@ function selectGame() {
                 assist2.innerHTML = 'assist 2 ' + data.rosterSpots[j].firstName.default + ' ' + data.rosterSpots[j].lastName.default + ' ';
                 document.getElementById('gameInfo').appendChild(assist2);
               }}
-              onIceArray = []
+              
               var requestURL1 = 'https://cors-anywhere.herokuapp.com/api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
               fetch(requestURL1, {"method": "GET", "headers": {}
               })
@@ -202,22 +202,29 @@ function selectGame() {
                 .then(function (data) {
                 console.log('I am in third then', data)
                 for (j=0; j<data.data.length;j++) {
-                  // if (j<5) {console.log(j, data.data.length)}
-                  if (data.data[j].typeCode===517) {shiftStart = data.data[j].startTime.split(":");
-              shiftStartSeconds=shiftStart[0]*60+shiftStart[1];
-              shiftEnd = data.data[j].endTime.split(':');  
-              shiftEndSeconds=shiftEnd[0]*60+shiftEnd[1];
+                 // if (data.data[j].typeCode===517) {
+                    shiftStart = data.data[j].startTime.split(":");
+              shiftStartSeconds=Number(shiftStart[0])*60+Number(shiftStart[1]);
+              shiftEnd = data.data[j].endTime.split(':');
+              shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);
               
-              goalTimeSeconds=goalTime.split(':')[0]*60+goalTime.split(':')[1]
-              if ((shiftStartSeconds<goalTimeSeconds)&&(goalTimeSeconds>=goalTimeSeconds)) {onIceArray.push(data.data[j].lastName)}
-              console.log(onIceArray)
+              goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
+              if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data.data[j].period===periodNumber)) {
+                console.log(data.data[j].lastName, data.data[j].startTime, goalTimeSeconds, shiftStartSeconds, shiftEndSeconds)
+                onIceArray.push(data.data[j].lastName, data.data[j].startTime, goalTimeSeconds, shiftStartSeconds, shiftEndSeconds)}
+              
+           // }
+          } // end j loop
+          console.log(onIceArray)
+                });
+                         
             }
-          }
-                });                 
-            }
+            
+          } // end i loop
           
-          }
           });
+
+          
 
         // function getRoster(event) { // this function is not used for now
         //   var genre = event.currentTarget.value;
