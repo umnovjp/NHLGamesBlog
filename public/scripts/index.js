@@ -101,35 +101,26 @@ const handleFormSubmit = (e) => {
   postTip(newTip);
 };
 
-function selectGame() {
-  // var inputVal = document.getElementById('myInput').value;
-  var inputVal = document.getElementById('datepicker').value;
- // console.log('inputVal= ' + inputVal);
-
+function selectGame() {var inputVal = document.getElementById('datepicker').value;
   var date = inputVal.split('/');
-  // console.log(date);
   var formatted = date[2] + '-' + date[0] + '-' + date[1];
   console.log(formatted);
   var requestURL = 'https://cors-anywhere.herokuapp.com/https://api-web.nhle.com/v1/schedule/'+ formatted;
   //'https://statsapi.web.nhl.com/api/v1/schedule/?date=' 
   console.log(requestURL);
   fetch(requestURL, {
-    "method": "GET", "headers": {    }
+    "method": "GET", "headers": {}
   })
-
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
+    .then(function (response) {return response.json()})
+    .then(function (data2) {
       console.log('I am in schedule then')
-      console.log(data.gameWeek[0].games);
-    //  console.log(data.gameWeek[0].games[0].awayTeam.abbrev);
-      var numberOfGames = data.gameWeek[0].games.length;
+      console.log(data2.gameWeek[0].games);
+      var numberOfGames = data2.gameWeek[0].games.length;
       for (var i = 0; i < numberOfGames; i++) {
         var gameName = document.createElement('button');
         gameName.setAttribute('id', 'game' + i);
         var idx = gameName.getAttribute('id');
-        gameName.innerHTML = 'Game ' + i + ': ' + data.gameWeek[0].games[i].awayTeam.abbrev + ' ' + data.gameWeek[0].games[i].homeTeam.abbrev;
+        gameName.innerHTML = 'Game ' + i + ': ' + data2.gameWeek[0].games[i].awayTeam.abbrev + ' ' + data2.gameWeek[0].games[i].homeTeam.abbrev;
         document.getElementById('gamesPlayed').appendChild(gameName);
         gameName.addEventListener('click', displayGameData);
       }
@@ -142,7 +133,7 @@ function selectGame() {
         console.log(idxNumber);
         gameNumber = idxNumber[1];
 
-        const gameId = data.gameWeek[0].games[gameNumber].id;
+        const gameId = data2.gameWeek[0].games[gameNumber].id;
         console.log(gameId);
         var requestURL = 'https://cors-anywhere.herokuapp.com/api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
         fetch(requestURL, {
@@ -168,13 +159,12 @@ function selectGame() {
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game';
             document.getElementById('gameInfo').appendChild(gameTitle);
             
-
             for (i = 0; i < data.plays.length; i++) { //171-213
               if (data.plays[i].typeDescKey==='goal') {
                 scoringPlay = data.plays[i];
                 var newGoal = document.createElement('p');
-                periodNumber = data.plays[i].periodDescriptor.number;
-                goalTime = data.plays[i].timeInPeriod;
+                // periodNumber = data.plays[i].periodDescriptor.number;
+                // goalTime = data.plays[i].timeInPeriod;
                 newGoal.innerHTML = 'Period: ' + data.plays[i].periodDescriptor.number + ' Time: ' + data.plays[i].timeInPeriod + ' Score: ' + data.plays[i].details.awayScore + ' : ' + data.plays[i].details.homeScore;
                 document.getElementById('gameInfo').appendChild(newGoal);
                 for (j=0; j<data.rosterSpots.length; j++) {if (data.rosterSpots[j].playerId === data.plays[i].details.scoringPlayerId) {
@@ -191,40 +181,39 @@ function selectGame() {
                 var assist2 = document.createElement('span');
                 assist2.innerHTML = 'assist 2 ' + data.rosterSpots[j].firstName.default + ' ' + data.rosterSpots[j].lastName.default + ' ';
                 document.getElementById('gameInfo').appendChild(assist2);
-              }}
-              
-              var requestURL1 = 'https://cors-anywhere.herokuapp.com/api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
-              fetch(requestURL1, {"method": "GET", "headers": {}
-              })
-              .then(function (response) {
-                 return response.json();
-                })
-                .then(function (data) {
-                console.log('I am in third then', data)
-                for (j=0; j<data.data.length;j++) {
-                 // if (data.data[j].typeCode===517) {
-                    shiftStart = data.data[j].startTime.split(":");
-              shiftStartSeconds=Number(shiftStart[0])*60+Number(shiftStart[1]);
-              shiftEnd = data.data[j].endTime.split(':');
-              shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);
-              
-              goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
-              if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data.data[j].period===periodNumber)) {
-                console.log(data.data[j].lastName, data.data[j].startTime, goalTimeSeconds, shiftStartSeconds, shiftEndSeconds)
-                onIceArray.push(data.data[j].lastName, data.data[j].startTime, goalTimeSeconds, shiftStartSeconds, shiftEndSeconds)}
-              
-           // }
-          } // end j loop
-          console.log(onIceArray)
-                });
-                         
-            }
-            
+              }}                         
+            }            
           } // end i loop
           
           });
-
-          
+          var requestURL1 = 'https://cors-anywhere.herokuapp.com/api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
+          fetch(requestURL1, {"method": "GET", "headers": {}
+          })
+          .then(function (response) {
+             return response.json();
+            })
+            .then(function (data1) {
+            console.log('I am in third then', data1);
+            for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505)
+              {console.log(data1.data[i].lastName)
+                periodNumber = data1.data[i].period;
+                goalTime = data1.data[i].startTime;
+                for (j=0; j<data1.data.length;j++) {
+                  shiftStart = data1.data[j].startTime.split(":");
+                  shiftStartSeconds=Number(shiftStart[0])*60+Number(shiftStart[1]);
+                  shiftEnd = data1.data[j].endTime.split(':');
+                  shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);             
+                  
+                  goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
+                  if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data1.data[j].period===periodNumber)) {
+                    
+                    console.log(data1.data[j].lastName, shiftStartSeconds, shiftEndSeconds)
+                    onIceArray.push(data1.data[j].lastName, shiftStartSeconds, shiftEndSeconds)}
+                    } // end j loop
+              }            
+          } // end i loop
+            console.log(data)
+            });
 
         // function getRoster(event) { // this function is not used for now
         //   var genre = event.currentTarget.value;
