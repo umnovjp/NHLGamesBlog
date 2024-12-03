@@ -187,7 +187,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           } // end i loop
           
           });
-
           var requestURL1 = 'https://cors-anywhere.herokuapp.com/api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
           fetch(requestURL1, {"method": "GET", "headers": {}
           })
@@ -197,25 +196,21 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             .then(function (data1) {
             console.log('I am in third then', data1);
             for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505)
-              { var newGoal1 = document.createElement('p');
-              console.log(data1.data[i])
-              newGoal1.innerHTML = 'Period: ' + data1.data[i].period + ' Time: ' + data1.data[i].startTime + ' Scorer: ' + data1.data[i].lastName + ' Assists: ' + data1.data[i].eventDetails;
-                document.getElementById('gameInfo').appendChild(newGoal1);
-                // console.log(data1.data[i].lastName)
-                // periodNumber = data1.data[i].period;
-                // goalTime = data1.data[i].startTime;
-                // for (j=0; j<data1.data.length;j++) {
-                //   shiftStart = data1.data[j].startTime.split(":");
-                //   shiftStartSeconds=Number(shiftStart[0])*60+Number(shiftStart[1]);
-                //   shiftEnd = data1.data[j].endTime.split(':');
-                //   shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);             
+              {console.log(data1.data[i].lastName)
+                periodNumber = data1.data[i].period;
+                goalTime = data1.data[i].startTime;
+                for (j=0; j<data1.data.length;j++) {
+                  shiftStart = data1.data[j].startTime.split(":");
+                  shiftStartSeconds=Number(shiftStart[0])*60+Number(shiftStart[1]);
+                  shiftEnd = data1.data[j].endTime.split(':');
+                  shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);             
                   
-                //   goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
-                //   if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data1.data[j].period===periodNumber)) {
+                  goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
+                  if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data1.data[j].period===periodNumber)) {
                     
-                //     // console.log(data1.data[j].lastName, shiftStartSeconds, shiftEndSeconds)
-                //     onIceArray.push(data1.data[j].lastName, shiftStartSeconds, shiftEndSeconds)}
-                //     } // end j loop
+                    // console.log(data1.data[j].lastName, shiftStartSeconds, shiftEndSeconds)
+                    onIceArray.push(data1.data[j].lastName, shiftStartSeconds, shiftEndSeconds)}
+                    } // end j loop
               }            
           } // end i loop
             // console.log(data)
