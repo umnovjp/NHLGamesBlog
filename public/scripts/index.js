@@ -183,8 +183,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                 document.getElementById('gameInfo').appendChild(assist2);
               }}                         
             }            
-          } // end i loop
-          
+          } // end i loop          
           });
 
           var requestURL1 = 'https://cors-anywhere.herokuapp.com/api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
@@ -204,7 +203,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
               newGoal1.innerHTML = 'Period: ' + data1.data[i].period + ' Time: ' + data1.data[i].startTime + ' Scorer: ' + data1.data[i].lastName + ' Assists: ' + data1.data[i].eventDetails;
               // console.log(newGoal1.innerHTML)
                 document.getElementById('gameInfoHome').appendChild(newGoal1);
-                // console.log(data1.data[i].lastName)
                 periodNumber = data1.data[i].period;
                 goalTime = data1.data[i].startTime;
                 for (j=0; j<data1.data.length;j++) {
