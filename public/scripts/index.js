@@ -196,11 +196,14 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             .then(function (data1) {
             console.log('I am in third then', data1);
             for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505)
-              { var newGoal1 = document.createElement('span');
+              { const gameInfoHome = document.createElement('section');
+              gameInfoHome.setAttribute('id', 'gameInfoHome');
+              document.getElementById('schedule').appendChild(gameInfoHome);
+                var newGoal1 = document.createElement('span');
               console.log(data1.data[i]);
               newGoal1.innerHTML = 'Period: ' + data1.data[i].period + ' Time: ' + data1.data[i].startTime + ' Scorer: ' + data1.data[i].lastName + ' Assists: ' + data1.data[i].eventDetails;
               // console.log(newGoal1.innerHTML)
-                document.getElementById('gameInfo').appendChild(newGoal1);
+                document.getElementById('gameInfoHome').appendChild(newGoal1);
                 // console.log(data1.data[i].lastName)
                 periodNumber = data1.data[i].period;
                 goalTime = data1.data[i].startTime;
