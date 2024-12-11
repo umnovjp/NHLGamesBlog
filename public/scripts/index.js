@@ -152,8 +152,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             const gameInfoAway = document.createElement('section');
             gameInfoAway.setAttribute('id', 'gameInfoAway');
             document.getElementById('schedule').appendChild(gameInfoAway);
-            var gameTitle = document.createElement('h2');
-            gameTitle.textContent = '';
+            var gameTitle = document.createElement('h2'); gameTitle.textContent = '';
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game';
             document.getElementById('gameInfo').appendChild(gameTitle);
 
