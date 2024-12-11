@@ -1,7 +1,7 @@
 const tipForm = document.getElementById('tip-form');
 const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
-onIceArray = []; rosterSpots = [];
+onIceArray = []; 
 var game0 = document.getElementById('game0');
 
 const createCard = (tip) => {
@@ -111,9 +111,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
     "method": "GET", "headers": {}
   })
     .then(function (response) {return response.json()})
-    .then(function (data2) {
+    .then(function (data2) { rosterSpots = [];
       console.log('I am in schedule then')
-      console.log(data2.gameWeek[0].games);
+      // console.log(data2.gameWeek[0].games);
       var numberOfGames = data2.gameWeek[0].games.length;
       for (var i = 0; i < numberOfGames; i++) {
         var gameName = document.createElement('button');
@@ -131,7 +131,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
         idxNumber = idxArray[0].split(' ');
         console.log(idxNumber);
         gameNumber = idxNumber[1];
-
         const gameId = data2.gameWeek[0].games[gameNumber].id;
         console.log(gameId);
         var requestURL = 'https://cors-anywhere.herokuapp.com/api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
@@ -199,7 +198,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
               gameInfoHome.setAttribute('id', 'gameInfoHome');
               document.getElementById('schedule').appendChild(gameInfoHome);
                 var newGoal1 = document.createElement('span');
-              console.log(data1.data[i]);
+              console.log(data1.data[i], rosterSpots);
               newGoal1.innerHTML = 'Period: ' + data1.data[i].period + ' Time: ' + data1.data[i].startTime + ' Scorer: ' + data1.data[i].lastName + ' Assists: ' + data1.data[i].eventDetails;
               // console.log(newGoal1.innerHTML)
                 document.getElementById('gameInfoHome').appendChild(newGoal1);
@@ -219,12 +218,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     } // end j loop
               }            
           } // end i loop
-            // console.log(data)
-            });
-            console.log(onIceArray, rosterSpots)
-
+          console.log(onIceArray, rosterSpots)
+            }); // end third second .then
       }
-    } // end first .then
+    } // end first second .then
     );
 }
 
