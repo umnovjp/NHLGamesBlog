@@ -362,5 +362,12 @@
         "tip": "(1) pass from left G line to mid scored one timer pass was not intercepted shot was not blocked by NYR; (2) NYR D fumbled puck in D zone STL #25 took it individual effort not sure how two assists were added; (3) quick 2x1 no pass just shot; (4) STL skated over the puck NYR F shot from left dot maybe deflected off #55 stick; (5) NYR F outbattled behind G line quick pass to left circle one timer",
         "topic": "UX",
         "tip_id": "d13b"
+    },
+    {
+        "title": "You are watching stats for NJD at STL gamePeriod: 1 Time: 15:13 Score: 1 : 0goal: Ondrej Palat assist 2 Brett Pesce assist 1 Luke Hughes Period: 2 Time: 13:09 Score: 2 : 0goal: Stefan Noesen assist 1 Nico Hischier assist 2 Jack Hughes Period: 3 Time: 03:38 Score: 3 : 0goal: Brenden Dillon Period: 3 Time: 10:28 Score: 3 : 1assist 2 Brayden Schenn assist 1 Justin Faulk goal: Jordan Kyrou Period: 3 Time: 16:44 Score: 4 : 1goal: Jesper Bratt assist 1 Jack Hughes ",
+        "username": "Score was 3:0 with shots 21x12 NJD after 45. pair 55-17 was on ice for 3 goals against including one PK and one EN. Then 2 goals scored with EN. STL lines were 10-13-25 18-63-89 20-26-71 70-76-81 pairs were 6-72 17-55 22-48. Shots after 1st were just 7x5 NJD after 2nd 14x12 NJD, 21x12 after 45 min.",
+        "tip": "(1) 71-20-26 72-6 quasi shot pass from NJD D zone missed the net but NJD F was first shot from left circle uncovered definitely defense error; (2) 18-89 55-17 on PK shot from sharp angle deflected by G but scored on 3rd rebound attempt; (3) 10-63-81 55-17 clearing attempt by #81 was caught near blue line shot from blue line G was screened by 4 bodies; (4) 18-25-10-89-63 72 with 6x5 pass from mid blue line to left circle scored on hold and release; (5) 70-76-20-81 55-17 with EN lost battle behind NJD G line",
+        "topic": "UX",
+        "tip_id": "fdcc"
     }
 ]
