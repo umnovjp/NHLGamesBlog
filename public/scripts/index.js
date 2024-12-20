@@ -196,7 +196,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
               gameInfoHome.setAttribute('id', 'gameInfoHome');
               document.getElementById('schedule').appendChild(gameInfoHome);
                 var newGoal1 = document.createElement('span');
-               console.log(data1.data[i], rosterSpots);
+               console.log(data1.data[i], data1.data.length, rosterSpots);
               newGoal1.innerHTML = 'Period: ' + data1.data[i].period + ' Time: ' + data1.data[i].startTime + ' Scorer: ' + data1.data[i].lastName + ' Assists: ' + data1.data[i].eventDetails;
                 document.getElementById('gameInfoHome').appendChild(newGoal1);
                 periodNumber = data1.data[i].period;
@@ -205,7 +205,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   shiftStart = data1.data[j].startTime.split(":");
                   shiftStartSeconds=Number(shiftStart[0])*60+Number(shiftStart[1]);
                   shiftEnd = data1.data[j].endTime.split(':');
-                  shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);             
+                  shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);
                   
                   goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
                   if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data1.data[j].period===periodNumber)) {
