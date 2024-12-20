@@ -88,8 +88,6 @@ const handleFormSubmit = (e) => {
   // get the value of the username and save it to a variable
   const tipUsername = document.getElementById('tipUsername').value.trim();
 
-  console.log(document.getElementById('game0').textContent);
-
   // Create an object with the tip and username
   const newTip = {
     title: tipTitle,
@@ -150,8 +148,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             gameInfoHome.setAttribute('id', 'gameInfoHome');
             document.getElementById('schedule').appendChild(gameInfoHome);
             const gameInfoAway = document.createElement('section');
-            gameInfoAway.setAttribute('id', 'gameInfoAway');
-            document.getElementById('schedule').appendChild(gameInfoAway);
+            // gameInfoAway.setAttribute('id', 'gameInfoAway');
+            // document.getElementById('schedule').appendChild(gameInfoAway);
             var gameTitle = document.createElement('h2'); gameTitle.textContent = '';
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game';
             document.getElementById('gameInfo').appendChild(gameTitle);
@@ -192,14 +190,14 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             })
             .then(function (data1) {
             console.log('I am in third then', data1);
-            for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505)
-              { const gameInfoHome = document.createElement('section');
+   
+            for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
+              {  const gameInfoHome = document.createElement('section');
               gameInfoHome.setAttribute('id', 'gameInfoHome');
               document.getElementById('schedule').appendChild(gameInfoHome);
                 var newGoal1 = document.createElement('span');
-              console.log(data1.data[i], rosterSpots);
+               console.log(data1.data[i], rosterSpots);
               newGoal1.innerHTML = 'Period: ' + data1.data[i].period + ' Time: ' + data1.data[i].startTime + ' Scorer: ' + data1.data[i].lastName + ' Assists: ' + data1.data[i].eventDetails;
-              // console.log(newGoal1.innerHTML)
                 document.getElementById('gameInfoHome').appendChild(newGoal1);
                 periodNumber = data1.data[i].period;
                 goalTime = data1.data[i].startTime;
@@ -211,8 +209,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   
                   goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
                   if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data1.data[j].period===periodNumber)) {
-                    
-                    // console.log(data1.data[j].lastName, shiftStartSeconds, shiftEndSeconds)
                     onIceArray.push(data1.data[j].lastName, shiftStartSeconds, shiftEndSeconds)}
                     } // end j loop
               }            
