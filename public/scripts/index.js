@@ -110,8 +110,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
   })
     .then(function (response) {return response.json()})
     .then(function (data2) { rosterSpots = [];
-      console.log('I am in schedule then')
-      // console.log(data2.gameWeek[0].games);
+      console.log('I am in schedule then');
       var numberOfGames = data2.gameWeek[0].games.length;
       for (var i = 0; i < numberOfGames; i++) {
         var gameName = document.createElement('button');
@@ -147,12 +146,15 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             const gameInfoHome = document.createElement('section');
             gameInfoHome.setAttribute('id', 'gameInfoHome');
             document.getElementById('schedule').appendChild(gameInfoHome);
-            const gameInfoAway = document.createElement('section');
+            // const gameInfoAway = document.createElement('section');
             // gameInfoAway.setAttribute('id', 'gameInfoAway');
             // document.getElementById('schedule').appendChild(gameInfoAway);
             var gameTitle = document.createElement('h2'); gameTitle.textContent = '';
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game';
             document.getElementById('gameInfo').appendChild(gameTitle);
+            // var gameData = document.createElement('p');
+            // gameTitle.innerHTML = data;
+            // document.getElementById('gameInfo').appendChild(gameData);
 
             for (i=0; i<data.rosterSpots.length; i++) {rosterSpots.push(data.rosterSpots[i].teamId, data.rosterSpots[i].playerId, data.rosterSpots[i].sweaterNumber)}
             console.log(rosterSpots)
@@ -200,7 +202,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
               newGoal1.innerHTML = 'Period: ' + data1.data[i].period + ' Time: ' + data1.data[i].startTime + ' Scorer: ' + data1.data[i].lastName + ' Assists: ' + data1.data[i].eventDetails;
                 document.getElementById('gameInfoHome').appendChild(newGoal1);
                 periodNumber = data1.data[i].period;
-                goalTime = data1.data[i].startTime;
+                goalTime = data1.data[i].startTime; 
                 for (j=0; j<data1.data.length;j++) {
                   shiftStart = data1.data[j].startTime.split(":");
                   shiftStartSeconds=Number(shiftStart[0])*60+Number(shiftStart[1]);
@@ -211,6 +213,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data1.data[j].period===periodNumber)) {
                     onIceArray.push(data1.data[j].lastName, shiftStartSeconds, shiftEndSeconds)}
                     } // end j loop
+                    onIceArray1 = [];
+                    for (j=0;j<onIceArray.length;j++) {}
               }            
           } // end i loop
           console.log(onIceArray, rosterSpots)

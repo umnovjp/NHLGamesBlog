@@ -10,3 +10,7 @@ Current version was developed to use express.js to create a new blog. Later, I u
 
 ## Games to run
 WPG lines: 10/30, 11/01, 11/03, 11/05, 11/14, 11/16 FLA, 11/19 FLA, 11/22 PIT, 11/23 NSH, 11/25 MIN 7-27-91 9-15-36 13-55-81 17-22-62, data missing 11/07, 11/09,11/12, 
+
+eventDetails
+: 
+"Auston Matthews, Mitch Marner"
