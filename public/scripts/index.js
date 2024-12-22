@@ -122,12 +122,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
       }
 
       function displayGameData(event) {
-        idx = event.currentTarget;
-        idxString = event.currentTarget.textContent;
-        idxArray = idxString.split(':');
-        idxNumber = idxArray[0].split(' ');
-        console.log(idxNumber);
-        gameNumber = idxNumber[1];
+        idx = event.currentTarget; idxString = event.currentTarget.textContent;
+        idxArray = idxString.split(':'); idxNumber = idxArray[0].split(' ');
+        console.log(idxNumber); gameNumber = idxNumber[1];
         const gameId = data2.gameWeek[0].games[gameNumber].id;
         console.log(gameId);
         var requestURL = 'https://cors-anywhere.herokuapp.com/api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
@@ -146,9 +143,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             const gameInfoHome = document.createElement('section');
             gameInfoHome.setAttribute('id', 'gameInfoHome');
             document.getElementById('schedule').appendChild(gameInfoHome);
-            // const gameInfoAway = document.createElement('section');
-            // gameInfoAway.setAttribute('id', 'gameInfoAway');
-            // document.getElementById('schedule').appendChild(gameInfoAway);
+            console.log(data.rosterSpots);
             var gameTitle = document.createElement('h2'); gameTitle.textContent = '';
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game';
             document.getElementById('gameInfo').appendChild(gameTitle);
@@ -213,8 +208,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data1.data[j].period===periodNumber)) {
                     onIceArray.push(data1.data[j].lastName, shiftStartSeconds, shiftEndSeconds)}
                     } // end j loop
-                    onIceArray1 = [];
-                    for (j=0;j<onIceArray.length;j++) {}
+                    // onIceArray1 = [];
+                    // for (j=0;j<onIceArray.length;j++) {}
               }            
           } // end i loop
           console.log(onIceArray, rosterSpots)
