@@ -98,7 +98,6 @@ const handleFormSubmit = (e) => {
   // Make a fetch POST request to the server
   postTip(newTip);
 };
-
 rosterSpots = [];
 
 function selectGame() {var inputVal = document.getElementById('datepicker').value;
@@ -139,8 +138,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           .then(function (data) {
             console.log('I am in second then')
             console.log(data);
-            const gameInfo = document.createElement('section');
-            gameInfo.setAttribute('id', 'gameInfo');
+            const gameInfo = document.createElement('section'); 
+            gameInfo.setAttribute('id', 'gameInfo'); 
             document.getElementById('schedule').appendChild(gameInfo);
             const gameInfoHome = document.createElement('section');
             gameInfoHome.setAttribute('id', 'gameInfoHome');
@@ -149,37 +148,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             var gameTitle = document.createElement('h2'); gameTitle.textContent = '';
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game';
             document.getElementById('gameInfo').appendChild(gameTitle);
-            // var gameData = document.createElement('p');
-            // gameTitle.innerHTML = data;
-            // document.getElementById('gameInfo').appendChild(gameData);
-
+   
             for (i=0; i<data.rosterSpots.length; i++) {rosterSpots.push(data.rosterSpots[i].teamId, data.rosterSpots[i].sweaterNumber, data.rosterSpots[i].firstName.default, data.rosterSpots[i].lastName.default, data.rosterSpots[i].positionCode)}
-            console.log(rosterSpots)
-            
-          //   for (i = 0; i < data.plays.length; i++) { //159-181
-          //     if (data.plays[i].typeDescKey==='goal') {
-          //       scoringPlay = data.plays[i];
-          //       var newGoal = document.createElement('p');
-          //       newGoal.innerHTML = 'Period: ' + data.plays[i].periodDescriptor.number + ' Time: ' + data.plays[i].timeInPeriod + ' Score: ' + data.plays[i].details.awayScore + ' : ' + data.plays[i].details.homeScore;
-          //       document.getElementById('gameInfo').appendChild(newGoal);
-          //       for (j=0; j<data.rosterSpots.length; j++) {if (data.rosterSpots[j].playerId === data.plays[i].details.scoringPlayerId) {
-          //         var goalScorer = document.createElement('span');
-          //         goalScorer.innerHTML = 'goal: ' + data.rosterSpots[j].firstName.default + ' ' + data.rosterSpots[j].lastName.default + ' ';
-          //         document.getElementById('gameInfo').appendChild(goalScorer);
-          //       }
-          //     else if ((data.plays[i].details.assist1PlayerId>1000)&&(data.rosterSpots[j].playerId === data.plays[i].details.assist1PlayerId)) {
-          //       var assist1 = document.createElement('span');
-          //       assist1.innerHTML = 'assist 1 ' + data.rosterSpots[j].firstName.default + ' ' + data.rosterSpots[j].lastName.default + ' ';
-          //         document.getElementById('gameInfo').appendChild(assist1);
-          //     }
-          //     else if (data.rosterSpots[j].playerId === data.plays[i].details.assist2PlayerId) {
-          //       var assist2 = document.createElement('span');
-          //       assist2.innerHTML = 'assist 2 ' + data.rosterSpots[j].firstName.default + ' ' + data.rosterSpots[j].lastName.default + ' ';
-          //       document.getElementById('gameInfo').appendChild(assist2);
-          //     }}                         
-          //   }            
-          // } // end i loop   
-          
+            console.log(rosterSpots)            
+                   
           var requestURL1 = 'https://cors-anywhere.herokuapp.com/api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
           fetch(requestURL1, {"method": "GET", "headers": {}
           })
@@ -199,11 +171,12 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
      
                 periodNumber = data1.data[i].period;
                 goalTime = data1.data[i].startTime; 
+                for (j=0;j<totalScore;j++) {onIceArray.push([])}
                 for (j=0; j<data1.data.length;j++) {
                   shiftStart = data1.data[j].startTime.split(":");
                   shiftStartSeconds=Number(shiftStart[0])*60+Number(shiftStart[1]);
                   shiftEnd = data1.data[j].endTime.split(':');
-                  shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);
+                  shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);                  
                   
                   goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
                   if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data1.data[j].period===periodNumber)) {
