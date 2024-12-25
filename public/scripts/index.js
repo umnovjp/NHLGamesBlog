@@ -167,22 +167,23 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
               document.getElementById('schedule').appendChild(gameInfoHome);
               const totalScore = data.awayTeam.score + data.homeTeam.score;
               console.log(totalScore);
-              for (j=0;j<totalScore;j++) {onIceArray.push([])}
+              // for (j=0;j<totalScore;j++) {onIceArray.push([])}
      
                 periodNumber = data1.data[i].period;
                 goalTime = data1.data[i].startTime; 
-                for (j=0;j<totalScore;j++) {onIceArray.push([])}
+                goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
+                goalTimeSecondsAbsolute=goalTimeSeconds+periodNumber*1200;
+                onIceArray.push('newGoal', goalTimeSecondsAbsolute)
                 for (j=0; j<data1.data.length;j++) {
                   shiftStart = data1.data[j].startTime.split(":");
                   shiftStartSeconds=Number(shiftStart[0])*60+Number(shiftStart[1]);
                   shiftEnd = data1.data[j].endTime.split(':');
                   shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);                  
                   
-                  goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
                   if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data1.data[j].period===periodNumber)) {
                     console.log('player on ice ', j)
                     for (k=0;k<rosterSpots.length/5;k++) {if ((rosterSpots[5*k+2]===data1.data[j].firstName)&&(rosterSpots[5*k+3]===data1.data[j].lastName)) {
-                    onIceArray.push(rosterSpots[5*k+1], shiftStartSeconds, shiftEndSeconds)}
+                    onIceArray.push(rosterSpots[5*k], rosterSpots[5*k+1], shiftStartSeconds, shiftEndSeconds)}
                   }} // end if and end k loop
                     } // end j loop
                     var newGoal1 = document.createElement('span');
