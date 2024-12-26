@@ -397,5 +397,12 @@
         "tip": "(1) 13-55-81-27 44 on PP shot from blue line deflected by G but he lost site of puck, scored on rebound from right circle; (2) 13-55-81 2-44 quick 2x1 pass from left circle scored on redirection from point; (3) 7-36 24-4 on PK pass from right circle to left point not intercepted by TOR D; (4) 13-55-81 2-14 WPG overplayed D near boards pass to point redirected in one touch; (5) 13-55-81 2-44 like previous quick pass from left board to point then G saved but it was under his skate eventually scored; (6) 13-55-81 2-44 classic attack shot from mid not defended by WPG D; (7) 55-9-81 4-6 with TOR EN, TOR D mysteriously fell in the mutual zone quick attach by WPG scored to EN",
         "topic": "UX",
         "tip_id": "0129"
+    },
+    {
+        "title": "You are watching stats for MIN at WPG game",
+        "username": "unusual to see no goals from 13-55-81 line just their contribution on 1st PP",
+        "tip": "(1) 13-55-27-81 44 PP (2) 36-19-9 2-44 (3) 91-7-62-9 4 PP (4) 7-91-27 44-2 (5) 7-91-62 6-4 ",
+        "topic": "UX",
+        "tip_id": "de30"
     }
 ]
