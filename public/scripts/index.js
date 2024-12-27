@@ -180,7 +180,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);                  
                   
                   if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data1.data[j].period===periodNumber)) {
-                    console.log('player on ice ', j)
+                    // console.log('player on ice ', j)
                     for (k=0;k<rosterSpots.length/5;k++) {if ((rosterSpots[5*k+2]===data1.data[j].firstName)&&(rosterSpots[5*k+3]===data1.data[j].lastName)) {
                     onIceArray.push(rosterSpots[5*k], rosterSpots[5*k+1], shiftStartSeconds, shiftEndSeconds)}
                   }} // end if and end k loop
@@ -192,14 +192,20 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       k=k+1}
                     else {onIceSplit[k].push(onIceArray[j])}
                   }
-                  goalTime.sort((a, b) => a - b); 
-                  onIceSplit2 = []
-                  console.log(goalTime, onIceSplit)
-                  // for (j=0;j<goalTime.length;j++) {
+                  goalTime.sort((a, b) => a - b);
+                  onIceSplit2 = [];
+                  // onIceSplit2.push(onIceSplit[0]);
+                  // if(onIceSplit[1][0]>onIceSplit[1]) {}
+                  console.log(goalTime, onIceSplit, onIceSplit2);
+                  for (j=0;j<onIceSplit2.length;j++) { if (j>0) {
+                    if (onIceSplit[j][0]<onIceSplit2[j][0]) {}
+                  else {onIceSplit2.splice(j,0,onIceSplit[j])}}
+                  else if (j=0){onIceSplit2.push(onIceSplit[j])}
+                  else {}
                   //   for (k=0;goalTime.length;k++) {if(goalTime[j]===onIceSplit[k][0]) {onIceSplit2.push([])
                   //     onIceSplit2[j].push(onIceSplit[k]);
                   //     onIceSplit2[k].shift()}}                    
-                  // }
+                  }
                     // console.log(goalTime, onIceSplit, onIceSplit2) 
                     var newGoal1 = document.createElement('span');
                     // console.log(data1.data[i], data1.data.length, rosterSpots);
