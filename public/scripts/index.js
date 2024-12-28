@@ -185,28 +185,31 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     onIceArray.push(rosterSpots[5*k], rosterSpots[5*k+1], shiftStartSeconds, shiftEndSeconds)}
                   }} // end if and end k loop
                     } // end j loop
-                    onIceSplit=[]; k=-1; goalTime=[]
+                    onIceSplit=[]; k=-1; goalTime=[[],[]]; onIceSplit2 = [];
                     for (j=0;j<onIceArray.length;j++) {
                     if (onIceArray[j]==='newGoal') {onIceSplit.push([]);
-                      goalTime.push(onIceArray[j+1]);
+                      goalTime[0].push(onIceArray[j+1]);
+                      goalTime[1].push(onIceArray[j+1])
                       k=k+1}
-                    else {onIceSplit[k].push(onIceArray[j])}
-                  }
-                  goalTime.sort((a, b) => a - b);
-                  onIceSplit2 = [];
+                    else {onIceSplit[k].push(onIceArray[j]);
+                    }
+                  } // end short j loop
+                  goalTime[0].sort((a, b) => a - b);
+                  // 
                   // onIceSplit2.push(onIceSplit[0]);
                   // if(onIceSplit[1][0]>onIceSplit[1]) {}
-                  console.log(goalTime, onIceSplit, onIceSplit2);
-                  for (j=0;j<onIceSplit2.length;j++) { if (j>0) {
-                    if (onIceSplit[j][0]<onIceSplit2[j][0]) {}
-                  else {onIceSplit2.splice(j,0,onIceSplit[j])}}
-                  else if (j=0){onIceSplit2.push(onIceSplit[j])}
-                  else {}
+                  // console.log(goalTime, onIceSplit, onIceSplit2, tempIndex);
+                  for (j=0;j<onIceSplit.length;j++) { // tempIndex=goalTime.indexOf(goalTime[1][j])
+                    // goalTime[1].push(onIceSplit[j][0])
                   //   for (k=0;goalTime.length;k++) {if(goalTime[j]===onIceSplit[k][0]) {onIceSplit2.push([])
-                  //     onIceSplit2[j].push(onIceSplit[k]);
-                  //     onIceSplit2[k].shift()}}                    
+                  console.log(goalTime[0].indexOf(goalTime[1][j]))
+                  if (j===totalScore-1) {
+                    console.log(onIceSplit[goalTime[0].indexOf(goalTime[1][j])], goalTime[0].indexOf(goalTime[1][j]))
+                  onIceSplit2[j].push(onIceSplit[goalTime[0].indexOf(goalTime[1][j])]);
                   }
-                    // console.log(goalTime, onIceSplit, onIceSplit2) 
+                  //     onIceSplit2[k].shift()}}
+                  }
+                    console.log(goalTime, onIceSplit, onIceSplit2) 
                     var newGoal1 = document.createElement('span');
                     // console.log(data1.data[i], data1.data.length, rosterSpots);
                     newGoal1.innerHTML = 'Period: ' + data1.data[i].period + ' Time: ' + data1.data[i].startTime + ' Scorer: ' + data1.data[i].lastName + ' Assists: ' + data1.data[i].eventDetails;
