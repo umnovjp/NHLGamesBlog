@@ -167,11 +167,12 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
               document.getElementById('schedule').appendChild(gameInfoHome);
               const totalScore = data.awayTeam.score + data.homeTeam.score;
               console.log(totalScore);
+              console.log(i)
      
                 periodNumber = data1.data[i].period;
                 goalTime = data1.data[i].startTime; 
                 goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
-                goalTimeSecondsAbsolute=goalTimeSeconds+periodNumber*1200;
+                goalTimeSecondsAbsolute=goalTimeSeconds+(periodNumber-1)*1200;
                 onIceArray.push('newGoal', goalTimeSecondsAbsolute)
                 for (j=0; j<data1.data.length;j++) { // j loop counts all shifts and checks if a player was on ice when a goal was scored
                   shiftStart = data1.data[j].startTime.split(":");
@@ -180,7 +181,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);                  
                   
                   if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data1.data[j].period===periodNumber)) {
-                    // console.log('player on ice ', j)
+                    console.log('player on ice ', j)
                     for (k=0;k<rosterSpots.length/5;k++) {if ((rosterSpots[5*k+2]===data1.data[j].firstName)&&(rosterSpots[5*k+3]===data1.data[j].lastName)) {
                     onIceArray.push(rosterSpots[5*k], rosterSpots[5*k+1], shiftStartSeconds, shiftEndSeconds)}
                   }} // end if and end k loop
@@ -189,32 +190,23 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     for (j=0;j<onIceArray.length;j++) {
                     if (onIceArray[j]==='newGoal') {onIceSplit.push([]);
                       goalTime[0].push(onIceArray[j+1]);
-                      goalTime[1].push(onIceArray[j+1])
+                      goalTime[1].push(onIceArray[j+1]);
                       k=k+1}
                     else {onIceSplit[k].push(onIceArray[j]);
                     }
                   } // end short j loop
                   goalTime[0].sort((a, b) => a - b);
-                  // 
-                  // onIceSplit2.push(onIceSplit[0]);
-                  // if(onIceSplit[1][0]>onIceSplit[1]) {}
-                  // console.log(goalTime, onIceSplit, onIceSplit2, tempIndex);
                   for (j=0;j<onIceSplit.length;j++) { // tempIndex=goalTime.indexOf(goalTime[1][j])
-                    // goalTime[1].push(onIceSplit[j][0])
                   //   for (k=0;goalTime.length;k++) {if(goalTime[j]===onIceSplit[k][0]) {onIceSplit2.push([])
-                  console.log(goalTime[0].indexOf(goalTime[1][j]))
-                  if (j===totalScore-1) {
-                    console.log(onIceSplit[goalTime[0].indexOf(goalTime[1][j])], goalTime[0].indexOf(goalTime[1][j]))
-                  onIceSplit2[j].push(onIceSplit[goalTime[0].indexOf(goalTime[1][j])]);
+                  console.log(goalTime[1].indexOf(goalTime[0][j]));
+                  onIceSplit2.push(onIceSplit[goalTime[1].indexOf(goalTime[0][j])]);
                   }
-                  //     onIceSplit2[k].shift()}}
-                  }
-                    console.log(goalTime, onIceSplit, onIceSplit2) 
+                    console.log(goalTime, onIceSplit, onIceSplit2);
                     var newGoal1 = document.createElement('span');
                     // console.log(data1.data[i], data1.data.length, rosterSpots);
                     newGoal1.innerHTML = 'Period: ' + data1.data[i].period + ' Time: ' + data1.data[i].startTime + ' Scorer: ' + data1.data[i].lastName + ' Assists: ' + data1.data[i].eventDetails;
                       document.getElementById('gameInfoHome').appendChild(newGoal1);
-                    console.log(onIceArray, rosterSpots)
+                   //  console.log(onIceArray, rosterSpots)
               }            
               } // end i loop          
             }); // end third second .then
