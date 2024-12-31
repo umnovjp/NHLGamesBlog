@@ -432,5 +432,12 @@
         "tip": "(5) EDM G tried to move puck away but it was held near blue line shot from blue line off Nurse' stick (6) on fast attack, pass from left G line to right circle one timed; (7) after boards battle behind the G line shot from near left post gets through; (8) ANA scored to EN",
         "topic": "UX",
         "tip_id": "b18d"
+    },
+    {
+        "title": "You are watching stats for MIN at DAL game",
+        "username": "Stars blew up 2:0 lead in mid 3rd. Two goals scored by Johnson line. After 2 periods shots were 22x8 stars. But #21 was on ice for 2 goals against. #27 had injury left the game: puck in the face. Definitely goals 1 and 3 against were preventable",
+        "tip": "(1) 53-63-14 23-5 quick attack after 2 passes from D zone #63 scored on 1x1; (2) 53-63-14 46-6 #46 won boards battle -> fast 3x2 attack from D zone; (3) 95-15-21 23-5 fast 2x2 by MIN pass from right blue line to top left circle scored on hold and release #23 did not intercept pass but #5 fell to block shot but did not block; (4) 24-22-21 46-6 pass from right circle to blue line scored on one timer deflected off MIN F foot; (5) 53-95 4 wraparound by MIN D on 3x3 #53 was just watching it was 1st shot in OT",
+        "topic": "UX",
+        "tip_id": "728b"
     }
 ]
