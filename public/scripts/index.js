@@ -165,10 +165,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
               { const gameInfoHome = document.createElement('section');
               gameInfoHome.setAttribute('id', 'gameInfoHome');
               document.getElementById('schedule').appendChild(gameInfoHome);
-              // const totalScore = data.awayTeam.score + data.homeTeam.score;
-              // console.log(totalScore);
-              // console.log(i)
-     
+                
                 periodNumber = data1.data[i].period;
                 goalTime = data1.data[i].startTime; 
                 goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
@@ -198,31 +195,30 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   goalTime[0].sort((a, b) => a - b);
                  for (j=0;j<onIceSplit.length;j++) { // tempIndex=goalTime.indexOf(goalTime[1][j])
                   //   for (k=0;goalTime.length;k++) {if(goalTime[j]===onIceSplit[k][0]) {onIceSplit2.push([])
-                  console.log(onIceSplit.length);
+                  // console.log(onIceSplit.length);
                   onIceSplit2.push(onIceSplit[goalTime[1].indexOf(goalTime[0][j])]);
-                    for (k=0;k<(onIceSplit2[j].length-1)/4;k++) {onIceLineup = [[],[],[],[]]
-                      console.log(j, k, onIceSplit2[j][4*k+2], onIceSplit2[j][4*k+1])
-                      if (data.homeTeam.id===onIceSplit2[j][4*k+1]) {for (l=0;l<rosterSpots.length/4;l++) {
-                        if ((data.homeTeam.id===rosterSpots[4*l])&&(rosterSpots[4*l+2]==='D')) {onIceLineup[2].push(onIceSplit2[j][4*k+2])}
-                         else if ((data.homeTeam.id===rosterSpots[4*l])&&((rosterSpots[4*l+2]==='R')||(rosterSpots[4*l+2]==='C')||(rosterSpots[4*l+2]==='L'))) {onIceLineup[3].push(onIceSplit2[j][4*k+2])}
-                      }
+                  onIceLineup = [[],[],[],[]]
+                  //   for (k=0;k<(onIceSplit2[j].length-1)/4;k++) {
+                  //     // console.log(j, k, onIceSplit2[j][4*k+2], onIceSplit2[j][4*k+1])
+                  //     if (data.homeTeam.id===onIceSplit2[j][4*k+1]) {for (l=0;l<rosterSpots.length/4;l++) {
+                  //       if ((data.homeTeam.id===rosterSpots[4*l])&&(rosterSpots[4*l+2]==='D')) {onIceLineup[2].push(onIceSplit2[j][4*k+2])}
+                  //        else if ((data.homeTeam.id===rosterSpots[4*l])&&((rosterSpots[4*l+2]==='R')||(rosterSpots[4*l+2]==='C')||(rosterSpots[4*l+2]==='L'))) {onIceLineup[3].push(onIceSplit2[j][4*k+2])}
+                  //     }
+                  //   }
+                  //   else if (data.awayTeam.id===onIceSplit2[j][4*k+1]) {}
+                  // }
+                  console.log(onIceSplit2[j]);
+                  for (k=0;k<(onIceSplit2[j].length-1)/4;k++) {
+                    if (data.homeTeam.id===onIceSplit2[j][4*k+1]) {for (l=0;l<rosterSpots.length/4;l++) {
+                      if ((data.homeTeam.id===rosterSpots[4*l])&&(rosterSpots[4*l+2]=='D')) {onIceLineup[2].push(onIceSplit2[j][4*k+2])}
+                       else if ((data.homeTeam.id===rosterSpots[4*l])&&((rosterSpots[4*l+2]=='R')||(rosterSpots[4*l+2]=='C')||(rosterSpots[4*l+2]=='L'))) {onIceLineup[3].push(onIceSplit2[j][4*k+2])}
                     }
-                    else if (data.awayTeam.id===onIceSplit2[j][4*k+1]) {}
+                  }
                   }
                   console.log(onIceLineup)
                 } // end j loop
                     console.log(goalTime, onIceSplit, onIceSplit2);
-                    // onIceLineup = [[],[],[],[]]
-                  //   for (j=0;j<(onIceSplit2[j].length-1)/4;j++) {if (data.homeTeam.id===onIceSplit2[j][4*j+1]) {for (k=0;k<rosterSpots.length/4;k++) {
-                  //     if ((data.homeTeam.id===rosterSpots[4*k])&&(rosterSpots[4*k+2]==='D')) {onIceLineup[2].push(rosterSpots[4*k+1])}
-                  //     else if ((data.homeTeam.id===rosterSpots[4*k])&&(rosterSpots[4*k+2]!='G')) {onIceLineup[3].push(rosterSpots[4*k+1])}
-                  //   }}
-                  // else if (data.awayTeam.id===onIceSplit2[j][4*j+1]) {for (k=0;k<rosterSpots.length/4;k++) {
-                  //     if ((data.awayTeam.id===rosterSpots[4*k])&&(rosterSpots[4*k+2]==='D')) {onIceLineup[0].push(rosterSpots[4*k+1])}
-                  //     else if ((data.awayTeam.id===rosterSpots[4*k])&&(rosterSpots[4*k+2]!='G')) {onIceLineup[1].push(rosterSpots[4*k+1])}
-                  //   }}
-                  // }
-                  
+                                      
                     var newGoal1 = document.createElement('span');
                     // console.log(data1.data[i], data1.data.length, rosterSpots);
                     newGoal1.innerHTML = 'Period: ' + data1.data[i].period + ' Time: ' + data1.data[i].startTime + ' Scorer: ' + data1.data[i].lastName + ' Assists: ' + data1.data[i].eventDetails;
