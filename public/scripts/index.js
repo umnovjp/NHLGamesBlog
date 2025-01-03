@@ -204,7 +204,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   // }, 1000)
                   // OnIcePlayers='';
                   for (k=0;k<data.rosterSpots.length/4;k++) { for (l=0;l<(onIceSplit2[j].length-1)/4;l++) {
-                    if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='G')&&(data.rosterSpots[k].teamId===data.awayTeam.id))
+                    if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='G')&&(data.rosterSpots[k].teamId===data.awayTeam.id))
+                    {console.log(onIceSplit2[j][4*l+3])}
+                    if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+3])&&(data.rosterSpots[k].positionCode==='G')&&(data.rosterSpots[k].teamId===data.awayTeam.id))
                     {
                     onIcePlayers=data.rosterSpots[k].sweaterNumber.toString();
                     console.log(onIcePlayers)
