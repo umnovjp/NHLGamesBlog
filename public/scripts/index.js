@@ -195,53 +195,47 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   goalTime[0].sort((a, b) => a - b);
                  for (j=0;j<onIceSplit.length;j++) { // tempIndex=goalTime.indexOf(goalTime[1][j])
                   //   for (k=0;goalTime.length;k++) {if(goalTime[j]===onIceSplit[k][0]) {onIceSplit2.push([])
-                  // console.log(onIceSplit.length);
+                  onIceLineup = [[],[]]
                   onIceSplit2.push(onIceSplit[goalTime[1].indexOf(goalTime[0][j])]);
-                  // onIceLineup = [[],[],[],[]]
-                  // console.log(onIceSplit2[j])
-                  // setTimeout (() => {
-                  //   console.log(onIceSplit2[j]);
-                  // }, 1000)
-                  // OnIcePlayers='';
-                  for (k=0;k<data.rosterSpots.length/4;k++) { for (l=0;l<(onIceSplit2[j].length-1)/4;l++) {
-                    if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='G')&&(data.rosterSpots[k].teamId===data.awayTeam.id))
-                    {console.log(onIceSplit2[j][4*l+3])}
-                    if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+3])&&(data.rosterSpots[k].positionCode==='G')&&(data.rosterSpots[k].teamId===data.awayTeam.id))
-                    {
-                    onIcePlayers=data.rosterSpots[k].sweaterNumber.toString();
-                    console.log(onIcePlayers)
-                    }
-                  }
-                  //   console.log(j, k, onIceSplit2[j][4*k+2], onIceSplit2[j][4*k+1])
-                  //   if (data.homeTeam.id===onIceSplit2[j][4*k+1]) { console.log(j, k, onIceSplit2[j][4*k+2], onIceSplit2[j][4*k+1])
-                  //     for (l=0;l<rosterSpots.length/4;l++) {
-                  //     if ((data.homeTeam.id===rosterSpots[4*l])&&(rosterSpots[4*l+2]=='D')) {
-                  //       console.log('l cycle', j, k, l, rosterSpots[4*l+1])
-                  //       onIceLineup[2].push(rosterSpots[4*l+1])}
-                  //      else if ((data.homeTeam.id===rosterSpots[4*l])&&((rosterSpots[4*l+2]!='G'))) {onIceLineup[3].push(rosterSpots[4*l+1])}
-                  //   }
-                  // }
-                  }
-                } // end j loop
-                onIceLineup = [[],[],[],[]]
-                for (j=0;j<onIceSplit.length;j++) { // tempIndex=goalTime.indexOf(goalTime[1][j])
-                  //   for (k=0;goalTime.length;k++) {if(goalTime[j]===onIceSplit[k][0]) {onIceSplit2.push([])
-                  // console.log(onIceSplit.length);
-                  // onIceSplit2.push(onIceSplit[goalTime[1].indexOf(goalTime[0][j])]);
-                  
-                  console.log(onIceSplit2[j], j)
-                    for (k=0;k<(onIceSplit2[j].length-1)/4;k++) { console.log(j, k, onIceSplit2[j][4*k+2], onIceSplit2[j][4*k+1])
-                    if (data.homeTeam.id===onIceSplit2[j][4*k+1]) {
-                      for (l=0;l<rosterSpots.length/4;l++) {
-                      if ((data.homeTeam.id===rosterSpots[4*l])&&(rosterSpots[4*l+2]=='D')) { 
-                        // console.log('l cycle', rosterSpots[4*l+2], typeof rosterSpots[4*l+2])
-                        onIceLineup[2].push(onIceSplit2[j][4*k+2])}
-                       else if ((data.homeTeam.id===rosterSpots[4*l])&&((rosterSpots[4*l+2]!='G'))) {onIceLineup[3].push(onIceSplit2[j][4*k+2])}
-                    }
-                  }
-                  }
+                    for (k=0;k<data.rosterSpots.length;k++) { 
+                    for (l=0;l<(onIceSplit2[j].length-1)/4;l++) {
+                    // if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].positionCode==='G')&&(data.rosterSpots[k].teamId===data.awayTeam.id))
+                    // {console.log(onIceSplit2[j][4*l+3])}                    
+                    if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='G')&&(data.rosterSpots[k].teamId===data.awayTeam.id))
+                    { onIceLineup[0].push(onIceSplit2[j][4*l+2], 'G') }                     
+                    else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='D')&&(data.rosterSpots[k].teamId===data.awayTeam.id))
+                    { onIceLineup[0].push(onIceSplit2[j][4*l+2], 'D')}
+                    else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&((data.rosterSpots[k].positionCode==='C')||(data.rosterSpots[k].positionCode==='R')||(data.rosterSpots[k].positionCode==='L'))&&(data.rosterSpots[k].teamId===data.awayTeam.id))
+                    { onIceLineup[0].push(onIceSplit2[j][4*l+2], 'F')}
+                    else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='G')&&(data.rosterSpots[k].teamId===data.homeTeam.id))
+                    { onIceLineup[1].push(onIceSplit2[j][4*l+2], 'G') }                     
+                    else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='D')&&(data.rosterSpots[k].teamId===data.homeTeam.id))
+                    { onIceLineup[1].push(onIceSplit2[j][4*l+2], 'D')}
+                    else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&((data.rosterSpots[k].positionCode==='C')||(data.rosterSpots[k].positionCode==='R')||(data.rosterSpots[k].positionCode==='L'))&&(data.rosterSpots[k].teamId===data.homeTeam.id))
+                    { onIceLineup[1].push(onIceSplit2[j][4*l+2], 'F')}
+                  }} // end k loop
+
                   console.log(onIceLineup)
                 } // end j loop
+                // onIceLineup = [[],[],[],[]]
+                // for (j=0;j<onIceSplit.length;j++) { // tempIndex=goalTime.indexOf(goalTime[1][j])
+                //   //   for (k=0;goalTime.length;k++) {if(goalTime[j]===onIceSplit[k][0]) {onIceSplit2.push([])
+                //   // console.log(onIceSplit.length);
+                //   // onIceSplit2.push(onIceSplit[goalTime[1].indexOf(goalTime[0][j])]);
+                  
+                //   console.log(onIceSplit2[j], j)
+                //     for (k=0;k<(onIceSplit2[j].length-1)/4;k++) { console.log(j, k, onIceSplit2[j][4*k+2], onIceSplit2[j][4*k+1])
+                //     if (data.homeTeam.id===onIceSplit2[j][4*k+1]) {
+                //       for (l=0;l<rosterSpots.length/4;l++) {
+                //       if ((data.homeTeam.id===rosterSpots[4*l])&&(rosterSpots[4*l+2]=='D')) { 
+                //         // console.log('l cycle', rosterSpots[4*l+2], typeof rosterSpots[4*l+2])
+                //         onIceLineup[2].push(onIceSplit2[j][4*k+2])}
+                //        else if ((data.homeTeam.id===rosterSpots[4*l])&&((rosterSpots[4*l+2]!='G'))) {onIceLineup[3].push(onIceSplit2[j][4*k+2])}
+                //     }
+                //   }
+                //   }
+                //   console.log(onIceLineup)
+                // } // end j loop
                     console.log(goalTime, onIceSplit, onIceSplit2);
                                       
                     var newGoal1 = document.createElement('span');
