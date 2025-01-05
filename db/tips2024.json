@@ -467,5 +467,12 @@
         "tip": "(1) 17-62 7-8 PK pass from blue line to left corner then to right point one timed; (2) 29-96-62 42-67 fast attack almost 1x1; (3) 62-94 7-8 PK similar to first goal but opposite direction: pass from right corner to left point redirected; (4) 29-96-27 7-8 individual effort by #8 but unclear why BUF F did not try to prevent; (5) 37-20-62 49-42 shot from blue line scored on rebound; (6) 17-25-94 49-42 BUF F pushed on COL G fell on him that was injury BUF F scored on wraparound; (7) 29-27-96-27 8 5x3 pass from left circle to right dot scored one timer; (8) 29-96-27 7-67 COL D dispossessed behind G line pass from right corner to right point scored on second rebound; (9) 29-96-27-62 7-8 6x5 one timer from blue line; (10) 29-96-27-62 7-8 6x5 pass from left circle one timed from mid; (11) 29-97 7 3x3 BUF suddenly lost puck 1x1 score",
         "topic": "UX",
         "tip_id": "3b31"
+    },
+    {
+        "title": "You are watching stats for DET at WPG game",
+        "username": "1st period shots were 17x6 DET. No goals from WPG 13-55-81 line. DET played backup G. WPG hit DET iron at least twice.",
+        "tip": "(1) 15-17 4-64 PK pass from top left circle to right circle scored on hold and release; (2) 36-81 4-44 PK pass from blue line to top left circle one timed puck hit #4 stick; (3) 55-62-9 4-44 shot from blue line off DET D stick; (4) 7-62-9 4-44 kind of fast attack pass from left mid to right point scored one touch; (5) 7-62-27 2-4 shot pass from blue line redirected at point; (6) 13-17-55-27-81 44 EN DET D won board battle in right corner pass to M zone scored EN",
+        "topic": "UX",
+        "tip_id": "2f42"
     }
 ]
