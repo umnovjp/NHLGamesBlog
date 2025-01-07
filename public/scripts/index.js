@@ -211,13 +211,28 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                 } // end j loop
 
                 var lineUp =''
+                // var lineUp2='D'
+                var lineUpG =''
 
                 if (onIceLineup[0].indexOf('G')!=-1) {
-                lineUp = onIceLineup[0][onIceLineup[0].indexOf('G') - 1].toString()}
-                else {lineUp = ' '}
+                lineUpG = onIceLineup[0][onIceLineup[0].indexOf('G') - 1].toString()}
+                else {lineUpG = ' '}
                 for (j=0;j<onIceLineup[0].length;j++) {if (onIceLineup[0][j]==='D') { console.log('it is D', onIceLineup[0][j-1].toString())
-                  lineUp.concat(onIceLineup[0][onIceLineup[0].indexOf('D') - 1].toString())}}
-             
+                  if (j===onIceLineup[0].indexOf('D'))
+                {lineUp=lineUpG.concat(' ', onIceLineup[0][j-1].toString(), '-')}
+                else if (j===onIceLineup[0].lastIndexOf('D')) {lineUp=lineUpG.concat(onIceLineup[0][j-1].toString())}
+                else {lineUp=lineUpG.concat(onIceLineup[0][j-1].toString(), '-')}
+                  lineUpG=lineUp
+              }}
+                lineUpG=lineUp
+
+                for (j=0;j<onIceLineup[0].length;j++) {if (onIceLineup[0][j]==='F') {console.log('it is F', onIceLineup[0][j-1].toString())
+                if (j===onIceLineup[0].indexOf('F')) {
+                lineUp=lineUpG.concat(' ', onIceLineup[0][j-1].toString(), '-')}
+                else if (j===onIceLineup[0].lastIndexOf('F')) {lineUp=lineUpG.concat(onIceLineup[0][j-1].toString())}
+                else (lineUp=lineUpG.concat(onIceLineup[0][j-1].toString(), '-'))
+                lineUpG=lineUp} }
+             console.log(lineUp)
                     console.log(goalTime, onIceSplit, onIceSplit2);
                                       
                     var newGoal1 = document.createElement('span');
