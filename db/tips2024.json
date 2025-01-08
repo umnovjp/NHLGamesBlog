@@ -495,5 +495,12 @@
         "tip": "(1) 37-20-62 42-67 after boards battle quick 2x1 #67 did not intercept puck twice; (2) 37-20-62 7-42 shot from blue line off the bar -> G back -> net; (3) 20-16-62 7-49 shot from blue line with FLA D behind G line; (4) 29-96-62 7-8 EN shot from D zone after FO win",
         "topic": "UX",
         "tip_id": "548b"
+    },
+    {
+        "title": "You are watching stats for STL at MIN game",
+        "username": "MIN scored 2 goals in less than 3 first minutes. MIN had multiple chances later but allowed STL to score 4 straight. Including 3 goals in less than 4 minutes early in 2nd. Fleury was in goal for MIN but Binnington to STL. looks like MIN was in full control.",
+        "tip": "(1) shot from blue line screened; (2) four shots by MIN saved but scored on 4th rebound there may be G interference before that; (3) fast 3x2 by STL; (4) bad gola to give up by MIN 6 seconds into STL PP shot from top left circle; (5) fast 3x2 by STL shot from left circle; (6) complete mess at MIN defense scored by STL; (7) fast attack by MIN like 3x2 shot from right circle; (8) early in 3rd pass from right boards to left circle scored on hold and release; (9) sudden turnover in M zone 2x1 by MIN pass from top left circle to top right circle scored one timer; (10) puck intercepted scored to EN from M zone",
+        "topic": "UX",
+        "tip_id": "5043"
     }
 ]

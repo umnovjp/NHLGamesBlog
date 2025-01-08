@@ -208,10 +208,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     { onIceLineup[1].push(onIceSplit2[j][4*l+2], 'F')}
                   }} // end k loop
                   console.log(onIceLineup)
-                } // end j loop
+                               } // end j loop
 
                 var lineUp =''
-                // var lineUp2='D'
                 var lineUpG =''
 
                 if (onIceLineup[0].indexOf('G')!=-1) {
@@ -236,11 +235,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     console.log(goalTime, onIceSplit, onIceSplit2);
                                       
                     var newGoal1 = document.createElement('span');
-                    // console.log(data1.data[i], data1.data.length, rosterSpots);
                     newGoal1.innerHTML = 'Period: ' + data1.data[i].period + ' Time: ' + data1.data[i].startTime + ' Scorer: ' + data1.data[i].lastName + ' Assists: ' + data1.data[i].eventDetails + lineUp;
                       document.getElementById('gameInfoHome').appendChild(newGoal1);
-              }            
-              } // end i loop          
+              }} // end i loop          
             }); // end third second .then
           });
       } // end displayGamedata
