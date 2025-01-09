@@ -183,13 +183,13 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     onIceArray.push(rosterSpots[4*k], rosterSpots[4*k+1], shiftStartSeconds, shiftEndSeconds)}
                   }} // end if and end k loop
                     } // end j loop
-                    onIceSplit=[]; k=-1; goalTime=[[],[]]; onIceSplit2 = [];
+                    onIceSplit=[]; k=-1; goalTime=[[],[]]; onIceSplit2 = []; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) { if (onIceArray[j]==='newGoal') {onIceSplit.push([]);
                       goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1}
                     else {onIceSplit[k].push(onIceArray[j])}
                   } // end short j loop
                   goalTime[0].sort((a, b) => a - b);
-                 for (j=0;j<onIceSplit.length;j++) { 
+                 for (j=0;j<onIceSplit.length;j++) { // this loop is to order goals chronologically
                   onIceLineup = [[],[]]
                   onIceSplit2.push(onIceSplit[goalTime[1].indexOf(goalTime[0][j])]);
                     for (k=0;k<data.rosterSpots.length;k++) { 
@@ -216,10 +216,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                 if (onIceLineup[0].indexOf('G')!=-1) {
                 lineUpG = onIceLineup[0][onIceLineup[0].indexOf('G') - 1].toString()}
                 else {lineUpG = ' '}
-                for (j=0;j<onIceLineup[0].length;j++) {if (onIceLineup[0][j]==='D') { console.log('it is D', onIceLineup[0][j-1].toString())
+                for (j=0;j<onIceLineup[0].length;j++) {if (onIceLineup[0][j]==='D') { // console.log('it is D', onIceLineup[0][j-1].toString())
                   if (j===onIceLineup[0].indexOf('D'))
                 {lineUp=lineUpG.concat(' ', onIceLineup[0][j-1].toString(), '-')}
-                else if (j===onIceLineup[0].lastIndexOf('D')) {lineUp=lineUpG.concat(onIceLineup[0][j-1].toString())}
+                else if ((j===onIceLineup[0].lastIndexOf('D'))&&(onIceLineup[0].lastIndexOf('D')!=onIceLineup[0].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[0][j-1].toString())}
                 else {lineUp=lineUpG.concat(onIceLineup[0][j-1].toString(), '-')}
                   lineUpG=lineUp
               }}
@@ -237,7 +237,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     var newGoal1 = document.createElement('span');
                     newGoal1.innerHTML = 'Period: ' + data1.data[i].period + ' Time: ' + data1.data[i].startTime + ' Scorer: ' + data1.data[i].lastName + ' Assists: ' + data1.data[i].eventDetails + lineUp;
                       document.getElementById('gameInfoHome').appendChild(newGoal1);
-              }} // end i loop          
+              }} // end goal if statement and i loop          
             }); // end third second .then
           });
       } // end displayGamedata
