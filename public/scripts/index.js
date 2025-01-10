@@ -1,7 +1,7 @@
 const tipForm = document.getElementById('tip-form');
 const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
-onIceArray = []; 
+onIceArray = []; onIceArray2 = [];
 var game0 = document.getElementById('game0');
 
 const createCard = (tip) => {
@@ -208,30 +208,27 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     { onIceLineup[1].push(onIceSplit2[j][4*l+2], 'F')}
                   }} // end k loop
                   console.log(onIceLineup)
+                  for (k=0;k<2;k++) { var lineUp =''; var lineUpG ='';    
+                    if (onIceLineup[k].indexOf('G')!=-1) {lineUpG = onIceLineup[k][onIceLineup[k].indexOf('G') - 1].toString()}
+                    else {lineUpG = ' '}
+                    for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='D') { if (l===onIceLineup[k].indexOf('D'))
+                    {lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
+                    else if ((l===onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')!=onIceLineup[0].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
+                    else {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-')}
+                      lineUpG=lineUp }}
+                    lineUpG=lineUp
+    
+                    for (l=0;l<onIceLineup[0].length;l++) {if (onIceLineup[k][l]==='F') { //console.log('it is F', onIceLineup[0][j-1].toString())
+                    if (l===onIceLineup[k].indexOf('F')) {
+                    lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
+                    else if (l===onIceLineup[k].lastIndexOf('F')) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
+                    else (lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-'))
+                    lineUpG=lineUp} }
+                    onIceArray2.push(lineUp)
+                  } // end k loop                  
                                } // end j loop
-
-                var lineUp =''
-                var lineUpG =''
-
-                if (onIceLineup[0].indexOf('G')!=-1) {
-                lineUpG = onIceLineup[0][onIceLineup[0].indexOf('G') - 1].toString()}
-                else {lineUpG = ' '}
-                for (j=0;j<onIceLineup[0].length;j++) {if (onIceLineup[0][j]==='D') { // console.log('it is D', onIceLineup[0][j-1].toString())
-                  if (j===onIceLineup[0].indexOf('D'))
-                {lineUp=lineUpG.concat(' ', onIceLineup[0][j-1].toString(), '-')}
-                else if ((j===onIceLineup[0].lastIndexOf('D'))&&(onIceLineup[0].lastIndexOf('D')!=onIceLineup[0].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[0][j-1].toString())}
-                else {lineUp=lineUpG.concat(onIceLineup[0][j-1].toString(), '-')}
-                  lineUpG=lineUp
-              }}
-                lineUpG=lineUp
-
-                for (j=0;j<onIceLineup[0].length;j++) {if (onIceLineup[0][j]==='F') {console.log('it is F', onIceLineup[0][j-1].toString())
-                if (j===onIceLineup[0].indexOf('F')) {
-                lineUp=lineUpG.concat(' ', onIceLineup[0][j-1].toString(), '-')}
-                else if (j===onIceLineup[0].lastIndexOf('F')) {lineUp=lineUpG.concat(onIceLineup[0][j-1].toString())}
-                else (lineUp=lineUpG.concat(onIceLineup[0][j-1].toString(), '-'))
-                lineUpG=lineUp} }
-             console.log(lineUp)
+                               console.log(onIceArray2)
+      
                     console.log(goalTime, onIceSplit, onIceSplit2);
                                       
                     var newGoal1 = document.createElement('span');
@@ -242,7 +239,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           });
       } // end displayGamedata
     } // end first second .then
-    );
+    )
 }
 
 tipForm.addEventListener('submit', handleFormSubmit);
