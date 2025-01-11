@@ -159,12 +159,12 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
              return response.json();
             })
             .then(function (data1) {
-            console.log('I am in third then', data1);
+            console.log('I am in third then', data1); m=0
             
                for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
               { const gameInfoHome = document.createElement('section');
               gameInfoHome.setAttribute('id', 'gameInfoHome');
-              document.getElementById('schedule').appendChild(gameInfoHome);
+              document.getElementById('schedule').appendChild(gameInfoHome); 
                 
                 periodNumber = data1.data[i].period;
                 goalTime = data1.data[i].startTime; 
@@ -227,14 +227,14 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     onIceArray2.push(lineUp)
                   } // end k loop                  
                                } // end j loop
-                               console.log(onIceArray2)
-      
+                               console.log(onIceArray2);      
                     console.log(goalTime, onIceSplit, onIceSplit2);
                                       
-                    var newGoal1 = document.createElement('span');
-                    newGoal1.innerHTML = 'Period: ' + data1.data[i].period + ' Time: ' + data1.data[i].startTime + ' Scorer: ' + data1.data[i].lastName + ' Assists: ' + data1.data[i].eventDetails + lineUp;
+                    var newGoal1 = document.createElement('span');// onIceArray2[goalTime[1].indexOf(goalTime[0][m])] -2*onIceSplit.length+onIceArray2[goalTime[1].indexOf(goalTime[0][m])]+1
+                    newGoal1.innerHTML='Period: '+data1.data[i].period+' Time: '+data1.data[i].startTime+' Scorer: '+data1.data[i].lastName+' Assists: '+data1.data[i].eventDetails+' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+2*goalTime[1].indexOf(goalTime[0][m])]+' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+1+2*goalTime[1].indexOf(goalTime[0][m])]+m+' '+onIceArray2.length+' '+2*onIceSplit.length+' ';
                       document.getElementById('gameInfoHome').appendChild(newGoal1);
-              }} // end goal if statement and i loop          
+                               m=m+1
+                    }} // end goal if statement and i loop
             }); // end third second .then
           });
       } // end displayGamedata
