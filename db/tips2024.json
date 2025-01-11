@@ -523,5 +523,12 @@
         "tip": "(1) 37-16-20 49-67 individual effort by #16 who stole puck in D zone skated across the field scored backhand; (2) 17-25-48 42-49 COL D has turnover in D zone pass from boards CHI F overplayed COL G; (3) 20-37-62 7-49 COL turnover in M zone fast attack first shot saved scored on rebound; (4) 37-20-62 70-44 fast attack by CHI #98 scored from right circle similar to goal he scored against Stars",
         "topic": "UX",
         "tip_id": "e7f0"
+    },
+    {
+        "title": "You are watching stats for LAK at WPG game",
+        "username": "LAK scored in 1st but that was marginal offside overturned. WPG played 2nd G. Shots in 1st were just 6x4 WPG. LAK is the best D team in NHL now. Jets to play COL tomorrow. That was reason they did not really play",
+        "tip": "(1) 17-62-9 2-44 pass shot from blue line tipped from left circle; (2) 55-13-27-81 44 PP pass from right corner to right circle no look pass to left circle one timer; (3) OT not displayed yet LAK F holds waits scores from left dot",
+        "topic": "UX",
+        "tip_id": "7c55"
     }
 ]
