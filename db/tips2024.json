@@ -530,5 +530,19 @@
         "tip": "(1) 17-62-9 2-44 pass shot from blue line tipped from left circle; (2) 55-13-27-81 44 PP pass from right corner to right circle no look pass to left circle one timer; (3) OT not displayed yet LAK F holds waits scores from left dot",
         "topic": "UX",
         "tip_id": "7c55"
+    },
+    {
+        "title": "You are watching stats for BOS at FLA game",
+        "username": "FLA had 35x18 shots. And BOS is 0x5x1 in last 6. FLA had 100+ shot attempts.",
+        "tip": "(1) BOS PP shot from blue line blocked but scored on rebound from left point; (2) just after FLA PP expired shot pass from blue line hit post then another shot (3) BOS won puck battle behind G line pass from left circle to mid tipped in (4) pass from left G line to point tipped; (5) from close range; (6) 6x5 scored with 0.8 to go (7) pass from blue line on BOS PP deflected off skate",
+        "topic": "UX",
+        "tip_id": "45aa"
+    },
+    {
+        "title": "You are watching stats for BOS at FLA game",
+        "username": "FLA had 35x18 shots. And BOS is 0x5x1 in last 6. FLA had 100+ shot attempts. they just scored less. Both played top goalies. FLA did not back to back",
+        "tip": "(1) BOS PP shot from blue line blocked but scored on rebound from left point; (2) just after FLA PP expired shot pass from blue line hit post then another shot (3) BOS won puck battle behind G line pass from left circle to mid tipped in (4) pass from left G line to point tipped; (5) from close range; (6) 6x5 scored with 0.8 to go (7) pass from blue line on BOS PP deflected off skate",
+        "topic": "UX",
+        "tip_id": "0b65"
     }
 ]
