@@ -1,7 +1,7 @@
 const tipForm = document.getElementById('tip-form');
 const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
-onIceArray = []; onIceArray2 = [];
+onIceArray = []; onIceArray2 = []; goalsNumber = [];
 var game0 = document.getElementById('game0');
 
 const createCard = (tip) => {
@@ -98,7 +98,7 @@ const handleFormSubmit = (e) => {
   // Make a fetch POST request to the server
   postTip(newTip);
 };
-rosterSpots = [];
+rosterSpots = []; // to be deleted
 
 function selectGame() {var inputVal = document.getElementById('datepicker').value;
   var date = inputVal.split('/');
@@ -166,7 +166,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
               gameInfoHome.setAttribute('id', 'gameInfoHome');
               document.getElementById('schedule').appendChild(gameInfoHome); 
                 
-                periodNumber = data1.data[i].period;
+                periodNumber = data1.data[i].period; goalsNumber.push(i);
                 goalTime = data1.data[i].startTime; 
                 goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
                 goalTimeSecondsAbsolute=goalTimeSeconds+(periodNumber-1)*1200;
@@ -235,6 +235,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       document.getElementById('gameInfoHome').appendChild(newGoal1);
                                m=m+1
                     }} // end goal if statement and i loop
+                    console.log(goalsNumber)
+                    for (i=0;i<goalsNumber.length;i++) {}
             }); // end third second .then
           });
       } // end displayGamedata

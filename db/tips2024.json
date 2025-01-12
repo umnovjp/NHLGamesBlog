@@ -544,5 +544,12 @@
         "tip": "(1) BOS PP shot from blue line blocked but scored on rebound from left point; (2) just after FLA PP expired shot pass from blue line hit post then another shot (3) BOS won puck battle behind G line pass from left circle to mid tipped in (4) pass from left G line to point tipped; (5) from close range; (6) 6x5 scored with 0.8 to go (7) pass from blue line on BOS PP deflected off skate",
         "topic": "UX",
         "tip_id": "0b65"
+    },
+    {
+        "title": "You are watching stats for COL at WPG game",
+        "username": "WPG looked much stronger team. They scored early in 1st then added one in 2nd then EN in 3rd. Not sure why COL was that weak they won MIN 2 nights ago",
+        "tip": "(1) 17-9-27 52-54 puck win near boards in D zone fast attack like 2x2 COL #8 did not defend well shot from mid; (2) 55-13-81 2-44 pass from behind g line to mid -> pass to left point score; (3) 7-9-27 4-54 fast attack to EN late in 3rd",
+        "topic": "UX",
+        "tip_id": "cac0"
     }
 ]
