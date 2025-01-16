@@ -586,5 +586,12 @@
         "tip": "(1) 13-55-81 44-64 VAN G did not handle puck well behind G line caught out of position; (2) 13-5-81 54-4 fast attack by WPG shot pass from blue line scored on rebound; (3) 13-55-81 44-2 fast attack 1x1 scored; (4) 15-91-62 4-54 pass from right corner to blue line one timed; (5) 15-91-62 14-64 shot pass from right circle tipped saved scored on rebound; (6) 13-55-81-27 44 FO win on PP pass from G line to mid scored one timer; (7) 17-27-9 64-54 WPG was dispossessed in M zone then he carried the puck scored from right circle",
         "topic": "UX",
         "tip_id": "8fc4"
+    },
+    {
+        "title": "You are watching stats for NYR at COL game",
+        "username": "3rd COL line scored their first goal. #29 and #96 played on different lines. Then NYR scored SH. Then NYR 4th line scored on breakaway. COL equalized with 6x5 then won in OT with multiple chances on both sides in OT.",
+        "tip": "(1) 17-20-25 7-8 pass from right corner to right circle scored hold and release; (2) 29-96-27-62 8 SH terrible error by #8 on PP NYR F scored on 1x1; (3) 20-37-96 42-70 COL giveaway in A zone led to 2x1 by NYR; (4) 29-96-27-62 7-8 6x5 pass from left circle to mid one timed saved by scored on rebound from right point; (5) 29-25 7 in OT 3x3 pass from almost blue line to right circle one timed",
+        "topic": "UX",
+        "tip_id": "a805"
     }
 ]
