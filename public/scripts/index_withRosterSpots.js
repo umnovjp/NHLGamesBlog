@@ -98,7 +98,7 @@ const handleFormSubmit = (e) => {
   // Make a fetch POST request to the server
   postTip(newTip);
 };
-// rosterSpots = []; 
+rosterSpots = []; // to be deleted
 
 function selectGame() {var inputVal = document.getElementById('datepicker').value;
   var date = inputVal.split('/');
@@ -149,8 +149,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game';
             document.getElementById('gameInfo').appendChild(gameTitle);
    
-            // for (i=0; i<data.rosterSpots.length; i++) {rosterSpots.push(data.rosterSpots[i].teamId, data.rosterSpots[i].sweaterNumber, data.rosterSpots[i].positionCode, data.rosterSpots[i].playerId)}
-            // console.log(rosterSpots);
+            for (i=0; i<data.rosterSpots.length; i++) {rosterSpots.push(data.rosterSpots[i].teamId, data.rosterSpots[i].sweaterNumber, data.rosterSpots[i].positionCode, data.rosterSpots[i].playerId)}
+            console.log(rosterSpots);
                    
           var requestURL1 = 'https://cors-anywhere.herokuapp.com/api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
           fetch(requestURL1, {"method": "GET", "headers": {}
@@ -177,8 +177,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   
                   if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data1.data[j].period===periodNumber)) {
                   // console.log('player on ice ', j)
-                    for (k=0;k<data.rosterSpots.length;k++) {if (data.rosterSpots[k].playerId===data1.data[j].playerId) {
-                    onIceArray.push(data.rosterSpots[k].teamId, data.rosterSpots[k].sweaterNumber, shiftStartSeconds, shiftEndSeconds)}
+                    for (k=0;k<rosterSpots.length/4;k++) {if (rosterSpots[4*k+3]===data1.data[j].playerId) {
+                    onIceArray.push(rosterSpots[4*k], rosterSpots[4*k+1], shiftStartSeconds, shiftEndSeconds)}
                   }} // end if and end k loop
                     } // end j loop
                     onIceSplit=[]; k=-1; goalTime=[[],[]]; onIceSplit2 = []; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
