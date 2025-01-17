@@ -600,5 +600,12 @@
         "tip": "(1) just before the goal #53 had 1x1 but missed then shot by #63 from left circle scored on rebound from right point; (2) #11 lost puck in M zone quick 2x1 pass from left G line to point not intercepted by #4; (3) immediately after FO win shot pass from blue line tipped from right left circle; (4) #40 overplayed Miro #4 scored to EN",
         "topic": "UX",
         "tip_id": "41c4"
+    },
+    {
+        "title": "You are watching stats for EDM at COL game",
+        "username": "COL took 3:0 lead in 1st just after 5 shots. Then EDM scored 2 quick then 2 more. #29 and #96 played on different lines again",
+        "tip": "(1) battle near boards COL F took puck overplayed G; (2) clean shot from mid; (3) pass from D zone to mid #29 overplayed D scored like 1x1; (4) fast attack by EDM shot from top left circle scored off D stick; (5) shot from blue line redirected at point by #90; (6) shot from right circle scored on rebound from point; (7) pass from behind G line to top right circle one timer",
+        "topic": "UX",
+        "tip_id": "79f5"
     }
 ]
