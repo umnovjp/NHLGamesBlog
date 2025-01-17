@@ -122,8 +122,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
         gameName.addEventListener('click', displayGameData);
       }
 
-      function displayGameData(event) {
-        idx = event.currentTarget; idxString = event.currentTarget.textContent;
+      function displayGameData(event) { idx = event.currentTarget; idxString = event.currentTarget.textContent;
         idxArray = idxString.split(':'); idxNumber = idxArray[0].split(' ');
         console.log(idxNumber); gameNumber = idxNumber[1];
         const gameId = data2.gameWeek[0].games[gameNumber].id;
@@ -135,29 +134,23 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           .then(function (response) {
             return response.json();
           })
-          .then(function (data) {
-            console.log('I am in second then')
+          .then(function (data) { console.log('I am in second then')
             console.log(data);
-            const gameInfo = document.createElement('section');
-            gameInfo.setAttribute('id', 'gameInfo'); 
+            const gameInfo = document.createElement('section'); gameInfo.setAttribute('id', 'gameInfo'); 
             document.getElementById('schedule').appendChild(gameInfo);
             const gameInfoHome = document.createElement('section');
             gameInfoHome.setAttribute('id', 'gameInfoHome');
-            document.getElementById('schedule').appendChild(gameInfoHome);
-            console.log(data.rosterSpots);
+            document.getElementById('schedule').appendChild(gameInfoHome); console.log(data.rosterSpots);
             var gameTitle = document.createElement('h2'); gameTitle.textContent = '';
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game';
             document.getElementById('gameInfo').appendChild(gameTitle);
-   
-            // for (i=0; i<data.rosterSpots.length; i++) {rosterSpots.push(data.rosterSpots[i].teamId, data.rosterSpots[i].sweaterNumber, data.rosterSpots[i].positionCode, data.rosterSpots[i].playerId)}
-            // console.log(rosterSpots);
                    
           var requestURL1 = 'https://cors-anywhere.herokuapp.com/api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
           fetch(requestURL1, {"method": "GET", "headers": {}
           })
           .then(function (response) { return response.json();
             })
-            .then(function (data1) { console.log('I am in third then', data1); // m=0
+            .then(function (data1) { console.log('I am in third then', data1);
             
                for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
               { const gameInfoHome = document.createElement('section');
@@ -217,8 +210,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     lineUpG=lineUp
     
                     for (l=0;l<onIceLineup[0].length;l++) {if (onIceLineup[k][l]==='F') {
-                    if (l===onIceLineup[k].indexOf('F')) {
-                    lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
+                    if (l===onIceLineup[k].indexOf('F')) { lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
                     else if (l===onIceLineup[k].lastIndexOf('F')) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
                     else (lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-'))
                     lineUpG=lineUp} }
@@ -228,9 +220,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                                console.log(onIceArray2);      
                     console.log(goalTime, onIceSplit, onIceSplit2);                                      
                     // var newGoal1 = document.createElement('span');// onIceArray2[goalTime[1].indexOf(goalTime[0][m])] -2*onIceSplit.length+onIceArray2[goalTime[1].indexOf(goalTime[0][m])]+1
-                    // newGoal1.innerHTML='Period: '+data1.data[i].period+' Time: '+data1.data[i].startTime+' Scorer: '+data1.data[i].lastName+' Assists: '+data1.data[i].eventDetails+' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+2*goalTime[1].indexOf(goalTime[0][m])]+' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+1+2*goalTime[1].indexOf(goalTime[0][m])]+m+' '+onIceArray2.length+' '+2*onIceSplit.length+' ';
-                    //   document.getElementById('gameInfoHome').appendChild(newGoal1);
-                    //            m=m+1
+                    // newGoal1.innerHTML='Period: '+data1.data[i].period+' Time: '+data1.data[i].startTime+' Scorer: '+data1.data[i].lastName+' Assists: '+data1.data[i].eventDetails+' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+2*goalTime[1].indexOf(goalTime[0][m])]+' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+1+2*goalTime[1].indexOf(goalTime[0][m])];
                     }} // end goal if statement and i loop
                     console.log(goalsNumber)
                     for (i=0;i<goalsNumber.length;i++) { console.log(i, ' ', goalTime[1].indexOf(goalTime[0][i]), ' ', onIceArray2.length-2*onIceSplit.length+2*goalTime[1].indexOf(goalTime[0][i]), ' ', onIceArray2.length-2*onIceSplit.length+1+2*goalTime[1].indexOf(goalTime[0][i]))
