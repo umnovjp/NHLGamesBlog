@@ -181,10 +181,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   } // end short j loop
                   goalTime[0].sort((a, b) => a - b);
                  for (j=0;j<onIceSplit.length;j++) { // this loop is to order goals chronologically
-                  onIceLineup = [[],[]]
+                  onIceLineup = [[],[]];
                   onIceSplit2.push(onIceSplit[goalTime[1].indexOf(goalTime[0][j])]);
-                    for (k=0;k<data.rosterSpots.length;k++) { 
-                    for (l=0;l<(onIceSplit2[j].length-1)/4;l++) {                 
+                    for (k=0;k<data.rosterSpots.length;k++) { for (l=0;l<(onIceSplit2[j].length-1)/4;l++) {                 
                     if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='G')&&(data.rosterSpots[k].teamId===data.awayTeam.id))
                     { onIceLineup[0].push(onIceSplit2[j][4*l+2], 'G') }                     
                     else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='D')&&(data.rosterSpots[k].teamId===data.awayTeam.id))
@@ -216,11 +215,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     lineUpG=lineUp} }
                     onIceArray2.push(lineUp)
                   } // end k loop                  
-                               } // end j loop
-                               console.log(onIceArray2);      
+                               } // end j loop    
                     console.log(goalTime, onIceSplit, onIceSplit2);                                      
-                    // var newGoal1 = document.createElement('span');// onIceArray2[goalTime[1].indexOf(goalTime[0][m])] -2*onIceSplit.length+onIceArray2[goalTime[1].indexOf(goalTime[0][m])]+1
-                    // newGoal1.innerHTML='Period: '+data1.data[i].period+' Time: '+data1.data[i].startTime+' Scorer: '+data1.data[i].lastName+' Assists: '+data1.data[i].eventDetails+' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+2*goalTime[1].indexOf(goalTime[0][m])]+' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+1+2*goalTime[1].indexOf(goalTime[0][m])];
                     }} // end goal if statement and i loop
                     console.log(goalsNumber)
                     for (i=0;i<goalsNumber.length;i++) { console.log(i, ' ', goalTime[1].indexOf(goalTime[0][i]), ' ', onIceArray2.length-2*onIceSplit.length+2*goalTime[1].indexOf(goalTime[0][i]), ' ', onIceArray2.length-2*onIceSplit.length+1+2*goalTime[1].indexOf(goalTime[0][i]))
