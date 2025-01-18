@@ -607,5 +607,12 @@
         "tip": "(1) battle near boards COL F took puck overplayed G; (2) clean shot from mid; (3) pass from D zone to mid #29 overplayed D scored like 1x1; (4) fast attack by EDM shot from top left circle scored off D stick; (5) shot from blue line redirected at point by #90; (6) shot from right circle scored on rebound from point; (7) pass from behind G line to top right circle one timer",
         "topic": "UX",
         "tip_id": "79f5"
+    },
+    {
+        "title": "You are watching stats for SEA at WPG game",
+        "username": "SEA played Daccord who is 1st G for them. Second goal lineup incorrect #13 is missing. Shots were 19x5 WPG in 2nd 9x3 in 3rd. Did SEA expect to get tie?",
+        "tip": "(1) fast attack by SEA like 2x1 pass from right G line to point redirected; (2) PP shot from right circle on rebound from left circle; (3) with 27 seconds left pass from left circle to almost blue line scored hold and release SEA G was screened",
+        "topic": "UX",
+        "tip_id": "1578"
     }
 ]
