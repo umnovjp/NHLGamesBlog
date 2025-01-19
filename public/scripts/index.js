@@ -179,6 +179,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1}
                     else {onIceSplit[k].push(onIceArray[j])}
                   } // end short j loop
+                  // console.log(onIceArray)
                   goalTime[0].sort((a, b) => a - b);
                  for (j=0;j<onIceSplit.length;j++) { // this loop is to order goals chronologically
                   onIceLineup = [[],[]];
@@ -201,25 +202,35 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   for (k=0;k<2;k++) { var lineUp =''; var lineUpG ='';    
                     if (onIceLineup[k].indexOf('G')!=-1) {lineUpG = onIceLineup[k][onIceLineup[k].indexOf('G') - 1].toString()}
                     else {lineUpG = ' '}
-                    for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='D') { if (l===onIceLineup[k].indexOf('D'))
-                    {lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
-                    else if ((l===onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')!=onIceLineup[0].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
-                    else {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-')}
-                      lineUpG=lineUp}}
+                    for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='D') { 
+                      if (l===onIceLineup[k].indexOf('D')) { console.log(l, onIceLineup[k].lastIndexOf('D'))
+                      if ((l===onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')===onIceLineup[k].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
+                      else if (l!=onIceLineup[k].lastIndexOf('D')) {lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
+                      else if ((l=onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')!=onIceLineup[k].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
+                      else {console.log('exception')}
+                    }
+                     
+                      // if (l===onIceLineup[k].indexOf('D'))
+                    // {lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
+                    // else if ((l===onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')!=onIceLineup[0].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
+                    // else {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-')}
+                      lineUpG=lineUp
+                    }
+                  } // end l loop
                     lineUpG=lineUp
     
-                    for (l=0;l<onIceLineup[0].length;l++) {if (onIceLineup[k][l]==='F') {
+                    for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='F') {
                     if (l===onIceLineup[k].indexOf('F')) { lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
                     else if (l===onIceLineup[k].lastIndexOf('F')) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
                     else (lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-'))
                     lineUpG=lineUp} }
                     onIceArray2.push(lineUp)
-                  } // end k loop                  
-                               } // end j loop    
+                  } // end k loop
+                  } // end j loop    
                     console.log(goalTime, onIceSplit, onIceSplit2);                                      
                     }} // end goal if statement and i loop
                     console.log(goalsNumber)
-                    for (i=0;i<goalsNumber.length;i++) { console.log(i, ' ', goalTime[1].indexOf(goalTime[0][i]), ' ', onIceArray2.length-2*onIceSplit.length+2*goalTime[1].indexOf(goalTime[0][i]), ' ', onIceArray2.length-2*onIceSplit.length+1+2*goalTime[1].indexOf(goalTime[0][i]))
+                    for (i=0;i<goalsNumber.length;i++) { // console.log(i, ' ', goalTime[1].indexOf(goalTime[0][i]), ' ', onIceArray2.length-2*onIceSplit.length+2*goalTime[1].indexOf(goalTime[0][i]), ' ', onIceArray2.length-2*onIceSplit.length+1+2*goalTime[1].indexOf(goalTime[0][i]))
                       var newGoal2 = document.createElement('span');
                     newGoal2.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails
                     +' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+2*i]+' '+onIceArray2[1+onIceArray2.length-2*onIceSplit.length+2*i];

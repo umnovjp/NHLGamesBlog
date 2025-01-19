@@ -3,7 +3,7 @@ This code allows user to post NHL game reviews online displaying stats that I pa
 
 This script has been developed after another NHL stats page I created earlier: https://github.com/umnovjp/NHLStats. But it is built to post blog online. It has less stats functionality built in. Link above has data for penalties, faceoffs, shots, blocked shots, goals, missed shots. And I could add more data in the future.
 
-There is no live page version. At least for now. If you would like to try it, download from github to local folder, then run it from your laptop. Still this repo has great examples of fs.readfile and fs.writefile. To start program, type node server.js in terminal. Then open http://localhost:3001 in your browser. 
+There is no live page version. At least for now. If you would like to try it, download from github to local folder, then run it from your laptop. Still this repo has great examples of fs.readfile and fs.writefile. To start program, type node server.js in terminal. Then open http://localhost:3001 in your browser.
 
 Current version was developed to use express.js to create a new blog. Later, I used current files to use databases instead of writing to file. Here is this repo: https://github.com/umnovjp/NHLGamesBlog. And in the future I will use REACT.js for live updates. And another plan in the future is to add shift chart analytics. 
 
