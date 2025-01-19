@@ -202,21 +202,27 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   for (k=0;k<2;k++) { var lineUp =''; var lineUpG ='';    
                     if (onIceLineup[k].indexOf('G')!=-1) {lineUpG = onIceLineup[k][onIceLineup[k].indexOf('G') - 1].toString()}
                     else {lineUpG = ' '}
-                    for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='D') { 
-                      if (l===onIceLineup[k].indexOf('D')) { console.log(l, onIceLineup[k].lastIndexOf('D'))
-                      if ((l===onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')===onIceLineup[k].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
-                      else if (l!=onIceLineup[k].lastIndexOf('D')) {lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
-                      else if ((l=onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')!=onIceLineup[k].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
-                      else {console.log('exception')}
-                    }
+                    for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='D') { if (l===onIceLineup[k].indexOf('D'))
+                    {lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
+                    else if ((l===onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')!=onIceLineup[0].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
+                    else {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-')}
+                      lineUpG=lineUp}}
+                  //   for (l=0;l<onIceLineup[k].length;l++) {
+                  //   //   if (onIceLineup[k][l]==='D') { 
+                  //   //   if (l===onIceLineup[k].indexOf('D')) { console.log(l, onIceLineup[k].lastIndexOf('D'))
+                  //   //   if ((l===onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')===onIceLineup[k].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
+                  //   //   else if (l!=onIceLineup[k].lastIndexOf('D')) {lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
+                  //   //   else if ((l=onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')!=onIceLineup[k].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
+                  //   //   else {console.log('exception')}
+                  //   // }}
                      
-                      // if (l===onIceLineup[k].indexOf('D'))
-                    // {lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
-                    // else if ((l===onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')!=onIceLineup[0].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
-                    // else {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-')}
-                      lineUpG=lineUp
-                    }
-                  } // end l loop
+                  //     if (l===onIceLineup[k].indexOf('D'))
+                  //   {lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
+                  //   else if ((l===onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')!=onIceLineup[0].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
+                  //   else {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-')}
+                  //     lineUpG=lineUp
+                    
+                  // } // end l loop
                     lineUpG=lineUp
     
                     for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='F') {
