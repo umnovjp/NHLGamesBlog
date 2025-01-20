@@ -3,6 +3,10 @@ const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
 onIceArray = []; onIceArray2 = []; goalsNumber = [];
 var game0 = document.getElementById('game0');
+const frequency = (arr, item) => {let count = 0;
+  for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
+  return count;
+};
 
 const createCard = (tip) => {
   // Create card
@@ -200,29 +204,22 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   }} // end k loop
                   console.log(onIceLineup);
                   for (k=0;k<2;k++) { var lineUp =''; var lineUpG ='';    
-                    if (onIceLineup[k].indexOf('G')!=-1) {lineUpG = onIceLineup[k][onIceLineup[k].indexOf('G') - 1].toString()}
+                    if (onIceLineup[k].indexOf('G')!=-1) {lineUpG = onIceLineup[k][onIceLineup[k].indexOf('G') - 1].toString()+' '}
                     else {lineUpG = ' '}
-                    for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='D') { if (l===onIceLineup[k].indexOf('D'))
-                    {lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
-                    else if ((l===onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')!=onIceLineup[0].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
-                    else {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-')}
-                      lineUpG=lineUp}}
-                  //   for (l=0;l<onIceLineup[k].length;l++) {
-                  //   //   if (onIceLineup[k][l]==='D') { 
-                  //   //   if (l===onIceLineup[k].indexOf('D')) { console.log(l, onIceLineup[k].lastIndexOf('D'))
-                  //   //   if ((l===onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')===onIceLineup[k].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
-                  //   //   else if (l!=onIceLineup[k].lastIndexOf('D')) {lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
-                  //   //   else if ((l=onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')!=onIceLineup[k].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
-                  //   //   else {console.log('exception')}
-                  //   // }}
-                     
-                  //     if (l===onIceLineup[k].indexOf('D'))
-                  //   {lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
-                  //   else if ((l===onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')!=onIceLineup[0].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
-                  //   else {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-')}
-                  //     lineUpG=lineUp
-                    
-                  // } // end l loop
+                    // console.log('freq', frequency(onIceLineup[k], 'D'))
+                    for (l=1;l<onIceLineup[k].length;l++) { if (frequency(onIceLineup[k], 'D')===1) {
+                      lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
+                    else { if (onIceLineup[k][l]==='D') {
+                      if (l==onIceLineup[k].lastIndexOf('D')) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
+                  else {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-')}
+                  lineUpG=lineUp
+                }}
+                    //   if (onIceLineup[k][l]==='D') { if (l===onIceLineup[k].indexOf('D'))
+                    // {lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
+                    // else if ((l===onIceLineup[k].lastIndexOf('D'))&&(onIceLineup[k].lastIndexOf('D')!=onIceLineup[0].indexOf('D'))) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
+                    // else {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-')}
+                    //   lineUpG=lineUp}
+                    }
                     lineUpG=lineUp
     
                     for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='F') {
