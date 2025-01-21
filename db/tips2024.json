@@ -635,5 +635,12 @@
         "tip": "(1) WPG lost board battle near right boards pass to right blue line one timed; (2) on PP fast attack pass from left circle to top right circle one timed; (3) after FO win shot pass from blue line redirected from mid; (4) after boards battle shot from D zone to EN",
         "topic": "UX",
         "tip_id": "0c21"
+    },
+    {
+        "title": "You are watching stats for WPG at UTA game",
+        "username": "Utah played 2nd G #39. Utah scored 4 quick late in 2nd early in 3rd in 8 minutes.",
+        "tip": "(1) pass from left circle to blue line one timed; (2) fast 2x1 by Utah; (3) another fast 2x1 by Utah; (4) fast 3x2 by Utah; (5) fast attack by WPG shot from top right circle through G legs; (6) pass from right corner to top right circle one timed while Utah player was out without his stick; (7) turnover shot to EN",
+        "topic": "UX",
+        "tip_id": "1961"
     }
 ]
