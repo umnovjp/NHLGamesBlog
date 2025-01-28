@@ -102,12 +102,10 @@ const handleFormSubmit = (e) => {
   // Make a fetch POST request to the server
   postTip(newTip);
 };
-// rosterSpots = []; 
 
 function selectGame() {var inputVal = document.getElementById('datepicker').value;
   var date = inputVal.split('/');
   var formatted = date[2] + '-' + date[0] + '-' + date[1];
-  console.log(formatted);
   var requestURL = 'https://cors-anywhere.herokuapp.com/https://api-web.nhle.com/v1/schedule/'+ formatted;
   console.log(requestURL);
   fetch(requestURL, {
@@ -210,26 +208,21 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else { if (onIceLineup[k][l]==='D') {
                       if (l==onIceLineup[k].lastIndexOf('D')) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
                   else {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-')}
-                  lineUpG=lineUp
-                }}
-                    }
+                  lineUpG=lineUp }}}
                     lineUpG=lineUp
     
                     for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='F') {
                     if (l===onIceLineup[k].indexOf('F')) { lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
                     else if (l===onIceLineup[k].lastIndexOf('F')) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
                     else (lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-'))
-                    lineUpG=lineUp} }
+                    lineUpG=lineUp}}
                     onIceArray2.push(lineUp)
-                  } // end k loop
-                  } // end j loop    
+                  }} // end k,j loop    
                     }} // end goal if statement and i loop
-                    for (i=0;i<goalsNumber.length;i++) { // console.log(i, ' ', goalTime[1].indexOf(goalTime[0][i]), ' ', onIceArray2.length-2*onIceSplit.length+2*goalTime[1].indexOf(goalTime[0][i]), ' ', onIceArray2.length-2*onIceSplit.length+1+2*goalTime[1].indexOf(goalTime[0][i]))
-                      var newGoal2 = document.createElement('span');
+                    for (i=0;i<goalsNumber.length;i++) { var newGoal2 = document.createElement('span');
                     newGoal2.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails
                     +' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+2*i]+' '+onIceArray2[1+onIceArray2.length-2*onIceSplit.length+2*i];
-                      document.getElementById('gameInfoHome').appendChild(newGoal2);
-                    }
+                      document.getElementById('gameInfoHome').appendChild(newGoal2) }
             }); // end third second .then
           });
       } // end displayGamedata
