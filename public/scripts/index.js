@@ -222,7 +222,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     for (i=0;i<goalsNumber.length;i++) { var newGoal2 = document.createElement('span');
                     newGoal2.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails
                     +' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+2*i]+' '+onIceArray2[1+onIceArray2.length-2*onIceSplit.length+2*i];
-                      document.getElementById('gameInfoHome').appendChild(newGoal2) }
+                      document.getElementById('gameInfoHome').appendChild(newGoal2);
+                      document.getElementById('gameInfo').appendChild(newGoal2) }
             }); // end third second .then
           });
       } // end displayGamedata

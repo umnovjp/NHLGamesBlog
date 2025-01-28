@@ -698,5 +698,12 @@
         "tip": "(1) one man effort #81 took puck in D zone skated around D men not sure what 2 CAL D men were doing; (2) shot from blue line scored on 2nd rebound; (3) one timer from blue line on CAL PP; (4) second wave of fast attack by WPG scored by 1st line; (5) PP pass from left dot to left point worked by WPG #13; (6) short pass from left G line to left point scored; (7) fast attack on PP pass from right board to top right circle one timed",
         "topic": "UX",
         "tip_id": "ed7f"
+    },
+    {
+        "title": "You are watching stats for VAN at STL game",
+        "username": "there is a bug because lineups display #63 as G during EN goal but does not display #55 who was on ice. And #32 is displayed as G and D for VAN. #50 was replaced by #30 in goal after 3:0. VAN was 2x2 on PP but STL was 1x5 and got one SH. So special teams decided the game VAN scored 4 on special teams. STL scored at 0:1 but it was disallowed G interference I believe it was wrong after challenge. at 5x5 teams were 1:1.",
+        "tip": "(1) fast 2x1 STL D #22 Suter tried to intercept pass by spreading on ice but puck went below his legs pass from bottom left circle to right point scored on redirect; (2) on PP initial shot was saved scored on rebound from crease; (3) pass from D zone to blue line not intercepted, scored from mid; (4) STL PP goal pass from blue line one timed from top right circle; (5) SH goal by VAN like 1x1; (6) pass from left point scored off D leg; (5) after battle in the right corner VAN D scored from his G line to EN",
+        "topic": "UX",
+        "tip_id": "c0d9"
     }
 ]
