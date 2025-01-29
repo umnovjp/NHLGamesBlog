@@ -171,7 +171,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);
                   
                   if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data1.data[j].period===periodNumber)) {
-                  // console.log('player on ice ', j)
                     for (k=0;k<data.rosterSpots.length;k++) {if (data.rosterSpots[k].playerId===data1.data[j].playerId) {
                     onIceArray.push(data.rosterSpots[k].teamId, data.rosterSpots[k].sweaterNumber, shiftStartSeconds, shiftEndSeconds)}
                   }} // end if and end k loop
@@ -181,7 +180,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1}
                     else {onIceSplit[k].push(onIceArray[j])}
                   } // end short j loop
-                  // console.log(onIceArray)
                   goalTime[0].sort((a, b) => a - b);
                  for (j=0;j<onIceSplit.length;j++) { // this loop is to order goals chronologically
                   onIceLineup = [[],[]];
@@ -209,7 +207,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       if (l==onIceLineup[k].lastIndexOf('D')) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
                   else {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-')}
                   lineUpG=lineUp }}}
-                    lineUpG=lineUp
+                    lineUpG=lineUp;
     
                     for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='F') {
                     if (l===onIceLineup[k].indexOf('F')) { lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
@@ -228,7 +226,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           });
       } // end displayGamedata
     } // end first second .then
-    )
-}
+    )}
 
 tipForm.addEventListener('submit', handleFormSubmit);
