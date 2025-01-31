@@ -712,5 +712,12 @@
         "tip": "(1) pass from behind G line to point scored one touch; (2) pass from right boards scored from mid on hold and release; (3) VGK just was able to hold puck near blue line skated to right corner then behind goal short pass scored from right point on rebound; (4) on 5x3 pass across the crease shot missed but went in off #29 leg; (5) same PP SH goal #24 intercepted pass fast 2x1 shot from right circle scored on rebound by #53; (6) fast 3x2 attack again #24 and #53 scored from left right corner; (7) in OT first shot by VGK saved but then quick 2x1 by Stars scored for hat-trick by #53",
         "topic": "UX",
         "tip_id": "e0c1"
+    },
+    {
+        "title": "You are watching stats for WPG at BOS gamePeriod: 1 Time: 02:55 Scorer: Namestnikov Assists: Nino Niederreiter, Cole Perfetti 37 91 62-7-9-91 70 73-52 11-45Period: 1 Time: 11:31 Scorer: Scheifele Assists: Neal Pionk, Dylan Samberg 37 54-4 55-81-13 70 91-52 63-28-55Period: 1 Time: 15:34 Scorer: Marchand Assists: Elias Lindholm, David Pastrnak 37 54-4 9-19 70 73 63-28-88-18Period: 3 Time: 00:11 Scorer: Lindholm Assists: Pavel Zacha 37 13 55-27-81-13 70 91-25 28-18Period: 3 Time: 00:35 Scorer: Scheifele Assists: Nikolaj Ehlers, Josh Morrissey 37 13 55-27-81-13 70 91-25 13-19Period: 3 Time: 01:17 Scorer: Ehlers Assists:  37 54-4 7-27-91 70 73-6 88-18-39Period: 3 Time: 05:57 Scorer: Ford Assists: Alex Iafallo, Logan Stanley 37 2-64 9-19-73 70 73-6 88-18-39Period: 3 Time: 19:23 Scorer: Connor Assists: Vladislav Namestnikov 37 2-64 7-81  73-6 28-88-18-39",
+        "username": "BOS played 2nd G. One early WPG goal was disallowed offside but their G did not catch shot from top left circle that he saw. Score was 2:2 early in 3rd. But then WPG scored 2 goals in less than a minute due to bad errors by BOS Ds. Where is BOS defense? 3 goals scored after bad errors.",
+        "tip": "(1) on PP shot from right circle scored on rebound from point; (2) shot pass from right blue line tipped in front; (3) BOS PP hold and release shot from top left circle; (4) on BOS PK shot right after FO win in WPG zone; (5) same PP for WPG easy entry -> pass -> almost 1x1 scored; (6) BOS D was dispossessed skating from behind the goal; (7) pass from behind goal line to front scored on second shot; (8) SH goal to EN after another bad turnover by BOS D",
+        "topic": "UX",
+        "tip_id": "bddb"
     }
 ]
