@@ -761,5 +761,12 @@
         "tip": "(1) on 5x3 PP passes between CGY scored from top right circle; (2) scored on hold and release from almost right blue line; (3) shot from mid scored on rebound from point; (4) shot from top left circle on PP went in on double deflection; (5) 1x1 after mistake by CGY D; (6) fast attack by CGY shot from bottom right circle that should never go in",
         "topic": "UX",
         "tip_id": "782e"
+    },
+    {
+        "title": "You are watching stats for FLA at STL gamePeriod: 1 Time: 03:31 Scorer: Bolduc Assists: Ryan Suter, Alexey Toropchenko 30 88-26 10-17-15 30 22-6 70-13-76Period: 1 Time: 07:09 Scorer: Samoskevich Assists: Sam Bennett, Matthew Tkachuk 30 7-77 9-19-25 30 4-72 10-25-81Period: 1 Time: 16:54 Scorer: Tkachuk Assists: Aaron Ekblad, Aleksander Barkov 30 30 23-16-13-19 30 22-55 12-13Period: 2 Time: 05:18 Scorer: Sundqvist Assists: Robert Thomas, Zack Bolduc 30 5-42 70-15 30 76 70-89-18-76Period: 3 Time: 19:48 Scorer: Reinhart Assists: Aleksander Barkov, Gustav Forsling 30 5-42 16-13-19 30 17-55 89-25-18Period: 3 Time: 19:48 Scorer: Reinhart Assists: Aleksander Barkov, Gustav Forsling 30 5-42 16-13-19 30 17-55 89-25-18",
+        "username": "last goal added twice. Both teams played 2nd Gs. It was 2:2 in slow 3rd but FLA scored with 12 s to go. They were stronger team.",
+        "tip": "(1) shot from blue line scored on rebound; (2) very strong sequence by FLA, pass from right circle to left circle one timed from on double deflection; (3) on PP shot from right blue line redirected in front; (4) on PP shot from top right circle redirected; (5) with 12 seconds to go shot from mid scored on rebound from point",
+        "topic": "UX",
+        "tip_id": "ecc1"
     }
 ]
