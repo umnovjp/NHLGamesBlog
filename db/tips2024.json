@@ -782,5 +782,12 @@
         "tip": "(1) on PP shot from top left circle G was screened; (2) on PP pass from top left circle one timed from mid; (3) quick attack by COL pass from left blue line to top right circle one timed; (4) on entry shot from blue line saved but scored on second rebound from point; (5) fast attack like 2x1 pass from top left circle to mid one timed; (6) SH turnover in M zone by EDM D leads to almost 1x1 scored; (7) on PP #90 overplayed COL G in front; (8) shot from left circle scored on rebound; (9) after fast attack shot from mid by #29 saved then his pass from bottom right circle one timed from mid",
         "topic": "UX",
         "tip_id": "df52"
+    },
+    {
+        "title": "You are watching stats for COL at CGY gamePeriod: 1 Time: 03:22 Scorer: Huberdeau Assists: MacKenzie Weegar, Matt Coronato 39 7-8 25- 32 27 91-10-17-27Period: 2 Time: 01:20 Scorer: Makar Assists: Nathan MacKinnon, Devon Toews 39 7-8 62-29-88 32 44-4 91-20-27Period: 2 Time: 05:34 Scorer: Lehkonen Assists: Nathan MacKinnon, Martin Necas 39 49-70 62-29-88 32 52-62 11-10-27Period: 2 Time: 19:42 Scorer: Necas Assists: Nathan MacKinnon, Cale Makar 39 8 62-29-27-88 32 44-4 11-20Period: 3 Time: 12:53 Scorer: Necas Assists: Sam Malinski, Parker Kelly 39 8-70 62-88-17 32 44-4 16-86-17Period: 3 Time: 18:14 Scorer: Andersson Assists: Martin Pospisil, Nazem Kadri 39 44-58 17-25-94 32 52-4 91-10-76",
+        "username": "COL scored first three goals with 62-29-88 on ice forth with 62-88 on ice. One was PP. They had 2 goals against, one on 3x5 PK another very late. Blackwood plays 2 nights in goal in a row both away wins. COL goal late in 1st was disallowed offside. Second time I reviewed this game :)",
+        "tip": "(1) on 5x3 PP shot from top right circle G was screened; (2) shot from top right circle G was screened; (3) pass from left blue line to top right circle shot scored on rebound from crease; (4) on PP pass from blue line one timed from left dot went in on double deflection; (5) pass from its own G line off the boards led to 1x1 scored; (6) fast attack shot from bottom right circle under sharp angle should not go in",
+        "topic": "UX",
+        "tip_id": "e419"
     }
 ]
