@@ -803,5 +803,12 @@
         "tip": "(1) goal against just 11 seconds in, sudden turnover in D zone by #55, scored on rebound from point unusual reaction from #29; (2) complete chaos in LAK zone before that shot by #95 screened; (3) our #6 was hit by puck, he did not have stick shot from sharp angle; (4) shot from blue line scored on easy rebound; (5) shot from blue line very odd deflection scored off rebound; (6) shot from top left circle scored on rebound; (7) fast attack shot from top right circle G was screened; (8) shot pass from right circle redirected by skate near left point; (9) shutout goal",
         "topic": "UX",
         "tip_id": "fb3e"
+    },
+    {
+        "title": "You are watching stats for NYI at WPG game",
+        "username": "NYI D have 2 new players: DeAngelo and Boqvist with cheap contracts. #4 had turnover during WPG 3rd goal while #34 was puck watching during 4th goal. They were helpless against WPG. Server did not work today do not know who was on ice",
+        "tip": "(1) fast 3x2 by NYI pass from left circle redirected in front; (2) individual effort by WPG #9 Iafallo who got puck in M zone then skated to scored backhand; (3) unfortunate wrong shot from behind their own G line picked up by NYI F to score his first NHL goal; (4) turnover by #4 DeAngelo fast 2x1 by WPG pass from left boards redirected in front; (5) puck dumped in pass from behind G line scored from left point; (6) pass from bottom left circle scored from mid; (7) shot from blue line scored on rebound",
+        "topic": "UX",
+        "tip_id": "9967"
     }
 ]
