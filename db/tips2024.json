@@ -810,5 +810,12 @@
         "tip": "(1) fast 3x2 by NYI pass from left circle redirected in front; (2) individual effort by WPG #9 Iafallo who got puck in M zone then skated to scored backhand; (3) unfortunate wrong shot from behind their own G line picked up by NYI F to score his first NHL goal; (4) turnover by #4 DeAngelo fast 2x1 by WPG pass from left boards redirected in front; (5) puck dumped in pass from behind G line scored from left point; (6) pass from bottom left circle scored from mid; (7) shot from blue line scored on rebound",
         "topic": "UX",
         "tip_id": "9967"
+    },
+    {
+        "title": "You are watching stats for COL at NYI gamePeriod: 2 Time: 04:11 Scorer: Lee Assists: Brock Nelson, Anthony DeAngelo 39 7-8 27-88-17 30 4-28 27-29-13Period: 2 Time: 13:00 Scorer: Lehkonen Assists: Nathan MacKinnon, Martin Necas 39 7-8 62-29-88 30 24-36 11-14-13Period: 3 Time: 01:54 Scorer: Holmstrom Assists: Jean-Gabriel Pageau 39 44-70 28-20-18 30 24-26 53-44-10Period: 3 Time: 11:23 Scorer: Horvat Assists: Anders Lee, Scott Perunovich 39 42-49 27-37-16 30 3-26 27-14-13Period: 3 Time: 14:55 Scorer: Drury Assists: Martin Necas, Josh Manson 39 7-8 28-88-18 30 4-28 53-44-10Period: 3 Time: 17:31 Scorer: Romanov Assists: Simon Holmstrom, Casey Cizikas 39 42-49 28-20-37 30 4-28 53-44-10Period: 3 Time: 18:50 Scorer: Holmstrom Assists: Jean-Gabriel Pageau  7-8 62-29-27-88 30 3-4 27-44-10",
+        "username": "Score was 1:1 after 2nd. COL made it 2:2 in 3rd but that was G interference disallowed. Fifth NYI win in a row. Not sure why 62-29-88 COL scored just one goal",
+        "tip": "(1) turnover in M zone quick pass off the boards individual effort like 1x1; (2) great attack pass from bottom right circle scored in front by a player lying on his butt; (3) turnover behind G line shot from left right circle with G screened; (4) pass from right G line to left point one timed; (5) pass from M zone indicidual effort",
+        "topic": "UX",
+        "tip_id": "f12d"
     }
 ]
