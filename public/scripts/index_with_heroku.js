@@ -103,12 +103,10 @@ const handleFormSubmit = (e) => {
   postTip(newTip);
 };
 
-console.log(document.featurePolicy.allowedFeatures());
-
 function selectGame() {var inputVal = document.getElementById('datepicker').value;
   var date = inputVal.split('/');
   var formatted = date[2] + '-' + date[0] + '-' + date[1];
-  var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/schedule/'+ formatted;
+  var requestURL = 'https://cors-anywhere.herokuapp.com/https://api-web.nhle.com/v1/schedule/'+ formatted;
   console.log(requestURL);
   fetch(requestURL, {
     "method": "GET", "headers": {}
@@ -131,7 +129,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
         console.log(idxNumber); gameNumber = idxNumber[1];
         const gameId = data2.gameWeek[0].games[gameNumber].id;
         console.log(gameId);
-        var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
+        var requestURL = 'https://cors-anywhere.herokuapp.com/api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
         fetch(requestURL, {
           "method": "GET", "headers": { }
         })
@@ -149,7 +147,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game';
             document.getElementById('gameInfo').appendChild(gameTitle);
                    
-          var requestURL1 = 'https://corsproxy.io/?key=2ddedfd8&url=https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
+          var requestURL1 = 'https://cors-anywhere.herokuapp.com/api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
           fetch(requestURL1, {"method": "GET", "headers": {}
           })
           .then(function (response) { return response.json();
