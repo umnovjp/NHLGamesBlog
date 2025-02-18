@@ -103,7 +103,7 @@ const handleFormSubmit = (e) => {
   postTip(newTip);
 };
 
-console.log(document.featurePolicy.allowedFeatures());
+// console.log(document.featurePolicy.allowedFeatures());
 
 function selectGame() {var inputVal = document.getElementById('datepicker').value;
   var date = inputVal.split('/');
