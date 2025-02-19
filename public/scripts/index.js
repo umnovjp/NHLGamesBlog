@@ -144,7 +144,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             document.getElementById('schedule').appendChild(gameInfo);
             const gameInfoHome = document.createElement('section');
             gameInfoHome.setAttribute('id', 'gameInfoHome');
-            document.getElementById('schedule').appendChild(gameInfoHome); console.log(data.rosterSpots);
+            document.getElementById('schedule').appendChild(gameInfoHome); // console.log(data.rosterSpots);
             var gameTitle = document.createElement('h2'); gameTitle.textContent = '';
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game';
             document.getElementById('gameInfo').appendChild(gameTitle);
