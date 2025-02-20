@@ -831,5 +831,12 @@
         "tip": "(1) scored from right circle on 2nd rebound you do not see that many rebounds from far that often; (2) pass from top right circle to top left circle scored by D; (3) shot pass from right blue line deflected by #12 Faksa in front",
         "topic": "UX",
         "tip_id": "9467"
+    },
+    {
+        "title": "You are watching stats for DAL at MTL gamePeriod: 2 Time: 15:14 Scorer: Laine Assists: Nick Suzuki, Lane Hutson 29 23-46 10- 35 20 92-14-13-20Period: 2 Time: 17:34 Scorer: Benn Assists: Mavrik Bourque 29 23-4 14-95-53 35 45-21 11-77-15Period: 5 Time: 00:00 Scorer: Robertson Assists:   ",
+        "username": "MTL scored 5x3 but Stars responded very quickly. Then it seemed MTL tried to score in OT but Stars shoot in G. Robo won it all in OT",
+        "tip": "(1) PP 5x3 goal pass from blue line one timed from left circle; (2) kind of fast 2x1 for Stars $14 scored from left circle; (3) SO goal by #21 ",
+        "topic": "UX",
+        "tip_id": "3b43"
     }
 ]
