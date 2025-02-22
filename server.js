@@ -81,6 +81,8 @@ app.post('/api/tips', (req, res) => {
 
     readAndAppend(newTip, './db/tips2024.json');
     res.json(`Review added successfully 🚀`);
+    
+  console.log(title)
   } else {
     res.error('Error in adding review');
   }
