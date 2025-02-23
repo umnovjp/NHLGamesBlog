@@ -873,5 +873,19 @@
         "tip": "",
         "topic": "UX",
         "tip_id": "3159"
+    },
+    {
+        "title": "You are watching stats for WPG at STL gamePeriod: 1 Time: 04:58 Scorer: Ehlers Assists: Cole Perfetti, Vladislav Namestnikov 1 54-4 7-27-91 30 22-75 10-25-81Period: 1 Time: 15:34 Scorer: Thomas Assists: Pavel Buchnevich 1 2-64 62-55-13 30 17-55 89-18-63Period: 2 Time: 11:01 Scorer: Vilardi Assists: Mark Scheifele, Colin Miller 1 54-4 55-81-13 30 22-75 12-26-13Period: 3 Time: 00:16 Scorer: Thomas Assists: Pavel Buchnevich, Cam Fowler 1 54-4 55-81 30 17-55 89-18Period: 3 Time: 17:10 Scorer: Buchnevich Assists: Robert Thomas, Oskar Sundqvist 1 6-64 7-81 30 76 70-89-18-76Period: 3 Time: 19:32 Scorer: Vilardi Assists: Kyle Connor, Cole Perfetti  91 55-27-81-13-91 30 17-55 10-12-13Period: 5 Time: 00:00 Scorer: Connor Assists:   ",
+        "username": "both teams played 2nd Gs. Score was 2:2 late in 3rd. Then STL scored on 4 min PP with 2:50 remaining. They did not keep win. WPG controlled the game even after goal against on double minor late in 3rd",
+        "tip": "(1) puck intercepted near WPG blue line fast 2x1 by WPG pass from left circle one timed from right circle; (2) fast 2x1 by STL after winning puck battle near the boards shot from right point; (3) pass from left boards scored from point after deflection off skate; (4) 4x4 individual effort after skating behind G line; (5) on PP shot from mid after pass from left boards; (6) 6x5 shot pass from right blue line redirected from mid; (7) SO goal",
+        "topic": "UX",
+        "tip_id": "f35b"
+    },
+    {
+        "title": "You are watching stats for WPG at STL gamePeriod: 1 Time: 04:58 Scorer: Ehlers Assists: Cole Perfetti, Vladislav Namestnikov 1 54-4 7-27-91 30 22-75 10-25-81Period: 1 Time: 15:34 Scorer: Thomas Assists: Pavel Buchnevich 1 2-64 62-55-13 30 17-55 89-18-63Period: 2 Time: 11:01 Scorer: Vilardi Assists: Mark Scheifele, Colin Miller 1 54-4 55-81-13 30 22-75 12-26-13Period: 3 Time: 00:16 Scorer: Thomas Assists: Pavel Buchnevich, Cam Fowler 1 54-4 55-81 30 17-55 89-18Period: 3 Time: 17:10 Scorer: Buchnevich Assists: Robert Thomas, Oskar Sundqvist 1 6-64 7-81 30 76 70-89-18-76Period: 3 Time: 19:32 Scorer: Vilardi Assists: Kyle Connor, Cole Perfetti  91 55-27-81-13-91 30 17-55 10-12-13Period: 5 Time: 00:00 Scorer: Connor Assists:   ",
+        "username": "both teams played 2nd Gs. Score was 2:2 late in 3rd. Then STL scored on 4 min PP with 2:50 remaining. They did not keep win. WPG controlled the game even after goal against on double minor late in 3rd. First 3 goals were scored 5x5 but then 3 goals on special teams. Line 4-54 was 2:1 55 was 2:2 81 was 2:1",
+        "tip": "(1) puck intercepted near WPG blue line fast 2x1 by WPG pass from left circle one timed from right circle; (2) fast 2x1 by STL after winning puck battle near the boards shot from right point; (3) pass from left boards scored from point after deflection off skate; (4) 4x4 individual effort after skating behind G line; (5) on PP shot from mid after pass from left boards; (6) 6x5 shot pass from right blue line redirected from mid; (7) SO goal",
+        "topic": "UX",
+        "tip_id": "cdae"
     }
 ]
