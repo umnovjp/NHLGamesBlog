@@ -880,5 +880,12 @@
         "tip": "(1) puck intercepted near WPG blue line fast 2x1 by WPG pass from left circle one timed from right circle; (2) fast 2x1 by STL after winning puck battle near the boards shot from right point; (3) pass from left boards scored from point after deflection off skate; (4) 4x4 individual effort after skating behind G line; (5) on PP shot from mid after pass from left boards; (6) 6x5 shot pass from right blue line redirected from mid; (7) SO goal",
         "topic": "UX",
         "tip_id": "f35b"
+    },
+    {
+        "title": "You are watching stats for COL at STL gamePeriod: 1 Time: 07:49 Scorer: Toews Assists: Cale Makar, Artturi Lehkonen 39 7-8 62-29-88 50 22-55 70-71-63Period: 2 Time: 10:45 Scorer: Schenn Assists: Jordan Kyrou, Justin Faulk 39 7-49 20-37-18 50 72-6 10-25-81Period: 2 Time: 14:13 Scorer: Parayko Assists: Pavel Buchnevich, Robert Thomas 39 7-8 62-29-88 50 17-55 89-18-63Period: 2 Time: 19:50 Scorer: Holloway Assists: Justin Faulk, Jordan Kyrou 39 7-8 27-20-18 50 72-6 10-25-81",
+        "username": "COL had lead in 1st from top line. But STL scored 3 late in 3rd. At that time shots were 16x17 STL. COL ended up with 28 shots. First line 62-29-88 was 1:1",
+        "tip": "(1) shot from right blue line tipped by F in mid; (2) shot from almost blue line scored on rebound from bottom right circle; (3) fast attack by STL like 3x3 shot from blue line scored by D on rebound from left point; (4) fast attack by STL like 2x1 pass from right blue line to point scored",
+        "topic": "UX",
+        "tip_id": "13c7"
     }
 ]
