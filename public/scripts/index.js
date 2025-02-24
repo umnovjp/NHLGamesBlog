@@ -157,9 +157,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             .then(function (data1) { console.log('I am in third then', data1);
             
                for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
-              { const gameInfoHome = document.createElement('section');
-              gameInfoHome.setAttribute('id', 'gameInfoHome');
-              document.getElementById('schedule').appendChild(gameInfoHome); 
+               { // const gameInfoHome = document.createElement('section');
+              // gameInfoHome.setAttribute('id', 'gameInfoHome');
+              // document.getElementById('schedule').appendChild(gameInfoHome); 
                 
                 periodNumber = data1.data[i].period; goalsNumber.push(i);
                 goalTime = data1.data[i].startTime; 
@@ -222,7 +222,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     for (i=0;i<goalsNumber.length;i++) { var newGoal2 = document.createElement('span');
                     newGoal2.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails
                     +' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+2*i]+' '+onIceArray2[1+onIceArray2.length-2*onIceSplit.length+2*i];
-                      document.getElementById('gameInfoHome').appendChild(newGoal2);
+                      // document.getElementById('gameInfoHome').appendChild(newGoal2);
                       document.getElementById('gameInfo').appendChild(newGoal2) }
             }); // end third second .then
           });
