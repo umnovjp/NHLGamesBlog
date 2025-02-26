@@ -61,8 +61,7 @@ const readAndAppend = (content, file) => {
 // GET Route for retrieving all the tips
 app.get('/api/tips', (req, res) => {
   console.info(`${req.method} request received for review`);
-  readFromFile('./db/tips2024.json').then((data) => res.json(JSON.parse(data)));
-   console.log(res.json)
+  readFromFile('./db/tips2024.json').then((data) => res.json(JSON.parse(data)))
 });
 
 // POST Route for a new UX/UI tip

@@ -12,3 +12,5 @@ Later I may add more data to reflect which combination of players is on ice when
 
 ## Games to run (to be deleted)
 WPG lines: 10/30, 11/01, 11/03, 11/05, 11/14, 11/16 FLA, 11/19 FLA, 11/22 PIT, 11/23 NSH, 11/25 MIN 7-27-91 9-15-36 13-55-81 17-22-62, data missing 11/07, 11/09,11/12, 
+
+incorrect data game WPG SJC 02/24 SJC G is missing during 1st goal 3rd goal is wrong as well because same player is added twice #51
