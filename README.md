@@ -8,9 +8,9 @@ There is no live page version. At least for now. If you would like to try it, do
 Current version was developed to use express.js to create a new blog. Later, I used current files to use databases instead of writing to file. Here is this repo: https://github.com/umnovjp/NHLGamesBlog. I did one react.js NHL project earlier. It kind of worked. Maybe I will make another attempt. 
 
 ## Future development
-Later I may add more data to reflect which combination of players is on ice when goals are scored, maybe in previous games of the same team as well. But that's for long haul. NHL stats just show plus minus rating for each player. And that one is a little distorted because players do not get minus if goal is scored on PK. In the short term, it would make sense to show that some players were on ice for X goals for and Y goals against, counting those on PK. And check out this repo as well: https://github.com/umnovjp/NHLShiftsStats3. That's my next goal. And that's what I am proud of. 
+Later I may add more data to reflect which combination of players is on ice when goals are scored, maybe in previous games of the same team as well. But that's for long haul. NHL stats just show plus minus rating for each player. And that one is a little distorted because players do not get minus if goal is scored on PK. In the short term, it would make sense to show that some players were on ice for X goals for and Y goals against, counting those on PK. And check out this repo as well: https://github.com/umnovjp/NHLShiftsStats3. That's my next goal. And that's what I am proud of. Though job is in progress with algorithms changing frequently.  
 
 ## Games to run (to be deleted)
 WPG lines: 10/30, 11/01, 11/03, 11/05, 11/14, 11/16 FLA, 11/19 FLA, 11/22 PIT, 11/23 NSH, 11/25 MIN 7-27-91 9-15-36 13-55-81 17-22-62, data missing 11/07, 11/09,11/12, 
 
-incorrect data game WPG SJC 02/24 SJC G is missing during 1st goal 3rd goal is wrong as well because same player is added twice #51
+incorrect data game WPG SJC 02/24 SJC G is missing during 1st goal 3rd goal is wrong as well because same player is added twice #51. incorrect data stars at cbj on 2/25 on goal 9 same player counted twice. 
