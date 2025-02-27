@@ -908,5 +908,12 @@
         "tip": "(1) on PP shot from right circle scored on 2nd rebound from point; (2) pass from almost right G line redirected in front; (3) as DET PP expired pass from blue line to right G line scored from very sharp angle; (4) pass from left circle one timed from blue line; (5) shot by D from top left circle",
         "topic": "UX",
         "tip_id": "55b4"
+    },
+    {
+        "title": "You are watching stats for MIN at DET gamePeriod: 1 Time: 07:54 Scorer: DeBrincat Assists: Andrew Copp, Vladimir Tarasenko 29 5-7 90-18-14 39 20-77 11-18-93Period: 2 Time: 05:41 Scorer: Larkin Assists: Alex DeBrincat, Lucas Raymond 29 5-7 89-14 39 23 88-71-93-23Period: 2 Time: 08:05 Scorer: Hinostroza Assists: Matt Boldy 29 7 36-18-14-12 39 8-53 37-90Period: 3 Time: 00:22 Scorer: Raymond Assists: Dylan Larkin, Patrick Kane 29 24-25 89-14 39 23 88-71-93-23Period: 3 Time: 13:07 Scorer: Boldy Assists: Marcus Johansson, Frederick Gaudreau  46-25 90-89-12 39 8-20 11-37Period: 3 Time: 18:29 Scorer: Foligno Assists: Marco Rossi, Marcus Johansson  7 90-17-36-12-23 39 20-77 88-37-93Period: 4 Time: 03:35 Scorer: Rossi Assists: Joel Eriksson Ek 29 25-5 14-23 39 8-56 11-93",
+        "username": "MIN lines were different in 02/25 game against DET: 12-23-26 13-19-22 14-18-90 {0:1} 17-28-89. Fleury was G. MIN was losing 1:3 with 7 minutes remaining in 3rd. Still MIN won in OT. Only 1st goal by DET scored 5x5",
+        "tip": "(1) kind of fast attack by DET; (2) PP goal by DET; (3) PP by MIN shot from blue line on rebound from mid air; (4) DET on PP; (5) 5x4 by MIN shot from mid; (6) 6x5 with EN pass from behind G line scored from bottom right circle; (7) in OT 1x1 by MIN",
+        "topic": "UX",
+        "tip_id": "b7f8"
     }
 ]
