@@ -915,5 +915,12 @@
         "tip": "(1) kind of fast attack by DET; (2) PP goal by DET; (3) PP by MIN shot from blue line on rebound from mid air; (4) DET on PP; (5) 5x4 by MIN shot from mid; (6) 6x5 with EN pass from behind G line scored from bottom right circle; (7) in OT 1x1 by MIN",
         "topic": "UX",
         "tip_id": "b7f8"
+    },
+    {
+        "title": "You are watching stats for WPG at NSH gamePeriod: 1 Time: 04:26 Scorer: Forsberg Assists: Gustav Nyquist, Ryan O'Reilly 1 54-4 62-17-22 74 2-7 14-90-9Period: 1 Time: 11:05 Scorer: Pionk Assists: Rasmus Kupari, Alex Iafallo 1 54-4 9-15-19 74 2-7 82-77-40Period: 1 Time: 15:29 Scorer: Novak Assists: Justin Barron, Luke Evangelista 1 44-4 17-15 74 76-20 82-77-40",
+        "username": "When score was 2:1 shots were 9x3 NSH. WPG had scoring chances after that, but all shots were to G except one on 5x3 iron. Did not look line WPG tried to score.",
+        "tip": "(1) right after FO shot from top left circle G was screened; (2) shot from blue line deflected off something; (3) on PP turnover behind G line pass from left G line scored from left point",
+        "topic": "UX",
+        "tip_id": "8794"
     }
 ]
