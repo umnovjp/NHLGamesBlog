@@ -957,5 +957,12 @@
         "tip": "(1) fast attack by CAR pass from top right circle to bottom left scored one touch; (2) CGY scored on PP just as 5x3 just expired; (3) OT goal on one timer",
         "topic": "UX",
         "tip_id": "027f"
+    },
+    {
+        "title": "You are watching stats for NJD at VGK gamePeriod: 3 Time: 01:27 Scorer: Stone Assists: Noah Hanifin, Jack Eichel 25 5-8 13-91 33 16 61-48-9-16Period: 3 Time: 09:10 Scorer: Hanifin Assists: Jack Eichel 25 5-8 56-91 33 16 61-48-9-16",
+        "username": "VGK scored 2 PP goals in 3rd. virtually same lineups for both teams.",
+        "tip": "",
+        "topic": "UX",
+        "tip_id": "43b7"
     }
 ]

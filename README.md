@@ -15,4 +15,4 @@ WPG lines: 10/30, 11/01, 11/03, 11/05, 11/14, 11/16 FLA, 11/19 FLA, 11/22 PIT, 1
 
 incorrect data game WPG SJC 02/24 SJC G is missing during 1st goal 3rd goal is wrong as well because same player is added twice #51. incorrect data stars at cbj on 2/25 on goal 9 same player counted twice. 
 
-incorrect lineup stars goals 5,8,9 on 03/02 53 is counted as D and F. car game on 03/02 1st goal 7 players on ice? 
+incorrect lineup stars goals 5,8,9 on 03/02 53 is counted as D and F. car game on 03/02 1st goal 7 players on ice? There is no #10 in CAR. 
