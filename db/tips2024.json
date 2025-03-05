@@ -985,5 +985,12 @@
         "tip": "(1) shot pass from blue line redirected in front; (2) one man effort skated from D zone shot from top right circle bit G clean; (3) shot from left blue line deflected off G; (4) goal by PHI; (5) PHI F won puck in M zone then one man effort; (6) shot from blue line scored on rebound from left point should not go in; (7) multiple shots on PP scored by D from mid; (8) CGY dispossessed in D zone scored on rebound from crease; (9) EN goal by CGY",
         "topic": "UX",
         "tip_id": "124e"
+    },
+    {
+        "title": "You are watching stats for WPG at NYI gamePeriod: 1 Time: 16:49 Scorer: Palmieri Assists: Brock Nelson, Bo Horvat 37 2-44 9-15 30 10 21-29-14-10Period: 2 Time: 01:33 Scorer: Nelson Assists: Maxim Tsyplakov, Noah Dobson 37 2-44 55-81-13 30 3-8 29-10-7Period: 2 Time: 08:48 Scorer: Morrissey Assists: Mark Scheifele, Kyle Connor 37 13 55-27-81-13 30 3-6 29-10Period: 3 Time: 04:03 Scorer: Pulock Assists: Anders Lee, Casey Cizikas 37 64-4 9-36-15 30 24-6 53-27-44Period: 3 Time: 12:51 Scorer: Ehlers Assists: Kyle Connor, Josh Morrissey 37 13 55-27-81-13 30 3-6 21-14",
+        "username": "5x5 goals were 1:1 line 13-55-81 was 0:1 but they were on ice for 2 PP goals by WPG",
+        "tip": "(1) PP pass from right circle one timed from bottom left circle; (2) fast attack by NYI give and go scored like 2x1; (3) PP shot from blue line deflected off D skate; (4) one timer from blue line deflected off WPG skate; (5) PP great move from right g line",
+        "topic": "UX",
+        "tip_id": "6e2f"
     }
 ]
