@@ -1006,5 +1006,12 @@
         "tip": "(1) PP goal shot from left point maybe redirected; (2) PP shot from blue line deflected off the mid; (3) shot from right circle hold and release G was screened; (4) pass from right circle deflected off D skate; (5) give and go shot from bottom right circle; (6) PP pass from top right circle scored on hold and release from left point; (7) rebound from left point",
         "topic": "UX",
         "tip_id": "78b6"
+    },
+    {
+        "title": "You are watching stats for STL at LAK game",
+        "username": "STL entering playoff picture",
+        "tip": "(1) turnover in M zone shot from right circle; (2) shot from almost blue line; (3) went in after deflection off G skate; (4) PP pass from right circle scored from left circle; (5) SO goal",
+        "topic": "UX",
+        "tip_id": "ffa0"
     }
 ]
