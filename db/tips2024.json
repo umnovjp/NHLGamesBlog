@@ -1027,5 +1027,12 @@
         "tip": "(1) on rebound from point after shot from blue line; (2) on PP, shot from right point score don rebound from mid; (3) clean bit G late in 2nd from mid; ",
         "topic": "UX",
         "tip_id": "af2e"
+    },
+    {
+        "title": "You are watching stats for MIN at VAN gamePeriod: 1 Time: 16:14 Scorer: Pettersson Assists: Filip Hronek, Brock Boeser 32 46-4 41-12 32 32 6-74-8-40Period: 3 Time: 07:12 Scorer: Faber Assists: Marco Rossi, Matt Boldy 32 7 36-38-12-23 32 57-29 44-18Period: 3 Time: 16:15 Scorer: Sherwood Assists: Filip Hronek 32 24-4 36-19-13 32 27-17 53-44-21Period: 3 Time: 19:06 Scorer: Blueger Assists: Pius Suter  7 90-17-36-12-23 32 57-29 53-40-24",
+        "username": "MIN had 38x18 shots advantage. Still they never led the game. They made it 1:1 in 3rd to make 1:3 in the last 4 minutes",
+        "tip": "(1) on PP one timer from blue line; (2) very dangerous PP by MIN one timer from mid; (3) pass from top right circle to left almost G line scored; (3) EN goal with MIN D allowing to score when he had puck ",
+        "topic": "UX",
+        "tip_id": "a28e"
     }
 ]
