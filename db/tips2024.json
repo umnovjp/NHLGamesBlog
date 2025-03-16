@@ -1076,5 +1076,12 @@
         "tip": "(1) shot pass from blue line tipped in front then scored on rebound; (2) set play shot from right circle scored on rebound; (3) scored on 2nd rebound after shot pass from left corner; (4) shot to kind of empty net after puck was intercepted with goalie out of net; (5) one man effort scored on wraparound; (6) EN goal to complete hat-trick ",
         "topic": "UX",
         "tip_id": "5da7"
+    },
+    {
+        "title": "You are watching stats for VGK at BUF gamePeriod: 1 Time: 12:07 Scorer: Howden Assists: Tanner Pearson, Ivan Barbashev 33 15-2 70-49-21 1 23-26 81-29-72Period: 2 Time: 12:06 Scorer: Dorofeyev Assists: Tomas Hertl 33 7-14 70-48-16 1 26-25 89-72-22Period: 2 Time: 12:13 Scorer: McLeod Assists: Jacob Bryson, Bowen Byram 33 3-6 61-49-9 1 78-4 17-71-9Period: 3 Time: 09:53 Scorer: Zucker Assists:  33 7-3 61-9 1 26 17-89-72-71Period: 3 Time: 17:27 Scorer: Eichel Assists: Mark Stone, Alex Pietrangelo 33 7-14 61-49-9 1 23-26 89-12-72Period: 3 Time: 19:46 Scorer: Dahlin Assists: Bowen Byram, Tage Thompson 33 7-3 61-9-21  26-4 17-89-72-71Period: 5 Time: 00:00 Scorer: Tuch Assists:   Period: 5 Time: 00:00 Scorer: Tuch Assists:   Period: 5 Time: 00:00 Scorer: Tuch Assists:   ",
+        "username": "cannot believe it was not a preset game. vgk scored twice. then sabres made it 2:2. but then vgk scored with 3 minutes remaining after 2nd fast attack. sabres made it 3:3 with 13 seconds remaining that one looked real.",
+        "tip": "(1) fast attack pass from bottom right circle redirected from crease; (2) turnover near blue line -> 2x1 by vgk scored on rebound; (3) 7 seconds after vgk goal shot from left circle bit g clean; (4) on PP clearing attempt from behind g line intercepted in mid scored; (5) shot from mid scored on rebound; (6) 6x5 shot from blue line; (7) shutout goal ",
+        "topic": "UX",
+        "tip_id": "c963"
     }
 ]
