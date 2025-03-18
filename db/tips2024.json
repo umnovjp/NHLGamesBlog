@@ -1104,5 +1104,12 @@
         "tip": "(1) turnover in d zone by col; (2) backhand shot pass from blue line redirected in front; (3) shutout goal",
         "topic": "UX",
         "tip_id": "540c"
+    },
+    {
+        "title": "You are watching stats for TOR at COL gamePeriod: 1 Time: 00:56 Scorer: Nichushkin Assists: Ryan Lindgren, Josh Manson 41 44-25 91-88-29 39 42-55 11-27-13Period: 1 Time: 03:04 Scorer: Marner Assists: Matthew Knies, Auston Matthews 41 95-22 16-34-23 39 7-8 11-27-13Period: 1 Time: 06:08 Scorer: Nichushkin Assists: Brock Nelson, Sam Malinski 41 44-25 24-11-74 39 49-70 11-27-13Period: 1 Time: 12:51 Scorer: Tavares Assists: William Nylander 41 44-25 91-88-29 39 42-55 11-27-13Period: 1 Time: 16:04 Scorer: Marner Assists: Bobby McMann, Auston Matthews 41 44-25 16-34-74 39 7-8 62-29-88Period: 2 Time: 12:45 Scorer: Tavares Assists: Auston Matthews, William Nylander  91-88-16-34-23 39 7-8 10-94Period: 2 Time: 15:11 Scorer: Kiviranta Assists: Ross Colton, Sam Malinski 41 95-22 91-88-89 39 49-70 10-20-94Period: 3 Time: 11:55 Scorer: Drouin Assists: Charlie Coyle, Ross Colton 41 51-2 24-89-74 39 49-70 10-27-20Period: 3 Time: 15:45 Scorer: MacKinnon Assists: Martin Necas, Devon Toews 41 95-2 24-23 39 88 11-62-29-88Period: 3 Time: 18:06 Scorer: Nichushkin Assists: Artturi Lehkonen, Cale Makar  23 91-88-16-34-23 39 7-8 62-29-13Period: 3 Time: 19:07 Scorer: MacKinnon Assists: Valeri Nichushkin  23 91-88-16-34-23 39 7-8 62-29-13",
+        "username": "COL was stronger they hit iron then scored on first shift. Scored was 2:4 in 2nd, then 4:4 with 5 minutes remaining then COL scored on PP then 2 more empty net.",
+        "tip": "(1) shot pass from top left circle tipped in front; (2) fast attack pass from right circle to mid bit G clean; (3) after pass from board backhand to forehand scored from right point: (4) turnover after faceoff shot from mid; (5) one timer from right dot after pass from behind the goal; (6) on PP shot from left right circle after pass from goal line; (7) fast attack pass from left circle scored one touch from left right circle; (8) pass from behind goal line scored from mid; (9) on PP bit goalie clean from left dot; (10) EN from M zone; (11) another EN goal ",
+        "topic": "UX",
+        "tip_id": "83db"
     }
 ]
