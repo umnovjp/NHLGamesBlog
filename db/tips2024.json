@@ -1111,5 +1111,12 @@
         "tip": "(1) shot pass from top left circle tipped in front; (2) fast attack pass from right circle to mid bit G clean; (3) after pass from board backhand to forehand scored from right point: (4) turnover after faceoff shot from mid; (5) one timer from right dot after pass from behind the goal; (6) on PP shot from left right circle after pass from goal line; (7) fast attack pass from left circle scored one touch from left right circle; (8) pass from behind goal line scored from mid; (9) on PP bit goalie clean from left dot; (10) EN from M zone; (11) another EN goal ",
         "topic": "UX",
         "tip_id": "83db"
+    },
+    {
+        "title": "You are watching stats for ANA at DAL gamePeriod: 1 Time: 11:42 Scorer: Johnston Assists: Thomas Harley, Roope Hintz 1 7-2 21-20 29 53 96-24-21-53Period: 2 Time: 02:48 Scorer: Nesterenko Assists: Pavel Mintyukov, Mason McTavish 1 43-34 11-62-23 29 3-6 14-22-53Period: 2 Time: 04:25 Scorer: Granlund Assists: Matt Duchene, Mason Marchment 1 65-51 17-77-91 29 44-23 95-64-27Period: 2 Time: 13:03 Scorer: Carlsson Assists: Ryan Strome, Troy Terry 1 91 16-19-23-91 29 23-46 18-Period: 2 Time: 19:20 Scorer: Carlsson Assists:   65-34 17-19-11-61 29 44-23 15-18-10Period: 3 Time: 04:37 Scorer: Harley Assists: Jamie Benn, Mavrik Bourque 1 7-43 16-77-19 29 46-55 14-22-53Period: 4 Time: 02:32 Scorer: Granlund Assists: Thomas Harley, Roope Hintz 1 23 77-23 29 55 64-24",
+        "username": "Stars controlled the game. But it went out of control in 2nd when ANA scored 2 to make it 3:2 one 5x3 another questionnable penalty shot.",
+        "tip": "(1) on PP, shot pass from blue line tipped in front; (2) shot pass from blue line tipped in front; (3) fast attack pass from right blue line to left circle scored under sharp angle",
+        "topic": "UX",
+        "tip_id": "87fa"
     }
 ]
