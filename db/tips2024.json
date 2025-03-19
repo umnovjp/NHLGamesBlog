@@ -1118,5 +1118,12 @@
         "tip": "(1) on PP, shot pass from blue line tipped in front; (2) shot pass from blue line tipped in front; (3) fast attack pass from right blue line to left circle scored under sharp angle",
         "topic": "UX",
         "tip_id": "87fa"
+    },
+    {
+        "title": "You are watching stats for CGY at NYR gamePeriod: 1 Time: 01:13 Scorer: Panarin Assists: Urho Vaakanainen, Will Cuylle 80 52-44 91-76-47 31 23-18 16-10-50Period: 1 Time: 10:22 Scorer: Kadri Assists: MacKenzie Weegar, Connor Zary 80 52-44 91-76-47 31 23-18 16-10-50Period: 1 Time: 18:03 Scorer: Coronato Assists: Nazem Kadri, MacKenzie Weegar 80 27 91-10-16-27 31 79-4 16-8Period: 3 Time: 19:50 Scorer: Coleman Assists:  80 4-7 91-20-86  79 20-16-93-8-10",
+        "username": "cgy played 2nd goalie #80 vladar. nhl.com stakes were flames +210 rangers -258. that's why this game is here. but nyr scored on 1st shot then lost. they had just 13x35 shots differential during the game. seems that mika did not try to score in 2nd after 1x1.",
+        "tip": "(1) #52 cgy suspiciously fell down nyr scored on 1st shot during fast attack; (2) intentional shot off target from blue line scored on 2nd rebound; (3) on pp pass from top right circle scored from mid; ",
+        "topic": "UX",
+        "tip_id": "eec4"
     }
 ]
