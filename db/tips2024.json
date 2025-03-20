@@ -1125,5 +1125,12 @@
         "tip": "(1) #52 cgy suspiciously fell down nyr scored on 1st shot during fast attack; (2) intentional shot off target from blue line scored on 2nd rebound; (3) on pp pass from top right circle scored from mid; ",
         "topic": "UX",
         "tip_id": "eec4"
+    },
+    {
+        "title": "You are watching stats for COL at TOR gamePeriod: 2 Time: 00:28 Scorer: Matthews Assists: Mitch Marner, John Tavares 39 7-8 17-25  91-88-16-34-23Period: 2 Time: 02:48 Scorer: Nichushkin Assists: Nathan MacKinnon, Cale Makar 39 8 29-27-13-88 60 8-22 24-16Period: 3 Time: 02:53 Scorer: Lorentz Assists: Simon Benoit 39 8 29-27-13-88 60 8-22 18-23",
+        "username": "shots were 39x25 COL. No goals were scored on 5x5. Many great chances for TOR but not many for COL. They will play in OTT tomorrow.",
+        "tip": "(1) on PP, pass from G line to front bounced off d stick; (2) on PP backhand pass from left point scored from mid; (3) on PK, shot from D zone hit ref then TOR scored from left circle on quick attack",
+        "topic": "UX",
+        "tip_id": "8747"
     }
 ]
