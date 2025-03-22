@@ -1139,5 +1139,12 @@
         "tip": "(1) turnover by stars in tbl zone, fast 3x2 by tbl scored to empty net; (2) fast almost 1x1 by tbl goalie saved but scored on rebound; (3) shot pass from blue line tipped in front; (4) on PP shot from right dot scored on rebound in front",
         "topic": "UX",
         "tip_id": "1575"
+    },
+    {
+        "title": "You are watching stats for WPG at EDM gamePeriod: 1 Time: 05:28 Scorer: Skinner Assists:  37 44-24 7-27-91 74 25-51 53-18-97Period: 1 Time: 13:39 Scorer: Perfetti Assists: Dylan Samberg, Nikolaj Ehlers 37 44-54 7-27-91 74 25-96 18-97-46Period: 2 Time: 05:30 Scorer: Skinner Assists: Connor McDavid, Darnell Nurse 37 6-54 7-27-91 74 25-96 53-18-97Period: 2 Time: 07:41 Scorer: Morrissey Assists: Nino Niederreiter, Morgan Barron 37 5-44 62-22-36 74 25-96 90-19-33Period: 3 Time: 03:56 Scorer: Tanev Assists: Alex Iafallo, Haydn Fleury 37 2-24 73-9-36 74 25-2 93-33-92Period: 3 Time: 14:26 Scorer: Hyman Assists: Darnell Nurse, Jake Walman 37 5-54 55-81-13 74 25-96 90-19-18Period: 4 Time: 01:13 Scorer: Connor Assists: Mark Scheifele, Josh Morrissey 37 81 55-81 30 25-2 33-",
+        "username": "7-27-91 was on ice during first three goals for wpg making it 1:2. 55-13-81 line was 0:1 then 55-81 scored in ot. shots were just 20x24 edm. edm played without #29 drysytle and #97 mcdavid was injured. score was 2:2 when shots were 6x7.",
+        "tip": "(1) kind of fast attack by edm shot from far mid unclear why it went in; (2) not the strongest shot from right circle deflected scored on rebound from right circle; (3) after skating behind g line pass to mid scored on second shot; (4) fast attack 2x1 pass from left circle redirected in front; (5) shot from blue line scored on second rebound from point; (6) shot from blue line on rebound from point",
+        "topic": "UX",
+        "tip_id": "acd1"
     }
 ]
