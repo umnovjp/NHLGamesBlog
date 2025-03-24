@@ -1153,5 +1153,12 @@
         "tip": "(1) shot from almost blue line g was screened; (2) fast attack like 4x3 shot from almost blue line that one is on goalie who saw the puck; (3) pass from left blue line to right circle PHI F was uncovered; (4) turnover in PHI zone but then #6 left position to make hit that was like 1x1 scored from point; (5) in OT just 9 seconds in after huge mistake by G",
         "topic": "UX",
         "tip_id": "1332"
+    },
+    {
+        "title": "You are watching stats for BUF at WPG gamePeriod: 1 Time: 09:15 Scorer: Peterka Assists: Jacob Bernard-Docker, Ryan McLeod 47 24-25 71-22-77 1 2-44 73-9-36Period: 2 Time: 02:05 Scorer: Niederreiter Assists: Cole Perfetti, Vladislav Namestnikov 47 23-26 29-19 1 91 62-7-9-91Period: 2 Time: 18:46 Scorer: Dahlin Assists: Jacob Bernard-Docker, Ryan McLeod 47 26-24 71-22-77 1 2-44 7-27-91Period: 3 Time: 07:13 Scorer: Kozak Assists: Mattias Samuelsson 47 23-24 29-19-48 1 5-64 17-81Period: 3 Time: 07:41 Scorer: Miller Assists: Mark Scheifele, Logan Stanley 47 23-24 29-72-19 1 6-64 55-81-13Period: 3 Time: 13:21 Scorer: Tuch Assists: Ryan McLeod, Connor Clifton 47 75-4 89-71 1 13 55-27-81-13Period: 3 Time: 16:32 Scorer: Ehlers Assists: Logan Stanley, Dylan DeMelo 47 24-25 71-22-77 1 6-54 17-27-22Period: 3 Time: 19:13 Scorer: McLeod Assists:  47 23-4 89-71-19  91 55-27-81-13-91",
+        "username": "WPG scored PP goal. But BUF scored one PP goal, one SH goal and one 5x6 goal. So 5x5 play was 2:2 BUF. Shots differential was 36x17 and it was 18x4 and 24x6 WPG at 1:1. WPG played 2nd G.",
+        "tip": "(1) individual effort picked up puck in the corner skated shot from left right circle; (2) on PP pass from top right corner to left point tipped but went in off d skate; (3) fast attack few passes then pass from top left circle one timed from top right circle; (4) shot from blue line on rebound from point; (5) individual effort by D who skated from blue line to score from bottom right circle; (6) SH goal 1x1; (7) one man effort by WPG who skated from D zone scored from left left circle; (8) EN from BUF D zone",
+        "topic": "UX",
+        "tip_id": "a380"
     }
 ]
