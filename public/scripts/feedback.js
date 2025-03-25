@@ -28,7 +28,7 @@ feedbackForm
       .then((res) => res.json())
       .then((data) => {
         alert(data.status);
-        email = '';
+        email = gameId + '';
         feedback = '';
       });
   })

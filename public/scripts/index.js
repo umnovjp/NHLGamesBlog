@@ -234,3 +234,4 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
     )}
 
 tipForm.addEventListener('submit', handleFormSubmit);
+module.exports = gameId
