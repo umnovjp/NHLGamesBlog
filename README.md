@@ -17,3 +17,6 @@ incorrect lineup stars goals 5,8,9 on 03/02 53 is counted as D and F. car game o
 
 ## Just to review what I am doing (to be deleted)
 There are 4 get routes (/, /feedback, /api/tips, /api/feedback) and 2 post routes (/api/feedback, /api/tips). / Forwards to /public/index.html file but /feedback forwards to /public/pages/feedback.html. Two more get routes just read from files. 
+
+## Not related material how to apply exports (to be deleted)
+9.15 index.js has `const badmath = require('./badmath.js')`. Full path is included. index.js has function or action: console.log something. badmath.js has one variable and one function that we are exporting using module.exports = {pie, predictable}. Then index.js knows what pie is and what predictable is. Then he reviewed 9.16. index.js to require ('./math.js') but math.js has function then it says module.exports = {function here}. Here is example: module.exports = {sum: (a,b) => a+b}. Then I can use math.sum in index.js. 
