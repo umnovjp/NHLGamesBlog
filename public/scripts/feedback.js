@@ -1,6 +1,5 @@
 const feedbackForm = document.getElementById('feedback-form'); // this form is not used for now
 
-
 // Handle when a user submits feedback
 feedbackForm
   .addEventListener('submit', (e) => {
