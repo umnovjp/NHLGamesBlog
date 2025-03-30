@@ -101,9 +101,7 @@ const handleFormSubmit = (e) => {
   };
   // Make a fetch POST request to the server
   postTip(newTip);
-};
-
-// console.log(document.featurePolicy.allowedFeatures());
+}
 
 function selectGame() {var inputVal = document.getElementById('datepicker').value;
   var date = inputVal.split('/');
@@ -158,8 +156,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             
                for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
                { // const gameInfoHome = document.createElement('section');
-              // gameInfoHome.setAttribute('id', 'gameInfoHome');
-              // document.getElementById('schedule').appendChild(gameInfoHome); 
                 
                 periodNumber = data1.data[i].period; goalsNumber.push(i);
                 goalTime = data1.data[i].startTime; 
@@ -234,4 +230,3 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
     )}
 
 tipForm.addEventListener('submit', handleFormSubmit);
-/// module.exports = gameId;
