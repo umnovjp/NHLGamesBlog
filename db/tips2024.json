@@ -1223,5 +1223,12 @@
         "tip": "(1) on PP pass from left circle one timed from mid; (2) pass from mid scored from left point; (3) rebound generator from left blue line scored on rebound from left point",
         "topic": "UX",
         "tip_id": "5e8d"
+    },
+    {
+        "title": "You are watching stats for VAN at WPG gamePeriod: 1 Time: 18:55 Scorer: Suter Assists: Tyler Myers, Jake DeBrusk 35 57-27 6-74-24 37 5-64 55-27-91Period: 2 Time: 09:26 Scorer: Connor Assists: Mark Scheifele, Colin Miller 35 57-27 6-74-24 37 6-44 55-81-9Period: 3 Time: 06:24 Scorer: Appleton Assists: Adam Lowry, Nikolaj Ehlers 35 17-43 6-74-24 37 5-54 17-27-22Period: 3 Time: 12:11 Scorer: Perfetti Assists: Vladislav Namestnikov, Kyle Connor 35 27-25 53-8-18 37 6-64 62-7-91",
+        "username": "Expected win for WPG. Line 55-81-9 was 1:0. They did not need more.",
+        "tip": "(1) fast attack pass from right boards to uncovered f in the mid who score 1x1; (2) fast attack like 2x2 bit goalie clean from mid even though two Ds were there; (3) shot from right circle scored on rebound from point; (4) fast attack one man effort overplayed D scored falling from left circle",
+        "topic": "UX",
+        "tip_id": "6196"
     }
 ]
