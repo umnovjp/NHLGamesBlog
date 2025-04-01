@@ -142,7 +142,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             document.getElementById('schedule').appendChild(gameInfo);
             const gameInfoHome = document.createElement('section');
             gameInfoHome.setAttribute('id', 'gameInfoHome');
-            document.getElementById('schedule').appendChild(gameInfoHome); // console.log(data.rosterSpots);
+            document.getElementById('schedule').appendChild(gameInfoHome);
             var gameTitle = document.createElement('h2'); gameTitle.textContent = '';
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game';
             document.getElementById('gameInfo').appendChild(gameTitle);
@@ -155,9 +155,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             .then(function (data1) { console.log('I am in third then', data1);
             
                for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
-               { // const gameInfoHome = document.createElement('section');
-                
-                periodNumber = data1.data[i].period; goalsNumber.push(i);
+               { periodNumber = data1.data[i].period; goalsNumber.push(i);
                 goalTime = data1.data[i].startTime; 
                 goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
                 goalTimeSecondsAbsolute=goalTimeSeconds+(periodNumber-1)*1200;
