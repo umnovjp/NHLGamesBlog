@@ -1258,5 +1258,12 @@
         "tip": "(1) fast attack by COL #29 scored from mid; (2) shot pass from blue line scored on rebound from point; (3) intentional miss from blue line scored on rebound from right point; (4) random shot from left corner slipped through G; (5) high shot from blue line scored on rebound; (6) fast 2x1 attack pass from left circle to right circle one timed; (7) fast attack pass from mid to almost blue line scored one timer; (8) fast attack on PP pass from mid one timed from left dot; (9) shot from blue line bit goalie thought there was traffic; (10) pass from behind G line scored from right point",
         "topic": "UX",
         "tip_id": "fac0"
+    },
+    {
+        "title": "You are watching stats for WPG at VGK gamePeriod: 1 Time: 13:01 Scorer: Scheifele Assists: Alex Iafallo, Luke Schenn 1 5-54 55-81-9 33 3-27 70-55-21Period: 1 Time: 18:15 Scorer: Lowry Assists: Nino Niederreiter, Logan Stanley 1 6-64 62-17-22 33 3-27 70-55-21Period: 2 Time: 11:53 Scorer: Miller Assists: Mason Appleton, Nino Niederreiter 1 9 62-7-22-9 33 14-2 20-9Period: 3 Time: 19:08 Scorer: Perfetti Assists: Kyle Connor 1 2-44 7-81-91  10 19-20-95-9-10",
+        "username": "WPG even played 2nd goalie. And VGK did not score on him on home ice. Shots were 19x8 WPG late in 2nd. They ended 22x27 or so. But all VGK shots were to goalie. He did not make great saves",
+        "tip": "(1) fast attack 2x1 backhand pass from right circle to left circle one timed; (2) shot pass from blue line scored on rebound that bounced off something; (3) one timer from blue line on PP; (4) EN after shot from M zone",
+        "topic": "UX",
+        "tip_id": "c874"
     }
 ]
