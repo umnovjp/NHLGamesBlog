@@ -1265,5 +1265,12 @@
         "tip": "(1) fast attack 2x1 backhand pass from right circle to left circle one timed; (2) shot pass from blue line scored on rebound that bounced off something; (3) one timer from blue line on PP; (4) EN after shot from M zone",
         "topic": "UX",
         "tip_id": "c874"
+    },
+    {
+        "title": "You are watching stats for PIT at DAL gamePeriod: 1 Time: 04:16 Scorer: Crosby Assists: Evgeni Malkin, Kris Letang 35 58-65 71-87-2 1 44-23 24-53Period: 1 Time: 10:43 Scorer: Dadonov Assists: Oskar BÃ¤ck, Lian Bichsel 35 65-20 13-19-53 1 46-55 63-15-10Period: 2 Time: 12:36 Scorer: Dadonov Assists: Matt Duchene, Mathew Dumba 35 24-5 19-46 1 1 63-95-64-27Period: 3 Time: 00:20 Scorer: Crosby Assists: Rutger McGroarty 35 58-24 87-17-2 1 44-23 63-96-53Period: 3 Time: 03:11 Scorer: Dadonov Assists: Thomas Harley, Ilya Lyubushkin 35 65-5 71-67-53 1 46-55 63-96-53Period: 3 Time: 08:49 Scorer: Rust Assists: Sidney Crosby 35 65-20 87-17-2 1 46-55 96-24-21Period: 3 Time: 18:17 Scorer: Lizotte Assists: Danton Heinen 35 58-24 43-55-46 1 44-55 63-96-53Period: 3 Time: 18:45 Scorer: Crosby Assists: Conor Timmins 35 58-20 87-17-2  53 95-96-24-21-53",
+        "username": "Stars played #1 DeSmith. #63 had hat-trick last goal was too easy. Stars led 3:2 with 11 remaining then #46 fell it was 3:3.",
+        "tip": "(1) on PP pass from behind G line scored from mid on hold and release; (2) fast attack like 1x1; (3) on PP backhand pass from right corner to left point not intercepted; (4) PIT won puck battle behind G line over #44 pass to right G line then to point tik-tak-toe scored; (5) pass from blue line to uncovered #63 who scored from right point; (6) #46 fell behind G line scored from point overplayed G; (7) 2D collided in our zone fast 2x1 scored from mid; (8) EN goal from PIT D zone",
+        "topic": "UX",
+        "tip_id": "3e35"
     }
 ]
