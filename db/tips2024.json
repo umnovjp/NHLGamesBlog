@@ -1293,5 +1293,12 @@
         "tip": "(1) on PP pass from left boards scored from mid in 1st minute; (2) pass from behind G line scored from mid; (3) pass to point where STL F was absolutely uncovered; (4) shot from mid G was screened; (5) sudden fall by D in M zone fast 2x1 by COL; (6) turnover in D zone pass from behind G line to point; (7) 6x5 shot from almost blue line hit D leg; (8) 6x5 sudden turnover in STL D zone shot to EN; (9) 6x5 shot from top right circle G was screened",
         "topic": "UX",
         "tip_id": "c3cf"
+    },
+    {
+        "title": "You are watching stats for STL at WPG gamePeriod: 2 Time: 02:34 Scorer: Barron Assists: Josh Morrissey 30 4-17 70-71-76 37 2-44 28-36-19Period: 2 Time: 07:27 Scorer: Buchnevich Assists: Robert Thomas, Philip Broberg 30 72-6 89-18-21 37 5-54 55-81-9Period: 3 Time: 07:05 Scorer: Iafallo Assists: Kyle Connor 30 72-6 89-18-21 37 5-54 55-81-9Period: 3 Time: 19:51 Scorer: Lowry Assists: Mark Scheifele  63 10-89-25-18-63 37 5-54 17-55-9",
+        "username": "STL played 2nd goalie against western leader away. That's odd. WPG knew they are going to win. WPG 55-81-9 line was 1:1. Again no #13. They scored when they needed to. STL had just 15 shots.",
+        "tip": "(1) sudden turnover by STL fast attack almost 1x1 scored; (2) pass from behind G line scored from left point; (3) pass from mid scored on rebound from point; (4) EN goal after turnover",
+        "topic": "UX",
+        "tip_id": "3e06"
     }
 ]
