@@ -1300,5 +1300,12 @@
         "tip": "(1) sudden turnover by STL fast attack almost 1x1 scored; (2) pass from behind G line scored from left point; (3) pass from mid scored on rebound from point; (4) EN goal after turnover",
         "topic": "UX",
         "tip_id": "3e06"
+    },
+    {
+        "title": "You are watching stats for VAN at DAL gamePeriod: 1 Time: 13:48 Scorer: Rantanen Assists: Wyatt Johnston, Thomas Harley 35 27-17 8-18 1 53 96-24-21-53Period: 1 Time: 18:01 Scorer: Marchment Assists: Jamie Benn, Mikael Granlund 35 27-25 44-18 1 1 14-95-64-27Period: 2 Time: 07:28 Scorer: Duchene Assists: Jamie Benn, Mikael Granlund 35 17-43 8-44 1 1 14-95-64-27Period: 3 Time: 00:17 Scorer: DeBrusk Assists: Conor Garland, Quinn Hughes 35 43 6-74-8-24 1 23-46 15-22Period: 3 Time: 04:39 Scorer: Mancini Assists: Aatu Raty, Linus Karlsson 35 17-90 94-21-54 1 44-6 64-22Period: 3 Time: 17:15 Scorer: Bourque Assists: Jason Robertson, Cody Ceci 35 43-90 81-44-54 1 44-23 24-21-22Period: 3 Time: 17:39 Scorer: Granlund Assists: Esa Lindell, Matt Duchene  29-25 6-8-24-21 1 44-23 95-64-96Period: 3 Time: 19:00 Scorer: Raty Assists: Marcus Pettersson 35 29-25 81-44-54 1 44-46 14-22-53Period: 3 Time: 19:30 Scorer: Suter Assists: Conor Garland, Filip Hronek  17-43 6-74-8-24 1 23-46 63-15-18Period: 3 Time: 19:53 Scorer: Suter Assists: Filip Hronek, Quinn Hughes  17-43 6-74-8-24 1 23-55 96-24-21Period: 4 Time: 03:44 Scorer: Sherwood Assists: Conor Garland 35 17-43 8-44 1 3-55 95-96",
+        "username": "Very odd game. Stars led 5:2 with one minute remaining. VAN scored 3 in the final minute then won in OT. 3 different lines were on ice during these 3 goals for Stars. #23 and #46 were 0:2 during those 3 goals.",
+        "tip": "(1) on PP pass from center blue line one timed from right circle; (2) on PP pass from behind the G scored from left point; (3) on PP backhand pass from mid one timed from bottom left circle; (4) on PP one man effort shot from behind the G bounced off #1 skate; (5) on PP shot from blue line bounced off #22 glove; (6) pass from behind the G sone timed from mid; (7) EN from M zone; (8) 6x5 scored from bottom left circle on bounce; (9) 6x5 scored from mid after pass from right G line; (10) 6x5 pass from right G line one timed from mid; (11) in OT pass from behind G line one timed from point",
+        "topic": "UX",
+        "tip_id": "5568"
     }
 ]
