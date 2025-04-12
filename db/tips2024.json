@@ -1328,5 +1328,12 @@
         "tip": "(1) fast attack by VAN like 2x1 backhand pass from left G line scored from point; (2) fast attack by VAN shot from right dot bit G clean; (3) shot from blue line by F redirected from point by D; (4) scored on rebound after shot from blue line; (5) EN goal after rebound off the boards",
         "topic": "UX",
         "tip_id": "1972"
+    },
+    {
+        "title": "You are watching stats for SEA at VGK gamePeriod: 1 Time: 06:58 Scorer: Barbashev Assists:  35 6-29 15-21-26 33 3-6 61-49-21Period: 2 Time: 07:56 Scorer: Karlsson Assists: Reilly Smith, Brayden McNabb 35 62-41 7-17-9 33 3-27 19-71-26Period: 2 Time: 17:21 Scorer: McCann Assists: Jordan Eberle, Adam Larsson 35 6-29 7-17-19 33 15-2 19-71-26",
+        "username": "VGK took 2:0 lead in 2nd then controlled the game. Both goals shortly after entry but not fast attacks. SEAT did not create any real danger at 1:2.",
+        "tip": "(1) zone entry backhand pass from right G line to point but one F missed pass then another F scored from mid like 3x2; (2) another zone entry backhand pass scored from left circle on 3x2; (3) shot from blue line scored on rebound",
+        "topic": "UX",
+        "tip_id": "f3e3"
     }
 ]
