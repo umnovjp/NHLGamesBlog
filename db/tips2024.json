@@ -1384,5 +1384,12 @@
         "tip": "(1) PP pass from left circle one timed from mid; (2) puck bounced to #29 who was uncovered left point; (3) shot pass from blue line scored on rebound from left point",
         "topic": "UX",
         "tip_id": "df40"
+    },
+    {
+        "title": "You are watching stats for LAK at COL gamePeriod: 2 Time: 05:25 Scorer: O'Connor Assists: Cale Makar, Jack Drury 31 6-92 61-39-79 39 7-8 17-18-25Period: 2 Time: 06:57 Scorer: Necas Assists: Samuel Girard, Brock Nelson 31 84-21 24-37-12 39 67-49 11-62-88Period: 2 Time: 15:29 Scorer: Necas Assists: Cale Makar, Jonathan Drouin 31 8-6 24-9 39 8 62-29-27-88Period: 3 Time: 04:56 Scorer: Drouin Assists: Nathan MacKinnon, Martin Necas 31 8-84 11-9 39 8 29-27-13-88",
+        "username": "Second time reviewing this game just before playoff start. And no way for me to get line combinations. Error from another script. COL had 2 PP goals. But before that they had 2:0 lead. Two lines scored: 17-18-25 and 11-62-88.",
+        "tip": "(1) one man effort by #8 who passed to F at the last moment scored from point; (2) intentional miss from blue line scored on rebound off boards; (3) ",
+        "topic": "UX",
+        "tip_id": "aecb"
     }
 ]
