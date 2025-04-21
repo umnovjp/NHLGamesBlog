@@ -1412,5 +1412,12 @@
         "tip": "(1) initials hot saved but puck goes off skate of a falling F; (2) on PP shot from top right circle off D leg",
         "topic": "UX",
         "tip_id": "b1a7"
+    },
+    {
+        "title": "You are watching stats for STL at WPG gamePeriod: 1 Time: 09:31 Scorer: Thomas Assists: Cam Fowler, Pavel Buchnevich 50 21 89-18-76-21 37 2-54 17-9Period: 1 Time: 13:38 Scorer: Scheifele Assists: Kyle Connor, Josh Morrissey 50 22-55 12-13 37 91 55-81-9-91Period: 1 Time: 15:02 Scorer: Anderson-Dolan Assists: Morgan Barron, Luke Schenn 50 22-4 70-71-76 37 5-64 28-36-19Period: 1 Time: 18:10 Scorer: Sundqvist Assists: Zack Bolduc, Justin Faulk 50 72-6 70-71-76 37 5-44 28-36-19Period: 2 Time: 01:13 Scorer: Kyrou Assists: Justin Faulk, Jake Neighbours 50 63 10-70-25-63 37 2-44 7-73Period: 3 Time: 09:18 Scorer: Iafallo Assists: Mark Scheifele, Kyle Connor 50 17-55 89-18-63 37 54-4 55-81-9Period: 3 Time: 18:24 Scorer: Connor Assists: Mark Scheifele, Josh Morrissey 50 17-55-55 10-25-21 37 44-4 55-81-9Period: 3 Time: 19:07 Scorer: Lowry Assists: Mason Appleton  63 10-89-25-18-63 37 2-54 17-22-73",
+        "username": "Jets lines were 7-62-91 283 7 217 5 152 3; 9-55-81 (2:0) 330 8 379 9 421 7; 17-22-73 214 6 195 5 299 8; 19-28-36 (1:1) 187 6 118 3 63 2. Quite a change vs regular season. There was real lines matching. pairs were 2-44 4-54 5-64. No surprise here. STL scored 3 goals on 10 shots early in 2nd. They ended up with 16 shots. Four goals scored 5x5 WPG was 3:1. STL was 2:1 on PP plus one EN goal. Line 55-81-9 was 2:0 in 3rd when they needed to be top players.",
+        "tip": "(1) on PP pass from right blue line scored from left dot; (2) on PP shot under very sharp angle from left G line bounced to the net; (3) shot pass from blue line redirected in front; (4) shot pass from blue line bounced twice scored on rebound from in front; (5) on PP shot from top right circle bit G clean; (6) battle behind G line pass to front scored; (7) pass from top left circle one timed from right circle; (8) EN goal",
+        "topic": "UX",
+        "tip_id": "5b44"
     }
 ]
