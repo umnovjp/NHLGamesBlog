@@ -1433,5 +1433,12 @@
         "tip": "(1) on PP shot from top left circle by #29 beat G clean; (2) on PP one timer from left dot; (3) shot by #55 from mid after pass from right circle by #18; (4) fast attack shot from left right circle after pass from right boards; (5) fast attack backhand shot from mid while falling short after Stars PP expired; (6) shot from blue line scored on rebound from point; (7) fast attack in OT one man effort scored on his own rebound",
         "topic": "UX",
         "tip_id": "13c6"
+    },
+    {
+        "title": "You are watching stats for STL at WPG gamePeriod: 1 Time: 16:32 Scorer: Scheifele Assists: Dylan DeMelo 50 4-55 18-76-21 37 5-2 55-81-9Period: 1 Time: 19:58 Scorer: Snuggerud Assists: Pavel Buchnevich, Cam Fowler 50 21 89-18-76-21 37 44-4 7-9Period: 3 Time: 01:43 Scorer: Connor Assists: Cole Perfetti, Mark Scheifele 50 17-55 89-26-18 37 5-44 55-81-91",
+        "username": "WPG lines were 7-62-91 186 5 115 4 218 5; 9-55-81 (1:0) 356 7 205 5 233 7; 17-22-73 148 5 133 3 204 6; 19-28-36 76 3 68 2 47 2\tpairs 2-44 5-64 4-54. WPG had 2 with 55 and 81 on ice STL scored one PP.",
+        "tip": "(1) one man effort STL D ran into G during the shot; (2) on PP shot from top left circle beat G clean; (3) shot from point after pass from behind the G line",
+        "topic": "UX",
+        "tip_id": "c754"
     }
 ]
