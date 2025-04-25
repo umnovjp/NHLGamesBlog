@@ -1440,5 +1440,12 @@
         "tip": "(1) one man effort STL D ran into G during the shot; (2) on PP shot from top left circle beat G clean; (3) shot from point after pass from behind the G line",
         "topic": "UX",
         "tip_id": "c754"
+    },
+    {
+        "title": "You are watching stats for DAL at COL gamePeriod: 1 Time: 08:09 Scorer: Nichushkin Assists: Samuel Girard, Sam Malinski 29 46-55 95-91 39 49-70 11-13Period: 3 Time: 09:18 Scorer: Benn Assists: Thomas Harley, Mikael Granlund 29 55 14-91-64-27 39 7-8 10-13Period: 4 Time: 05:31 Scorer: Seguin Assists: Mason Marchment, Mikko Rantanen 29 23-55 95-91-27 39 7-8 29-27-88",
+        "username": "Stars lines were 10-15-18 126 5 203 5 114 4; 14-53-63 174 5 274 6 205 7; 24-64-96 195 6 232 6 188 6; 27-91-95 (1:0) 226 5 232 6 166 7. Note change between Benn and Hintz lines. D pairs were 6-28 23-44 55-46. COL lines were 10-92-94 122 4 83 3 67 3; 11-13-62 175 5 249 5 145 5; 17-18-25 186 5 175 3 150 4; 27-29-88 (0:1) 327 6 283 7 236 6. Note 2 lines changes in COL 27-62 switched then 28 out 92 in. COL pairs were 7-8 42-55 49-70. Two goals scored on PP then Stars scored in OT. There were few chances for COL late in the game on PP with seconds remaining another early in OT.",
+        "tip": "(1) individual effort by #13 not clear what #95 was doing; (2) on PP shot pass from blue line redirected in front; (3) fast attack pass from right G line to right circle one timed",
+        "topic": "UX",
+        "tip_id": "07d6"
     }
 ]
