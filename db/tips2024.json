@@ -1461,5 +1461,12 @@
         "tip": "(1) on PP shot from almost blue line G was screened but not much maybe beat G clean; (2) won puck battle behind G line short pass to point scored; (3) shot from almost blue line scored on rebound; (4) on PP shot from left dot scored on 2nd rebound; (5) two players were on ice shot pass from left circle deflected from one of them; (6) shot from blue line deflected scored on wraparound; (7) in OT sudden turnover by MIN D fast shots scored on 2nd rebound from point",
         "topic": "UX",
         "tip_id": "34a6"
+    },
+    {
+        "title": "You are watching stats for WPG at STL gamePeriod: 1 Time: 13:58 Scorer: Connor Assists: Cole Perfetti, Dylan Samberg 37 54-4 55-81-91 50 17-55 10-25-63Period: 1 Time: 19:37 Scorer: Neighbours Assists: Colton Parayko, Cam Fowler 37 5-24 62-55-9 50 17-55 10-70-63Period: 2 Time: 10:46 Scorer: Tucker Assists: Nick Leddy, Alexandre Texier 37 2-44 73-28-19 50 4-75 70-9-76Period: 2 Time: 17:23 Scorer: Schenn Assists: Colton Parayko, Jake Neighbours 37 5-54 17-55-81 50 55-6 10-25-63Period: 2 Time: 18:54 Scorer: Faulk Assists: Jake Neighbours, Brayden Schenn 37 54-4 62-7-91 50 72-6 10-25-63Period: 3 Time: 02:01 Scorer: Thomas Assists: Oskar Sundqvist, Pavel Buchnevich 37 2-44 55-81-9 50 17-55 70-89-18",
+        "username": "WPG lines were 7-62-91 (0:1) 122 4 286 7 232 6; 9-55-81 (1:1) 384 7 242 6 136 3; 17-22-36 123 4 286 9 349 7; 19-28-73 (0:1) 107 2 110 3 198 6. Seems like all goals scored 5x5. Pairs 2-44 (0:2) 4-54 (1:1) 5-24 (0:1). Three goals scored by STL after shots from blue line including 2 bounced and one screened. And two goals on fast attacks. Just 23 shots for STL. Probably STL was just lucky. But they won previous game 7:2.",
+        "tip": "(1) first shot generated rebound that went to post scored on 2nd rebound from left point; (2) shot from right circle blocked then on rebound shot pass from blue line redirected in front; (3) one timer from right blue line; (4) backhand pass from left G line during fast attack mishandled by G; (5) one timer from blue line bounced off pad or D arm; (6) fast attack like 2x2 after WPG turnover in STL zone ",
+        "topic": "UX",
+        "tip_id": "ebe8"
     }
 ]
