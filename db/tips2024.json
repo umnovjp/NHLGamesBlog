@@ -1489,5 +1489,12 @@
         "tip": "(1) 9 seconds after opening faceoff shot from G line bounced off G goalie's error; (2) turnover in M zone fast attack pass from left dot to mid blue line scored from mid after incredible bounce; (3) after COL shot save fast attack 2x1 pass from right circle scored from point; (4) pass from G line one timed from top right circle redirected in front; (5) individual effort from top right circle; (6) on PP pass from right G line to left G line not intercepted scored from very sharp angle; (7) shot pass from right blue line deflected in front; (8) EN goal",
         "topic": "UX",
         "tip_id": "0843"
+    },
+    {
+        "title": "You are watching stats for EDM at LAK gamePeriod: 2 Time: 03:33 Scorer: Kuzmenko Assists: Anze Kopitar, Adrian Kempe 30 27-49 19-93  11-22-9-55-96Period: 2 Time: 06:16 Scorer: Kane Assists: John Klingberg 30 36-96 19-91-18 35 8-6-84 9-55Period: 3 Time: 07:12 Scorer: Janmark Assists: Viktor Arvidsson, Vasily Podkolzin 30 96-2 13-33-92 35 6-92 24-37-12Period: 3 Time: 19:02 Scorer: Nugent-Hopkins Assists: Connor McDavid, Leon Draisaitl 30 27-25 93-29-97  96 24-22-9-55-96",
+        "username": "When LAK scored 1st goal shots were 21x7 EDM. EDM scored on next shot. Some shots earlier were clearly to G glove. shots were 46x20 EDM in the end.",
+        "tip": "(1) on PP pass shot from left blue line redirected in front; (2) scored right after PP expired: while on PP scramble near goal, eventually pass from left G line one timed from mid; (3) 2x1 by 4th line shot from right circle on rebound from left point not a dangerous play; (4) EN after turnover in EDM zone then fast attack",
+        "topic": "UX",
+        "tip_id": "e2f9"
     }
 ]
