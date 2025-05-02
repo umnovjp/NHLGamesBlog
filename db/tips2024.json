@@ -1496,5 +1496,12 @@
         "tip": "(1) on PP pass shot from left blue line redirected in front; (2) scored right after PP expired: while on PP scramble near goal, eventually pass from left G line one timed from mid; (3) 2x1 by 4th line shot from right circle on rebound from left point not a dangerous play; (4) EN after turnover in EDM zone then fast attack",
         "topic": "UX",
         "tip_id": "e2f9"
+    },
+    {
+        "title": "You are watching stats for STL at WPG gamePeriod: 1 Time: 01:23 Scorer: Connor Assists: Mark Scheifele, Mason Appleton 50 22-4 18-9-21 37 54-4 55-81-22Period: 1 Time: 03:42 Scorer: Walker Assists: Colton Parayko, Cam Fowler 50 17-55 12-26-13 37 2-44 62-17-22Period: 1 Time: 08:39 Scorer: Niederreiter Assists: Dylan Samberg, Neal Pionk 50 22-4 25-63-76 37 54-4 62-7-22Period: 2 Time: 06:06 Scorer: Snuggerud Assists: Robert Thomas 50 22-4 89-18-21 37 5-64 17-9-91Period: 2 Time: 11:05 Scorer: DeMelo Assists: Kyle Connor, Vladislav Namestnikov 50 17-55 10-25-63 37 2-44 7-81-13Period: 2 Time: 18:51 Scorer: Namestnikov Assists: Kyle Connor, Mason Appleton 50 4-72 70-9-76 37 54-4 7-81-22Period: 3 Time: 16:47 Scorer: Lowry Assists: Nino Niederreiter, Mason Appleton  63 10-89-25-18-63 37 44-4 62-17-22Period: 3 Time: 19:07 Scorer: Walker Assists: Radek Faksa, Alexey Toropchenko 50 72-6 12-26-13 37 5-64 62-28-36",
+        "username": "WPG lines 7-9-91 152 4 352 8 287 7; 13-55-81 319 7 199 5 247 6; 17-22-62 (1:1) 226 5 163 4 199 5; 28-36-73 \t94 3 0 0 0 0. Apparently last line got switched but my GUI does not show that. Pairs were 2-44 (1:1) 4-54 (3:0) 5-64 (0:2). #55 WPG back in lineup. When score was 2:2 shots were 13x7 WPG. They ended 26x19 or so. Probably #55 was demoted because line 55-13-81 was not on ice during any goal. So #81 was 3:0. WPG controlled game",
+        "tip": "(1) pass from behind G line scored in front one touch; (2) shot pass from blue line redirected from mid 3rd time in row on rotation; (3) shot pass from blue line tipped in front; (4) soft turnover in STL zone fast 2x1 pass from left blue line scored from right circle soft goal for rookie's 1st playoff goal; (5) shot pass from blue line bounced off D hip; (6) fast attack like 3x3 pass from mid scored from bottom left circle; (7) EN goal; (8) shot from point scored on rebound from right point",
+        "topic": "UX",
+        "tip_id": "f5b7"
     }
 ]
