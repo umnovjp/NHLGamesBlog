@@ -1538,5 +1538,12 @@
         "tip": "(1) fast entry pass from right circle to mid bounced scored from point; (2) turnover in M zone fast entry basically 1x1 vs D shot from left circle bit goalie clean he was screened; (3) on PP pass from right boards to bottom right circle redirected from sharp angle; (4) turnover in M zone fast entry shot from left dot bit goalie clean; (5) 6x5 shot pass from right boards bounced off D stick; (6) 6x5 shot pass from right boards redirected in front with 2 seconds remaining; (7) shot pass from blue line redirected in front",
         "topic": "UX",
         "tip_id": "b1c0"
+    },
+    {
+        "title": "You are watching stats for VGK at MIN gamePeriod: 1 Time: 03:30 Scorer: Theodore Assists: Victor Olofsson, Jack Eichel 33 33 61-48-95-9 32 5-7 17-89Period: 1 Time: 19:56 Scorer: Hartman Assists: Marcus Foligno 33 15-2 48-49-95 32 24-4 17-36-38Period: 2 Time: 16:12 Scorer: Eichel Assists: Mark Stone, Brayden McNabb 33 3-27 61-71-9 32 25-7 14-97-12Period: 3 Time: 16:02 Scorer: Stone Assists: Brayden McNabb, Shea Theodore 33 3-27 61-71-9 32 46-25 97-12-23Period: 3 Time: 16:33 Scorer: Hartman Assists: Marcus Johansson, Jake Middleton 33 7-15 19-49-10 32 5-7 90-17-38",
+        "username": "VGK lines were 9-61-71 199 5 303 7 155 5; 10-19-49 250 6 154 5 124 3; 20-48-95 223 5 191 1 0 0; 21-55-70 118 4 46 1 0 0. pairs 2-15 3-27 7-14. Lines changed in 3rd to 20-48-55 21-70-95. So 55 and 95 switched. VGK was in control led the game.",
+        "tip": "(1) on PP shot from blue line g was screened; (2) one timer from top right circle after pass from right boards; (3) turnover in VGK zone quick pass 1x1; (4) pass from left g line knocked off mid air in front; (5) on wraparound after grabbing puck behind the net",
+        "topic": "UX",
+        "tip_id": "55cf"
     }
 ]
