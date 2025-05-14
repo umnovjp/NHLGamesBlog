@@ -1587,5 +1587,12 @@
         "tip": "(1) just after 5x3 shot pass from top right circle redirected to net by D; (2) WPG picked up rebound behind G line scored on wraparound; (3) on delayed penalty shot from mid by D; (4) WPG D overplayed #15 near G line pass to bottom right circle scored; (5) shot by D from behind G line deflected to net by goalie; (6) one man effort by #96 shot from right left circle; (7) fast entry was 2x1 saved on rebound pass scored from mid",
         "topic": "UX",
         "tip_id": "00f2"
+    },
+    {
+        "title": "You are watching stats for WPG at DAL gamePeriod: 1 Time: 08:36 Scorer: Granlund Assists: Thomas Harley, Jason Robertson 37 54-4 7-73 29 55 91-64-27-21Period: 2 Time: 01:02 Scorer: Ehlers Assists: Kyle Connor, Josh Morrissey 37 13 55-27-81-13 29 44-23 91-64-18Period: 2 Time: 17:52 Scorer: Granlund Assists: Mikko Rantanen 37 54-4 62-7-91 29 23-55 64-96-24Period: 3 Time: 07:23 Scorer: Granlund Assists: Miro Heiskanen, Matt Duchene 37 54-4 7-73 29 4 95-91-64-27",
+        "username": "Stars had unusual lineup. They played 11F and 7D because #4 finally is back. Lines were 14-18-63 234 7 158 4 139 3; 27-91-95 223 6 154 5 265 6; 24-64-96 199 6 85 3 95 2, 53-21. Pairs were 4-55 23-44 6-28 46 though #4 played just 1 shift in 3rd. WPG lines were 7-62-91 (0:1) 235 7 265 6 244 5; 9-55-81 254 6 142 4 209 4; 13-17-27 251 6 81 2 164 5; 22-36-73 153 5 54 2 30 2. Pairs were 2-44 4-54 5-24. both teams had many chances 5x5 but it was 1:0 and it was 2:1 on PP. Interesting line matching by Stars.",
+        "tip": "(1) fast entry on PP one man effort crossing blue line shot from mid using D as a screen; (2) on PP shot from right very sharp angle; (3) fast entry 2x1 basically one man effort shot from right circle; (4) on PP pass from blue line one timed from right circle. ",
+        "topic": "UX",
+        "tip_id": "06bb"
     }
 ]
