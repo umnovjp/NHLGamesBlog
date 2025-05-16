@@ -1601,5 +1601,12 @@
         "tip": "(1) in OT, scored from crease on 2nd rebound. ",
         "topic": "UX",
         "tip_id": "ab01"
+    },
+    {
+        "title": "You are watching stats for DAL at WPG gamePeriod: 2 Time: 06:17 Scorer: Scheifele Assists: Kyle Connor, Neal Pionk 29 4-55 96-53 37 54-4 55-81Period: 3 Time: 02:20 Scorer: Ehlers Assists: Kyle Connor, Mark Scheifele 29 44-55 53- 37 13 55-27-81-13Period: 3 Time: 12:07 Scorer: Namestnikov Assists: Alex Iafallo, Neal Pionk 29 46-55 14-64 37 91 62-7-9-91Period: 3 Time: 19:15 Scorer: Ehlers Assists: Cole Perfetti, Vladislav Namestnikov  53 95-64-96-24-53 37 5-54 7-27-91",
+        "username": "Stars lines are different 14-91-95 141 4 223 6 101 2; 18-27-63 166 4 136 4 236 5; 147 4 179 5 236 5 147 4 179 5 236 5; 21-53. Pairs were 4-55 6-28 23-44 46. Site shows Miro did not play single 5x5 shift in 3rd but he was on ice when 4th goal against us was scored. Overall he played 18 minutes. #46 was on ice for less than 10 minutes overall including just 1 shift 5x5. There were many penalties in 3rd and overall. No goals scored 5x5. WPG scored one 4x4 in 2nd then 2 PP in 3rd including 5x3 then to EN. Miro was -2. Stars played with 7D 11F again.",
+        "tip": "(1) 4x4 fast attack by WPG pass from right circle to crease bounced off #55 skate; (2) 5x3 PP pass to right blue line overplayed G from there; (3) on PP pass from behind the G line shot from bottom tight circle; (4) EN with Miro losing race ",
+        "topic": "UX",
+        "tip_id": "fb9f"
     }
 ]
