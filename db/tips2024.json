@@ -1629,5 +1629,12 @@
         "tip": "This game was reviewed before just adding EDM lines",
         "topic": "UX",
         "tip_id": "fd8d"
+    },
+    {
+        "title": "You are watching stats for VGK at EDM gamePeriod: 1 Time: 07:19 Scorer: Perry Assists: Connor McDavid, Leon Draisaitl 33 7-14 61-49-9 74 36-96 90-29-97Period: 1 Time: 11:12 Scorer: Perry Assists: Evan Bouchard, Ryan Nugent-Hopkins 33 7-3 61-71 74 2 90-93-29-97Period: 1 Time: 15:17 Scorer: Roy Assists: Nicolas Hague, Keegan Kolesar 33 7-14 70-55-10 74 25-2 90-29-97Period: 1 Time: 16:11 Scorer: Smith Assists: Jack Eichel, Zach Whitecloud 33 15-2 19-71-21 74 36-96 13-33-92Period: 2 Time: 17:05 Scorer: Karlsson Assists: Noah Hanifin, Alex Pietrangelo 33 7-15 19-71-70 74 27-25 18-13-97Period: 3 Time: 16:58 Scorer: McDavid Assists: Evan Bouchard, Leon Draisaitl 33 3-27 9-10-21 74 96-2 18-29-97Period: 3 Time: 19:59 Scorer: Smith Assists: William Karlsson, Brayden McNabb 33 27-15 19-71-9 74 27-25 18-29-97",
+        "username": "EDM lines were 13-33-92 166 4 130 3 217 6; 18-91-93 189 5 231 5 14 1; 19-21-28 180 4 300 4 0 0; 29-90-97 345 7 91 4 56 3. Apparently, lines changed later in 3rd. Pairs were 2-25, 27-49, 36-96. But #49 did not play in 3rd. Lines were 2-96, 25-27. 25-36. Not sure how VGK line 9-49-61 played 9 shifts in 3rd but only 3 were recorded in against table/",
+        "tip": "This game was reviewed before just adding EDM lines",
+        "topic": "UX",
+        "tip_id": "45cf"
     }
 ]
