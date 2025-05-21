@@ -1615,5 +1615,12 @@
         "tip": "(1) scored on rebound from point after shot from left dot technically special teams because Stars #6 was supposed to go to penalty box; (2) rebound from top right circle after shot from right boards, yes both shots were far away; (3) on PP pass from left G line to mid one timed",
         "topic": "UX",
         "tip_id": "a437"
+    },
+    {
+        "title": "You are watching stats for VGK at EDM gamePeriod: 1 Time: 01:27 Scorer: Henrique Assists: Connor Brown 33 14-2 48-95-16 74 25-51 19-91-28Period: 1 Time: 13:03 Scorer: Henrique Assists: Zach Hyman, Evander Kane 33 3-27 55-10-21 74 25-96 19-91-18Period: 2 Time: 07:38 Scorer: Kane Assists: Connor McDavid, Evan Bouchard 33 3-27 61-9-16 74 27-2 91-18-97",
+        "username": "Second time reviewing this game. Because I did not expect EDM to win. Instead VGK did not score goals in 2 last games. EDM lines were EDM lines were 18-93-97 147 3 336 7 138 4; 29-42-92 114 4 144 4 280 7; 19-28-91 49 2 209 7 278 5; 13-21-90 58 2 65 2 275 6. Pairs were 2-27, 25-51, 36-96.",
+        "tip": "second time no entry here",
+        "topic": "UX",
+        "tip_id": "bc1e"
     }
 ]
