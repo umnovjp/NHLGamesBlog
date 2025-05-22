@@ -1636,5 +1636,12 @@
         "tip": "This game was reviewed before just adding EDM lines",
         "topic": "UX",
         "tip_id": "45cf"
+    },
+    {
+        "title": "You are watching stats for EDM at DAL gamePeriod: 1 Time: 10:19 Scorer: Draisaitl Assists: Darnell Nurse, Connor McDavid 74 36-25 18-29-97 29 44-23 95-21-53Period: 1 Time: 15:22 Scorer: Seguin Assists:  74 36-96 90-91-29 29 44-23 91-27-18Period: 2 Time: 06:08 Scorer: Nugent-Hopkins Assists: Connor McDavid, Leon Draisaitl 74 2 90-93-29-97 29 44-23 10-53Period: 2 Time: 07:48 Scorer: Bouchard Assists: Ryan Nugent-Hopkins, Leon Draisaitl 74 27-2 93-29-42 29 4-55 95-21-53Period: 3 Time: 00:32 Scorer: Heiskanen Assists: Mikael Granlund, Mason Marchment 74 25-51 28-13 29 4 91-64-27-21Period: 3 Time: 03:49 Scorer: Granlund Assists: Miro Heiskanen, Tyler Seguin 74 96-2 28-13 29 4 91-64-27-21Period: 3 Time: 05:58 Scorer: Duchene Assists: Roope Hintz, Mikko Rantanen 74 25-51 19-93 29 53 95-96-24-53Period: 3 Time: 16:02 Scorer: Seguin Assists: Sam Steel, Jason Robertson 74 96-2 18-29-97 29 23-4 91-18-21Period: 3 Time: 16:45 Scorer: Lindell Assists:   25-2 90-18-29-97 29 23-4 64-96-24",
+        "username": "Started lines 18-93-97 265 5 272 5 304 8; 19-28-91 278 6 131 3 103 2; 29-42-92 173 5 124 3 1 0; 13-21-90 82 3 68 2 0 0. But later in 3rd changed to 18-29-97 28-91-93 19-92-42. Only line 21-90-13 stayed. Pairs were 2-27 25-51 36-96. Stars scored 5 in 3rd.",
+        "tip": "Will review later just to add lines today. ",
+        "topic": "UX",
+        "tip_id": "ef2c"
     }
 ]
