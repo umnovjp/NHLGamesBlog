@@ -1650,5 +1650,19 @@
         "tip": "to add EDM lines",
         "topic": "UX",
         "tip_id": "c38e"
+    },
+    {
+        "title": "You are watching stats for LAK at EDM gamePeriod: 1 Time: 01:19 Scorer: Byfield Assists: Kevin Fiala, Alex Laferriere 35 6-84 22-55-14 30 25-2 90-29-97Period: 1 Time: 03:04 Scorer: Henrique Assists: Connor Brown, Trent Frederic 35 6-92 15-39-79 30 27-49 19-28-21Period: 1 Time: 03:37 Scorer: Clarke Assists: Phillip Danault 35 6-92 24-37-12 30 25-2 91-18-93Period: 1 Time: 05:55 Scorer: Nugent-Hopkins Assists: Connor McDavid, Zach Hyman 35 8-6 24-12 30 2 18-93-29-97Period: 1 Time: 12:49 Scorer: Hyman Assists: Darnell Nurse, Ryan Nugent-Hopkins 35 6-84 22-55-14 30 25-2 91-18-93Period: 2 Time: 14:59 Scorer: Nurse Assists: Vasily Podkolzin, Mattias Janmark 35 8-44 22-55-14 30 36-25 13-33-92Period: 2 Time: 16:35 Scorer: Frederic Assists: Connor Brown, Brett Kulak 35 8-44 11-9-96 30 36-96 19-28-21Period: 2 Time: 18:01 Scorer: Spence Assists: Kevin Fiala, Samuel Helenius 35 84-21 22-14-79 30 27-25 91-13-33Period: 3 Time: 19:05 Scorer: Kopitar Assists: Drew Doughty, Alex Laferriere  14 11-22-9-12-14 30 96-2 19-93-21Period: 3 Time: 19:58 Scorer: Brown Assists:   96 11-22-9-55-96 30 27-25 28-29-97",
+        "username": "EDM lines 13-33-92 158 4 163 5 205 5; 18-91-93 157 4 320 7 142 4; 19-21-28 183 7 232 6 97 3; 29-90-97 255 6 208 6 89 2. Lines were 2-25 27-49 36-96 in 1st changed to 2-96 25-27 a little of 36-96 because #49 did not play in 3rd again",
+        "tip": "To add EDM lines. No real review. Game 5 LAK EDM. ",
+        "topic": "UX",
+        "tip_id": "80f5"
+    },
+    {
+        "title": "You are watching stats for LAK at EDM gamePeriod: 1 Time: 01:19 Scorer: Byfield Assists: Kevin Fiala, Alex Laferriere 35 6-84 22-55-14 30 25-2 90-29-97Period: 1 Time: 03:04 Scorer: Henrique Assists: Connor Brown, Trent Frederic 35 6-92 15-39-79 30 27-49 19-28-21Period: 1 Time: 03:37 Scorer: Clarke Assists: Phillip Danault 35 6-92 24-37-12 30 25-2 91-18-93Period: 1 Time: 05:55 Scorer: Nugent-Hopkins Assists: Connor McDavid, Zach Hyman 35 8-6 24-12 30 2 18-93-29-97Period: 1 Time: 12:49 Scorer: Hyman Assists: Darnell Nurse, Ryan Nugent-Hopkins 35 6-84 22-55-14 30 25-2 91-18-93Period: 2 Time: 14:59 Scorer: Nurse Assists: Vasily Podkolzin, Mattias Janmark 35 8-44 22-55-14 30 36-25 13-33-92Period: 2 Time: 16:35 Scorer: Frederic Assists: Connor Brown, Brett Kulak 35 8-44 11-9-96 30 36-96 19-28-21Period: 2 Time: 18:01 Scorer: Spence Assists: Kevin Fiala, Samuel Helenius 35 84-21 22-14-79 30 27-25 91-13-33Period: 3 Time: 19:05 Scorer: Kopitar Assists: Drew Doughty, Alex Laferriere  14 11-22-9-12-14 30 96-2 19-93-21Period: 3 Time: 19:58 Scorer: Brown Assists:   96 11-22-9-55-96 30 27-25 28-29-97",
+        "username": "EDM lines 13-33-92 158 4 163 5 205 5; 18-91-93 157 4 320 7 142 4; 19-21-28 183 7 232 6 97 3; 29-90-97 255 6 208 6 89 2. Lines were 2-25 27-49 36-96 in 1st changed to 2-96 25-27 a little of 36-96 because #49 did not play in 3rd again. He plays about 7 minutes per game did not play after May 10.",
+        "tip": "To add EDM lines. No real review. Game 5 LAK EDM. ",
+        "topic": "UX",
+        "tip_id": "1bf0"
     }
 ]
