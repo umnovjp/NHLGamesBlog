@@ -1685,5 +1685,12 @@
         "tip": "(1) fast entry but #4 mishandled the puck in D zone pass from right boards one timed from right blue line; (2) #64 lost puck near boards in EDM zone sudden 3x1 by EDM one timed from bottom right circle; (3) pass from behind G line one timed by D from mid he did not even celebrate; (4) shot from right circle bit G clean but #64 lost puck battle then did not intercept pass just before; (5) 50x50 battle near boards lost pass that was 1x1 scored; (6) fast entry #4 did not intercept but #23 suddenly fell pass from left boards scored from point; (7) on PP shot from mid by D",
         "topic": "UX",
         "tip_id": "1cf9"
+    },
+    {
+        "title": "You are watching stats for DAL at EDM gamePeriod: 1 Time: 14:02 Scorer: Bouchard Assists: Ryan Nugent-Hopkins, Brett Kulak 29 23-4 14-63-53 74 27-2 18-93-97Period: 1 Time: 14:38 Scorer: McDavid Assists: Ryan Nugent-Hopkins, Zach Hyman 29 44-55 64-96-21 74 27-2 18-93-97Period: 2 Time: 15:35 Scorer: Robertson Assists: Lian Bichsel, Mikko Rantanen 29 28-6 95-96-21 74 27-25 91-28-13Period: 2 Time: 19:41 Scorer: McDavid Assists: Evan Bouchard 29 44-23 64-96-21 74 27-2 18-29-97Period: 3 Time: 03:25 Scorer: Hyman Assists: Ryan Nugent-Hopkins, Evander Kane 29 28-6 95-91-27 74 36-51 91-18-93Period: 3 Time: 12:06 Scorer: Hyman Assists: Evander Kane 29 23-4 63-27-53 74 25-51 19-91-18Period: 3 Time: 17:40 Scorer: Klingberg Assists: Leon Draisaitl, Evander Kane 29 23-6 15-18 74 36-27 91-29-92",
+        "username": "EDM lines were 13-21-90 158 4 170 5 239 6; 18-93-97 287 6 118 2 139 4; 19-28-91 215 5 69 1 292 7; 29-42-92 199 5 1 0 0 0. Apparently 29 was united with 97 in 2nd and 3rd. But my table is wrong.",
+        "tip": "I had review yesterday today just to add EDM lines. Looks similar to COL game when Stars allowed them to get all stats they wanted in game 6 then outscored in game 7. ",
+        "topic": "UX",
+        "tip_id": "fb28"
     }
 ]
