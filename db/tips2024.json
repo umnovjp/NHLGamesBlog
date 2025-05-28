@@ -1692,5 +1692,12 @@
         "tip": "I had review yesterday today just to add EDM lines. Looks similar to COL game when Stars allowed them to get all stats they wanted in game 6 then outscored in game 7. ",
         "topic": "UX",
         "tip_id": "fb28"
+    },
+    {
+        "title": "You are watching stats for DAL at EDM gamePeriod: 1 Time: 11:23 Scorer: Draisaitl Assists: Ryan Nugent-Hopkins, Corey Perry 29 4-55 64-18 74 2 90-93-29-97Period: 2 Time: 06:57 Scorer: Robertson Assists: Thomas Harley, Mikael Granlund 29 55 91-64-27-21 74 27-2 13-97Period: 2 Time: 09:20 Scorer: Perry Assists: Ryan Nugent-Hopkins, Connor McDavid 29 44-23 10-53 74 2 90-93-29-97Period: 3 Time: 17:33 Scorer: Kapanen Assists: Brett Kulak, Leon Draisaitl  53 95-96-24-21-53 74 27-25 19-29-42Period: 3 Time: 19:10 Scorer: Henrique Assists: Connor McDavid, Jake Walman  4-55 95-91-96-27 74 96-2 19-13-97",
+        "username": "Stars lines were 10-15-18 101 3 154 4 153 3; 14-53-64 172 6 183 4 90 2; 21-24-96 260 8 144 4 153 3; 27-91-95 242 5 144 4 90 2. Pairs 4-23 6-28 44-55. Very tough game. No goals scored 5x5. First three goals on PP but EDM led 2:1 then two more to EN. Surprise that #63 was out but #64 was on 3rd line.",
+        "tip": "(1) on PP fast entry pass from mid one timed from right under sharp angle; (2) on PP pass from almost blue line to right circle scored from mid; (3) on PP shot pass from left circle redirected in right front; (4) lost FO in EDM zone pass to M zone scored to EN; (5) pass intercepted in M zone scored from there to EN",
+        "topic": "UX",
+        "tip_id": "1a44"
     }
 ]
