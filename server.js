@@ -61,7 +61,7 @@ const readAndAppend = (content, file) => {
 // GET Route for retrieving all the tips
 app.get('/api/tips', (req, res) => {
   console.info(`${req.method} request received for review`);
-  readFromFile('./db/tips2024.json').then((data) => res.json(JSON.parse(data)))
+  readFromFile('./db/tips2025.json').then((data) => res.json(JSON.parse(data)))
 });
 
 // POST Route for a new UX/UI tip
@@ -79,7 +79,7 @@ app.post('/api/tips', (req, res) => {
       tip_id: uuid(),
     };
 
-    readAndAppend(newTip, './db/tips2024.json');
+    readAndAppend(newTip, './db/tips2025.json');
     res.json(`Review added successfully 🚀`);
   } else {
     res.error('Error in adding review');
