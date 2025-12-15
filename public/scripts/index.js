@@ -84,13 +84,15 @@ const handleFormSubmit = (e) => {
   e.preventDefault();
   console.log('Form submit invoked');
 
-  const tipTitle = document.getElementById('gameInfo').textContent;
+  const tipTitle = document.getElementById('gameInfo').textContent;  
 
   // Get the value of the tip and save it to a variable
   const tipContent = document.getElementById('tipText').value;
 
   // get the value of the username and save it to a variable
   const tipUsername = document.getElementById('tipUsername').value.trim();
+  const gameIdNumber = document.getElementById('gameId').textContent;
+  console.log(tipTitle, gameIdNumber)
 
   // Create an object with the tip and username
   const newTip = {
@@ -98,6 +100,7 @@ const handleFormSubmit = (e) => {
     username: tipUsername,
     topic: 'UX',
     tip: tipContent,
+    gameId: gameIdNumber
   };
   // Make a fetch POST request to the server
   postTip(newTip);
@@ -128,7 +131,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
       function displayGameData(event) { idx = event.currentTarget; idxString = event.currentTarget.textContent;
         idxArray = idxString.split(':'); idxNumber = idxArray[0].split(' ');
         console.log(idxNumber); gameNumber = idxNumber[1];
-        const gameId = data2.gameWeek[0].games[gameNumber].id;
+        const gameId = data2.gameWeek[0].games[gameNumber].id; gameIdNumber=document.createElement('section'); 
+        gameIdNumber.setAttribute('id', 'gameId');
+        gameIdNumber.textContent='abc';
+        
         console.log(gameId);
         // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
         var requestURL = 'https://cors-anywhere.herokuapp.com/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
@@ -140,7 +146,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           })
           .then(function (data) { console.log('I am in second then')
             // console.log(data);
-            const gameInfo = document.createElement('section'); gameInfo.setAttribute('id', 'gameInfo'); 
+            const gameInfo = document.createElement('section'); gameInfo.setAttribute('id', 'gameInfo');
             document.getElementById('schedule').appendChild(gameInfo);
             const gameInfoHome = document.createElement('section');
             gameInfoHome.setAttribute('id', 'gameInfoHome');
@@ -222,7 +228,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     for (i=0;i<goalsNumber.length;i++) { var newGoal2 = document.createElement('span');
                     newGoal2.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails
                     +' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+2*i]+' '+onIceArray2[1+onIceArray2.length-2*onIceSplit.length+2*i];
-                      // document.getElementById('gameInfoHome').appendChild(newGoal2);
                       document.getElementById('gameInfo').appendChild(newGoal2)}
             }); // end third second .then
           });
