@@ -131,9 +131,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
       function displayGameData(event) { idx = event.currentTarget; idxString = event.currentTarget.textContent;
         idxArray = idxString.split(':'); idxNumber = idxArray[0].split(' ');
         console.log(idxNumber); gameNumber = idxNumber[1];
-        const gameId = data2.gameWeek[0].games[gameNumber].id; gameIdNumber=document.createElement('section'); 
+        const gameId = data2.gameWeek[0].games[gameNumber].id; gameIdNumber=document.createElement('span'); 
         gameIdNumber.setAttribute('id', 'gameId');
-        gameIdNumber.textContent='abc';
+        gameIdNumber.innerHTML='abc';
         
         console.log(gameId);
         // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
