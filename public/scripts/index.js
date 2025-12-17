@@ -91,8 +91,8 @@ const handleFormSubmit = (e) => {
 
   // get the value of the username and save it to a variable
   const tipUsername = document.getElementById('tipUsername').value.trim();
-  const gameIdNumber = document.getElementById('gameId').textContent;
-  console.log(tipTitle, gameIdNumber)
+  //  const gameIdNumber = document.getElementById('gameId').textContent;
+  console.log(tipTitle)
 
   // Create an object with the tip and username
   const newTip = {
@@ -100,7 +100,7 @@ const handleFormSubmit = (e) => {
     username: tipUsername,
     topic: 'UX',
     tip: tipContent,
-    gameId: gameIdNumber
+    // gameId: gameIdNumber
   };
   // Make a fetch POST request to the server
   postTip(newTip);
@@ -119,10 +119,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
     .then(function (data2) { 
       console.log('I am in schedule then');
       var numberOfGames = data2.gameWeek[0].games.length;
-      for (var i = 0; i < numberOfGames; i++) {
-        var gameName = document.createElement('button');
-        gameName.setAttribute('id', 'game' + i);
-        var idx = gameName.getAttribute('id');
+      for (var i = 0; i < numberOfGames; i++) { var gameName = document.createElement('button');
+        gameName.setAttribute('id', 'game' + i); var idx = gameName.getAttribute('id');
         gameName.innerHTML = 'Game ' + i + ': ' + data2.gameWeek[0].games[i].awayTeam.abbrev + ' ' + data2.gameWeek[0].games[i].homeTeam.abbrev;
         document.getElementById('gamesPlayed').appendChild(gameName);
         gameName.addEventListener('click', displayGameData);
@@ -131,9 +129,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
       function displayGameData(event) { idx = event.currentTarget; idxString = event.currentTarget.textContent;
         idxArray = idxString.split(':'); idxNumber = idxArray[0].split(' ');
         console.log(idxNumber); gameNumber = idxNumber[1];
-        const gameId = data2.gameWeek[0].games[gameNumber].id; gameIdNumber=document.createElement('span'); 
-        gameIdNumber.setAttribute('id', 'gameId');
-        gameIdNumber.innerHTML='abc';
+        const gameId = data2.gameWeek[0].games[gameNumber].id; // gameIdNumber=document.createElement('span'); 
+        // gameIdNumber.setAttribute('id', 'gameId');
+        // gameIdNumber.innerHTML='abc';
         
         console.log(gameId);
         // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
@@ -144,15 +142,14 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           .then(function (response) {
             return response.json();
           })
-          .then(function (data) { console.log('I am in second then')
-            // console.log(data);
+          .then(function (data) { console.log('I am in second then');
             const gameInfo = document.createElement('section'); gameInfo.setAttribute('id', 'gameInfo');
             document.getElementById('schedule').appendChild(gameInfo);
             const gameInfoHome = document.createElement('section');
             gameInfoHome.setAttribute('id', 'gameInfoHome');
             document.getElementById('schedule').appendChild(gameInfoHome);
             var gameTitle = document.createElement('h2'); gameTitle.textContent = '';
-            gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game';
+            gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game # ' + gameId + '. ';
             document.getElementById('gameInfo').appendChild(gameTitle);
                    
           var requestURL1 = 'https://cors-anywhere.herokuapp.com/https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
@@ -161,8 +158,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           })
           .then(function (response) { return response.json();
             })
-            .then(function (data1) { console.log('I am in third then', data1);
-            
+            .then(function (data1) { console.log('I am in third then', data1);            
                for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
                { periodNumber = data1.data[i].period; goalsNumber.push(i);
                 goalTime = data1.data[i].startTime; 
