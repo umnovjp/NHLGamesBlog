@@ -4,3 +4,21 @@ for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='D') { if (l===on
                     else {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-')}
                       lineUpG=lineUp}}
                     lineUpG=lineUp
+
+                    async function responseContains(url, searchString) {
+  try {
+    const response = await fetch(url);
+    const content = await response.text(); // Get the response body as text
+    
+    // Use the includes() method on the string content
+    return content.includes(searchString);
+  } catch (e) {
+    console.error('Error fetching the file:', e);
+    throw e;
+  }
+}
+
+// Example usage (replace with your file URL):
+const url = "C:/Users/umnov/OneDrive/Documents/Code/NHLGamesBlog/db/tips2025.json";
+responseContains(url, gameId)
+  .then(found => console.log(`Found gameId? ${found}`));

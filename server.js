@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const util = require('util');
+const tips = require('./db/tips2025.json')
 
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');

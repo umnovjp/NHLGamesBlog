@@ -43,6 +43,70 @@ cardTitleEl.classList.add('bg-info');
   tipsContainer.appendChild(cardEl);
 };
 
+// Get a list of existing tips from the server
+const getTips = () =>
+  fetch('api/tips', {
+    method: 'GET', // or 'PUT'
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    // body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((data) => data)
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
+ 
+// Post a new tip to the page
+const postTip = (tip) =>
+  fetch('api/tips', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(tip),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      alert(data);
+      createCard(tip);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
+// When the page loads, get all the tips
+getTips().then((data) => data.forEach((tip) => createCard(tip)));
+
+// Function to handle when a user submits the feedback form
+const handleFormSubmit = (e) => {
+  e.preventDefault();
+  console.log('Form submit invoked');
+
+  const tipTitle = document.getElementById('gameInfo').textContent;  
+
+  // Get the value of the tip and save it to a variable
+  const tipContent = document.getElementById('tipText').value;
+
+  // get the value of the username and save it to a variable
+  const tipUsername = document.getElementById('tipUsername').value.trim();
+  //  const gameIdNumber = document.getElementById('gameId').textContent;
+  console.log(tipTitle)
+
+  // Create an object with the tip and username
+  const newTip = {
+    title: tipTitle,
+    username: tipUsername,
+    topic: 'UX',
+    tip: tipContent,
+    // gameId: gameIdNumber
+  };
+  // Make a fetch POST request to the server
+  postTip(newTip);
+}
+
 function selectGame() {var inputVal = document.getElementById('datepicker').value;
   var date = inputVal.split('/');
   var formatted = date[2] + '-' + date[0] + '-' + date[1];
@@ -166,72 +230,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           });
       } // end displayGamedata
     } // end first second .then
-    )} // end function selectGame
-
-
-
-    // Get a list of existing tips from the server
-const getTips = () =>
-  fetch('api/tips', {
-    method: 'GET', // or 'PUT'
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    // body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((data) => data)
-    .catch((error) => {
-      console.error('Error:', error);
-    });
-
- 
-// Post a new tip to the page
-const postTip = (tip) =>
-  fetch('api/tips', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(tip),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      alert(data);
-      createCard(tip);
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
-
-// When the page loads, get all the tips
-getTips().then((data) => data.forEach((tip) => createCard(tip)));
-
-// Function to handle when a user submits the feedback form
-const handleFormSubmit = (e) => {
-  e.preventDefault();
-  console.log('Form submit invoked');
-
-  const tipTitle = document.getElementById('gameInfo').textContent;  
-
-  // Get the value of the tip and save it to a variable
-  const tipContent = document.getElementById('tipText').value;
-
-  // get the value of the username and save it to a variable
-  const tipUsername = document.getElementById('tipUsername').value.trim();
-  //  const gameIdNumber = document.getElementById('gameId').textContent;
-  console.log(tipTitle)
-
-  // Create an object with the tip and username
-  const newTip = {
-    title: tipTitle,
-    username: tipUsername,
-    topic: 'UX',
-    tip: tipContent,
-    // gameId: gameIdNumber
-  };
-  // Make a fetch POST request to the server
-  postTip(newTip);
-}
+    )}
 
 tipForm.addEventListener('submit', handleFormSubmit);
