@@ -20,5 +20,6 @@ for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='D') { if (l===on
 
 // Example usage (replace with your file URL):
 const url = "C:/Users/umnov/OneDrive/Documents/Code/NHLGamesBlog/db/tips2025.json";
-responseContains(url, gameId)
+const searchString = gameId;
+responseContains(url, searchString)
   .then(found => console.log(`Found gameId? ${found}`));
