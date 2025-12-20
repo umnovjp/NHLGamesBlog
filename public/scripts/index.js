@@ -1,7 +1,7 @@
 const tipForm = document.getElementById('tip-form');
 const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
-onIceArray = []; onIceArray2 = []; goalsNumber = [];
+onIceArray = []; onIceArray2 = []; goalsNumber = []; const gameId = 0;
 var game0 = document.getElementById('game0');
 const frequency = (arr, item) => {let count = 0;
   for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
@@ -122,7 +122,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                  for (j=0;j<onIceSplit.length;j++) { // this loop is to order goals chronologically
                   onIceLineup = [[],[]];
                   onIceSplit2.push(onIceSplit[goalTime[1].indexOf(goalTime[0][j])]);
-                  console.log(onIceSplit2)
+                  // console.log(onIceSplit2)
                     for (k=0;k<data.rosterSpots.length;k++) { for (l=0;l<(onIceSplit2[j].length-1)/4;l++) {                 
                     if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='G')&&(data.rosterSpots[k].teamId===data.awayTeam.id))
                     { onIceLineup[0].push(onIceSplit2[j][4*l+2], 'G') }                     
@@ -137,7 +137,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&((data.rosterSpots[k].positionCode==='C')||(data.rosterSpots[k].positionCode==='R')||(data.rosterSpots[k].positionCode==='L'))&&(data.rosterSpots[k].teamId===data.homeTeam.id))
                     { onIceLineup[1].push(onIceSplit2[j][4*l+2], 'F')}
                   }} // end k loop
-                  console.log(onIceLineup)
+                  // console.log(onIceLineup)
                   for (k=0;k<2;k++) { var lineUp =''; var lineUpG ='';    
                     if (onIceLineup[k].indexOf('G')!=-1) {lineUpG = onIceLineup[k][onIceLineup[k].indexOf('G') - 1].toString()+' '}
                     else {lineUpG = ' '}
@@ -168,7 +168,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
     } // end first second .then
     )} // end function selectGame
 
-// console.log(gameId)
+console.log(gameId)
 
     // Get a list of existing tips from the server
 const getTips = () =>
