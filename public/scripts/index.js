@@ -168,7 +168,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
     } // end first second .then
     )} // end function selectGame
 
-console.log(gameId)
+// console.log(gameId)
 
     // Get a list of existing tips from the server
 const getTips = () =>
@@ -185,25 +185,6 @@ const getTips = () =>
       console.error('Error:', error);
     });
 
-//       async function responseContains(url, searchString) {
-//   try {
-//     const response = await fetch(url);
-//     const content = await response.text(); // Get the response body as text
-    
-//     // Use the includes() method on the string content
-//     return content.includes(searchString);
-//   } catch (e) {
-//     console.error('Error fetching the file:', e);
-//     throw e;
-//   }
-// }
-
-// // Example usage (replace with your file URL):
-// const url = "C:/Users/umnov/OneDrive/Documents/Code/NHLGamesBlog/db/tips2025.json";
-// const searchString = gameId;
-// responseContains(url, searchString)
-//   .then(found => console.log(`Found gameId? ${found}`));
- 
 // Post a new tip to the page
 const postTip = (tip) =>
   fetch('api/tips', {
