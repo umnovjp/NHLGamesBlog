@@ -1,7 +1,7 @@
 const tipForm = document.getElementById('tip-form');
 const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
-onIceArray = []; onIceArray2 = []; goalsNumber = []; const gameId = 0;
+onIceArray = []; onIceArray2 = []; goalsNumber = []; // const gameId; 
 var game0 = document.getElementById('game0');
 const frequency = (arr, item) => {let count = 0;
   for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
@@ -168,7 +168,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
     } // end first second .then
     )} // end function selectGame
 
-console.log(gameId)
+// console.log(gameId)
+console.log('x')
 
     // Get a list of existing tips from the server
 const getTips = () =>
@@ -210,6 +211,7 @@ getTips().then((data) => data.forEach((tip) => createCard(tip)));
 const handleFormSubmit = (e) => {
   e.preventDefault();
   console.log('Form submit invoked');
+  console.log(gameId)
 
   const tipTitle = document.getElementById('gameInfo').textContent;  
 
