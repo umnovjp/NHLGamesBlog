@@ -66,9 +66,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
       function displayGameData(event) { idx = event.currentTarget; idxString = event.currentTarget.textContent;
         idxArray = idxString.split(':'); idxNumber = idxArray[0].split(' ');
         console.log(idxNumber); gameNumber = idxNumber[1];
-        const gameId = data2.gameWeek[0].games[gameNumber].id; // gameIdNumber=document.createElement('span'); 
-        // gameIdNumber.setAttribute('id', 'gameId');
-        // gameIdNumber.innerHTML='abc';
+        const gameId = data2.gameWeek[0].games[gameNumber].id; gameIdNumber=document.createElement('span'); 
+        gameIdNumber.setAttribute('id', 'gameId');
+        gameIdNumber.innerHTML='abc';
         
         console.log(gameId);
         // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
@@ -212,6 +212,7 @@ const handleFormSubmit = (e) => {
   e.preventDefault();
   console.log('Form submit invoked');
   console.log(gameId)
+  // condole.log(../db/)
 
   const tipTitle = document.getElementById('gameInfo').textContent;  
 
@@ -220,7 +221,7 @@ const handleFormSubmit = (e) => {
 
   // get the value of the username and save it to a variable
   const tipUsername = document.getElementById('tipUsername').value.trim();
-  //  const gameIdNumber = document.getElementById('gameId').textContent;
+  // const gameIdNumber = document.getElementById('gameId').textContent;
   console.log(tipTitle)
 
   // Create an object with the tip and username
@@ -229,7 +230,8 @@ const handleFormSubmit = (e) => {
     username: tipUsername,
     topic: 'UX',
     tip: tipContent,
-    // gameId: gameIdNumber
+    // tip_id
+    gameId: gameIdNumber
   };
   // Make a fetch POST request to the server
   postTip(newTip);

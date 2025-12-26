@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const util = require('util');
-const tips = require('./db/tips2025.json')
+// const tips = require('./db/tips2025.json')
 
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');
@@ -65,11 +65,12 @@ app.get('/api/tips', (req, res) => {
   readFromFile('./db/tips2025.json').then((data) => res.json(JSON.parse(data)))
 });
 
+console.log(/db/tips2025.json)
 // POST Route for a new UX/UI tip
 app.post('/api/tips', (req, res) => {
   console.info(`${req.method} request received to add a tip`);
 
-  const { title, username, topic, tip } = req.body;
+  const { title, username, topic, tip, tip_id } = req.body;
 
   if (req.body) {
     const newTip = {
@@ -78,6 +79,7 @@ app.post('/api/tips', (req, res) => {
       tip,
       topic,
       tip_id: uuid(),
+      gameId
     };
 
     readAndAppend(newTip, './db/tips2025.json');
