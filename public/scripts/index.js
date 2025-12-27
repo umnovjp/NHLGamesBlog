@@ -1,7 +1,7 @@
 const tipForm = document.getElementById('tip-form');
 const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
-onIceArray = []; onIceArray2 = []; goalsNumber = []; var gameId; 
+onIceArray = []; onIceArray2 = []; goalsNumber = []; var gameId;
 var game0 = document.getElementById('game0');
 const frequency = (arr, item) => {let count = 0;
   for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
@@ -66,7 +66,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
       function displayGameData(event) { idx = event.currentTarget; idxString = event.currentTarget.textContent;
         idxArray = idxString.split(':'); idxNumber = idxArray[0].split(' ');
         console.log(idxNumber); gameNumber = idxNumber[1];
-        const gameId = data2.gameWeek[0].games[gameNumber].id; gameIdNumber=document.createElement('span'); 
+        var gameId = data2.gameWeek[0].games[gameNumber].id; gameIdNumber=document.createElement('span');
         gameIdNumber.setAttribute('id', 'gameId');
         gameIdNumber.innerHTML='abc';
         
@@ -164,11 +164,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       document.getElementById('gameInfo').appendChild(newGoal2)}
             }); // end third second .then
           });
-      } // end displayGamedata
+      } // end function displayGamedata
     } // end first second .then
     )} // end function selectGame
 
-// console.log(gameId)
 console.log('x')
 
     // Get a list of existing tips from the server
@@ -207,12 +206,13 @@ const postTip = (tip) =>
 // When the page loads, get all the tips
 getTips().then((data) => data.forEach((tip) => createCard(tip)));
 
+console.log(gameId)
+
 // Function to handle when a user submits the feedback form
 const handleFormSubmit = (e) => {
   e.preventDefault();
   console.log('Form submit invoked');
-  console.log(gameId)
-  // condole.log(../db/)
+  // console.log(/Users/umnov/OneDrive/Documents/RFDemo.txt)
 
   const tipTitle = document.getElementById('gameInfo').textContent;  
 
@@ -231,7 +231,7 @@ const handleFormSubmit = (e) => {
     topic: 'UX',
     tip: tipContent,
     // tip_id
-    gameId: gameIdNumber
+    // gameId: gameIdNumber
   };
   // Make a fetch POST request to the server
   postTip(newTip);

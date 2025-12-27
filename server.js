@@ -65,7 +65,6 @@ app.get('/api/tips', (req, res) => {
   readFromFile('./db/tips2025.json').then((data) => res.json(JSON.parse(data)))
 });
 
-console.log(/db/tips2025.json)
 // POST Route for a new UX/UI tip
 app.post('/api/tips', (req, res) => {
   console.info(`${req.method} request received to add a tip`);
@@ -79,7 +78,7 @@ app.post('/api/tips', (req, res) => {
       tip,
       topic,
       tip_id: uuid(),
-      gameId
+      // gameId
     };
 
     readAndAppend(newTip, './db/tips2025.json');
