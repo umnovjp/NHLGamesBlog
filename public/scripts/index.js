@@ -1,7 +1,7 @@
 const tipForm = document.getElementById('tip-form');
 const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
-onIceArray = []; onIceArray2 = []; goalsNumber = []; var gameId;
+onIceArray = []; onIceArray2 = []; goalsNumber = []; var gameId; const plusMinusArray = [[],[]];
 var game0 = document.getElementById('game0');
 const frequency = (arr, item) => {let count = 0;
   for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
@@ -53,8 +53,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
     "method": "GET", "headers": {}
   })
     .then(function (response) {return response.json()})
-    .then(function (data2) { 
-      console.log('I am in schedule then');
+    .then(function (data2) { console.log('I am in schedule then');
       var numberOfGames = data2.gameWeek[0].games.length;
       for (var i = 0; i < numberOfGames; i++) { var gameName = document.createElement('button');
         gameName.setAttribute('id', 'game' + i); var idx = gameName.getAttribute('id');
@@ -155,13 +154,14 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else (lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-'))
                     lineUpG=lineUp}}
                     onIceArray2.push(lineUp)
+                    // to add plusMinusArray push here tomorrow
                   }} // end k,j loop 
                   console.log('onIceArray2', onIceArray2)
                     }} // end goal if statement and i loop
                     for (i=0;i<goalsNumber.length;i++) { var newGoal2 = document.createElement('span');
                     newGoal2.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails
                     +' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+2*i]+' '+onIceArray2[1+onIceArray2.length-2*onIceSplit.length+2*i];
-                      document.getElementById('gameInfo').appendChild(newGoal2)}
+                    document.getElementById('gameInfo').appendChild(newGoal2)}
             }); // end third second .then
           });
       } // end function displayGamedata
@@ -212,9 +212,9 @@ console.log(gameId)
 const handleFormSubmit = (e) => {
   e.preventDefault();
   console.log('Form submit invoked');
-  // console.log(/Users/umnov/OneDrive/Documents/RFDemo.txt)
 
-  const tipTitle = document.getElementById('gameInfo').textContent;  
+  const tipTitle = document.getElementById('gameInfo').textContent;
+  // console.log(localhost:3001/api/tips)
 
   // Get the value of the tip and save it to a variable
   const tipContent = document.getElementById('tipText').value;
