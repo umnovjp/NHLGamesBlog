@@ -59,6 +59,11 @@ const readAndAppend = (content, file) => {
   });
 };
 
+// GET Route for retrieving existing db json file
+app.get('/db', (req, res) =>
+  res.sendFile(path.join(__dirname, 'db/tips2025.json'))
+);
+
 // GET Route for retrieving all the tips
 app.get('/api/tips', (req, res) => {
   console.info(`${req.method} request received for review`);

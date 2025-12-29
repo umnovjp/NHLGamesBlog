@@ -46,7 +46,7 @@ cardTitleEl.classList.add('bg-info');
 function selectGame() {var inputVal = document.getElementById('datepicker').value;
   var date = inputVal.split('/');
   var formatted = date[2] + '-' + date[0] + '-' + date[1];
-  // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/schedule/'+ formatted;
+  // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/schedule/'+ formatted; date games displayed
   var requestURL = 'https://cors-anywhere.herokuapp.com/https://api-web.nhle.com/v1/schedule/'+ formatted;
   console.log(requestURL);
   fetch(requestURL, {
@@ -70,7 +70,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
         gameIdNumber.innerHTML='abc';
         
         console.log(gameId);
-        // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
+        // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play'; to select game on certain date
         var requestURL = 'https://cors-anywhere.herokuapp.com/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
         fetch(requestURL, {
           "method": "GET", "headers": { }
@@ -88,7 +88,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game # ' + gameId + '. ';
             document.getElementById('gameInfo').appendChild(gameTitle);
                    
-          var requestURL1 = 'https://cors-anywhere.herokuapp.com/https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
+          var requestURL1 = 'https://cors-anywhere.herokuapp.com/https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId; // charts to find which players were on ice
           // var requestURL1 = 'https://corsproxy.io/?key=2ddedfd8&url=https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
           fetch(requestURL1, {"method": "GET", "headers": {}
           })
@@ -137,30 +137,29 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     { onIceLineup[1].push(onIceSplit2[j][4*l+2], 'F')}
                   }} // end k loop
                   // console.log(onIceLineup)
-                  for (k=0;k<2;k++) { var lineUp =''; var lineUpG ='';    
-                    if (onIceLineup[k].indexOf('G')!=-1) {lineUpG = onIceLineup[k][onIceLineup[k].indexOf('G') - 1].toString()+' '}
+                  for (k=0;k<2;k++) { var lineUp =''; var lineUpG ='';
+                    if (onIceLineup[k].indexOf('G')!=-1) {lineUpG = onIceLineup[k][onIceLineup[k].indexOf('G')-1].toString()+' '}
                     else {lineUpG = ' '}
-                    for (l=1;l<onIceLineup[k].length;l++) { if (frequency(onIceLineup[k], 'D')===1) {
-                      lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
+                    for (l=1;l<onIceLineup[k].length;l++) { if (frequency(onIceLineup[k], 'D')===1) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
                     else { if (onIceLineup[k][l]==='D') {
                       if (l==onIceLineup[k].lastIndexOf('D')) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
                   else {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-')}
                   lineUpG=lineUp }}}
                     lineUpG=lineUp;
     
-                    for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='F') {
-                    if (l===onIceLineup[k].indexOf('F')) { lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
+                    for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='F') {if (l===onIceLineup[k].indexOf('F')) { lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
                     else if (l===onIceLineup[k].lastIndexOf('F')) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
                     else (lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-'))
                     lineUpG=lineUp}}
                     onIceArray2.push(lineUp)
                     // to add plusMinusArray push here tomorrow
+                    // new function will determine if play was 5x5 or PP or PK or other special teams like 3x3 in OT
                   }} // end k,j loop 
                   console.log('onIceArray2', onIceArray2)
                     }} // end goal if statement and i loop
                     for (i=0;i<goalsNumber.length;i++) { var newGoal2 = document.createElement('span');
-                    newGoal2.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails
-                    +' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+2*i]+' '+onIceArray2[1+onIceArray2.length-2*onIceSplit.length+2*i];
+                    newGoal2.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+
+                    ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+2*i]+' '+onIceArray2[1+onIceArray2.length-2*onIceSplit.length+2*i];
                     document.getElementById('gameInfo').appendChild(newGoal2)}
             }); // end third second .then
           });
