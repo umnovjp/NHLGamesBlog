@@ -1,7 +1,7 @@
 const tipForm = document.getElementById('tip-form');
 const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
-onIceArray = []; onIceArray2 = []; goalsNumber = []; var gameId; const plusMinusArray = [[],[]];
+onIceArray = []; onIceArray2 = []; goalsNumber = []; var gameId; const plusMinusArray = [[[],[],[]],[[],[],[]]];
 var game0 = document.getElementById('game0');
 const frequency = (arr, item) => {let count = 0;
   for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
@@ -124,17 +124,17 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   // console.log(onIceSplit2)
                     for (k=0;k<data.rosterSpots.length;k++) { for (l=0;l<(onIceSplit2[j].length-1)/4;l++) {                 
                     if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='G')&&(data.rosterSpots[k].teamId===data.awayTeam.id))
-                    { onIceLineup[0].push(onIceSplit2[j][4*l+2], 'G') }                     
+                    { onIceLineup[0].push(onIceSplit2[j][4*l+2], 'G'); plusMinusArray[0][0].push(data.rosterSpots[k].sweaterNumber) }                     
                     else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='D')&&(data.rosterSpots[k].teamId===data.awayTeam.id))
-                    { onIceLineup[0].push(onIceSplit2[j][4*l+2], 'D')}
+                    { onIceLineup[0].push(onIceSplit2[j][4*l+2], 'D'); plusMinusArray[0][1].push(data.rosterSpots[k].sweaterNumber)}
                     else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&((data.rosterSpots[k].positionCode==='C')||(data.rosterSpots[k].positionCode==='R')||(data.rosterSpots[k].positionCode==='L'))&&(data.rosterSpots[k].teamId===data.awayTeam.id))
-                    { onIceLineup[0].push(onIceSplit2[j][4*l+2], 'F')}
+                    { onIceLineup[0].push(onIceSplit2[j][4*l+2], 'F'); plusMinusArray[0][2].push(data.rosterSpots[k].sweaterNumber)}
                     else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='G')&&(data.rosterSpots[k].teamId===data.homeTeam.id))
-                    { onIceLineup[1].push(onIceSplit2[j][4*l+2], 'G') }                     
+                    { onIceLineup[1].push(onIceSplit2[j][4*l+2], 'G'); plusMinusArray[1][0].push(data.rosterSpots[k].sweaterNumber) }                     
                     else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='D')&&(data.rosterSpots[k].teamId===data.homeTeam.id))
-                    { onIceLineup[1].push(onIceSplit2[j][4*l+2], 'D')}
+                    { onIceLineup[1].push(onIceSplit2[j][4*l+2], 'D'); plusMinusArray[1][1].push(data.rosterSpots[k].sweaterNumber)}
                     else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&((data.rosterSpots[k].positionCode==='C')||(data.rosterSpots[k].positionCode==='R')||(data.rosterSpots[k].positionCode==='L'))&&(data.rosterSpots[k].teamId===data.homeTeam.id))
-                    { onIceLineup[1].push(onIceSplit2[j][4*l+2], 'F')}
+                    { onIceLineup[1].push(onIceSplit2[j][4*l+2], 'F'); plusMinusArray[1][2].push(data.rosterSpots[k].sweaterNumber)}
                   }} // end k loop
                   // console.log(onIceLineup)
                   for (k=0;k<2;k++) { var lineUp =''; var lineUpG ='';
@@ -148,6 +148,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     lineUpG=lineUp;
     
                     for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='F') {if (l===onIceLineup[k].indexOf('F')) { lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
+                    // should it be D and not F? Will look tomorrow
                     else if (l===onIceLineup[k].lastIndexOf('F')) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
                     else (lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-'))
                     lineUpG=lineUp}}
@@ -155,7 +156,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     // to add plusMinusArray push here tomorrow
                     // new function will determine if play was 5x5 or PP or PK or other special teams like 3x3 in OT
                   }} // end k,j loop 
-                  console.log('onIceArray2', onIceArray2)
+                  console.log('onIceArray2', onIceArray2, 'plusMinusArray', plusMinusArray)
                     }} // end goal if statement and i loop
                     for (i=0;i<goalsNumber.length;i++) { var newGoal2 = document.createElement('span');
                     newGoal2.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+
