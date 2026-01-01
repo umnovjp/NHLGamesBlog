@@ -157,13 +157,17 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     lineUpG=lineUp}}
                     onIceArray2.push(lineUp)
                     // new function will determine if play was 5x5 or PP or PK or other special teams like 3x3 in OT
-                  }} // end k,j loop 
-                  console.log('onIceArray2', onIceArray2)
+                  }} // end k,j loop                   
                     }} // end goal if statement and i loop
+
+                    console.log('onIceArray2', onIceArray2)
                     for (i=0;i<goalsNumber.length;i++) { var newGoal2 = document.createElement('span');
                     newGoal2.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+
                     ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+2*i]+' '+onIceArray2[1+onIceArray2.length-2*onIceSplit.length+2*i];
-                    document.getElementById('gameInfo').appendChild(newGoal2)}
+                    document.getElementById('gameInfo').appendChild(newGoal2);
+                    const goalType = [[],[]]
+                    // to split onIceArray2 above to 2-3 elements
+                  }
             }); // end third second .then
           });
       } // end function displayGamedata
@@ -216,7 +220,6 @@ const handleFormSubmit = (e) => {
   console.log('Form submit invoked');
 
   const tipTitle = document.getElementById('gameInfo').textContent;
-  // console.log(localhost:3001/api/tips)
 
   // Get the value of the tip and save it to a variable
   const tipContent = document.getElementById('tipText').value;
