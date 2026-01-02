@@ -101,8 +101,7 @@ app.get('/api/feedback', (req, res) => {
 });
 
 // POST Route for submitting feedback
-app.post('/api/feedback', (req, res) => {
-  // Log that a POST request was received
+app.post('/api/feedback', (req, res) => { // Log that a POST request was received
   console.info(`${req.method} request received to submit feedback`);
 
   // Destructuring assignment for the items in req.body

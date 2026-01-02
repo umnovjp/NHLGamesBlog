@@ -92,34 +92,30 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           // var requestURL1 = 'https://corsproxy.io/?key=2ddedfd8&url=https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
           fetch(requestURL1, {"method": "GET", "headers": {}
           })
-          .then(function (response) { return response.json();
+          .then(function (response) { return response.json()
             })
             .then(function (data1) { console.log('I am in third then', data1);            
                for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
-               { periodNumber = data1.data[i].period; goalsNumber.push(i);
-                goalTime = data1.data[i].startTime; 
+               { periodNumber = data1.data[i].period; goalsNumber.push(i); goalTime = data1.data[i].startTime; 
                 goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
-                goalTimeSecondsAbsolute=goalTimeSeconds+(periodNumber-1)*1200;
-                onIceArray.push('newGoal', goalTimeSecondsAbsolute)
+                goalTimeSecondsAbsolute=goalTimeSeconds+(periodNumber-1)*1200; onIceArray.push('newGoal', goalTimeSecondsAbsolute);
                 for (j=0; j<data1.data.length;j++) { // j loop counts all shifts and checks if a player was on ice when a goal was scored
-                  shiftStart = data1.data[j].startTime.split(":");
-                  shiftStartSeconds=Number(shiftStart[0])*60+Number(shiftStart[1]);
-                  shiftEnd = data1.data[j].endTime.split(':');
-                  shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);
+                  shiftStart = data1.data[j].startTime.split(":"); shiftStartSeconds=Number(shiftStart[0])*60+Number(shiftStart[1]);
+                  shiftEnd = data1.data[j].endTime.split(':'); shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);
                   
                   if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data1.data[j].period===periodNumber)) {
                     for (k=0;k<data.rosterSpots.length;k++) {if (data.rosterSpots[k].playerId===data1.data[j].playerId) {
                     onIceArray.push(data.rosterSpots[k].teamId, data.rosterSpots[k].sweaterNumber, shiftStartSeconds, shiftEndSeconds);
-                  // if (plusMinusArray)
                   }
                   }} // end if and end k loop
                     } // end j loop
+                    console.log('ponIceArray', onIceArray)
                     onIceSplit=[]; k=-1; goalTime=[[],[]]; onIceSplit2 = []; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) { if (onIceArray[j]==='newGoal') {onIceSplit.push([]);
                       goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1}
                     else {onIceSplit[k].push(onIceArray[j])}
                   } // end short j loop
-                  console.log(onIceArray)
+                  // console.log(onIceArray)
                   goalTime[0].sort((a,b) => a-b);
                  for (j=0;j<onIceSplit.length;j++) { // this loop is to order goals chronologically
                   onIceLineup = [[],[]];
