@@ -109,7 +109,18 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   }
                   }} // end if and end k loop
                     } // end j loop
-                    console.log('ponIceArray', onIceArray)
+                    console.log('onIceArray', onIceArray)
+                    console.log(data.homeTeam.id, data.awayTeam.id)
+                    const goalType = [[],[]];
+                    const lastIndexOfOnIceArray = onIceArray.lastIndexOf('newGoal');
+                    // const goaltype = {homeTeam: data.homeTeam.id, awayTeam: data.awayTeam.id}
+                    console.log('status', lastIndexOfOnIceArray, lastIndexOfOnIceArray+(onIceArray.length-lastIndexOfOnIceArray-2)/4)
+                    
+                    for (j=lastIndexOfOnIceArray;j<lastIndexOfOnIceArray+(onIceArray.length-lastIndexOfOnIceArray-2)/4;j++) { // console.log('onIceArray')
+                      console.log(onIceArray[lastIndexOfOnIceArray+2])
+                      if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.homeTeam.id) {goalType[0].push(lastIndexOfOnIceArray+2+4*j)}
+                  else if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.awayTeam.id) {goalType[1].push(lastIndexOfOnIceArray+2+4*j)}}
+                  console.log(goalType)
                     onIceSplit=[]; k=-1; goalTime=[[],[]]; onIceSplit2 = []; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) { if (onIceArray[j]==='newGoal') {onIceSplit.push([]);
                       goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1}
@@ -123,7 +134,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   // console.log(onIceSplit2)
                     for (k=0;k<data.rosterSpots.length;k++) { for (l=0;l<(onIceSplit2[j].length-1)/4;l++) {                 
                     if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='G')&&(data.rosterSpots[k].teamId===data.awayTeam.id))
-                    { onIceLineup[0].push(onIceSplit2[j][4*l+2], 'G')}                     
+                    { onIceLineup[0].push(onIceSplit2[j][4*l+2], 'G')}
                     else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='D')&&(data.rosterSpots[k].teamId===data.awayTeam.id))
                     { onIceLineup[0].push(onIceSplit2[j][4*l+2], 'D')}
                     else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&((data.rosterSpots[k].positionCode==='C')||(data.rosterSpots[k].positionCode==='R')||(data.rosterSpots[k].positionCode==='L'))&&(data.rosterSpots[k].teamId===data.awayTeam.id))
@@ -161,7 +172,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     newGoal2.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+
                     ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+2*i]+' '+onIceArray2[1+onIceArray2.length-2*onIceSplit.length+2*i];
                     document.getElementById('gameInfo').appendChild(newGoal2);
-                    const goalType = [[],[]]
+  
                     // to split onIceArray2 above to 2-3 elements
                   }
             }); // end third second .then
