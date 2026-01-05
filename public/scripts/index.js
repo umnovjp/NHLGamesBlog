@@ -114,13 +114,19 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     const goalType = [[],[]];
                     const lastIndexOfOnIceArray = onIceArray.lastIndexOf('newGoal');
                     // const goaltype = {homeTeam: data.homeTeam.id, awayTeam: data.awayTeam.id}
-                    console.log('status', lastIndexOfOnIceArray, lastIndexOfOnIceArray+(onIceArray.length-lastIndexOfOnIceArray-2)/4)
+                    console.log('status', lastIndexOfOnIceArray, onIceArray.length)
                     
-                    for (j=lastIndexOfOnIceArray;j<lastIndexOfOnIceArray+(onIceArray.length-lastIndexOfOnIceArray-2)/4;j++) { // console.log('onIceArray')
-                      console.log(onIceArray[lastIndexOfOnIceArray], onIceArray[lastIndexOfOnIceArray+2+j])
-                      if (onIceArray[lastIndexOfOnIceArray+2+j]===data.homeTeam.id) {goalType[0].push(lastIndexOfOnIceArray+3)}
-                  else if (onIceArray[lastIndexOfOnIceArray+2+j]===data.awayTeam.id) {goalType[1].push(lastIndexOfOnIceArray+3)}}
+                    for (j=0;j<(onIceArray.length-2-lastIndexOfOnIceArray)/4;j++) { // console.log('onIceArray')
+                      // console.log(onIceArray[lastIndexOfOnIceArray+2+4*j], 'j ', j)
+                      if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.homeTeam.id) {goalType[0].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}
+                  else if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.awayTeam.id) {goalType[1].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}
+                }
                   console.log(goalType)
+                  console.log(data.rosterSpots)
+                  for (j=0;j<data.rosterSpots.length;j++) {for (k=0;k<2;k++) // k is home or away team
+                    { for (l=0;l<goaltype[k].length;l++) {}
+
+                    }}
                     onIceSplit=[]; k=-1; goalTime=[[],[]]; onIceSplit2 = []; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) { if (onIceArray[j]==='newGoal') {onIceSplit.push([]);
                       goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1}
