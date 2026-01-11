@@ -133,7 +133,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1}
                     else {onIceSplit[k].push(onIceArray[j])}
                   } // end short j loop
-                  // console.log(onIceArray)
                   goalTime[0].sort((a,b) => a-b);
                  for (j=0;j<onIceSplit.length;j++) { // this loop is to order goals chronologically
                   onIceLineup = [[],[]];
