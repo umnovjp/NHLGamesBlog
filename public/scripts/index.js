@@ -115,19 +115,30 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     goalType[0].push(data.homeTeam.id); goalType[1].push(data.awayTeam.id);
                     const lastIndexOfOnIceArray = onIceArray.lastIndexOf('newGoal');
                     // const goaltype = {homeTeam: data.homeTeam.id, awayTeam: data.awayTeam.id}
-                    console.log('status', lastIndexOfOnIceArray, onIceArray.length)
+                    console.log('status', lastIndexOfOnIceArray, onIceArray.length, data.rosterSpots)
                     
                     for (j=0;j<(onIceArray.length-2-lastIndexOfOnIceArray)/4;j++) { // console.log('onIceArray')
                       // console.log(onIceArray[lastIndexOfOnIceArray+2+4*j], 'j ', j)
                       if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.homeTeam.id) {goalType[0].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}
                   else if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.awayTeam.id) {goalType[1].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}
                 }
-                  console.log(goalType); console.log(data.rosterSpots); goalType2=[[],[]];
+                  console.log('i= ', i, goalType); goalType2=[[],[]];
                   for (j=0;j<data.rosterSpots.length;j++) {for (k=0;k<2;k++) // k is home or away team
-                    { for (l=1;l<goalType[k].length+1;l++) {if ((goalType[k][0]===data.homeTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
-                  else if ((goalType[k][0]===data.awayTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
+                    { for (l=1;l<goalType[k].length+1;l++) {if ((goalType[k][0]===data.homeTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)&&(data.rosterSpots[j].teamId===data.homeTeam.id)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
+                  else if ((goalType[k][0]===data.awayTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)&&(data.rosterSpots[j].teamId===data.awayTeam.id)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
                   }}}
-                    console.log(goalType2);
+                    console.log(goalType2); goalType3=[[0,0,0,0],[0,0,0,0]];
+                    for (j=0;j<2;j++) {for (k=0;k<goalType2[j].length;k++) {
+                      if (goalType2[j][k]==='G') {goalType3[j][0]=goalType3[j][0]+1, goalType3[j][3]=goalType3[j][3]+1}
+                      else if (goalType2[j][k]==='D') {goalType3[j][1]=goalType3[j][1]+1, goalType3[j][3]=goalType3[j][3]+1}
+                      else if ((goalType2[j][k]==='C')||(goalType2[j][k]==='R')||(goalType2[j][k]==='L')) {goalType3[j][2]=goalType3[j][2]+1, goalType3[j][3]=goalType3[j][3]+1}
+                    }}
+                    console.log(goalType3);
+                    var goalType4; 
+                    if ((goalType3[0][0]=1)&&(goalType3[0][1]=2)&&(goalType3[0][2]=3)&&(goalType3[1][0]=1)&&(goalType3[1][1]=2)&&(goalType3[1][2]=3)) {goalType4='5x5'}
+                    else if (goalType3[0][3]>goalType3[1][3]) {goalType4='homePP'}
+                    else if (goalType3[0][3]<goalType3[1][3]) {goalType4='homePK'}
+                    console.log(goalType4)
                     onIceSplit=[]; k=-1; goalTime=[[],[]]; onIceSplit2 = []; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) { if (onIceArray[j]==='newGoal') {onIceSplit.push([]);
                       goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1}
