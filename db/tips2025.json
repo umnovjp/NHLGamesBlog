@@ -70,10 +70,17 @@
         "tip_id": "0a48"
     },
     {
-        "title": "You are watching stats for DAL at LAK game # 2025020724. ",
-        "username": "no data yet but stars win tonight",
-        "tip": "no data yet",
+        "title": "You are watching stats for DAL at LAK game # 2025020724. Period: 5 Time: 03:44 Scorer: Johnston Assists: Sam Steel, Esa Lindell 29 23-4 96-18-53 35 2-92 9-14-39Period: 5 Time: 08:42 Scorer: Byfield Assists: Corey Perry, Brandt Clarke 29 23-4 12-10 35 96 10-9-55-96Period: 5 Time: 16:14 Scorer: Robertson Assists: Roope Hintz, Esa Lindell 29 28-55 24-21-22 35 8-44 9-14-39Period: 5 Time: 19:42 Scorer: Duchene Assists: Mikko Rantanen, Sam Steel 29 23-4 95-96-18  8-92 10-22-9-96",
+        "username": "stars won last night",
+        "tip": "data are there",
         "topic": "UX",
-        "tip_id": "cdae"
+        "tip_id": "d8c5"
+    },
+    {
+        "title": "You are watching stats for TOR at COL game # 2025020723. Period: 5 Time: 11:15 Scorer: Cowan Assists:  60 44-25 55-74-53 50 84-42 11-13-20Period: 5 Time: 16:12 Scorer: Makar Assists: Martin Necas, Nathan MacKinnon 60 22-25 24-55-18 50 84-8 29-95-88Period: 5 Time: 17:53 Scorer: Nelson Assists: Nathan MacKinnon, Cale Makar 60 22-25 24-18 50 50 11-62-29-88Period: 5 Time: 02:12 Scorer: McMann Assists:  60 28-2 55-74-53 50 49-28 95-17-18Period: 5 Time: 10:24 Scorer: Matthews Assists: William Nylander, Oliver Ekman-Larsson 60 44-25 88-34 50 42-49 11-13Period: 5 Time: 12:55 Scorer: Necas Assists: Nathan MacKinnon 60 95-22 11-34-74 50 42-49 29-20-88Period: 5 Time: 03:59 Scorer: Nylander Assists: Oliver Ekman-Larsson, Auston Matthews 60 60 88-34 50 50 29-13",
+        "username": "will have to rewrite scripts again",
+        "tip": "not sure why all goals show up as scored as 5 period",
+        "topic": "UX",
+        "tip_id": "0818"
     }
 ]

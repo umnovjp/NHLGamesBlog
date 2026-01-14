@@ -118,7 +118,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     console.log('status', lastIndexOfOnIceArray, onIceArray.length, data.rosterSpots)
                     
                     for (j=0;j<(onIceArray.length-2-lastIndexOfOnIceArray)/4;j++) { // console.log('onIceArray')
-                      // console.log(onIceArray[lastIndexOfOnIceArray+2+4*j], 'j ', j)
                       if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.homeTeam.id) {goalType[0].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}
                   else if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.awayTeam.id) {goalType[1].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}
                 }
@@ -133,7 +132,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       else if (goalType2[j][k]==='D') {goalType3[j][1]=goalType3[j][1]+1, goalType3[j][3]=goalType3[j][3]+1}
                       else if ((goalType2[j][k]==='C')||(goalType2[j][k]==='R')||(goalType2[j][k]==='L')) {goalType3[j][2]=goalType3[j][2]+1, goalType3[j][3]=goalType3[j][3]+1}
                     }}
-                    console.log(goalType3);
+                    console.log(goalType3, data1.data[i]);
                     var goalType4; 
                     if (data1.data[i].period=5) {goaltype4='shootout'}
                     else if ((goalType3[0][0]=1)&&(goalType3[0][1]=2)&&(goalType3[0][2]=3)&&(goalType3[1][0]=1)&&(goalType3[1][1]=2)&&(goalType3[1][2]=3)&&(data1.data[i].period<5)) {goalType4='5x5'}
