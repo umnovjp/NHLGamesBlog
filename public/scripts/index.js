@@ -115,7 +115,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     goalType[0].push(data.homeTeam.id); goalType[1].push(data.awayTeam.id);
                     const lastIndexOfOnIceArray = onIceArray.lastIndexOf('newGoal');
                     // const goaltype = {homeTeam: data.homeTeam.id, awayTeam: data.awayTeam.id}
-                    console.log('status', lastIndexOfOnIceArray, onIceArray.length, data.rosterSpots)
+                    console.log('status', lastIndexOfOnIceArray, onIceArray, data.rosterSpots)
                     
                     for (j=0;j<(onIceArray.length-2-lastIndexOfOnIceArray)/4;j++) { // console.log('onIceArray')
                       if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.homeTeam.id) {goalType[0].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}
@@ -149,6 +149,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else {onIceSplit[k].push(onIceArray[j])}
                   } // end short j loop
                   goalTime[0].sort((a,b) => a-b);
+                  console.log(goalTime[0])
                  for (j=0;j<onIceSplit.length;j++) { // this loop is to order goals chronologically
                   onIceLineup = [[],[]];
                   onIceSplit2.push(onIceSplit[goalTime[1].indexOf(goalTime[0][j])]);
@@ -167,7 +168,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&((data.rosterSpots[k].positionCode==='C')||(data.rosterSpots[k].positionCode==='R')||(data.rosterSpots[k].positionCode==='L'))&&(data.rosterSpots[k].teamId===data.homeTeam.id))
                     { onIceLineup[1].push(onIceSplit2[j][4*l+2], 'F')}
                   }} // end k loop
-                  // console.log(onIceLineup)
                   for (k=0;k<2;k++) { var lineUp =''; var lineUpG ='';
                     if (onIceLineup[k].indexOf('G')!=-1) {lineUpG = onIceLineup[k][onIceLineup[k].indexOf('G')-1].toString()+' '}
                     else {lineUpG = ' '}
@@ -192,8 +192,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     for (i=0;i<goalsNumber.length;i++) { var newGoal2 = document.createElement('span');
                     newGoal2.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+
                     ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+2*i]+' '+onIceArray2[1+onIceArray2.length-2*onIceSplit.length+2*i];
-                    document.getElementById('gameInfo').appendChild(newGoal2);
-  
+                    document.getElementById('gameInfo').appendChild(newGoal2);  
                     // to split onIceArray2 above to 2-3 elements
                   }
             }); // end third second .then
@@ -202,12 +201,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
     } // end first second .then
     )} // end function selectGame
 
-console.log('x')
-
     // Get a list of existing tips from the server
 const getTips = () =>
-  fetch('api/tips', {
-    method: 'GET', // or 'PUT'
+  fetch('api/tips', { method: 'GET', // or 'PUT'
     headers: {
       'Content-Type': 'application/json',
     },

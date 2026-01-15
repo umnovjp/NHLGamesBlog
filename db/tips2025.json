@@ -82,5 +82,12 @@
         "tip": "not sure why all goals show up as scored as 5 period",
         "topic": "UX",
         "tip_id": "0818"
+    },
+    {
+        "title": "You are watching stats for DAL at ANA game # 2025020734. Period: 5 Time: 03:36 Scorer: Kreider Assists: Mikael Granlund, Radko Gudas 1 20-55 95-96  7-98 20-64-45Period: 5 Time: 12:03 Scorer: Sennecke Assists:  1 20-46 95-24-21 1 14-98 17-64-45Period: 5 Time: 17:48 Scorer: Hintz Assists: Matt Duchene, Wyatt Johnston  53 95-96-24-21-53 1 65-98 20-64-16Period: 5 Time: 19:39 Scorer: Trouba Assists: Jackson LaCombe  53 95-96-24-21-53 1 65-2 64-24-13",
+        "username": "and period is still 5 for all goals scored",
+        "tip": "tough loss last night. ",
+        "topic": "UX",
+        "tip_id": "5094"
     }
 ]
