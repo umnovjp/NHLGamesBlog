@@ -24,3 +24,5 @@ There are 4 get routes (/, /feedback, /api/tips, /api/feedback) and 2 post route
 ## Temporary note (to be deleted)
 game 0 01/04/26 as test. Three goals look wrong: Period 2 10:14 1814 home #53 playing on D and F, OT 3:40 home #53 playing on D and F, same goal away #93 playing both, period 2 18:39 away #93 playing both. Also when there are multiple SO goals, same player is recorded. There was a game around new year stars against chi when 3 SO goals were scored. Stars Game 01/10 OT goal added twice at different time.
 
+Reviewing game 7 1/13. 1583 #44 is not displayed instead #13 is displayed as D. Goal recorded as 5x5 though it is a PPG. 1738 PS goal but players recorded on ice. 
+
