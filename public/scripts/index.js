@@ -125,6 +125,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     { for (l=1;l<goalType[k].length+1;l++) {if ((goalType[k][0]===data.homeTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)&&(data.rosterSpots[j].teamId===data.homeTeam.id)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
                   else if ((goalType[k][0]===data.awayTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)&&(data.rosterSpots[j].teamId===data.awayTeam.id)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
                   }}}
+                  console.log(goalType2);
                     goalType3=[[0,0,0,0],[0,0,0,0]];
                     for (j=0;j<2;j++) {for (k=0;k<goalType2[j].length;k++) {
                       if (goalType2[j][k]==='G') {goalType3[j][0]=goalType3[j][0]+1, goalType3[j][3]=goalType3[j][3]+1}
