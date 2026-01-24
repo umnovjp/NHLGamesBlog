@@ -24,7 +24,16 @@ There are 4 get routes (/, /feedback, /api/tips, /api/feedback) and 2 post route
 ## Temporary note (to be deleted)
 game 0 01/04/26 as test. Three goals look wrong: Period 2 10:14 1814 home #53 playing on D and F, OT 3:40 home #53 playing on D and F, same goal away #93 playing both, period 2 18:39 away #93 playing both. Also when there are multiple SO goals, same player is recorded. There was a game around new year stars against chi when 3 SO goals were scored. Stars Game 01/10 OT goal added twice at different time. Data are not there 01/21/20. 
 
-Reviewing game 7 1/13. 1583 #44 is not displayed instead #13 is displayed as D. Goal recorded as 5x5 though it is a PPG. 1738 PS goal but players recorded on ice. game is no longer there. Typical for games in canada to delete data after one week. 
+Reviewing game 7 1/13. 1583 #44 is not displayed instead #13 is displayed as D. Goal recorded as 5x5 though it is a PPG. 1738 PS goal but players recorded on ice. game is no longer there. Typical for games in Canada to delete data after one week. 
 
 Game 3 1/20. Should not disappear. onIceArray2 is incorrect. 
+
+25, 14, 23, 29, 4, 10, 49; 6, 71, 18, 73, 11, 1, 45
+25, 15, 18, 29, 46, 55; 6, 70, 28, 88, 18, 73, 39
+25, 23, 24, 29, 21, 4, 22; 6, 28, 88, 73, 1, 45, 92
+25, 24, 29, 21, 5, 55, 22; 6, 27, 28, 88, 1, 6, 21
+25, 14, 23, 29, 55, 22, 49; 6, 52, 26, 1, 47, 45
+25, 95, 24, 29, 21, 4, 53; 6, 52, 91, 73, 1, 47
+25, 15, 12, 11, 29, 5, 55; 6, 70, 91, 26, 84, 39, 93
+25, 14, 29, 10, 5, 55, 49; 6, 27, 39, 1, 47, 6, 93
 
