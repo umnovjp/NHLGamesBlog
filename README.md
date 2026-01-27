@@ -26,16 +26,9 @@ game 0 01/04/26 as test. Three goals look wrong: Period 2 10:14 1814 home #53 pl
 
 Reviewing game 7 1/13. 1583 #44 is not displayed instead #13 is displayed as D. Goal recorded as 5x5 though it is a PPG. 1738 PS goal but players recorded on ice. game is no longer there. Typical for games in Canada to delete data after one week. 
 
-Game 3 1/20. Should not disappear. onIceArray2 is incorrect. 
+Game 3 1/20. Should not disappear. onIceArray2 is incorrect. Game 6 1/24 has multiple SO goals. 
 
-25, 14, 23, 29, 4, 10, 49; 6, 71, 18, 73, 11, 1, 45 - [29] [23, 4] [14, 10, 49]; [1] [73, 45] [71, 18, 11]
-25, 15, 18, 29, 46, 55; 6, 70, 28, 88, 18, 73, 39 - [29] [46, 55] [15, 18]; [70] [73] [28, 88, 18, 39]
-25, 23, 24, 29, 21, 4, 22; 6, 28, 88, 73, 1, 45, 92 - [29] [23, 4] [24, 21, 22]; [1] [73, 45] [28, 88, 92]
-25, 24, 29, 21, 5, 55, 22; 6, 27, 28, 88, 1, 6, 21 - [29] [5, 55] [24, 21, 22]; [1] [27, 6] [28, 88, 21]
-25, 14, 23, 29, 55, 22, 49; 6, 52, 26, 1, 47, 45 - [29] [23, 55] [14, 22, 49]; [1] [26, 45] [52, 47]
-25, 95, 24, 29, 21, 4, 53; 6, 52, 91, 73, 1, 47 - [29] [4] [95, 24, 21, 53]; [1] [91, 73] [52, 47]
-25, 15, 12, 11, 29, 5, 55; 6, 70, 91, 26, 84, 39, 93 - [29] [5, 55] [15, 12, 11]; [70] [91, 26] [84, 39, 93]
-25, 14, 29, 10, 5, 55, 49; 6, 27, 39, 1, 47, 6, 93 - [29] [5, 55] [14, 10, 49]; [1] [27, 6] [39, 47, 93]
+Game 0 1/26 last goal displayed twice
 
 [
     "newGoal", 1706, [[[29],[23,4],[14,10,49]],[[1],[73,45],[71,18,11]]],
