@@ -21,22 +21,13 @@ There are 4 get routes (/, /feedback, /api/tips, /api/feedback) and 2 post route
 ## Not related material how to apply exports (to be deleted)
 9.15 index.js has `const badmath = require('./badmath.js')`. Full path is included. index.js has function or action: console.log something. badmath.js has one variable and one function that we are exporting using module.exports = {pie, predictable}. Then index.js knows what pie is and what predictable is. Then he reviewed 9.16. index.js to require ('./math.js') but math.js has function then it says module.exports = {function here}. Here is example: module.exports = {sum: (a,b) => a+b}. Then I can use math.sum in index.js. important development 13.2 around 36:50 when he used that to export routes. then another revellation async await. Require may be used only in my side not on server. 
 
-## Temporary note (to be deleted)
+## Temporary notes (to be deleted)
 game 0 01/04/26 as test. Three goals look wrong: Period 2 10:14 1814 home #53 playing on D and F, OT 3:40 home #53 playing on D and F, same goal away #93 playing both, period 2 18:39 away #93 playing both. Also when there are multiple SO goals, same player is recorded. There was a game around new year stars against chi when 3 SO goals were scored. Stars Game 01/10 OT goal added twice at different time. Data are not there 01/21/20. 
 
 Reviewing game 7 1/13. 1583 #44 is not displayed instead #13 is displayed as D. Goal recorded as 5x5 though it is a PPG. 1738 PS goal but players recorded on ice. game is no longer there. Typical for games in Canada to delete data after one week. 
 
-Game 3 1/20. Should not disappear. onIceArray2 is incorrect. Game 6 1/24 has multiple SO goals. 
+Game 3 1/20. Disappeared. Game 6 1/24 has multiple SO goals. 
 
 Game 0 1/26 last goal displayed twice
 
-[
-    "newGoal", 1706, [[[29],[23,4],[14,10,49]],[[1],[73,45],[71,18,11]]],
-    "newGoal", 3131, [[[29],[46,55],[15,18]],[[70],[73],[28,88,18,39]]],
-    "newGoal", 2595, [[[29],[23,4],[24,21,22]],[[1],[73,45],[28,88,92]]],
-    "newGoal", 2797, [[[29],[5,55],[24,21,22]],[[1],[27,6],[28,88,21]]],
-    "newGoal", 1187, [[[29],[23,55],[14,22,49]],[[1],[26,45],[52,47]]],
-    "newGoal", 968, [[[29],[4],[95,24,21,53]],[[1],[91,73],[52,47]]],
-    "newGoal", 3339, [[[29],[5,55],[15,12,11]],[[70],[91,26],[84,39,93]]],
-    "newGoal", 2369, [[[29],[5,55],[14,10,49]],[[1],[27,6],[39,47,93]]]
-]
+game 3 01/26 goalType3 sometimes has 2G (period 2 7:34, period 2 0:55) then goal 33-65,98-17,25 counts goalType3 as 1,2,3,5 (not 6). sometimes 7 players. 
