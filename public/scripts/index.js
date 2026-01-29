@@ -269,7 +269,7 @@ const handleFormSubmit = (e) => {
 
   // get the value of the username and save it to a variable
   const tipUsername = document.getElementById('tipUsername').value.trim();
-  // console.log(tipTitle)
+  console.log(tipTitle)
 
   // Create an object with the tip and username
   const newTip = {
