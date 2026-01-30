@@ -88,6 +88,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             var gameTitle = document.createElement('h2'); gameTitle.textContent = '';
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game # ' + gameId + '. ';
             document.getElementById('gameInfo').appendChild(gameTitle);
+            const lineups = document.createElement('section');
+            document.getElementById('gameInfo').appendChild(lineups)
                    
           var requestURL1 = 'https://cors-anywhere.herokuapp.com/https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId; // charts to find which players were on ice
           // var requestURL1 = 'https://corsproxy.io/?key=2ddedfd8&url=https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;

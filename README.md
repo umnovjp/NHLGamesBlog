@@ -26,7 +26,7 @@ game 0 01/04/26 as test. Three goals look wrong: Period 2 10:14 1814 home #53 pl
 
 Reviewing game 7 1/13. 1583 #44 is not displayed instead #13 is displayed as D. Goal recorded as 5x5 though it is a PPG. 1738 PS goal but players recorded on ice. game is no longer there. Typical for games in Canada to delete data after one week. 
 
-Game 3 1/20. Disappeared. Game 6 1/24 has multiple SO goals. 
+Game 3 1/20. Disappeared. Still not visible 1/29. Game 6 1/24 has multiple SO goals. 
 
 Game 0 1/26 last goal displayed twice
 
