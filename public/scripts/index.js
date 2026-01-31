@@ -92,9 +92,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             const lineups = document.createElement('section');
             document.getElementById('gameInfo').appendChild(lineups)
             fullLineup = [[],[]]
-            for (i=0;i<data.rosterSpots.length;i++) {
-               if (data.rosterSpots.teamId===data.homeTeam.id) {fullLineup[0].push(data.rosterSpots.playerId)}
-               else if (data.rosterSpots.teamId===data.awayTeam.id) {fullLineup[0].push(data.rosterSpots.playerId)}
+            for (i=0;i<data.rosterSpots.length;i++) { 
+               if (data.rosterSpots[i].teamId===data.homeTeam.id) {fullLineup[0].push(data.rosterSpots.playerId)}
+               else if (data.rosterSpots[i].teamId===data.awayTeam.id) {fullLineup[1].push(data.rosterSpots.playerId)}
               }
               console.log(fullLineup)
                    
