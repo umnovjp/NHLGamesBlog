@@ -66,9 +66,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
       function displayGameData(event) { idx = event.currentTarget; idxString = event.currentTarget.textContent;
         idxArray = idxString.split(':'); idxNumber = idxArray[0].split(' ');
         console.log(idxNumber); gameNumber = idxNumber[1];
-        var gameId = data2.gameWeek[0].games[gameNumber].id; gameIdNumber=document.createElement('span');
-        gameIdNumber.setAttribute('id', 'gameId');
-        gameIdNumber.innerHTML='abc';
+        var gameId = data2.gameWeek[0].games[gameNumber].id; // gameIdNumber=document.createElement('span');
+        // gameIdNumber.setAttribute('id', 'gameId');
+        // gameIdNumber.innerHTML='abc';
         
         console.log(gameId);
         // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play'; to select game on certain date
@@ -80,6 +80,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             return response.json();
           })
           .then(function (data) { console.log('I am in second then');
+            console.log(data.rosterSpots);
             const gameInfo = document.createElement('section'); gameInfo.setAttribute('id', 'gameInfo');
             document.getElementById('schedule').appendChild(gameInfo);
             const gameInfoHome = document.createElement('section');
@@ -90,6 +91,12 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             document.getElementById('gameInfo').appendChild(gameTitle);
             const lineups = document.createElement('section');
             document.getElementById('gameInfo').appendChild(lineups)
+            fullLineup = [[],[]]
+            for (i=0;i<data.rosterSpots.length;i++) {
+               if (data.rosterSpots.teamId===data.homeTeam.id) {fullLineup[0].push(data.rosterSpots.playerId)}
+               else if (data.rosterSpots.teamId===data.awayTeam.id) {fullLineup[0].push(data.rosterSpots.playerId)}
+              }
+              console.log(fullLineup)
                    
           var requestURL1 = 'https://cors-anywhere.herokuapp.com/https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId; // charts to find which players were on ice
           // var requestURL1 = 'https://corsproxy.io/?key=2ddedfd8&url=https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
@@ -126,7 +133,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     { for (l=1;l<goalType[k].length+1;l++) {if ((goalType[k][0]===data.homeTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)&&(data.rosterSpots[j].teamId===data.homeTeam.id)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
                   else if ((goalType[k][0]===data.awayTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)&&(data.rosterSpots[j].teamId===data.awayTeam.id)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
                   }}}
-                  console.log('i= ', i, goalType, goalType2); // goalType is array of players on ice but goalType2 is array of their positions
+                  // console.log('i= ', i, goalType, goalType2); 
+                  // goalType is array of players on ice but goalType2 is array of their positions like G or D or C or L or R
                     goalType3=[[0,0,0,0],[0,0,0,0]]; goalType5 = [[[],[],[]],[[],[],[]]]; 
                     for (j=0;j<2;j++) {for (k=0;k<goalType2[j].length;k++) {
                       if (goalType2[j][k]==='G') {goalType3[j][0]=goalType3[j][0]+1; goalType3[j][3]=goalType3[j][3]+1; goalType5[j][0].push(goalType[j][k+1])}
