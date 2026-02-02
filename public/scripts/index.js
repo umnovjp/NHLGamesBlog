@@ -9,8 +9,10 @@ const frequency = (arr, item) => {let count = 0;
   return count;
 };
 
-const createCard = (tip) => {
-  // Create card
+// const ticket = localStorage.getItem('AA_FlightSearch')
+// console.log(ticket)
+
+const createCard = (tip) => { // Create card
   const cardEl = document.createElement('section');
   cardEl.classList.add('card', 'mb-3');
   cardEl.setAttribute('key', tip.tip_id);
@@ -105,12 +107,11 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           })
           .then(function (response) { return response.json()
             })
-            .then(function (data1) { console.log('I am in third then', data1);            
+            .then(function (data1) { console.log('I am in third then', data1);
                for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
-               { periodNumber = data1.data[i].period; goalsNumber.push(i); goalTime = data1.data[i].startTime; 
+               { periodNumber = data1.data[i].period; goalsNumber.push(i); goalTime = data1.data[i].startTime;
                 goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
                 goalTimeSecondsAbsolute=goalTimeSeconds+(periodNumber-1)*1200; onIceArray.push('newGoal', goalTimeSecondsAbsolute);
-                // console.log('period', periodNumber, 'data', data1.data[i])
                 for (j=0; j<data1.data.length;j++) { // j loop counts all shifts and checks if a player was on ice when a goal was scored
                   shiftStart = data1.data[j].startTime.split(":"); shiftStartSeconds=Number(shiftStart[0])*60+Number(shiftStart[1]);
                   shiftEnd = data1.data[j].endTime.split(':'); shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);
@@ -123,7 +124,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     const goalType = [[],[]];
                     goalType[0].push(data.homeTeam.id); goalType[1].push(data.awayTeam.id);
                     const lastIndexOfOnIceArray = onIceArray.lastIndexOf('newGoal');
-                    // console.log('status', lastIndexOfOnIceArray)
                     
                     for (j=0;j<(onIceArray.length-2-lastIndexOfOnIceArray)/4;j++) {
                       if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.homeTeam.id) {goalType[0].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}
@@ -208,7 +208,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   for (j=0;j<goalTime2[0].length;j++) { // console.log(goalTime2[0][j], goalTime2[1].indexOf(goalTime2[0][j]))
                    goalType7.push(goalType6[3*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[3*goalTime2[1].indexOf(goalTime2[0][j])+2])
                   }
-                    console.log(goalType7, 'goalType6', goalType6)
+                    console.log(goalType7)
                     for (j=0;j<goalType7.length/2;j++) {}
 
                   //   for (i=0;i<goalsNumber.length;i++) { var newGoal2 = document.createElement('span');
