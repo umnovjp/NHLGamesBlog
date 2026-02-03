@@ -143,8 +143,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     }}
                     for (j=0;j<2;j++) {goalTime2[j].push(goalTimeSecondsAbsolute)} // goalTime2[0] and goalTime2[1] are arrays of when a goal was scored. But goalTime2[0] will be used for ordering
                     goalTime2[0].sort((a,b) => a-b);
-                    console.log('goalType3', goalType3, 'goalType5', goalType5, 'goalTime2', goalTime2)
-                    goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5) 
+                    console.log('goalType3', goalType3, 'goalType5', goalType5, 'goalTime2', goalTime2);
+                    goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5);
                     
                     // var goalType4; 
                     // if (data1.data[i].period===5) {goaltype4='shootout'}
