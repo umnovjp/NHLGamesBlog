@@ -146,7 +146,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     console.log('goalType3', goalType3, 'goalType5', goalType5, 'goalTime2', goalTime2);
                     goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5);
                     
-                    // var goalType4; 
+                    var goalType4; 
                     // if (data1.data[i].period===5) {goaltype4='shootout'}
                     // else if ((goalType3[0][0]=1)&&(goalType3[0][1]=2)&&(goalType3[0][2]=3)&&(goalType3[1][0]=1)&&(goalType3[1][1]=2)&&(goalType3[1][2]=3)&&(data1.data[i].period<5)) {goalType4='5x5'}
                     // else if ((goalType3[0][3]>goalType3[1][3])&&(goalType3[0][0]=1)&&(goalType3[1][0]=1)&&(data1.data[i].period<5)) {goalType4='homePP'}
@@ -202,21 +202,17 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   // }
                   // } // end k,j loop                   
                     }} // end goal if statement and i loop
-                    console.log('goalType6', goalType6, 'goalTime2', goalTime2)
+                    console.log('goalType6', goalType6)
                     
-                  goalType7=[];
+                  goalType7=[]; // to add actual goal type here like 5x5 or PP
                   for (j=0;j<goalTime2[0].length;j++) { // console.log(goalTime2[0][j], goalTime2[1].indexOf(goalTime2[0][j]))
                    goalType7.push(goalType6[3*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[3*goalTime2[1].indexOf(goalTime2[0][j])+2])
+                  //  if (data1.data[i].period===5) {goaltype4='shootout'}
+                  //  else {goalType4='TBD'}
+                  //  goalType7.push(goalType4)
                   }
                     console.log(goalType7)
-                    for (j=0;j<goalType7.length/2;j++) {}
-
-                  //   for (i=0;i<goalsNumber.length;i++) { var newGoal2 = document.createElement('span');
-                  //   newGoal2.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+
-                  //   ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+onIceArray2[onIceArray2.length-2*onIceSplit.length+2*i]+' '+onIceArray2[1+onIceArray2.length-2*onIceSplit.length+2*i];
-                  //   document.getElementById('gameInfo').appendChild(newGoal2);  
-                  //   // to split onIceArray2 above to 2-3 elements
-                  // }
+                    // for (j=0;j<goalType7.length/2;j++) {}
                   for (i=0;i<goalsNumber.length;i++) { var newGoal3 = document.createElement('span');
                     newGoal3.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+
                     ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+goalType7[2*i+1][1][0]+'-'+goalType7[2*i+1][1][1]+'-'+goalType7[2*i+1][1][2]+' '+goalType7[2*i+1][0][0]+'-'+goalType7[2*i+1][0][1]+'-'+goalType7[2*i+1][0][2];
