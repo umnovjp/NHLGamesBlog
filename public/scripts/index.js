@@ -134,7 +134,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     { for (l=1;l<goalType[k].length+1;l++) {if ((goalType[k][0]===data.homeTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)&&(data.rosterSpots[j].teamId===data.homeTeam.id)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
                   else if ((goalType[k][0]===data.awayTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)&&(data.rosterSpots[j].teamId===data.awayTeam.id)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
                   }}}
-                  // goalType is array of players on ice but goalType2 is array of their positions like G or D or C or L or R
+                  // goalType is array of players on ice but goalType2 is array of their positions like G or D or C or L or R goalType3 is number of G, D, F on both sides like 1-2-3-6 if that was 5x5
+                  // goalType5 is array of numbers who was on ice during the goal
                     goalType3=[[0,0,0,0],[0,0,0,0]]; goalType5 = [[[],[],[]],[[],[],[]]]; 
                     for (j=0;j<2;j++) {for (k=0;k<goalType2[j].length;k++) {
                       if (goalType2[j][k]==='G') {goalType3[j][0]=goalType3[j][0]+1; goalType3[j][3]=goalType3[j][3]+1; goalType5[j][0].push(goalType[j][k+1])}
@@ -143,7 +144,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     }}
                     for (j=0;j<2;j++) {goalTime2[j].push(goalTimeSecondsAbsolute)} // goalTime2[0] and goalTime2[1] are arrays of when a goal was scored. But goalTime2[0] will be used for ordering
                     goalTime2[0].sort((a,b) => a-b);
-                    console.log('goalType3', goalType3, 'goalType5', goalType5, 'goalTime2', goalTime2);
+                    console.log('goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2);
                     goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5);
                     
                     var goalType4; 
@@ -206,8 +207,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     
                   goalType7=[]; // to add actual goal type here like 5x5 or PP
                   for (j=0;j<goalTime2[0].length;j++) { // console.log(goalTime2[0][j], goalTime2[1].indexOf(goalTime2[0][j]))
-                   goalType7.push(goalType6[3*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[3*goalTime2[1].indexOf(goalTime2[0][j])+2])
-                  //  if (data1.data[i].period===5) {goaltype4='shootout'}
+                  goalType7.push(goalType6[3*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[3*goalTime2[1].indexOf(goalTime2[0][j])+2])
+                  // console.log(data1.data[i])
+                   //  if (data1.data[i].period===5) {goaltype4='shootout'}
                   //  else {goalType4='TBD'}
                   //  goalType7.push(goalType4)
                   }
