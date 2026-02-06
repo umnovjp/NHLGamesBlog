@@ -144,7 +144,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     }}
                     for (j=0;j<2;j++) {goalTime2[j].push(goalTimeSecondsAbsolute)} // goalTime2[0] and goalTime2[1] are arrays of when a goal was scored. But goalTime2[0] will be used for ordering
                     goalTime2[0].sort((a,b) => a-b);
-                    console.log('goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2);
+                    console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2);
+
                     goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5);
                     
                     var goalType4; 
@@ -205,16 +206,11 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     }} // end goal if statement and i loop
                     console.log('goalType6', goalType6)
                     
-                  goalType7=[]; // to add actual goal type here like 5x5 or PP
-                  for (j=0;j<goalTime2[0].length;j++) { // console.log(goalTime2[0][j], goalTime2[1].indexOf(goalTime2[0][j]))
+                  goalType7=[];
+                  for (j=0;j<goalTime2[0].length;j++) { 
                   goalType7.push(goalType6[3*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[3*goalTime2[1].indexOf(goalTime2[0][j])+2])
-                  // console.log(data1.data[i])
-                   //  if (data1.data[i].period===5) {goaltype4='shootout'}
-                  //  else {goalType4='TBD'}
-                  //  goalType7.push(goalType4)
                   }
                     console.log(goalType7)
-                    // for (j=0;j<goalType7.length/2;j++) {}
                   for (i=0;i<goalsNumber.length;i++) { var newGoal3 = document.createElement('span');
                     newGoal3.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+
                     ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+goalType7[2*i+1][1][0]+'-'+goalType7[2*i+1][1][1]+'-'+goalType7[2*i+1][1][2]+' '+goalType7[2*i+1][0][0]+'-'+goalType7[2*i+1][0][1]+'-'+goalType7[2*i+1][0][2];
