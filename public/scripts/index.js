@@ -146,9 +146,15 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     goalTime2[0].sort((a,b) => a-b);
                     console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2);
 
-                    goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5);
                     
                     var goalType4; 
+                    if ((goalType5[0][0].length===1)&&(goalType5[0][1].length===2)&&(goalType5[0][2].length===3)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length===2)&&(goalType5[0][2].length===3)) {goalType4='5x5'}
+                    else if (data1.data[i].period===5) {goalType4='shootout'}
+                    else {goalType4='something else'}
+                    console.log(goalType5, goalType4)
+                    goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5);
+                    
+                    
                     // if (data1.data[i].period===5) {goaltype4='shootout'}
                     // else if ((goalType3[0][0]=1)&&(goalType3[0][1]=2)&&(goalType3[0][2]=3)&&(goalType3[1][0]=1)&&(goalType3[1][1]=2)&&(goalType3[1][2]=3)&&(data1.data[i].period<5)) {goalType4='5x5'}
                     // else if ((goalType3[0][3]>goalType3[1][3])&&(goalType3[0][0]=1)&&(goalType3[1][0]=1)&&(data1.data[i].period<5)) {goalType4='homePP'}
