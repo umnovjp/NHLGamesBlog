@@ -94,12 +94,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             const lineups = document.createElement('section');
             document.getElementById('gameInfo').appendChild(lineups)
             fullLineup = []
-            for (i=0;i<data.rosterSpots.length;i++) { const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, fiveOnFive: 0, PP: 0, PK: 0, specialTeams: 0}
-              //  if (data.rosterSpots[i].teamId===data.homeTeam.id) {fullLineup[0].push(data.rosterSpots.playerId)}
-              //  else if (data.rosterSpots[i].teamId===data.awayTeam.id) {fullLineup[1].push(data.rosterSpots.playerId)}
-              fullLineup.push(obj)
-              }
-              console.log(fullLineup)
+            for (i=0;i<data.rosterSpots.length;i++) { const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, fiveOnFive: 0, PP: 0, PK: 0, specialTeams: 0, something: 0, shootout: 0}
+            fullLineup.push(obj)
+            }
+            console.log(fullLineup)
                    
           var requestURL1 = 'https://cors-anywhere.herokuapp.com/https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId; // charts to find which players were on ice
           // var requestURL1 = 'https://corsproxy.io/?key=2ddedfd8&url=https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
@@ -145,24 +143,15 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     for (j=0;j<2;j++) {goalTime2[j].push(goalTimeSecondsAbsolute)} // goalTime2[0] and goalTime2[1] are arrays of when a goal was scored. But goalTime2[0] will be used for ordering
                     goalTime2[0].sort((a,b) => a-b);
                     console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2);
-
                     
                     var goalType4; 
-                    if ((goalType5[0][0].length===1)&&(goalType5[0][1].length===2)&&(goalType5[0][2].length===3)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length===2)&&(goalType5[0][2].length===3)) {goalType4='5x5'}
+                    if ((goalType5[0][0].length===1)&&(goalType5[0][1].length===2)&&(goalType5[0][2].length===3)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length===2)&&(goalType5[0][2].length===3)) {goalType4='5x5';
+
+                    }
                     else if (data1.data[i].period===5) {goalType4='shootout'}
                     else {goalType4='something else'}
-                    console.log(goalType5, goalType4)
-                    goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5);
-                    
-                    
-                    // if (data1.data[i].period===5) {goaltype4='shootout'}
-                    // else if ((goalType3[0][0]=1)&&(goalType3[0][1]=2)&&(goalType3[0][2]=3)&&(goalType3[1][0]=1)&&(goalType3[1][1]=2)&&(goalType3[1][2]=3)&&(data1.data[i].period<5)) {goalType4='5x5'}
-                    // else if ((goalType3[0][3]>goalType3[1][3])&&(goalType3[0][0]=1)&&(goalType3[1][0]=1)&&(data1.data[i].period<5)) {goalType4='homePP'}
-                    // else if ((goalType3[0][3]<goalType3[1][3])&&(goalType3[0][0]=1)&&(goalType3[1][0]=1)&&(data1.data[i].period<5)) {goalType4='homePK'}
-                    // else if ((goalType3[0][0]=0)&&(data1.data[i].period<5)) {goalType4='AwayEN'}
-                    // else if ((goalType3[1][0]=0)&&(data1.data[i].period<5)) {goalType4='HomeEN'}
-                    // else if ((goalType3[0][0]=1)&&(goalType3[1][0]=1)&&(goalType3[0][3]<6)&&(goalType3[1][3]<6)&&(goalType3[0][3]=goalType3[1][3])&&(data1.data[i].period<5)) {goalType4='specialTeams'}
-                    // else {goalType4='goalType4 undefined'}
+                    // console.log(goalType5, goalType4);
+                    goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4);
                     // onIceSplit=[]; k=-1; 
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) { if (onIceArray[j]==='newGoal') { // onIceSplit.push([]);
@@ -214,12 +203,12 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { 
-                  goalType7.push(goalType6[3*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[3*goalTime2[1].indexOf(goalTime2[0][j])+2])
+                  goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3])
                   }
                     console.log(goalType7)
                   for (i=0;i<goalsNumber.length;i++) { var newGoal3 = document.createElement('span');
                     newGoal3.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+
-                    ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+goalType7[2*i+1][1][0]+'-'+goalType7[2*i+1][1][1]+'-'+goalType7[2*i+1][1][2]+' '+goalType7[2*i+1][0][0]+'-'+goalType7[2*i+1][0][1]+'-'+goalType7[2*i+1][0][2];
+                    ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+goalType7[3*i+1][1][0]+'-'+goalType7[3*i+1][1][1]+'-'+goalType7[3*i+1][1][2]+' '+goalType7[3*i+1][0][0]+'-'+goalType7[3*i+1][0][1]+'-'+goalType7[3*i+1][0][2];
                     document.getElementById('gameInfo').appendChild(newGoal3);
                   }
             }); // end third second .then
