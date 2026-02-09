@@ -146,17 +146,16 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     
                     var goalType4; 
                     if ((goalType5[0][0].length===1)&&(goalType5[0][1].length===2)&&(goalType5[0][2].length===3)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length===2)&&(goalType5[0][2].length===3)) {goalType4='5x5';
-
+                    for (j=0;j<2;j++) {for (k=0;k<goalType[j].length-1;k++) {
+                      // will add staff here tomorrow
+                    }}
                     }
                     else if (data1.data[i].period===5) {goalType4='shootout'}
                     else {goalType4='something else'}
-                    // console.log(goalType5, goalType4);
                     goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4);
-                    // onIceSplit=[]; k=-1; 
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
-                    for (j=0;j<onIceArray.length;j++) { if (onIceArray[j]==='newGoal') { // onIceSplit.push([]);
+                    for (j=0;j<onIceArray.length;j++) { if (onIceArray[j]==='newGoal') { 
                       goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1}
-                    // else {onIceSplit[k].push(onIceArray[j])}
                   } // end short j loop
                   goalTime[0].sort((a,b) => a-b);
                   // goalType7=[];
