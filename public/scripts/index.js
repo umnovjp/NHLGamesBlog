@@ -148,8 +148,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     if ((goalType5[0][0].length===1)&&(goalType5[0][1].length===2)&&(goalType5[0][2].length===3)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length===2)&&(goalType5[0][2].length===3)) {goalType4='5x5';
                     for (j=0;j<2;j++) {for (k=0;k<goalType[j].length-1;k++) {
                       // will add staff here tomorrow
-                    }}
-                    }
+                    }}}
                     else if (data1.data[i].period===5) {goalType4='shootout'}
                     else {goalType4='something else'}
                     goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4);
