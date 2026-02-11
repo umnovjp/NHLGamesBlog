@@ -42,13 +42,6 @@
         "tip_id": "d3c8"
     },
     {
-        "title": "You are watching stats for OTT at COL game # 2025020691. Period: 1 Time: 10:11 Scorer: Manson Assists: Ross Colton, Brock Nelson 1 85-2 22-7-18 41 42-28 11-13-20Period: 1 Time: 17:14 Scorer: MacKinnon Assists: Martin Necas, Sam Malinski 1 85-2 28-12-71 41 8-70 62-29-88Period: 2 Time: 02:35 Scorer: Makar Assists: Nathan MacKinnon, Josh Manson 1 72-2 21-12-71 41 84-42-8 29-88Period: 2 Time: 05:08 Scorer: Pinto Assists: Claude Giroux, Jake Sanderson 40 43-33 20-12-71 41 8-70 62-29-88Period: 2 Time: 11:46 Scorer: Necas Assists: Nathan MacKinnon, Cale Makar 40 85-2 28-18 41 8 11-62-29-88Period: 2 Time: 12:03 Scorer: Burns Assists: Josh Manson, Ross Colton 40 72-10 57-19-24 41 84-42 13-20-82Period: 2 Time: 14:23 Scorer: Nelson Assists: Nathan MacKinnon, Cale Makar 40 85-2 28- 41 8 11-62-29-88Period: 2 Time: 16:48 Scorer: Manson Assists: Jack Drury, Zakhar Bardakov 40 72-10 89-21-20 41 42-49 88-18-93Period: 2 Time: 18:04 Scorer: Nelson Assists: Ilya Solovyov, Ross Colton 40 43-33 20-7-18 41 42-28 11-20-88Period: 3 Time: 07:03 Scorer: Tkachuk Assists: Tyler Kleven 1 43-33 7-71 41 8 11-62-29-88",
-        "username": "will wait for now. Adding as it turns.",
-        "tip": "COL won again",
-        "topic": "UX",
-        "tip_id": "f810"
-    },
-    {
         "title": "You are watching stats for EDM at WPG game # 2025020690. Period: 1 Time: 11:11 Scorer: Connor Assists: Mark Scheifele, Alex Iafallo 30 25-24 18-93-97 37 44-4 55-81-9Period: 1 Time: 17:02 Scorer: Podkolzin Assists: Kasperi Kapanen, Ty Emberson 30 61-49 29-42-92 37 2-54 55-81-9Period: 1 Time: 18:16 Scorer: Pearson Assists: Cole Koepke 30 2-24 28-53-22 37 5-64 70-45-53Period: 1 Time: 18:56 Scorer: Morrissey Assists: Kyle Connor, Mark Scheifele 30 25-24 28-53-22 37 44-4 55-81-9Period: 2 Time: 19:39 Scorer: McDavid Assists: Leon Draisaitl, Evan Bouchard 30 14-2 93-29-97 37 44-4 55-81-9Period: 3 Time: 08:19 Scorer: Hyman Assists: Darnell Nurse 30 25-24 18-93-97 37 2-54 19-81-9Period: 3 Time: 10:37 Scorer: Bouchard Assists: Ryan Nugent-Hopkins, Connor McDavid 30 2 18-93-29-97 37 5-2 17-9",
         "username": "wpg lost again still plan to watch condensed game",
         "tip": "wpg lost again",
@@ -70,13 +63,6 @@
         "tip_id": "d8c5"
     },
     {
-        "title": "You are watching stats for TOR at COL game # 2025020723. Period: 5 Time: 11:15 Scorer: Cowan Assists:  60 44-25 55-74-53 50 84-42 11-13-20Period: 5 Time: 16:12 Scorer: Makar Assists: Martin Necas, Nathan MacKinnon 60 22-25 24-55-18 50 84-8 29-95-88Period: 5 Time: 17:53 Scorer: Nelson Assists: Nathan MacKinnon, Cale Makar 60 22-25 24-18 50 50 11-62-29-88Period: 5 Time: 02:12 Scorer: McMann Assists:  60 28-2 55-74-53 50 49-28 95-17-18Period: 5 Time: 10:24 Scorer: Matthews Assists: William Nylander, Oliver Ekman-Larsson 60 44-25 88-34 50 42-49 11-13Period: 5 Time: 12:55 Scorer: Necas Assists: Nathan MacKinnon 60 95-22 11-34-74 50 42-49 29-20-88Period: 5 Time: 03:59 Scorer: Nylander Assists: Oliver Ekman-Larsson, Auston Matthews 60 60 88-34 50 50 29-13",
-        "username": "will have to rewrite scripts again",
-        "tip": "not sure why all goals show up as scored as 5 period",
-        "topic": "UX",
-        "tip_id": "0818"
-    },
-    {
         "title": "You are watching stats for DAL at ANA game # 2025020734. Period: 5 Time: 03:36 Scorer: Kreider Assists: Mikael Granlund, Radko Gudas 1 20-55 95-96  7-98 20-64-45Period: 5 Time: 12:03 Scorer: Sennecke Assists:  1 20-46 95-24-21 1 14-98 17-64-45Period: 5 Time: 17:48 Scorer: Hintz Assists: Matt Duchene, Wyatt Johnston  53 95-96-24-21-53 1 65-98 20-64-16Period: 5 Time: 19:39 Scorer: Trouba Assists: Jackson LaCombe  53 95-96-24-21-53 1 65-2 64-24-13",
         "username": "and period is still 5 for all goals scored",
         "tip": "tough loss last night. ",
@@ -89,20 +75,6 @@
         "tip": "another stars loss",
         "topic": "UX",
         "tip_id": "73d0"
-    },
-    {
-        "title": "You are watching stats for DAL at UTA game # 2025020746. Period: 2 Time: 19:53 Scorer: Schmaltz Assists: John Marino, Clayton Keller 29 28-55 14-12-73 70 88-6 8-67-9Period: 3 Time: 02:04 Scorer: Rantanen Assists: Wyatt Johnston, Jason Robertson 29 53 96-24-21-53 70 28-98 67-82Period: 3 Time: 04:03 Scorer: Marino Assists: Nick Schmaltz 29 23-5 10-22-49 70 88-6 8-67-9",
-        "username": "we did not score 5x5 goal in two games",
-        "tip": "another loss",
-        "topic": "UX",
-        "tip_id": "ae5c"
-    },
-    {
-        "title": "You are watching stats for NYI at WPG game # 2025020732. Period: 1 Time: 04:20 Scorer: Connor Assists: Alex Iafallo, Mark Scheifele 30 6-48 27-11-13 37 2-44 55-81-9Period: 2 Time: 05:41 Scorer: Morrissey Assists: Cole Perfetti, Adam Lowry 30 77-34 51-64-49 37 5-44 17-13-91Period: 2 Time: 06:23 Scorer: Toews Assists: Gabriel Vilardi, Kyle Connor 30 3-6 44-10 37 13 19-55-81-13Period: 2 Time: 07:40 Scorer: Duclair Assists: Anders Lee, Ryan Pulock 30 6-48 27-11-13 37 54-4 62-17-7Period: 2 Time: 08:58 Scorer: Heineman Assists:  30 6-48 51-64-49 37 5-54 55-13-91Period: 2 Time: 10:21 Scorer: MacLean Assists: Casey Cizikas 30 24-34 53-32-16 37 64-4 62-17-7Period: 2 Time: 12:23 Scorer: DeMelo Assists: Mark Scheifele, Vladislav Namestnikov 30 6-48 29-51-64 37 2-44 62-55-7Period: 2 Time: 19:40 Scorer: Lowry Assists: Neal Pionk, Dylan Samberg 30 3-77-34 44-10 37 54-4 62-17-7Period: 3 Time: 19:14 Scorer: Schaefer Assists: Mathew Barzal, Emil Heineman  48 27-44-13-51-64 37 54-4 62-17-13",
-        "username": "still few errors",
-        "tip": "trial game",
-        "topic": "UX",
-        "tip_id": "6cee"
     },
     {
         "title": "You are watching stats for TBL at DAL game # 2025020767. Period: 1 Time: 04:00 Scorer: BÃ¤ck Assists: Nils Lundkvist, Mavrik Bourque 88 43-90 86-20-38 29 5-55 10-22-49Period: 1 Time: 08:04 Scorer: James Assists: Jake Guentzel, Charle-Edouard D'Astous 88 43-51 86-59-17 29 23-5 15-12-10Period: 2 Time: 11:04 Scorer: Hagel Assists: Nikita Kucherov, Darren Raddysh 88 43-90 86-71-38 29 23-4 96-18-53Period: 2 Time: 18:50 Scorer: Guentzel Assists: Dominic James, Oliver Bjorkstrand 88 24-67 59-93-17 29 20-4 95-21-53Period: 3 Time: 17:59 Scorer: Holmberg Assists: Yanni Gourde, J.J. Moser 88 43-90 37-28-29  53 95-96-24-21-53",
@@ -119,13 +91,6 @@
         "tip_id": "4ae6"
     },
     {
-        "title": "You are watching stats for ANA at COL game # 2025020789. Period: 2 Time: 01:27 Scorer: Viel Assists: Cutter Gauthier, Radko Gudas 1 7-51 28-25-61 41 8-70 29-95-88Period: 3 Time: 16:21 Scorer: Lehkonen Assists: Brock Nelson, Brent Burns 1 14-98 28-25-61 41 84-49 11-62-13Period: 5 Time: 00:00 Scorer: Granlund Assists:   Period: 5 Time: 00:00 Scorer: Granlund Assists:   Period: 2 Time: 01:27 Scorer: Viel Assists: Cutter Gauthier, Radko Gudas 1 7-51 28-25-61 41 8-70 29-95-88Period: 3 Time: 16:21 Scorer: Lehkonen Assists: Brock Nelson, Brent Burns 1 14-98 28-25-61 41 84-49 11-62-13Period: 5 Time: 00:00 Scorer: Granlund Assists:   Period: 5 Time: 00:00 Scorer: Granlund Assists:   ",
-        "username": "They are too far ahead",
-        "tip": "COL lost in SO",
-        "topic": "UX",
-        "tip_id": "9db0"
-    },
-    {
         "title": "You are watching stats for DAL at CBJ game # 2025020797. Period: 1 Time: 08:48 Scorer: Werenski Assists: Damon Severson, Isac LundestrÃ¶m 1 28-5 15-12-11 73 78-8 43-21-10Period: 1 Time: 08:48 Scorer: Werenski Assists: Damon Severson, Isac LundestrÃ¶m 1 28-5 15-12-11 73 78-8 43-21-10",
         "username": "stars did everything not to score",
         "tip": "looks like stars did not try to score",
@@ -138,13 +103,6 @@
         "tip": "stars won a thriller tonight",
         "topic": "UX",
         "tip_id": "bc62"
-    },
-    {
-        "title": "You are watching stats for FLA at MIN game # 2025020817. Period: 1 Time: 06:44 Scorer: Reinhart Assists: Aaron Ekblad, Carter Verhaeghe 72 5-42 23-13-17 32 43-7 36-38-97Period: 1 Time: 09:17 Scorer: Kaprizov Assists: Matt Boldy, Mats Zuccarello 72 5-42 17-15 32 12 36-14-97-12Period: 1 Time: 18:20 Scorer: Marchand Assists: Sam Reinhart, Matthew Tkachuk 72 19 63-13-9-19 32 48-7 14-12Period: 2 Time: 04:33 Scorer: Eriksson Ek Assists: Kirill Kaprizov, Quinn Hughes 72 5-42 13-27 32 12 36-14-97-12Period: 3 Time: 12:09 Scorer: Boldy Assists:  72 26 63-13-9-19 32 5-7 14-12Period: 3 Time: 13:11 Scorer: Bennett Assists: Matthew Tkachuk, Brad Marchand 72 26 63-13-9-19 32 5-7 13-78Period: 4 Time: 03:00 Scorer: Marchand Assists: Carter Verhaeghe 72 77 63-23 32 12 97-12Period: 1 Time: 06:44 Scorer: Reinhart Assists: Aaron Ekblad, Carter Verhaeghe 72 5-42 23-13-17 32 43-7 36-38-97Period: 1 Time: 09:17 Scorer: Kaprizov Assists: Matt Boldy, Mats Zuccarello 72 5-42 17-15 32 12 36-14-97-12Period: 1 Time: 18:20 Scorer: Marchand Assists: Sam Reinhart, Matthew Tkachuk 72 19 63-13-9-19 32 48-7 14-12Period: 2 Time: 04:33 Scorer: Eriksson Ek Assists: Kirill Kaprizov, Quinn Hughes 72 5-42 13-27 32 12 36-14-97-12Period: 3 Time: 12:09 Scorer: Boldy Assists:  72 26 63-13-9-19 32 5-7 14-12Period: 3 Time: 13:11 Scorer: Bennett Assists: Matthew Tkachuk, Brad Marchand 72 26 63-13-9-19 32 5-7 13-78Period: 4 Time: 03:00 Scorer: Marchand Assists: Carter Verhaeghe 72 77 63-23 32 12 97-12",
-        "username": "Kaprisov is -2",
-        "tip": "MIN got 1 point",
-        "topic": "UX",
-        "tip_id": "37a6"
     },
     {
         "title": "You are watching stats for ANA at EDM game # 2025020829. Period: 1 Time: 03:24 Scorer: Granlund Assists: Chris Kreider, Cutter Gauthier 33-2-20,64,61,45 35-14,2-13,22Period: 1 Time: 17:14 Scorer: Hyman Assists: Ryan Nugent-Hopkins, Leon Draisaitl 33-65,98-17,25 35-2-18,93,29,97Period: 2 Time: 00:55 Scorer: Killorn Assists: Ryan Poehling, Jacob Trouba 33-65,2-17,28,25 35,35-14,2-18,29,92Period: 2 Time: 04:36 Scorer: Stastney Assists: Ty Emberson, Leon Draisaitl 33-7,51-28,25,61 35,35-49,24-29,42,92Period: 2 Time: 06:28 Scorer: Ekholm Assists: Zach Hyman, Connor McDavid 33-7,51-17,25,45 35,35-14,2-18,93,97Period: 2 Time: 07:34 Scorer: Nurse Assists:  33-65,2-28,25,61 35,35-25,96-42,92,81Period: 2 Time: 08:25 Scorer: Ekholm Assists: Matt Savoie 33-14,98-44,24,45 35,35-14,24-28,22,81Period: 2 Time: 13:41 Scorer: Granlund Assists: Beckett Sennecke 33-98-17,20,64,45 35,35-25,24-13,92Period: 3 Time: 13:38 Scorer: Granlund Assists: Beckett Sennecke, Jackson LaCombe 33-2-20,64,61,45 35-25,96-42,92Period: 3 Time: 18:12 Scorer: McDavid Assists: Leon Draisaitl, Evan Bouchard -2-17,20,64,61,45 35-14,2-18,29,97Period: 3 Time: 19:49 Scorer: Ekholm Assists: Leon Draisaitl -2-17,20,64,61,45 35-14,2-18,29,97",
@@ -196,17 +154,17 @@
         "tip_id": "10df"
     },
     {
-        "title": "You are watching stats for LAK at VGK game # 2025020909. Period: 1 Time: 08:22 Scorer: Eichel Assists: Mark Stone, Ivan Barbashev 31-8,2-10,9,14 33-15,4-61,49,9Period: 1 Time: 11:49 Scorer: Stone Assists: Ivan Barbashev, Jack Eichel 31-6,5-12,39,79 33-17,6-61,49,9Period: 1 Time: 13:29 Scorer: Dorofeyev Assists: Mark Stone, Tomas Hertl 31-6,5-11,55 33--61,48,9,93,16Period: 1 Time: 13:49 Scorer: Marner Assists: Pavel Dorofeyev 31-6,92-22,55,96 33-15,4-19,93,16Period: 1 Time: 15:03 Scorer: Moore Assists: Joel Armia, Anze Kopitar 31-5,43-11,40,12 33-27,5-61,49,9",
-        "username": "will have progress again",
-        "tip": "to add another game",
-        "topic": "UX",
-        "tip_id": "c3be"
-    },
-    {
         "title": "You are watching stats for STL at DAL game # 2025020899. Period: 1 Time: 07:29 Scorer: Buchnevich Assists: Jordan Kyrou, Justin Faulk 50-72-89,25,63,54 29-23,55-12,10Period: 1 Time: 11:37 Scorer: Robertson Assists: Mikko Rantanen, Miro Heiskanen 50-55,6-70,26,13 29-23,4-96,21,53Period: 1 Time: 18:33 Scorer: Kyrou Assists: Justin Faulk, Tyler Tucker 50-72,75-89,25,63 29-20,46-14,95,18Period: 2 Time: 01:55 Scorer: Duchene Assists: Thomas Harley, Jamie Benn 50-72,17-10,63 29-5,55-14,95,18Period: 2 Time: 03:58 Scorer: Bourque Assists: Jason Robertson, Roope Hintz 50-55,6-70,9,54 29-5,55-24,21,22Period: 2 Time: 11:57 Scorer: Benn Assists: Matt Duchene, Esa Lindell 50-17,55-70,22,54 29-23,55-14,95,22Period: 3 Time: 11:05 Scorer: Snuggerud Assists:  50-75,51-9,22,21 29-23,55-73,24,22Period: 3 Time: 15:31 Scorer: Toropchenko Assists: Philip Broberg, Jimmy Snuggerud 50-72,6-13,21,54 29-23,4-96,53,49Period: 3 Time: 19:37 Scorer: Benn Assists: Miro Heiskanen 50-55,75-89,25,63 29-23,4-14,95,18You are watching stats for EDM at CGY game # 2025020900. Period: 1 Time: 03:12 Scorer: Huberdeau Assists: MacKenzie Weegar, Matvei Gridin 35-14,25-42,92 1-52-91,10,27,92Period: 1 Time: 05:14 Scorer: Draisaitl Assists: Ryan Nugent-Hopkins, Evan Bouchard 35-2-18,93,29,97 1-28,7-11,86Period: 1 Time: 09:05 Scorer: Nurse Assists: null 50-72-89,25,63,54 29-23,55-12,10Period: 1 Time: 13:16 Scorer: Lomberg Assists: null 50-55,6-70,26,13 29-23,4-96,21,53Period: 1 Time: 14:44 Scorer: Gridin Assists: MacKenzie Weegar, Devin Cooley 35-25,96-13,22 1-52-91,10,27,92Period: 3 Time: 07:30 Scorer: McDavid Assists: null 50-72,75-89,25,63 29-20,46-14,95,18Period: 3 Time: 15:06 Scorer: Backlund Assists: null 50-72,17-10,63 29-5,55-14,95,18Period: 3 Time: 14:23 Scorer: Podkolzin Assists: null 50-55,6-70,9,54 29-5,55-24,21,22Period: 2 Time: 11:43 Scorer: Zary Assists: Zach Whitecloud, Nazem Kadri 35-25,24-18,93,81 1-28,37-91,86,47Period: 1 Time: 07:25 Scorer: Backlund Assists: null 50-17,55-70,22,54 29-23,55-14,95,22Period: 2 Time: 18:26 Scorer: Draisaitl Assists: Evan Bouchard, Connor McDavid 35-2-18,93,29,97 1-52,7-10,17Period: 3 Time: 04:17 Scorer: Kapanen Assists: Vasily Podkolzin, Evan Bouchard 35-14,2-29,42,92 1-44,19-91,86,47Period: 3 Time: 06:44 Scorer: Lomberg Assists: Nazem Kadri, Zach Whitecloud 35-49,24-13,20,88 1-28,7-91,70,43Period: 3 Time: 15:09 Scorer: Coronato Assists: null 50-75,51-9,22,21 29-23,55-73,24,22Period: 3 Time: 14:59 Scorer: Whitecloud Assists: null 50-72,6-13,21,54 29-23,4-96,53,49Period: 2 Time: 04:26 Scorer: Backlund Assists: null 50-55,75-89,25,63 29-23,4-14,95,18",
         "username": "to be deleted",
         "tip": "some staff",
         "topic": "UX",
         "tip_id": "ef98"
+    },
+    {
+        "title": "You are watching stats for EDM at CGY game # 2025020900. Period: 1 Time: 03:12 Scorer: Huberdeau Assists: MacKenzie Weegar, Matvei Gridin 35-14,25-42,92 1-52-91,10,27,92Period: 1 Time: 05:14 Scorer: Draisaitl Assists: Ryan Nugent-Hopkins, Evan Bouchard 35-2-18,93,29,97 1-28,7-11,86Period: 1 Time: 14:44 Scorer: Gridin Assists: MacKenzie Weegar, Devin Cooley 35-25,96-13,22 1-52-91,10,27,92Period: 2 Time: 11:43 Scorer: Zary Assists: Zach Whitecloud, Nazem Kadri 35-25,24-18,93,81 1-28,37-91,86,47Period: 2 Time: 18:26 Scorer: Draisaitl Assists: Evan Bouchard, Connor McDavid 35-2-18,93,29,97 1-52,7-10,17Period: 3 Time: 04:17 Scorer: Kapanen Assists: Vasily Podkolzin, Evan Bouchard 35-14,2-29,42,92 1-44,19-91,86,47Period: 3 Time: 06:44 Scorer: Lomberg Assists: Nazem Kadri, Zach Whitecloud 35-49,24-13,20,88 1-28,7-91,70,43",
+        "username": "then it will be deleted",
+        "tip": "just to add a game",
+        "topic": "UX",
+        "tip_id": "8ae8"
     }
 ]
