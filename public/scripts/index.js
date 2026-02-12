@@ -250,7 +250,7 @@ const postTip = (tip) =>
 // When the page loads, get all the tips
 getTips().then((data) => data.forEach((tip) => createCard(tip)));
 
-console.log(gameId)
+// console.log(gameId)
 
 // Function to handle when a user submits the feedback form
 const handleFormSubmit = (e) => {
