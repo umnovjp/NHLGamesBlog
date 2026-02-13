@@ -140,6 +140,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       else if (goalType2[j][k]==='D') {goalType3[j][1]=goalType3[j][1]+1; goalType3[j][3]=goalType3[j][3]+1; goalType5[j][1].push(goalType[j][k+1])}
                       else if ((goalType2[j][k]==='C')||(goalType2[j][k]==='R')||(goalType2[j][k]==='L')) {goalType3[j][2]=goalType3[j][2]+1; goalType3[j][3]=goalType3[j][3]+1; goalType5[j][2].push(goalType[j][k+1])}
                     }}
+                    // goalType5 should be solution to count goal as 5x5 or other
                     for (j=0;j<2;j++) {goalTime2[j].push(goalTimeSecondsAbsolute)} // goalTime2[0] and goalTime2[1] are arrays of when a goal was scored. But goalTime2[0] will be used for ordering
                     goalTime2[0].sort((a,b) => a-b);
                     console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2);
