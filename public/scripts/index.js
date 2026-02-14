@@ -146,57 +146,20 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2);
                     
                     var goalType4;
-                    if ((goalType5[0][0].length===1)&&(goalType5[0][1].length===2)&&(goalType5[0][2].length===3)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length===2)&&(goalType5[0][2].length===3)) {goalType4='5x5';
+                    if ((goalType5[0][0].length===1)&&(goalType5[0][1].length===2)&&(goalType5[0][2].length===3)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length===2)&&(goalType5[0][2].length===3)) 
+                      {goalType4='5x5';
                     for (j=0;j<2;j++) {for (k=0;k<goalType[j].length-1;k++) {
                       // will add staff here tomorrow and what do I want to do?
                     }}}
                     else if (data1.data[i].period===5) {goalType4='shootout'}
+                    else if (data1.data[i].period===4) {goalType4='overtime'}
                     else {goalType4='something else'}
-                    goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4);
+                    goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4); // end if loop
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) { if (onIceArray[j]==='newGoal') { 
                       goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1}
                   } // end short j loop
-                  goalTime[0].sort((a,b) => a-b);
-                  // goalType7=[];
-                  // for (j=0;j<goalTime2[0].length;j++) { console.log(goalTime2[0][3*j])
-                  //   // goalType7.push(goalTime2[1][3*indexOf(goalTime2[0][j])+2])
-                  // }
-                  // for (j=0;j<onIceSplit.length;j++) { // this loop is to order goals chronologically
-                  // onIceLineup = [[],[]];
-                  // onIceSplit2.push(onIceSplit[goalTime[1].indexOf(goalTime[0][j])]);
-                  //   for (k=0;k<data.rosterSpots.length;k++) { for (l=0;l<(onIceSplit2[j].length-1)/4;l++) {
-                  //   if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='G')&&(data.rosterSpots[k].teamId===data.awayTeam.id))
-                  //   { onIceLineup[0].push(onIceSplit2[j][4*l+2], 'G')}
-                  //   else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='D')&&(data.rosterSpots[k].teamId===data.awayTeam.id))
-                  //   { onIceLineup[0].push(onIceSplit2[j][4*l+2], 'D')}
-                  //   else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&((data.rosterSpots[k].positionCode==='C')||(data.rosterSpots[k].positionCode==='R')||(data.rosterSpots[k].positionCode==='L'))&&(data.rosterSpots[k].teamId===data.awayTeam.id))
-                  //   { onIceLineup[0].push(onIceSplit2[j][4*l+2], 'F')}
-                  //   else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='G')&&(data.rosterSpots[k].teamId===data.homeTeam.id))
-                  //   { onIceLineup[1].push(onIceSplit2[j][4*l+2], 'G')}                     
-                  //   else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&(data.rosterSpots[k].positionCode==='D')&&(data.rosterSpots[k].teamId===data.homeTeam.id))
-                  //   { onIceLineup[1].push(onIceSplit2[j][4*l+2], 'D')}
-                  //   else if ((data.rosterSpots[k].teamId===onIceSplit2[j][4*l+1])&&(data.rosterSpots[k].sweaterNumber===onIceSplit2[j][4*l+2])&&((data.rosterSpots[k].positionCode==='C')||(data.rosterSpots[k].positionCode==='R')||(data.rosterSpots[k].positionCode==='L'))&&(data.rosterSpots[k].teamId===data.homeTeam.id))
-                  //   { onIceLineup[1].push(onIceSplit2[j][4*l+2], 'F')}
-                  // }} // end k loop
-                  // for (k=0;k<2;k++) { var lineUp =''; var lineUpG ='';
-                  //   if (onIceLineup[k].indexOf('G')!=-1) {lineUpG = onIceLineup[k][onIceLineup[k].indexOf('G')-1].toString()+' '}
-                  //   else {lineUpG = ' '}
-                  //   for (l=1;l<onIceLineup[k].length;l++) { if (frequency(onIceLineup[k], 'D')===1) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
-                  //   else { if (onIceLineup[k][l]==='D') {
-                  //     if (l==onIceLineup[k].lastIndexOf('D')) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
-                  // else {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-')}
-                  // lineUpG=lineUp }}}
-                  //   lineUpG=lineUp;
-    
-                  //   for (l=0;l<onIceLineup[k].length;l++) {if (onIceLineup[k][l]==='F') {if (l===onIceLineup[k].indexOf('F')) { lineUp=lineUpG.concat(' ', onIceLineup[k][l-1].toString(), '-')}
-                  //   // should it be D and not F? Will look tomorrow
-                  //   else if (l===onIceLineup[k].lastIndexOf('F')) {lineUp=lineUpG.concat(onIceLineup[k][l-1].toString())}
-                  //   else (lineUp=lineUpG.concat(onIceLineup[k][l-1].toString(), '-'))
-                  //   lineUpG=lineUp}}
-                  //   onIceArray2.push(lineUp)
-                  // }
-                  // } // end k,j loop                   
+                  goalTime[0].sort((a,b) => a-b);                 
                     }} // end goal if statement and i loop
                     console.log('goalType6', goalType6)
                     
