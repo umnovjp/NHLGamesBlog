@@ -143,18 +143,18 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     // goalType5 should be solution to count goal as 5x5 or other
                     for (j=0;j<2;j++) {goalTime2[j].push(goalTimeSecondsAbsolute)} // goalTime2[0] and goalTime2[1] are arrays of when a goal was scored. But goalTime2[0] will be used for ordering
                     goalTime2[0].sort((a,b) => a-b);
-                    console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2);
-                    
+                                        
                     var goalType4;
                     if ((goalType5[0][0].length===1)&&(goalType5[0][1].length===2)&&(goalType5[0][2].length===3)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length===2)&&(goalType5[0][2].length===3)) 
                       {goalType4='5x5';
                     for (j=0;j<2;j++) {for (k=0;k<goalType[j].length-1;k++) {
-                      // will add staff here tomorrow and what do I want to do?
+                      // not here it is a wrong place
                     }}}
                     else if (data1.data[i].period===5) {goalType4='shootout'}
                     else if (data1.data[i].period===4) {goalType4='overtime'}
-                    else {goalType4='something else'}
-                    goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4); // end if loop
+                    else {goalType4='something else'} // end if loop
+                    goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4); 
+                    console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2, 'goalType6', goalType6);
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) { if (onIceArray[j]==='newGoal') { 
                       goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1}
