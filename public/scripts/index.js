@@ -160,8 +160,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1}
                   } // end short j loop
                   goalTime[0].sort((a,b) => a-b);                 
-                    }} // end goal if statement and i loop
-                    console.log('goalType6', goalType6)
+                    }} // end goal if 505 statement and i loop
                     
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { 
