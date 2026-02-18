@@ -141,15 +141,13 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       else if ((goalType2[j][k]==='C')||(goalType2[j][k]==='R')||(goalType2[j][k]==='L')) {goalType3[j][2]=goalType3[j][2]+1; goalType3[j][3]=goalType3[j][3]+1; goalType5[j][2].push(goalType[j][k+1])}
                     }}
                     // goalType5 should be solution to count goal as 5x5 or other
-                    for (j=0;j<2;j++) {goalTime2[j].push(goalTimeSecondsAbsolute)} // goalTime2[0] and goalTime2[1] are arrays of when a goal was scored. But goalTime2[0] will be used for ordering
+                    for (j=0;j<2;j++) {goalTime2[j].push(goalTimeSecondsAbsolute)} // goalTime2[0] and goalTime2[1] are arrays of when a goal was scored. But goalTime2[0] is an ordered array
                     goalTime2[0].sort((a,b) => a-b);
                                         
                     var goalType4;
                     if ((goalType5[0][0].length===1)&&(goalType5[0][1].length===2)&&(goalType5[0][2].length===3)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length===2)&&(goalType5[0][2].length===3)) 
-                      {goalType4='5x5';
-                    for (j=0;j<2;j++) {for (k=0;k<goalType[j].length-1;k++) {
-                      // not here it is a wrong place
-                    }}}
+                      {goalType4='5x5'
+                  }
                     else if (data1.data[i].period===5) {goalType4='shootout'}
                     else if (data1.data[i].period===4) {goalType4='overtime'}
                     else {goalType4='something else'} // end if loop
@@ -170,8 +168,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   for (i=0;i<goalsNumber.length;i++) { var newGoal3 = document.createElement('span');
                     newGoal3.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+
                     ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+goalType7[3*i+1][1][0]+'-'+goalType7[3*i+1][1][1]+'-'+goalType7[3*i+1][1][2]+' '+goalType7[3*i+1][0][0]+'-'+goalType7[3*i+1][0][1]+'-'+goalType7[3*i+1][0][2];
-                    document.getElementById('gameInfo').appendChild(newGoal3);
-                  }
+                    document.getElementById('gameInfo').appendChild(newGoal3)}
             }); // end third second .then
           });
       } // end function displayGamedata
