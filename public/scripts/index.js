@@ -151,7 +151,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else if (data1.data[i].period===5) {goalType4='shootout'}
                     else if (data1.data[i].period===4) {goalType4='overtime'}
                     else {goalType4='something else'} // end if loop
-                    goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4); 
+                    goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4);
                     console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2, 'goalType6', goalType6);
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) { if (onIceArray[j]==='newGoal') { 
