@@ -397,5 +397,12 @@
         "tip": "#43 is 0:2. MIN lost second in row at home",
         "topic": "UX",
         "tip_id": "638a"
+    },
+    {
+        "title": "You are watching stats for NYR at MIN game # 2025021046. Period: 1 Time: 02:41 Scorer: Laba Assists: Gabe Perreault, Vladislav Gavrikov 31-44-43,50,42,94 32-24,25-13,78Period: 1 Time: 15:00 Scorer: Gavrikov Assists: Tye Kartye, Adam Fox 31-44,23-43,24,42 32-43,7-71,14,12Period: 2 Time: 00:35 Scorer: Boldy Assists: Quinn Hughes, Filip Gustavsson 31-17,18-93,42 32-43-36,14,97,12Period: 2 Time: 08:41 Scorer: Chmelar Assists: Taylor Raddysh, Urho Vaakanainen 31-44,18-16,14,49 32-43,7-47,13,78Period: 2 Time: 09:03 Scorer: Trocheck Assists: Vladislav Gavrikov, Adam Fox 31-44,23-16,8,50 32-24,5-36,38,97Period: 3 Time: 07:19 Scorer: Yurov Assists: Vladimir Tarasenko, Yakov Trenin 31-17,4-16,8,50 32-46,25-91,13,22",
+        "username": "no code update as I am in Los Angeles. MIN lost back to back home games",
+        "tip": "#43 is 1:2, #97 is 1:1 for MIN. ",
+        "topic": "UX",
+        "tip_id": "e841"
     }
 ]
