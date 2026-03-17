@@ -404,5 +404,12 @@
         "tip": "#43 is 1:2, #97 is 1:1 for MIN. ",
         "topic": "UX",
         "tip_id": "e841"
+    },
+    {
+        "title": "You are watching stats for UTA at DAL game # 2025021066. Period: 1 Time: 06:17 Scorer: Steel Assists: Jamie Benn, Esa Lindell 41-88,6-8,67,9 1-23,4-14,95,18Period: 1 Time: 12:11 Scorer: Keller Assists: Mikhail Sergachev 41-52,98-8,67,9 1-5,55-15,58,49Period: 2 Time: 07:20 Scorer: Schmidt Assists: Logan Cooley 41-88,6-77,11,92 1-5,55-73,10,25Period: 2 Time: 15:34 Scorer: Johnston Assists: Miro Heiskanen, Jason Robertson 41-28,50-77,11,92 1-23,4-21,22,53Period: 3 Time: 04:16 Scorer: McBain Assists:  41-88,52-15,22 1-4-95,58,21,53Period: 3 Time: 08:05 Scorer: Yamamoto Assists: Alexander Kerfoot 41-52,6-15,13,56 1-5,55-95,15,18Period: 3 Time: 16:06 Scorer: Carcone Assists: JJ Peterka 41-88,6-53,77,92 1-23,55-10,49Period: 3 Time: 19:20 Scorer: Crouse Assists: Nick Schmaltz 41-88,52-8,67,9 -5,6-95,21,22,53Period: 3 Time: 19:56 Scorer: Erne Assists: Arttu Hyry, Tyler Myers 41-28,50-15,13,53 1-57,6-73,10,25",
+        "username": "#5 was -3, #55 was -4. no real code update again but it is coming. returned from California very late",
+        "tip": "score was 2:2 in 3rd but then stars had 4 against",
+        "topic": "UX",
+        "tip_id": "31c9"
     }
 ]
