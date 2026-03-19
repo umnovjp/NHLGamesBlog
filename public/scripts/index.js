@@ -157,7 +157,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     for (j=0;j<onIceArray.length;j++) { if (onIceArray[j]==='newGoal') { 
                       goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1}
                   } // end short j loop
-                  goalTime[0].sort((a,b) => a-b);                 
+                  goalTime[0].sort((a,b) => a-b)
                     }} // end goal if 505 statement and i loop
                     
                   goalType7=[];
