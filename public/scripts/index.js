@@ -161,10 +161,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     }} // end goal if 505 statement and i loop
                     
                   goalType7=[];
-                  for (j=0;j<goalTime2[0].length;j++) { 
+                  for (j=0;j<goalTime2[0].length;j++) {
                   goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3])
                   }
-                    console.log(goalType7)
+                    console.log(goalType7);
                   for (i=0;i<goalsNumber.length;i++) { var newGoal3 = document.createElement('span');
                     newGoal3.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+
                     ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+goalType7[3*i+1][1][0]+'-'+goalType7[3*i+1][1][1]+'-'+goalType7[3*i+1][1][2]+' '+goalType7[3*i+1][0][0]+'-'+goalType7[3*i+1][0][1]+'-'+goalType7[3*i+1][0][2];
