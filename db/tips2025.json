@@ -495,5 +495,12 @@
         "tip": "#29 is 2:2, #88 is 1:1, #8 is 1:0",
         "topic": "UX",
         "tip_id": "74f5"
+    },
+    {
+        "title": "You are watching stats for MIN at FLA game # 2025021140. Period: 2 Time: 02:47 Scorer: Foligno Assists: Yakov Trenin, Jeff Petry 30-2,5-71,17,13 40-20,6-24,92,29Period: 2 Time: 18:25 Scorer: Hartman Assists:  30-46,43-36,38,97 40-7,3-18,70,27Period: 3 Time: 00:42 Scorer: Tkachuk Assists: Gustav Forsling, Sam Bennett 30-46,43-91,14,12 40-3,42-23,9,19Period: 3 Time: 18:47 Scorer: Ekblad Assists: Seth Jones, Matthew Tkachuk 30-5,7-90,47,10 -3,5-23,9,19,27Period: 3 Time: 19:55 Scorer: Eriksson Ek Assists: Brock Faber 30-43,7-91,14,12 40-7,42-92,18,70",
+        "username": "no code update but finally started working on that",
+        "tip": "it was a 2:2 game with 5 seconds to go. MIN scored very late in 3rd. Just before that, FLA scored goal 6x5",
+        "topic": "UX",
+        "tip_id": "8286"
     }
 ]
