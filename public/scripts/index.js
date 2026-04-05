@@ -151,6 +151,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else if ((data1.data[i].period===4)&&(goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===goalType5[1][1].length+goalType5[1][2].length)) {goalType4='overtime'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length>goalType5[1][1].length+goalType5[1][2].length)) {goalType4='PP'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length>goalType5[1][1].length+goalType5[1][2].length)) {goalType4='PK'}
+                    // PP means home team PP PK means home team PK. Need to define special teams here
                     else {goalType4='something else'} // end if loop
                     goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4);
                     console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2, 'goalType6', goalType6);
