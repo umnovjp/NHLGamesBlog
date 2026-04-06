@@ -579,5 +579,12 @@
         "tip": "MIN led 4:0 until late in 3rd. #43 was 3:1, #97, #38, #36 all were 2:0, ",
         "topic": "UX",
         "tip_id": "d604"
+    },
+    {
+        "title": "You are watching stats for MIN at DET game # 2025021222. Period: 1 Time: 01:40 Scorer: Johansson Assists: Axel Sandin-Pellikka, Patrick Kane 32-2,5-91,13,22 39-20,44-57,37,93Period: 2 Time: 00:18 Scorer: Boldy Assists: Joel Eriksson Ek 32-43,7-90,14,12 39-53,77-71,23,58Period: 2 Time: 01:25 Scorer: Kaprizov Assists: Ryan Hartman, Mats Zuccarello 32-25,5-36,38,97 39-8,25-88,37,92Period: 2 Time: 07:03 Scorer: Tarasenko Assists: Jake Middleton, Ryan Hartman 32-25,5-90,91,38 39-53,20,44-92,58Period: 2 Time: 12:32 Scorer: Kaprizov Assists: Brock Faber 32-43,7-36,38,97 39-20,44-71,23,58Period: 3 Time: 07:18 Scorer: Sandin-Pellikka Assists: Dylan Larkin, Lucas Raymond 32-43,7-90,14,12 39-20,44-71,23,58Period: 3 Time: 11:14 Scorer: Compher Assists: Simon Edvinsson, Marco Kasper 32-43,7-36,38,97 39-53,77-57,37,92Period: 3 Time: 14:36 Scorer: Kane Assists: Alex DeBrincat, Andrew Copp 32-2,5-36,38,97 39-77,44-88,18,93Period: 3 Time: 18:09 Scorer: Kaprizov Assists: Matt Boldy, Mats Zuccarello 32-43-36,14,97,12 39-8,20-18,37",
+        "username": "did not update code because I was watching COL STL game in the evening",
+        "tip": "did not watch replay yet but i think MIN made it look interesting. leading 4:1 in the middle of 3rd, they allowed 4:4 to score 5:4 late in 3rd. #43, #36, #38, #97 all were 3:2, #7 2:2, #90 2:1 in a 5:4 game. Only last goal was PP, all other were 5x5",
+        "topic": "UX",
+        "tip_id": "e2fb"
     }
 ]
