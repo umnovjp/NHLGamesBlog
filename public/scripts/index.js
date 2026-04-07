@@ -1,18 +1,25 @@
 const tipForm = document.getElementById('tip-form');
 const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
-//const gameId = 2021021133;
+onIceArray = []; // onIceArray2 = []; 
+goalsNumber = []; var gameId; const plusMinusArray = [[[],[],[]],[[],[],[]]]; var goalType6=[]; var goalTime2=[[],[]]
 var game0 = document.getElementById('game0');
+const frequency = (arr, item) => {let count = 0;
+  for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
+  return count;
+};
 
-const createCard = (tip) => {
-  // Create card
+// const ticket = localStorage.getItem('AA_FlightSearch')
+// console.log(ticket)
+
+const createCard = (tip) => { // Create card
   const cardEl = document.createElement('section');
   cardEl.classList.add('card', 'mb-3');
   cardEl.setAttribute('key', tip.tip_id);
 
 const cardTitleEl = document.createElement('section');
 cardTitleEl.classList.add('bg-info');
- cardTitleEl.innerHTML = `${tip.title} </br>` // gameTitle.innerHTML;
+ cardTitleEl.innerHTML = `${tip.title} </br>`
 
   // Create card header
   const cardHeaderEl = document.createElement('h4');
@@ -39,10 +46,139 @@ cardTitleEl.classList.add('bg-info');
   tipsContainer.appendChild(cardEl);
 };
 
-// Get a list of existing tips from the server
+function selectGame() {var inputVal = document.getElementById('datepicker').value;
+  var date = inputVal.split('/');
+  var formatted = date[2] + '-' + date[0] + '-' + date[1];
+  // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/schedule/'+ formatted; date games displayed
+  var requestURL = 'https://cors-anywhere.herokuapp.com/https://api-web.nhle.com/v1/schedule/'+ formatted;
+  console.log(requestURL);
+  fetch(requestURL, {
+    "method": "GET", "headers": {}
+  })
+    .then(function (response) {return response.json()})
+    .then(function (data2) { console.log('I am in schedule then');
+      var numberOfGames = data2.gameWeek[0].games.length;
+      for (var i = 0; i < numberOfGames; i++) { var gameName = document.createElement('button');
+        gameName.setAttribute('id', 'game' + i); var idx = gameName.getAttribute('id');
+        gameName.innerHTML = 'Game ' + i + ': ' + data2.gameWeek[0].games[i].awayTeam.abbrev + ' ' + data2.gameWeek[0].games[i].homeTeam.abbrev;
+        document.getElementById('gamesPlayed').appendChild(gameName);
+        gameName.addEventListener('click', displayGameData);
+      }
+
+      function displayGameData(event) { idx = event.currentTarget; idxString = event.currentTarget.textContent;
+        idxArray = idxString.split(':'); idxNumber = idxArray[0].split(' ');
+        console.log(idxNumber); gameNumber = idxNumber[1];
+        var gameId = data2.gameWeek[0].games[gameNumber].id; // gameIdNumber=document.createElement('span');
+        // gameIdNumber.setAttribute('id', 'gameId');
+        // gameIdNumber.innerHTML='abc';
+        
+        console.log(gameId);
+        // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play'; to select game on certain date
+        var requestURL = 'https://cors-anywhere.herokuapp.com/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
+        fetch(requestURL, {
+          "method": "GET", "headers": { }
+        })
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) { console.log('I am in second then');
+            console.log(data.rosterSpots);
+            const gameInfo = document.createElement('section'); gameInfo.setAttribute('id', 'gameInfo');
+            document.getElementById('schedule').appendChild(gameInfo);
+            const gameInfoHome = document.createElement('section');
+            gameInfoHome.setAttribute('id', 'gameInfoHome');
+            document.getElementById('schedule').appendChild(gameInfoHome);
+            var gameTitle = document.createElement('h2'); gameTitle.textContent = '';
+            gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game # ' + gameId + '. ';
+            document.getElementById('gameInfo').appendChild(gameTitle);
+            const lineups = document.createElement('section');
+            document.getElementById('gameInfo').appendChild(lineups)
+            fullLineup = []
+            for (i=0;i<data.rosterSpots.length;i++) { const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, fiveOnFive: 0, PP: 0, PK: 0, specialTeams: 0, something: 0, shootout: 0}
+            fullLineup.push(obj)
+            }
+            console.log(fullLineup)
+                   
+          var requestURL1 = 'https://cors-anywhere.herokuapp.com/https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId; // charts to find which players were on ice
+          // var requestURL1 = 'https://corsproxy.io/?key=2ddedfd8&url=https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
+          fetch(requestURL1, {"method": "GET", "headers": {}
+          })
+          .then(function (response) { return response.json()
+            })
+            .then(function (data1) { console.log('I am in third then', data1);
+               for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
+                { periodNumber = data1.data[i].period; goalsNumber.push(i); goalTime = data1.data[i].startTime;
+                  goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
+                  goalTimeSecondsAbsolute=goalTimeSeconds+(periodNumber-1)*1200; onIceArray.push('newGoal', goalTimeSecondsAbsolute);
+                  for (j=0; j<data1.data.length;j++) { // j loop counts all shifts and checks if a player was on ice when a goal was scored
+                  shiftStart = data1.data[j].startTime.split(":"); shiftStartSeconds=Number(shiftStart[0])*60+Number(shiftStart[1]);
+                  shiftEnd = data1.data[j].endTime.split(':'); shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);
+                  
+                  if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data1.data[j].period===periodNumber)) {
+                    for (k=0;k<data.rosterSpots.length;k++) {if (data.rosterSpots[k].playerId===data1.data[j].playerId) {
+                    onIceArray.push(data.rosterSpots[k].teamId, data.rosterSpots[k].sweaterNumber, shiftStartSeconds, shiftEndSeconds);
+                  }}} // end if and end k loop
+                    } // end j loop
+                    const goalType = [[],[]];
+                    goalType[0].push(data.homeTeam.id); goalType[1].push(data.awayTeam.id);
+                    const lastIndexOfOnIceArray = onIceArray.lastIndexOf('newGoal');
+                    
+                    for (j=0;j<(onIceArray.length-2-lastIndexOfOnIceArray)/4;j++) {
+                      if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.homeTeam.id) {goalType[0].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}
+                  else if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.awayTeam.id) {goalType[1].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}
+                  }
+                  goalType2=[[],[]];
+                  for (j=0;j<data.rosterSpots.length;j++) {for (k=0;k<2;k++) // k is home or away team
+                    { for (l=1;l<goalType[k].length+1;l++) {if ((goalType[k][0]===data.homeTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)&&(data.rosterSpots[j].teamId===data.homeTeam.id)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
+                  else if ((goalType[k][0]===data.awayTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)&&(data.rosterSpots[j].teamId===data.awayTeam.id)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
+                  }}}
+                  // goalType is array of players on ice but goalType2 is array of their positions like G or D or C or L or R goalType3 is number of G, D, F on both sides like 1-2-3-6 if that was 5x5
+                  // goalType5 is array of numbers who was on ice during the goal
+                    goalType3=[[0,0,0,0],[0,0,0,0]]; goalType5 = [[[],[],[]],[[],[],[]]];
+                    for (j=0;j<2;j++) {for (k=0;k<goalType2[j].length;k++) {
+                      if (goalType2[j][k]==='G') {goalType3[j][0]=goalType3[j][0]+1; goalType3[j][3]=goalType3[j][3]+1; goalType5[j][0].push(goalType[j][k+1])}
+                      else if (goalType2[j][k]==='D') {goalType3[j][1]=goalType3[j][1]+1; goalType3[j][3]=goalType3[j][3]+1; goalType5[j][1].push(goalType[j][k+1])}
+                      else if ((goalType2[j][k]==='C')||(goalType2[j][k]==='R')||(goalType2[j][k]==='L')) {goalType3[j][2]=goalType3[j][2]+1; goalType3[j][3]=goalType3[j][3]+1; goalType5[j][2].push(goalType[j][k+1])}
+                    }}
+                    // goalType5 should be solution to count goal as 5x5 or other
+                    for (j=0;j<2;j++) {goalTime2[j].push(goalTimeSecondsAbsolute)} // goalTime2[0] and goalTime2[1] are arrays of when a goal was scored. But goalTime2[0] is an ordered array
+                    goalTime2[0].sort((a,b) => a-b);
+                                        
+                    var goalType4;
+                    if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[0][2].length===5))
+                      {goalType4='5x5'}
+                    else if (data1.data[i].period===5) {goalType4='shootout'}
+                    else if ((data1.data[i].period===4)&&(goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===goalType5[1][1].length+goalType5[1][2].length)) {goalType4='overtime'}
+                    else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length>goalType5[1][1].length+goalType5[1][2].length)) {goalType4='PP'}
+                    else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length>goalType5[1][1].length+goalType5[1][2].length)) {goalType4='PK'}
+                    // PP means home team PP PK means home team PK. Need to define special teams here
+                    else {goalType4='something else'} // end if loop
+                    goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4);
+                    console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2, 'goalType6', goalType6);
+                    goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
+                    for (j=0;j<onIceArray.length;j++) {if (onIceArray[j]==='newGoal') {goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1}
+                  } // end short j loop
+                  goalTime[0].sort((a,b) => a-b)
+                    }} // end goal if 505 statement and i loop
+                    
+                  goalType7=[];
+                  for (j=0;j<goalTime2[0].length;j++) {
+                  goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3])
+                  }
+                    console.log(goalType7);
+                  for (i=0;i<goalsNumber.length;i++) { var newGoal3 = document.createElement('span');
+                    newGoal3.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+
+                    ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+goalType7[3*i+1][1][0]+'-'+goalType7[3*i+1][1][1]+'-'+goalType7[3*i+1][1][2]+' '+goalType7[3*i+1][0][0]+'-'+goalType7[3*i+1][0][1]+'-'+goalType7[3*i+1][0][2];
+                    document.getElementById('gameInfo').appendChild(newGoal3)}
+                  }); // end third second .then
+                  });
+                  } // end function displayGamedata
+                } // end first second .then
+    )} // end function selectGame
+
+    // Get a list of existing tips from the server
 const getTips = () =>
-  fetch('api/tips', {
-    method: 'GET', // or 'PUT'
+  fetch('api/tips', { method: 'GET', // or 'PUT'
     headers: {
       'Content-Type': 'application/json',
     },
@@ -75,6 +211,8 @@ const postTip = (tip) =>
 // When the page loads, get all the tips
 getTips().then((data) => data.forEach((tip) => createCard(tip)));
 
+// console.log(gameId)
+
 // Function to handle when a user submits the feedback form
 const handleFormSubmit = (e) => {
   e.preventDefault();
@@ -87,8 +225,7 @@ const handleFormSubmit = (e) => {
 
   // get the value of the username and save it to a variable
   const tipUsername = document.getElementById('tipUsername').value.trim();
-
-  console.log(document.getElementById('game0').textContent);
+  console.log(tipTitle)
 
   // Create an object with the tip and username
   const newTip = {
@@ -96,223 +233,11 @@ const handleFormSubmit = (e) => {
     username: tipUsername,
     topic: 'UX',
     tip: tipContent,
+    // tip_id
+    // gameId: gameIdNumber
   };
-
   // Make a fetch POST request to the server
   postTip(newTip);
-};
-
-function selectGame() {
-  // var inputVal = document.getElementById('myInput').value;
-  var inputVal = document.getElementById('datepicker').value;
-  console.log('inputVal= ' + inputVal);
-
-  var date = inputVal.split('/');
-  console.log(date);
-  var formatted = date[2] + '-' + date[0] + '-' + date[1];
-  console.log(formatted);
-  var requestURL = 'https://statsapi.web.nhl.com/api/v1/schedule/?date=' + formatted;
-  console.log(requestURL);
-  fetch(requestURL, {
-    "method": "GET", "headers": {    }
-  })
-
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log('I am in schedule then')
-      console.log(data.dates[0].games);
-      console.log(data.dates[0].games[0].teams.away.leagueRecord);
-      var numberOfGames = data.dates[0].games.length;
-      //scheduleContent.textContent = '';
-      for (var i = 0; i < numberOfGames; i++) {
-        var gameName = document.createElement('button');
-        gameName.setAttribute('id', 'game' + i);
-        var idx = gameName.getAttribute('id');
-        gameName.innerHTML = 'Game ' + i + ': ' + data.dates[0].games[i].teams.away.team.name + ' ' + data.dates[0].games[i].teams.away.leagueRecord.wins + 'W ' + data.dates[0].games[i].teams.away.leagueRecord.losses + 'L ' + data.dates[0].games[i].teams.away.leagueRecord.ot + 'O vs ' + data.dates[0].games[i].teams.home.team.name + ' ' + data.dates[0].games[i].teams.home.leagueRecord.wins + 'W ' + data.dates[0].games[i].teams.home.leagueRecord.losses + 'L ' + data.dates[0].games[i].teams.home.leagueRecord.ot + 'O ';
-        document.getElementById('gamesPlayed').appendChild(gameName);
-        gameName.addEventListener('click', displayGameData);
-      }
-
-      function displayGameData(event) {
-        idx = event.currentTarget;
-        idxString = event.currentTarget.textContent;
-        idxArray = idxString.split(':');
-        idxNumber = idxArray[0].split(' ');
-        console.log(idxNumber);
-        gameNumber = idxNumber[1];
-
-        const gameId = data.dates[0].games[gameNumber].gamePk;
-        console.log(gameId);
-        var requestURL = 'https://statsapi.web.nhl.com/api/v1/game/' + gameId + '/feed/live';
-        fetch(requestURL, {
-          "method": "GET", "headers": {
-          }
-        })
-
-          .then(function (response) {
-            return response.json();
-          })
-          .then(function (data) {
-            console.log('I am in second then')
-            console.log(data);
-            const gameInfo = document.createElement('section');
-            gameInfo.setAttribute('id', 'gameInfo');
-            document.getElementById('schedule').appendChild(gameInfo);
-            const gameInfoHome = document.createElement('section');
-            gameInfoHome.setAttribute('id', 'gameInfoHome');
-            document.getElementById('schedule').appendChild(gameInfoHome);
-            const gameInfoAway = document.createElement('section');
-            gameInfoAway.setAttribute('id', 'gameInfoAway');
-            document.getElementById('schedule').appendChild(gameInfoAway);
-            var gameTitle = document.createElement('h2');
-            gameTitle.textContent = '';
-            gameTitle.innerHTML = 'You are watching stats for ' + data.gameData.teams.away.name + ' at ' + data.gameData.teams.home.name + ' game';
-            document.getElementById('gameInfo').appendChild(gameTitle);
-            
-            const arrayGoals = [];
-
-            for (i = 0; i < data.liveData.plays.scoringPlays.length; i++) {
-              scoringPlay = data.liveData.plays.scoringPlays[i];
-              var newGoal = document.createElement('p');
-              // for future input
-              const xCoord1 = data.liveData.plays.allPlays[scoringPlay].coordinates.x;
-              const yCoord1 = data.liveData.plays.allPlays[scoringPlay].coordinates.y;
-              var period = data.liveData.plays.allPlays[scoringPlay].about.period;
-         //     console.log(period)
-              if (period == 1)
-              {xCoord = xCoord1;
-                yCoord = yCoord1;
-                newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
-              document.getElementById('gameInfo').appendChild(newGoal);
-              //  console.log(period)
-            }
-              else if (period == 2)
-              {xCoord = -xCoord1;
-                yCoord = -yCoord1;
-                newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
-              document.getElementById('gameInfo').appendChild(newGoal);
-          //  console.log(period)
-          }
-          else if (period == 3)
-              {xCoord = xCoord1;
-                yCoord = yCoord1;
-                newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
-              document.getElementById('gameInfo').appendChild(newGoal);
-          //  console.log(period)
-          }
-          else if (period == 4)
-              {xCoord = -xCoord1;
-                yCoord = -yCoord1;
-                newGoal.innerHTML = 'Period: ' + data.liveData.plays.allPlays[scoringPlay].about.period + ' Time: ' + data.liveData.plays.allPlays[scoringPlay].about.periodTime + ' Score: ' + data.liveData.plays.allPlays[scoringPlay].about.goals.away + ' : ' + data.liveData.plays.allPlays[scoringPlay].about.goals.home + ' Shot Location: ' + xCoord + ' : ' + yCoord;
-              document.getElementById('gameInfo').appendChild(newGoal);
-          //  console.log(period)
-          }
-          else {console.log('error in periods')}
-    
-              var coordinates = { x: xCoord, y: yCoord };
-              arrayGoals.push(coordinates);
-              console.log(arrayGoals);
-
-              new Chart("myChart", {
-                type: "scatter",
-                data: {
-                  datasets: [{
-                    pointRadius: 4,
-                    pointBackgroundColor: "rgb(0,0,255)",
-                    data: arrayGoals
-                  }]
-                },
-                options: {
-                  legend: { display: false },
-                  scales: {
-                    xAxes: [{ ticks: { min: -100, max: 100 } }],
-                    yAxes: [{ ticks: { min: -42.5, max: 42.5 } }],
-                  }
-                }
-              });
-    
-              for (j = 0; j < data.liveData.plays.allPlays[scoringPlay].players.length; j++) {
-                var goalEvent = document.createElement('span');
-    
-                goalEvent.innerHTML = 'Name: ' + data.liveData.plays.allPlays[scoringPlay].players[j].player.fullName + ' Type: ' + data.liveData.plays.allPlays[scoringPlay].players[j].playerType;
-                document.getElementById('gameInfo').appendChild(goalEvent);
-              }
-            }
-
-            var rosterButton = document.createElement('button');
-            rosterButton.setAttribute('class', 'searchParameter');
-            rosterButton.textContent = 'Print Rosters';
-            document.getElementById('gameInfo').appendChild(rosterButton);
-            rosterButton.addEventListener('click', getRoster);
-          });
- 
-    //      console1();
-        function getRoster(event) { // this function is not used for now
-          var genre = event.currentTarget.value;
-          console.log('u r in get roster');
-
-          var requestURL = 'https://statsapi.web.nhl.com/api/v1/game/' + gameId + '/feed/live';
-          fetch(requestURL, {
-            "method": "GET", "headers": {
-            }
-          })
-
-            .then(function (response) {
-              return response.json();
-            })
-            .then(function (data) {
-              console.log(data.gameData.players)
-
-              var obj = data.gameData.players;
-              var keys = Object.keys(obj);
-
-              var awayRoster = document.createElement('h2');
-              awayRoster.innerHTML = data.gameData.teams.away.name + ' Roster ';
-              awayRoster.setAttribute('id', 'awayTeamId');
-              document.getElementById('gameInfoAway').appendChild(awayRoster);
-
-              var homeRoster = document.createElement('h2');
-              homeRoster.innerHTML = data.gameData.teams.home.name + ' Roster ';
-              homeRoster.setAttribute('id', 'homeTeamId');
-              document.getElementById('gameInfoHome').appendChild(homeRoster);
-              const homeRosterArray = [];
-              const awayRosterArray = [];
-
-              for (var i = 0; i < keys.length; i++) {
-                var val = obj[keys[i]];
-                const playerName1 = val.fullName;
-                const lastName = val.lastName;
-                const primaryNumber1 = val.primaryNumber;
-                const tempAttribute = playerName1;
-                var playerName = document.createElement('p');
-                if (val.primaryPosition.code == 'G')
-                {playerName.innerHTML = val.primaryNumber + ' ' + val.fullName + ', ' + val.primaryPosition.code + ' catches:' + val.shootsCatches + ','}
-                else 
-                {playerName.innerHTML = val.primaryNumber + ' ' + val.fullName + ', ' + val.primaryPosition.code + ' shoots:' + val.shootsCatches + ','};
-                playerName.setAttribute('id', tempAttribute);
-                if (val.currentTeam.id == data.gameData.teams.away.id) {
-                  document.getElementById('awayTeamId').appendChild(playerName);
-                  awayRosterArray.push(primaryNumber1);
-                  awayRosterArray.push(playerName1);
-                  rosterArray = awayRosterArray;
-                }
-                else if (val.currentTeam.id == data.gameData.teams.home.id) {
-                  //    console.log(val.fullName + ' ' + val.currentTeam.name + ' ' + val.currentTeam.id + data.gameData.teams.home.id);
-                  document.getElementById('homeTeamId').appendChild(playerName);
-                  homeRosterArray.push(primaryNumber1);
-                  homeRosterArray.push(playerName1);
-                }
-              }
-              console.log(homeRosterArray);
-              console.log(awayRosterArray);
-            });
-        }
-      }
-    }
-    );
 }
 
 tipForm.addEventListener('submit', handleFormSubmit);
-
