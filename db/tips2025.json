@@ -635,5 +635,12 @@
         "tip": "few games were missing like 3-4. last one recorded was on 10/14/25. this is next one on 10/23/2025. just one 5x5 goal 0:1. OT loss. #53 is 2:2, #21, #24 are 2:1, #55 is 0:3",
         "topic": "UX",
         "tip_id": "7c46"
+    },
+    {
+        "title": "You are watching stats for DAL at FLA game # 2025020185. Period: 2 Time: 01:48 Scorer: Marchand Assists: Eetu Luostarinen, Anton Lundell 1-23,4-96,21,53 72-2,6-63,27,15Period: 2 Time: 04:02 Scorer: Reinhart Assists: Carter Verhaeghe, Evan Rodrigues 1-4,55-91,18,22 72-3,77-23,13,17Period: 2 Time: 14:47 Scorer: Johnston Assists: Sam Steel, Mikko Rantanen 1-55-96,18,21,53 72-2,77-27,79Period: 2 Time: 15:01 Scorer: Hryckowian Assists: Thomas Harley, Sam Steel 1-23,55-18,22,49 72-2,77-63,17Period: 3 Time: 12:26 Scorer: Bennett Assists: Gustav Forsling, Mackie Samoskevich 1-46,55-96,10,53 72-42,6-9,27,11Period: 3 Time: 17:19 Scorer: Rantanen Assists: Sam Steel, Jason Robertson 1-23,46-96,18,21 72-5,42-63,27,15Period: 5 Time: 00:00 Scorer: Marchand Assists:  -- --",
+        "username": "minor update in code at last...",
+        "tip": "date is 11/01/25. SO loss. #55, #96 were 2:2 #23, #21, #18 were 2:1, #53 was 1:2, #4 was 0:2. 5x5 was 1:3, but Stars PP was 2:0",
+        "topic": "UX",
+        "tip_id": "b571"
     }
 ]

@@ -94,10 +94,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             const lineups = document.createElement('section');
             document.getElementById('gameInfo').appendChild(lineups)
             fullLineup = []
-            for (i=0;i<data.rosterSpots.length;i++) { const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, fiveOnFive: 0, PP: 0, PK: 0, specialTeams: 0, something: 0, shootout: 0}
+            for (i=0;i<data.rosterSpots.length;i++) { const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: 0, PP: 0, PK: 0, specialTeams: 0, something: 0, shootout: 0}
             fullLineup.push(obj)
             }
-            console.log(fullLineup)
+            console.log(fullLineup) // did not use fullLineup anywhere yet maybe need to change position
                    
           var requestURL1 = 'https://cors-anywhere.herokuapp.com/https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId; // charts to find which players were on ice
           // var requestURL1 = 'https://corsproxy.io/?key=2ddedfd8&url=https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
