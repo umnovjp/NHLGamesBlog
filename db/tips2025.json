@@ -642,5 +642,12 @@
         "tip": "date is 11/01/25. SO loss. #55, #96 were 2:2 #23, #21, #18 were 2:1, #53 was 1:2, #4 was 0:2. 5x5 was 1:3, but Stars PP was 2:0",
         "topic": "UX",
         "tip_id": "b571"
+    },
+    {
+        "title": "You are watching stats for MIN at DAL game # 2025021254. Period: 1 Time: 04:26 Scorer: Johnston Assists: Justin Hryckowian, Mikko Rantanen 32-43,7-90,14,12 29-23,55-96,53,49Period: 1 Time: 13:02 Scorer: Hughes Assists: Mats Zuccarello 32-43,7-36,38,97 29-23,4-14,73,25Period: 1 Time: 19:44 Scorer: Kaprizov Assists: Matt Boldy, Mats Zuccarello 32-43-36,38,97,12 29-23,55-10,25Period: 2 Time: 06:39 Scorer: Kaprizov Assists: Matt Boldy, Mats Zuccarello 32-43-36,14,97,12 29-57,55-15,49Period: 2 Time: 08:03 Scorer: Blackwell Assists: Esa Lindell 32-43,7-71,17,47 29-57,23-15,34,10Period: 2 Time: 16:16 Scorer: Hughes Assists: Colin Blackwell, Oskar BÃ¤ck 32-2,5-71,17,22 29-57,23-15,34,10Period: 2 Time: 19:49 Scorer: Hartman Assists: Jared Spurgeon, Quinn Hughes 32-46,46,43-90,91,38 29-23,46-10,25Period: 3 Time: 04:28 Scorer: Rantanen Assists: Thomas Harley, Wyatt Johnston 32-43,7-36,38,97 29-23,55-96,53,49Period: 3 Time: 10:35 Scorer: Robertson Assists: Esa Lindell 32-2,5-71,17,47 29-23,46-95,21,22",
+        "username": "Goal #7 #46 counted twice. To correct that. Another minor update to code",
+        "tip": "game 04/10/26. 5x5 game was 5:1 but stars were 0:3 on PK. Miro was injured in 2nd. #23 had extended minutes. He was 5:3. #55 was 2:2. #96 3:0, #53 was 2:0, #25 was 0:3 but that includes 2 on PK. #49 was 2:1. That was actual thriller. Among MIN, #43 was 2:3 but #36, #38, #97 all were 3:1 but that included 3 goals on PP. They were 1:1 with 5x5",
+        "topic": "UX",
+        "tip_id": "a74f"
     }
 ]
