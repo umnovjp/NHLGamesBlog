@@ -663,5 +663,12 @@
         "tip": "not much to analyze. watched entire game on victory +. Stars scored one PP goal in 3rd then another EN goal. Robo scored two. Not sure if #95 hit post intentionally on EN goal to let Robo score or Robo scored on real rebound from post",
         "topic": "UX",
         "tip_id": "6231"
+    },
+    {
+        "title": "You are watching stats for MIN at NSH game # 2025021267. Period: 1 Time: 15:01 Scorer: Stamkos Assists: Luke Evangelista, Ryan O'Reilly 30-43,7-91,38,97 29-59,76-91,90,77Period: 2 Time: 06:34 Scorer: Wood Assists: Steven Stamkos, Nick Perbix 30-43,7-91,97,22 29-48,85-91,81,71Period: 3 Time: 06:54 Scorer: McCarron Assists: Jonas Brodin 30-25,5-47,13,10 29-59,76-17,40,49",
+        "username": "no code update maybe I should start a new repo. Cannot jump start",
+        "tip": "MIN did not have too much to fight for. But they were supposed to rebound in NSH after loss to Stars. #97 was 0:2 in 1:2 game, #38 was 0:1",
+        "topic": "UX",
+        "tip_id": "c02c"
     }
 ]
