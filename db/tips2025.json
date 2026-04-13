@@ -677,5 +677,12 @@
         "tip": "COL #29, #88 were 1:1, but they scored on PP. #8 did not play. Not sure why #62 was 0:0. Their coach was hit by the puck in 3rd. ",
         "topic": "UX",
         "tip_id": "2b16"
+    },
+    {
+        "title": "You are watching stats for DAL at MTL game # 2025020270. Period: 1 Time: 14:21 Scorer: Johnston Assists: Roope Hintz, Mikko Rantanen 1-4-96,24,21,53 75-8,53-15,91Period: 2 Time: 03:50 Scorer: Lindell Assists: Miro Heiskanen, Radek Faksa 1-23,4-15,12,11 75-45,72-11,77,76Period: 2 Time: 07:10 Scorer: Seguin Assists: Jason Robertson, Lian Bichsel 1-28,6-91,24,21 75-45,48-17,71,90Period: 2 Time: 15:10 Scorer: Robertson Assists: Thomas Harley, Mikko Rantanen 1-28,55-96,21,53 75-45,48-17,71,91Period: 2 Time: 16:49 Scorer: Robertson Assists: Justin Hryckowian, Mavrik Bourque 1-28,6-21,22,49 75-47,48-11,77,76Period: 3 Time: 02:01 Scorer: Petrovic Assists: Radek Faksa, Colin Blackwell 1-28,6-15,12,11 35-47,48-17,91,93Period: 3 Time: 14:40 Scorer: Blackwell Assists: Radek Faksa, Ilya Lyubushkin 1-28,6-15,12,11 35-8,53-90,91,93",
+        "username": "no code update but creating something in my head",
+        "tip": "7:0 win on 11/13/25. Does not make sense to count who is plus minus. And before that games after 11/4 were missing",
+        "topic": "UX",
+        "tip_id": "e042"
     }
 ]
