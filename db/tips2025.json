@@ -667,8 +667,15 @@
     {
         "title": "You are watching stats for MIN at NSH game # 2025021267. Period: 1 Time: 15:01 Scorer: Stamkos Assists: Luke Evangelista, Ryan O'Reilly 30-43,7-91,38,97 29-59,76-91,90,77Period: 2 Time: 06:34 Scorer: Wood Assists: Steven Stamkos, Nick Perbix 30-43,7-91,97,22 29-48,85-91,81,71Period: 3 Time: 06:54 Scorer: McCarron Assists: Jonas Brodin 30-25,5-47,13,10 29-59,76-17,40,49",
         "username": "no code update maybe I should start a new repo. Cannot jump start",
-        "tip": "MIN did not have too much to fight for. But they were supposed to rebound in NSH after loss to Stars. #97 was 0:2 in 1:2 game, #38 was 0:1",
+        "tip": "MIN did not have too much to fight for. But they were supposed to rebound in NSH after loss to Stars. #97, #43 were 0:2 in 1:2 game, #38 was 0:1",
         "topic": "UX",
         "tip_id": "c02c"
+    },
+    {
+        "title": "You are watching stats for VGK at COL game # 2025021274. Period: 1 Time: 09:17 Scorer: Toews Assists: Brock Nelson, Martin Necas 79-4,5-93,22 39-7-11,92,29,88Period: 1 Time: 13:47 Scorer: Stone Assists: Tomas Hertl, Mitch Marner 79--61,48,9,93,16 39-42,7-17,18Period: 2 Time: 02:09 Scorer: Dorofeyev Assists: Ivan Barbashev, Kaedan Korczak 79-5,6-49,21,16 39-84,70-13,17,18Period: 2 Time: 10:56 Scorer: Blankenburg Assists: Nicolas Roy 79-5,6-26,55,22 39-84,37-10,20,94Period: 4 Time: 01:19 Scorer: Eichel Assists:  79-15,4,6-61,9 39-7-29,88",
+        "username": "Trying to start coding again",
+        "tip": "COL #29, #88 were 1:1, but they scored on PP. #8 did not play. Not sure why #62 was 0:0. Their coach was hit by the puck in 3rd. ",
+        "topic": "UX",
+        "tip_id": "2b16"
     }
 ]
