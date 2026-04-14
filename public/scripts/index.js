@@ -49,8 +49,8 @@ cardTitleEl.classList.add('bg-info');
 function selectGame() {var inputVal = document.getElementById('datepicker').value;
   var date = inputVal.split('/');
   var formatted = date[2] + '-' + date[0] + '-' + date[1];
-  // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/schedule/'+ formatted; date games displayed
-  var requestURL = 'https://cors-anywhere.herokuapp.com/https://api-web.nhle.com/v1/schedule/'+ formatted;
+  var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/schedule/'+ formatted; // date games displayed formatted example 2025-11-14
+  // var requestURL = 'https://cors-anywhere.herokuapp.com/https://api-web.nhle.com/v1/schedule/'+ formatted; 
   console.log(requestURL);
   fetch(requestURL, {
     "method": "GET", "headers": {}
