@@ -56,7 +56,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
     "method": "GET", "headers": {}
   })
     .then(function (response) {return response.json()})
-    .then(function (data2) { console.log('I am in schedule then');
+    .then(function (data2) { console.log('I am in schedule then', data2);
       var numberOfGames = data2.gameWeek[0].games.length;
       for (var i = 0; i < numberOfGames; i++) { var gameName = document.createElement('button');
         gameName.setAttribute('id', 'game' + i); var idx = gameName.getAttribute('id');
@@ -69,12 +69,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
         idxArray = idxString.split(':'); idxNumber = idxArray[0].split(' ');
         console.log(idxNumber); gameNumber = idxNumber[1];
         var gameId = data2.gameWeek[0].games[gameNumber].id; // gameIdNumber=document.createElement('span');
-        // gameIdNumber.setAttribute('id', 'gameId');
-        // gameIdNumber.innerHTML='abc';
         
         console.log(gameId);
         // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play'; to select game on certain date
-        var requestURL = 'https://cors-anywhere.herokuapp.com/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
+        var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
         fetch(requestURL, {
           "method": "GET", "headers": { }
         })
