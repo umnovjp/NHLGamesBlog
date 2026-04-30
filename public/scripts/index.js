@@ -62,7 +62,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
         gameName.setAttribute('id', 'game' + i); var idx = gameName.getAttribute('id');
         gameName.innerHTML = 'Game ' + i + ': ' + data2.gameWeek[0].games[i].awayTeam.abbrev + ' ' + data2.gameWeek[0].games[i].homeTeam.abbrev;
         document.getElementById('gamesPlayed').appendChild(gameName);
-        gameName.addEventListener('click', displayGameData);
+        gameName.addEventListener('click', displayGameData)
       }
 
       function displayGameData(event) { idx = event.currentTarget; idxString = event.currentTarget.textContent;
@@ -211,8 +211,6 @@ const postTip = (tip) =>
 // When the page loads, get all the tips
 getTips().then((data) => data.forEach((tip) => createCard(tip)));
 
-// console.log(gameId)
-
 // Function to handle when a user submits the feedback form
 const handleFormSubmit = (e) => {
   e.preventDefault();
@@ -233,7 +231,6 @@ const handleFormSubmit = (e) => {
     username: tipUsername,
     topic: 'UX',
     tip: tipContent,
-    // tip_id
     // gameId: gameIdNumber
   };
   // Make a fetch POST request to the server

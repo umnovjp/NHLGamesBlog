@@ -30,4 +30,4 @@ Game 3 1/20. Disappeared. Still not visible 1/29. Game 6 1/24 has multiple SO go
 
 Game 0 1/26 last goal displayed twice
 
-game 3 01/26 goalType3 sometimes has 2G (period 2 7:34, period 2 0:55) then goal 33-65,98-17,25 counts goalType3 as 1,2,3,5 (not 6). sometimes 7 players. 
+game 3 01/26 goalType3 sometimes has 2G (period 2 7:34, period 2 0:55) then goal 33-65,98-17,25 counts goalType3 as 1,2,3,5 (not 6). sometimes 7 players. Game 7 4/10/26 #46 counted twice. Game DAL MIN 4/20/26 both goalies counted twice during goals 1 and 2. PIT DAL game 12/7/25 #28 counted twice on goal #1. DAL WPG game 12/9/25 #10 counted twice durong goal 3. DAL MIN game 4/23/26 last goal counted twice. 
