@@ -66,8 +66,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
       }
 
       function displayGameData(event) { idx = event.currentTarget; idxString = event.currentTarget.textContent;
-        idxArray = idxString.split(':'); idxNumber = idxArray[0].split(' ');
-        console.log(idxNumber); gameNumber = idxNumber[1];
+        idxArray = idxString.split(':'); idxNumber = idxArray[0].split(' '); gameNumber = idxNumber[1];
         var gameId = data2.gameWeek[0].games[gameNumber].id; // gameIdNumber=document.createElement('span');
         
         console.log(gameId);
@@ -91,11 +90,11 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             document.getElementById('gameInfo').appendChild(gameTitle);
             const lineups = document.createElement('section');
             document.getElementById('gameInfo').appendChild(lineups)
-            fullLineup = []
-            for (i=0;i<data.rosterSpots.length;i++) { const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: 0, PP: 0, PK: 0, specialTeams: 0, something: 0, overtime: 0, shootout: 0}
-            fullLineup.push(obj)
-            }
-            console.log(fullLineup) // did not use fullLineup anywhere yet maybe need to change position
+            // fullLineup = []
+            // for (i=0;i<data.rosterSpots.length;i++) { const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: 0, PP: 0, PK: 0, specialTeams: 0, something: 0, overtime: 0, shootout: 0}
+            // fullLineup.push(obj)
+            // }
+            // console.log(fullLineup) // did not use fullLineup anywhere yet maybe need to change position
                    
           var requestURL1 = 'https://cors-anywhere.herokuapp.com/https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId; // charts to find which players were on ice
           // var requestURL1 = 'https://corsproxy.io/?key=2ddedfd8&url=https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
