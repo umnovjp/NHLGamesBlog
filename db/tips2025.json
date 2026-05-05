@@ -852,5 +852,12 @@
         "tip": "Game on 12/21/25. Score was 1:0 in 3rd then 3:1 late in 3rd but Stars won 5:1. 5x5 score was 4:1 but Stars also score one EN. Will not calculate plus minus",
         "topic": "UX",
         "tip_id": "a97d"
+    },
+    {
+        "title": "You are watching stats for DAL at DET game # 2025020579. Period: 1 Time: 09:23 Scorer: van Riemsdyk Assists: Michael Rasmussen, Simon Edvinsson 1-28,4-24,21,22 36-53,77-21,27,29Period: 2 Time: 10:47 Scorer: Hintz Assists: Mikko Rantanen, Jason Robertson 1-4-96,24,21,53 36-8,25-22,92Period: 2 Time: 19:16 Scorer: Benn Assists: Matt Duchene, Justin Hryckowian 1-28,4-14,95,49 36-53,77-18,93,43Period: 3 Time: 03:02 Scorer: Finnie Assists: Lucas Raymond, Moritz Seider 1-23,4-12,10 36-53-71,93,23,58Period: 3 Time: 11:18 Scorer: Johnston Assists: Miro Heiskanen, Mikko Rantanen 1-4-96,24,21,53 36-8,25-18,37Period: 3 Time: 15:57 Scorer: Larkin Assists: James van Riemsdyk, Lucas Raymond 1-23,4-18,53 36-53-21,71,93,23Period: 4 Time: 00:34 Scorer: Larkin Assists: Moritz Seider, Lucas Raymond 1-4-24,21 36-77-71,23",
+        "username": "No code update worked late in Little Rock.",
+        "tip": "Game on XMas eve 12/23/25. DAL lost in OT. 5x5 scored was 1:1, PP was 2:0, PK was 0:2, then OT was 0:1. Pair 28,4 was 1:1 5x5. ",
+        "topic": "UX",
+        "tip_id": "781d"
     }
 ]
