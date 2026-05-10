@@ -145,10 +145,11 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[0][2].length===5))
                       {goalType4='fiveOnFive'}
                     else if (data1.data[i].period===5) {goalType4='shootout'} // need to add a loop to add different players to shutout not just one scorer
-                    else if ((data1.data[i].period===4)&&(goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===goalType5[1][1].length+goalType5[1][2].length)) {goalType4='overtime'}
-                    else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length>goalType5[1][1].length+goalType5[1][2].length)) {goalType4='PP'}
-                    else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length>goalType5[1][1].length+goalType5[1][2].length)) {goalType4='PK'}
-                    // PP means home team PP PK means home team PK. Need to define special teams and EN here, differentiate EN goal from goal scored 6x5
+                    else if (data1.data[i].period===4) {goalType4='overtime'}
+                    else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length>goalType5[1][1].length+goalType5[1][2].length)) {goalType4='HomePP'}
+                    else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<goalType5[1][1].length+goalType5[1][2].length)) {goalType4='HomePK'}
+                    else if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[1][2].length<5)&&(goalType5[1][1].length+goalType5[1][2].length===goalType5[0][1].length+goalType5[0][2].length)) {goalType4='SpecialTeams'}
+                    // Need to define EN here, differentiate EN goal from goal scored 6x5
                     else {goalType4='something else'} // end if loop
                     goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4);
                     console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2, 'goalType6', goalType6);

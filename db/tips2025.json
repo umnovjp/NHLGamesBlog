@@ -560,13 +560,6 @@
         "tip_id": "aa21"
     },
     {
-        "title": "You are watching stats for DAL at WPG game # 2025020017. Period: 1 Time: 03:15 Scorer: Rantanen Assists: Roope Hintz, Sam Steel 29-23,4-96,24,18 37-24,4-55,81,13Period: 1 Time: 06:19 Scorer: Connor Assists: Mark Scheifele, Gabriel Vilardi 29-4,55-96,24,18 37-44,24-55,81,13Period: 1 Time: 15:24 Scorer: Lundkvist Assists: Mikko Rantanen, Jason Robertson 29-5,46-96,24,21 37-5,24-70,36,45Period: 3 Time: 01:01 Scorer: Robertson Assists: Mikko Rantanen, Roope Hintz 29-4-96,24,21,53 37-2,44,4-7Period: 3 Time: 01:35 Scorer: Seguin Assists: Matt Duchene, Thomas Harley 29-5,55-95,91,22 37-5,24-55,81,13Period: 3 Time: 03:23 Scorer: Johnston Assists: Nils Lundkvist, Thomas Harley 29-5,55-95,91,53 37-24,4-13,36,45Period: 3 Time: 09:53 Scorer: Barron Assists:  29-55-95,91,96,49 37-5,24-55,36Period: 3 Time: 11:09 Scorer: Connor Assists: Mark Scheifele, Dylan DeMelo 29-4-96,24,21,53 37-5,24-55,81Period: 3 Time: 16:57 Scorer: Connor Assists: Mark Scheifele, Dylan DeMelo 29-23,4-15,12,11 37-44,4-55,81,13",
-        "username": "did not made SW update tonight again",
-        "tip": "checking if old game is available. it was first game of the season. Stars showed WPG who they are. But they made game look really interesting. 5:1 in the middle of the third turned to 5:4. Still Stars won. They allowed WPG to score two goals on the same PP. #4 was 2:3, #55 was 2:2, #5 was 2:1, #96 was 3:3, #24 was 3:2, #21 and #53 were 2:1",
-        "topic": "UX",
-        "tip_id": "d535"
-    },
-    {
         "title": "You are watching stats for COL at DAL game # 2025021209. Period: 3 Time: 10:39 Scorer: Necas Assists: Artturi Lehkonen, Devon Toews 41-7,70-62,29,88 1-23,6-73,21,53Period: 3 Time: 19:02 Scorer: MacKinnon Assists: Martin Necas, Josh Manson 41-42,7-11,29,88 -4-14,95,96,21,53",
         "username": "Good news is that I started programming again. It was probably 6 weeks of hiatus",
         "tip": "was not able to watch this game on abc national tv. sling does not work there. Once again, we are on receiving end...",
@@ -880,19 +873,5 @@
         "tip": "game on 1/1/26 and another loss. Score was 1:4 with 4 minutes left. Stars scored two but they did not tie. 5x5 score was 1:2, 0:2 on PK, and 2:0 with 6x5. with 5x5 #4 was 0:2, #53 was 1:2, #22 was 1:1",
         "topic": "UX",
         "tip_id": "264c"
-    },
-    {
-        "title": "You are watching stats for DAL at UTA game # 2025020746. Period: 2 Time: 19:53 Scorer: Schmaltz Assists: John Marino, Clayton Keller 29-28,55-14,12,73 70-88,6-8,67,9Period: 3 Time: 02:04 Scorer: Rantanen Assists: Wyatt Johnston, Jason Robertson 29-55-96,24,21,53 70-28,98-67,82Period: 3 Time: 04:03 Scorer: Marino Assists: Nick Schmaltz 29-23,5-10,22,49 70-88,6-8,67,9",
-        "username": "No code update just added data",
-        "tip": "Game on 1/15/26. Games after 1/1/26 were missing. Stars lost again. 5x5 score was 0:2, Stars scored one on PP. I can say Utah was in control since they restored lead after Stars equalizer. ",
-        "topic": "UX",
-        "tip_id": "cf34"
-    },
-    {
-        "title": "You are watching stats for TBL at DAL game # 2025020767. Period: 1 Time: 04:00 Scorer: BÃ¤ck Assists: Nils Lundkvist, Mavrik Bourque 88-43,90-86,20,38 29-5,55-10,22,49Period: 1 Time: 08:04 Scorer: James Assists: Jake Guentzel, Charle-Edouard D'Astous 88-43,51-86,59,17 29-23,5-15,12,10Period: 2 Time: 11:04 Scorer: Hagel Assists: Nikita Kucherov, Darren Raddysh 88-43,90-86,71,38 29-23,4-96,18,53Period: 2 Time: 18:50 Scorer: Guentzel Assists: Dominic James, Oliver Bjorkstrand 88-24,67-59,93,17 29-20,4-95,21,53Period: 3 Time: 17:59 Scorer: Holmberg Assists: Yanni Gourde, J.J. Moser 88-43,90-37,28,29 -4-95,96,24,21,53",
-        "username": "added data but many games missing in January",
-        "tip": "And another loss on 01/18/26. 5x5 goals were 1:3 then Bolts scored 0:1 EN. ",
-        "topic": "UX",
-        "tip_id": "eaa8"
     }
 ]
