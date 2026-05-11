@@ -78,7 +78,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           .then(function (response) {
             return response.json();
           })
-          .then(function (data) { console.log('I am in second then');
+          .then(function (data) { console.log('I am in second then', data.awayTeam.abbrev, data.homeTeam.abbrev);
             console.log(data.rosterSpots);
             const gameInfo = document.createElement('section'); gameInfo.setAttribute('id', 'gameInfo');
             document.getElementById('schedule').appendChild(gameInfo);
@@ -104,7 +104,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             })
             .then(function (data1) { console.log('I am in third then', data1);
                for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
-                { periodNumber = data1.data[i].period; goalsNumber.push(i); goalTime = data1.data[i].startTime;
+                { console.log(data1.data[i].teamAbbrev, data.awayTeam.abbrev, data.homeTeam.abbrev)
+                  periodNumber = data1.data[i].period; goalsNumber.push(i); goalTime = data1.data[i].startTime;
                   goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
                   goalTimeSecondsAbsolute=goalTimeSeconds+(periodNumber-1)*1200; onIceArray.push('newGoal', goalTimeSecondsAbsolute);
                   for (j=0; j<data1.data.length;j++) { // j loop counts all shifts and checks if a player was on ice when a goal was scored
