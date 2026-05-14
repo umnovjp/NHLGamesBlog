@@ -89,7 +89,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game # ' + gameId + '. ';
             document.getElementById('gameInfo').appendChild(gameTitle);
             const lineups = document.createElement('section');
-            document.getElementById('gameInfo').appendChild(lineups)
+            document.getElementById('gameInfo').appendChild(lineups);
             // fullLineup = []
             // for (i=0;i<data.rosterSpots.length;i++) { const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: 0, PP: 0, PK: 0, specialTeams: 0, something: 0, overtime: 0, shootout: 0}
             // fullLineup.push(obj)
