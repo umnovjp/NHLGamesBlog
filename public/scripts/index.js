@@ -132,8 +132,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   else if ((goalType[k][0]===data.awayTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)&&(data.rosterSpots[j].teamId===data.awayTeam.id)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
                   }}}
                   // goalType is array of players on ice but goalType2 is array of their positions like G or D or C or L or R goalType3 is number of G, D, F on both sides like 1-2-3-6 if that was 5x5
-                  // goalType5 is array of numbers who was on ice during the goal
-                    goalType3=[[0,0,0,0],[0,0,0,0]]; goalType5 = [[[],[],[]],[[],[],[]]];
+                  // goalType5 is array of numbers by position who was on ice during the goal 
+                    goalType3=[[0,0,0,0],[0,0,0,0]]; goalType5 = [[[],[],[]],[[],[],[]]]; // do not need to count D and F separately, just total number and if a goalie was present
                     for (j=0;j<2;j++) {for (k=0;k<goalType2[j].length;k++) {
                       if (goalType2[j][k]==='G') {goalType3[j][0]=goalType3[j][0]+1; goalType3[j][3]=goalType3[j][3]+1; goalType5[j][0].push(goalType[j][k+1])}
                       else if (goalType2[j][k]==='D') {goalType3[j][1]=goalType3[j][1]+1; goalType3[j][3]=goalType3[j][3]+1; goalType5[j][1].push(goalType[j][k+1])}
