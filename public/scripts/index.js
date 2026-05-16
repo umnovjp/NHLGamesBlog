@@ -150,6 +150,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else if (data1.data[i].period===4) {goalType4='overtime'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length>goalType5[1][1].length+goalType5[1][2].length)) {goalType4='HomePP'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<goalType5[1][1].length+goalType5[1][2].length)) {goalType4='HomePK'}
+                    else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===0)) {goalType4='SixonFive'}
+                    else if ((goalType5[0][0].length===0)&&(goalType5[1][0].length===1)) {goalType4='EN'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[1][2].length<5)&&(goalType5[1][1].length+goalType5[1][2].length===goalType5[0][1].length+goalType5[0][2].length)) {goalType4='SpecialTeams'}
                     // Need to define EN here, differentiate EN goal from goal scored 6x5
                     else {goalType4='something else'} // end if loop
