@@ -90,8 +90,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             document.getElementById('gameInfo').appendChild(gameTitle);
             const lineups = document.createElement('section');
             document.getElementById('gameInfo').appendChild(lineups);
-            // fullLineup = []
-            // for (i=0;i<data.rosterSpots.length;i++) { const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: 0, PP: 0, PK: 0, specialTeams: 0, something: 0, overtime: 0, shootout: 0}
+            // fullLineup = [] will use it later
+            // for (i=0;i<data.rosterSpots.length;i++) { const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: 0, PP: 0, PK: 0, specialTeams: 0, EN: 0, SixOnFive: 0, ssomething: 0, overtime: 0, shootout: 0}
             // fullLineup.push(obj)
             // }
             // console.log(fullLineup) // did not use fullLineup anywhere yet maybe need to change position
@@ -150,10 +150,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else if (data1.data[i].period===4) {goalType4='overtime'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length>goalType5[1][1].length+goalType5[1][2].length)) {goalType4='HomePP'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<goalType5[1][1].length+goalType5[1][2].length)) {goalType4='HomePK'}
-                    else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===0)) {goalType4='SixonFive'}
-                    else if ((goalType5[0][0].length===0)&&(goalType5[1][0].length===1)) {goalType4='EN'}
+                    else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===0)) {goalType4='SixOnFive'}
+                    else if ((goalType5[0][0].length===0)&&(goalType5[1][0].length===1)) {goalType4='EN'} // need to add home or road 6x5 and EN
                     else if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[1][2].length<5)&&(goalType5[1][1].length+goalType5[1][2].length===goalType5[0][1].length+goalType5[0][2].length)) {goalType4='SpecialTeams'}
-                    // Need to define EN here, differentiate EN goal from goal scored 6x5
                     else {goalType4='something else'} // end if loop
                     goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4);
                     console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2, 'goalType6', goalType6);
