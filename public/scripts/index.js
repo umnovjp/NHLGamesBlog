@@ -163,9 +163,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     }} // end goal if 505 statement and i loop
                     
                   goalType7=[];
-                  for (j=0;j<goalTime2[0].length;j++) {
-                  goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3])
-                  }
+                  for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
                     console.log(goalType7, goalTime, goalTime2);
                     for (i=0;i<2;i++) {for (j=0;j<goalTime2[0].length;j++) {if (goalTime[i][j]===goalTime2[i][j]) {}
                   else {console.log('not equal', goalTime[i][j], goalTime2[i][j])}}}
