@@ -67,9 +67,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
 
       function displayGameData(event) { idx = event.currentTarget; idxString = event.currentTarget.textContent;
         idxArray = idxString.split(':'); idxNumber = idxArray[0].split(' '); gameNumber = idxNumber[1];
-        var gameId = data2.gameWeek[0].games[gameNumber].id; // gameIdNumber=document.createElement('span');
+        var gameId = data2.gameWeek[0].games[gameNumber].id;
+        var gameIdSplit = String(gameId).split('')
         
-        console.log(gameId);
+        console.log(gameId, gameIdSplit);
         // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play'; to select game on certain date
         var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
         fetch(requestURL, {
@@ -147,11 +148,11 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[0][2].length===5))
                       {goalType4='fiveOnFive'}
                     else if (data1.data[i].period===5) {goalType4='shootout'} // need to add a loop to add different players to shutout not just one scorer
-                    else if (data1.data[i].period===4) {goalType4='overtime'}
-                    else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length>goalType5[1][1].length+goalType5[1][2].length)) {goalType4='HomePP'}
-                    else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<goalType5[1][1].length+goalType5[1][2].length)) {goalType4='HomePK'}
-                    else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===0)) {goalType4='SixOnFive'}
-                    else if ((goalType5[0][0].length===0)&&(goalType5[1][0].length===1)) {goalType4='EN'} // need to add home or road 6x5 and EN
+                    else if ((data1.data[i].period===4)&&(gameIdSplit[5]<3)) {goalType4='overtime'}
+                    else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length>goalType5[1][1].length+goalType5[1][2].length)) {goalType4='HomePP_AwayPL'}
+                    else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<goalType5[1][1].length+goalType5[1][2].length)) {goalType4='HomePK_AwayPP'}
+                    else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===0)) {goalType4='homeSixOnFive'}
+                    else if ((goalType5[0][0].length===0)&&(goalType5[1][0].length===1)) {goalType4='homeEN'} // need to add home or road 6x5 and EN
                     else if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[1][2].length<5)&&(goalType5[1][1].length+goalType5[1][2].length===goalType5[0][1].length+goalType5[0][2].length)) {goalType4='SpecialTeams'}
                     else {goalType4='something else'} // end if loop
                     goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4);
