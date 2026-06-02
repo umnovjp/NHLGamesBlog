@@ -169,7 +169,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     for (i=0;i<2;i++) {for (j=0;j<goalTime2[0].length;j++) {if (goalTime[i][j]===goalTime2[i][j]) {}
                   else {console.log('not equal', goalTime[i][j], goalTime2[i][j])}}}
                   for (i=0;i<goalsNumber.length;i++) { var newGoal3 = document.createElement('span');
-                    newGoal3.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+
+                    newGoal3.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' '+goalType4+' '+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+
                     ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+goalType7[3*i+1][1][0]+'-'+goalType7[3*i+1][1][1]+'-'+goalType7[3*i+1][1][2]+' '+goalType7[3*i+1][0][0]+'-'+goalType7[3*i+1][0][1]+'-'+goalType7[3*i+1][0][2];
                     document.getElementById('gameInfo').appendChild(newGoal3)}
                   }); // end third second .then
