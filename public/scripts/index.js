@@ -80,7 +80,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             return response.json();
           })
           .then(function (data) { console.log('I am in second then', data.awayTeam.abbrev, data.homeTeam.abbrev);
-            console.log(data.rosterSpots);
+            console.log(data, data.rosterSpots);
             const gameInfo = document.createElement('section'); gameInfo.setAttribute('id', 'gameInfo');
             document.getElementById('schedule').appendChild(gameInfo);
             const gameInfoHome = document.createElement('section');
@@ -91,11 +91,13 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             document.getElementById('gameInfo').appendChild(gameTitle);
             const lineups = document.createElement('section');
             document.getElementById('gameInfo').appendChild(lineups);
-            // fullLineup = [] will use it later
-            // for (i=0;i<data.rosterSpots.length;i++) { const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: 0, PP: 0, PK: 0, specialTeams: 0, EN: 0, SixOnFive: 0, ssomething: 0, overtime: 0, shootout: 0}
-            // fullLineup.push(obj)
-            // }
-            // console.log(fullLineup) // did not use fullLineup anywhere yet maybe need to change position
+            fullLineup = [[],[]] // will use it later
+            for (i=0;i<data.rosterSpots.length;i++) { 
+              const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: 0, PP: 0, PK: 0, specialTeams: 0, EN: 0, SixOnFive: 0, ssomething: 0, overtime: 0, shootout: 0}
+            if (data.rosterSpots[i].teamId===data.awayTeam.id) { fullLineup[1].push(obj) }
+            else {fullLineup[0].push(obj) }
+            }
+            console.log(fullLineup) // did not use fullLineup anywhere yet maybe need to change position
                    
           var requestURL1 = 'https://cors-anywhere.herokuapp.com/https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId; // charts to find which players were on ice
           // var requestURL1 = 'https://corsproxy.io/?key=2ddedfd8&url=https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
