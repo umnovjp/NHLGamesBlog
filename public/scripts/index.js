@@ -80,7 +80,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             return response.json();
           })
           .then(function (data) { console.log('I am in second then', data.awayTeam.abbrev, data.homeTeam.abbrev);
-            console.log(data, data.rosterSpots);
+            console.log(data.rosterSpots);
             const gameInfo = document.createElement('section'); gameInfo.setAttribute('id', 'gameInfo');
             document.getElementById('schedule').appendChild(gameInfo);
             const gameInfoHome = document.createElement('section');
