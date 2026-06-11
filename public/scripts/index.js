@@ -93,7 +93,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             document.getElementById('gameInfo').appendChild(lineups);
             fullLineup = [[],[]] // will use it later
             for (i=0;i<data.rosterSpots.length;i++) { 
-              const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: 0, PP: 0, PK: 0, specialTeams: 0, EN: 0, SixOnFive: 0, ssomething: 0, overtime: 0, shootout: 0}
+              const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: [0,0], HomePP_awayPK: [0.0], homePK_awayPP: [0.0], specialTeams: [0,0], homeEN: [0,0], homeSixOnFive: [0,0], 
+                something: [0,0], overtime: [0,0], shootout: [0]}
             if (data.rosterSpots[i].teamId===data.awayTeam.id) { fullLineup[1].push(obj) }
             else {fullLineup[0].push(obj) }
             }
