@@ -68,9 +68,13 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
       function displayGameData(event) { idx = event.currentTarget; idxString = event.currentTarget.textContent;
         idxArray = idxString.split(':'); idxNumber = idxArray[0].split(' '); gameNumber = idxNumber[1];
         var gameId = data2.gameWeek[0].games[gameNumber].id;
-        var gameIdSplit = String(gameId).split('')
+        var gameIdSplit = String(gameId).split(''); var gameType;
         
         console.log(gameId, gameIdSplit);
+        if (gameIdSplit[5]==='3') {gameType='playoff'}
+        else if ((gameIdSplit[5]==='2')||(gameIdSplit[5]==='1')) {gameType='regular'}
+        else {gameType='who knows'}
+        console.log(gameId, gameIdSplit, gameType);
         // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play'; to select game on certain date
         var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
         fetch(requestURL, {
@@ -150,8 +154,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     var goalType4;
                     if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[0][2].length===5))
                       {goalType4='fiveOnFive'}
-                    else if (data1.data[i].period===5) {goalType4='shootout'} // need to add a loop to add different players to shutout not just one scorer
-                    else if ((data1.data[i].period===4)&&(gameIdSplit[5]<3)) {goalType4='overtime'}
+                    else if ((data1.data[i].period===5)&&(gameType='regular')) {goalType4='shootout'} // need to add a loop to add different players to shutout not just one scorer
+                    else if ((data1.data[i].period===4)&&(gameType='regular')) {goalType4='overtime'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length>goalType5[1][1].length+goalType5[1][2].length)) {goalType4='HomePP_AwayPK'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<goalType5[1][1].length+goalType5[1][2].length)) {goalType4='HomePK_AwayPP'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===0)) {goalType4='homeSixOnFive'}
@@ -172,7 +176,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     for (i=0;i<2;i++) {for (j=0;j<goalTime2[0].length;j++) {if (goalTime[i][j]===goalTime2[i][j]) {}
                   else {console.log('not equal', goalTime[i][j], goalTime2[i][j])}}}
                   for (i=0;i<goalsNumber.length;i++) { var newGoal3 = document.createElement('span');
-                    newGoal3.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' '+goalType7[3*i+2]+' '+'goalType5 '+goalType5[0]+' '+goalType5[1]+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+
+                    newGoal3.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' '+goalType7[3*i+2]+' '+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+
                     ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+goalType7[3*i+1][1][0]+'-'+goalType7[3*i+1][1][1]+'-'+goalType7[3*i+1][1][2]+' '+goalType7[3*i+1][0][0]+'-'+goalType7[3*i+1][0][1]+'-'+goalType7[3*i+1][0][2];
                     document.getElementById('gameInfo').appendChild(newGoal3)}
                   }); // end third second .then
