@@ -84,7 +84,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             return response.json();
           })
           .then(function (data) { console.log('I am in second then', data.awayTeam.abbrev, data.homeTeam.abbrev);
-            console.log(data.rosterSpots);
+            console.log(data);
             const gameInfo = document.createElement('section'); gameInfo.setAttribute('id', 'gameInfo');
             document.getElementById('schedule').appendChild(gameInfo);
             const gameInfoHome = document.createElement('section');
@@ -112,7 +112,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             })
             .then(function (data1) { console.log('I am in third then', data1);
                for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
-                { console.log(data1.data[i].teamAbbrev, data.awayTeam.abbrev, data.homeTeam.abbrev)
+                { var whoScored ='whichTeam';
+                  if (data1.data[i].teamAbbrev===data.awayTeam.abbrev) {whoScored='awayGoal'}
+                  else if (data1.data[i].teamAbbrev===data.homeTeam.abbrev) {whoScored='homeGoal'}
+                    console.log(data1.data[i].teamAbbrev, data.awayTeam.abbrev, data.homeTeam.abbrev, whoScored);
                   periodNumber = data1.data[i].period; goalsNumber.push(i); goalTime = data1.data[i].startTime;
                   goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
                   goalTimeSecondsAbsolute=goalTimeSeconds+(periodNumber-1)*1200; onIceArray.push('newGoal', goalTimeSecondsAbsolute);
@@ -155,7 +158,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[0][2].length===5))
                       {goalType4='fiveOnFive'}
                     else if ((data1.data[i].period===5)&&(gameType='regular')) {goalType4='shootout'} // need to add a loop to add different players to shutout not just one scorer
-                    else if ((data1.data[i].period===4)&&(gameType='regular')) {goalType4='overtime'}
+                    else if ((data1.data[i].period===4)&&(gameType='regular')&&(goalType5[0][1].length+goalType5[0][2].length===goalType5[1][1].length+goalType5[1][2].length)) {goalType4='overtime'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length>goalType5[1][1].length+goalType5[1][2].length)) {goalType4='HomePP_AwayPK'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<goalType5[1][1].length+goalType5[1][2].length)) {goalType4='HomePK_AwayPP'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===0)) {goalType4='homeSixOnFive'}
