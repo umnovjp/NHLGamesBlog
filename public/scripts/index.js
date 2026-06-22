@@ -51,12 +51,12 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
   var formatted = date[2] + '-' + date[0] + '-' + date[1];
   var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/schedule/'+ formatted; // date games displayed formatted example 2025-11-14
   // var requestURL = 'https://cors-anywhere.herokuapp.com/https://api-web.nhle.com/v1/schedule/'+ formatted; 
-  console.log(requestURL);
+  // console.log(requestURL);
   fetch(requestURL, {
     "method": "GET", "headers": {}
   })
     .then(function (response) {return response.json()})
-    .then(function (data2) { console.log('I am in schedule then', data2);
+    .then(function (data2) { // console.log('I am in schedule then', data2);
       var numberOfGames = data2.gameWeek[0].games.length;
       for (var i = 0; i < numberOfGames; i++) { var gameName = document.createElement('button');
         gameName.setAttribute('id', 'game' + i); var idx = gameName.getAttribute('id');
@@ -167,11 +167,11 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else if ((goalType5[0][0].length+goalType5[0][1].length+goalType5[0][2].length<goalType5[1][0].length+goalType5[1][1].length+goalType5[1][2].length)&&(whoScored='awayGoal')) {goalType4='HomePK_AwayPP'}
                     // else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<goalType5[1][1].length+goalType5[1][2].length)&&(whoScored='homeGoal')) {goalType4='HomeSH'}
                     else if ((goalType5[0][0].length+goalType5[0][1].length+goalType5[0][2].length<goalType5[1][0].length+goalType5[1][1].length+goalType5[1][2].length)&&(whoScored='homeGoal')) {goalType4='HomeSH'}
-                    else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===0)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][1].length+goalType5[1][2].length===6)&&(whoScored='awayGoal')) {goalType4='awaySixOnFive'}
+                    else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===0)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][1].length+goalType5[1][2].length===6)&&(whoScored='awayGoal')) {goalType4='homeEN_notTrue'}
                     else if ((goalType5[1][0].length===1)&&(goalType5[0][0].length===0)&&(goalType5[1][1].length+goalType5[1][2].length===5)&&(goalType5[0][1].length+goalType5[0][2].length===6)&&(whoScored='homeGoal')) {goalType4='homeSixOnFive'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===0)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][1].length+goalType5[1][2].length===6)&&(whoScored='homeGoal')) {goalType4='homeEN'}
                     else if ((goalType5[1][0].length===1)&&(goalType5[0][0].length===0)&&(goalType5[1][1].length+goalType5[1][2].length===5)&&(goalType5[0][1].length+goalType5[0][2].length===6)&&(whoScored='awayGoal')) {goalType4='awayEN'}
-                    // else if ((goalType5[0][0].length===0)&&(goalType5[1][0].length===1)) {goalType4='homeEN'} // need to add home or road 6x5 and EN
+                    
                     else if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[1][2].length<5)&&(goalType5[1][1].length+goalType5[1][2].length===goalType5[0][1].length+goalType5[0][2].length)&&(gameType='regular')&&(data1.data[i].period<4)) {goalType4='SpecialTeams'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[1][2].length<5)&&(goalType5[1][1].length+goalType5[1][2].length===goalType5[0][1].length+goalType5[0][2].length)&&(gameType='playoff')) {goalType4='SpecialTeams'}
                     else {goalType4='something else'} // end if loop
