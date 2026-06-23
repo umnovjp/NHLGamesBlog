@@ -1097,5 +1097,12 @@
         "tip": "unbelievable result. SJS were losing 1:5 in 3rd to win 6:5 in OT. They scored 3 6x5 goals late in 3rd. Celebrini goal is counted twice above at 17:32 and 17:33. It is one goal. But homeEN_notTrue should be away 6x5. ",
         "topic": "UX",
         "tip_id": "c625"
+    },
+    {
+        "title": "You are watching stats for PHI at CAR game # 2025020510 on 2025-12-14. Period: 1 Time: 05:44 fiveOnFive  Scorer: Carrier Assists: Sean Walker, Jordan Staal 80-36,9-22,11,46 32-26,19-11,48,28Period: 1 Time: 15:53 HomePP_AwayPK  Scorer: Hall Assists: Alexander Nikishin, Jackson Blake 80-6,8-22,27 32-21-71,27,22,53Period: 1 Time: 19:07 homeEN_notTrue  Scorer: Drysdale Assists: Trevor Zegras, Matvei Michkov -36,9-11,74,46,39 32-74,26-77,48,28Period: 3 Time: 18:08 homeEN_notTrue  Scorer: Zegras Assists: Travis Konecny, Christian Dvorak -6,8-22,11,27,46 32-26,19-20,37,24Period: 5 Time: 00:00 shootout  Scorer: Svechnikov Assists:  -- --",
+        "username": "no code update as I collected more data.",
+        "tip": "another wrong result. OK we have three games. All goals with EN on either side are counted as homeEN_notTrue. Though different teams scored. This time it was Philly who scored two goals 6x5. ",
+        "topic": "UX",
+        "tip_id": "fa0a"
     }
 ]
