@@ -1111,5 +1111,47 @@
         "tip": "it is not 6x5 goal but away EN goal. that's another wrong assignment",
         "topic": "UX",
         "tip_id": "348c"
+    },
+    {
+        "title": "You are watching stats for FLA at TBL game # 2025020514 on 2025-12-15. Period: 1 Time: 02:16 HomePP_AwayPK  Scorer: Reinhart Assists: Aaron Ekblad 72-3,26-13,15 31-43-86,59,22,21Period: 1 Time: 03:48 something else  Scorer: Lundell Assists: Uvis Balinskis, Seth Jones 72-2,77,26-13,15 31-43-86,37,20,38Period: 2 Time: 11:48 fiveOnFive  Scorer: Marchand Assists: Carter Verhaeghe, Aaron Ekblad 72-2,5-63,23,9 31-51,24-46,20,42Period: 2 Time: 18:08 HomePK_AwayPP  Scorer: Reinhart Assists: Mackie Samoskevich 72-5-63,13,15,11 31-51,24-71,38Period: 2 Time: 19:27 fiveOnFive  Scorer: Crozier Assists: Oliver Bjorkstrand, Brayden Point 72-2,26-70,53,27 31-24,90-59,22,21Period: 3 Time: 02:11 fiveOnFive  Scorer: Moser Assists: Brayden Point, Darren Raddysh 72-5,42-18,70,53 31-43,90-59,22,21Period: 3 Time: 06:37 fiveOnFive  Scorer: Verhaeghe Assists: Uvis Balinskis 72-2,26-63,23,9 31-51,24-37,28,29",
+        "username": "added example with wrong data",
+        "tip": "added data that something else should be modified",
+        "topic": "UX",
+        "tip_id": "0db8"
+    },
+    {
+        "title": "You are watching stats for ANA at NYR game # 2025020515 on 2025-12-15. Period: 2 Time: 07:18 HomePP_AwayPK  Scorer: LaCombe Assists: Ryan Poehling, Jacob Trouba 1-65,2-64,25 31--16,8,10,13,50Period: 2 Time: 16:18 fiveOnFive  Scorer: Robertson Assists: Artemi Panarin, Alexis LafreniÃ¨re 1-65,2-64,77,19 31-29,4-16,10,13Period: 3 Time: 05:51 HomePK_AwayPP  Scorer: Gauthier Assists: Beckett Sennecke, Olen Zellweger 1-51-16,23,61,45 31-24,4-16,8Period: 3 Time: 19:38 homeSixOnFive  Scorer: Gauthier Assists: Leo Carlsson, Alex Killorn 1-65,2-17,61,91 -44-16,8,10,13,50Period: 3 Time: 19:57 fiveOnFive  Scorer: Mintyukov Assists: Ryan Poehling, Ross Johnston 1-7,98-16,44,25 31-18,29-39,14,73",
+        "username": "added more data",
+        "tip": "goal #4 is actually away EN. goal #1 is away SH",
+        "topic": "UX",
+        "tip_id": "bb70"
+    },
+    {
+        "title": "You are watching stats for OTT at WPG game # 2025020516 on 2025-12-15. Period: 2 Time: 10:47 fiveOnFive  Scorer: Cousins Assists: Kurtis MacDermid, Tim StÃ¼tzle 35-10,33-21,23,18 37-5,4-55,81,13Period: 2 Time: 15:37 fiveOnFive  Scorer: Pionk Assists: Kyle Connor, Cole Perfetti 35-10,43-20,19,71 37-2,4-55,81,91Period: 2 Time: 18:35 fiveOnFive  Scorer: Stanley Assists: Morgan Barron, Gabriel Vilardi 35-85,2-57,7,24 37-2,64-55,13,36Period: 3 Time: 18:06 homeEN_notTrue  Scorer: Sanderson Assists: Tim StÃ¼tzle -85-28,19,7,24,18 37-2,44-55,81,13Period: 4 Time: 02:11 overtime  Scorer: Tkachuk Assists: Tim StÃ¼tzle, Jake Sanderson 35-85-7,18 37-54-7,91",
+        "username": "added more data",
+        "tip": "goal #4 is away 6x5",
+        "topic": "UX",
+        "tip_id": "f8cc"
+    },
+    {
+        "title": "You are watching stats for NSH at STL game # 2025020517 on 2025-12-15. Period: 1 Time: 00:27 fiveOnFive  Scorer: Forsberg Assists: Ryan O'Reilly, Brady Skjei 74-76,83-90,9,77 30-55,6-89,18,63Period: 1 Time: 10:06 fiveOnFive  Scorer: Dvorsky Assists: Hugh McGing, Justin Faulk 74-41,37-91,47,71 30-17,23-22,56,54Period: 2 Time: 01:23 fiveOnFive  Scorer: Bunting Assists: Nick Perbix, Erik Haula 74-59,48-56,81,58 30-55,75-10,9,63Period: 2 Time: 05:31 HomePK_AwayPP  Scorer: Forsberg Assists: Steven Stamkos, Roman Josi 74-59-91,90,81,9 30-72,75-89,18Period: 2 Time: 18:45 fiveOnFive  Scorer: Schaefer Assists: Roman Josi 74-59,37-47,17,49 30-55,6-10,9,63Period: 3 Time: 08:29 HomePP_AwayPK  Scorer: Dvorsky Assists: Jake Neighbours, Pavel Buchnevich 74-41,48-47,17 30-17-89,18,63,54Period: 3 Time: 16:09 homeSixOnFive  Scorer: Forsberg Assists: Ryan O'Reilly 74-76,83-90,9,77 -72,17-10,89,18,63",
+        "username": "added more data.",
+        "tip": "goal #7 should be away EN",
+        "topic": "UX",
+        "tip_id": "b66e"
+    },
+    {
+        "title": "You are watching stats for LAK at DAL game # 2025020518 on 2025-12-15. Period: 2 Time: 11:03 HomePK_AwayPP  Scorer: Kuzmenko Assists:  31--10,11,22,9,96 1-23,4-18Period: 2 Time: 15:42 fiveOnFive  Scorer: Duchene Assists: Mikko Rantanen, Wyatt Johnston 31-8,44-22,12,15 1-28,5-95,96,53Period: 3 Time: 06:12 fiveOnFive  Scorer: BÃ¤ck Assists: Radek Faksa, Colin Blackwell 31-2,5-10,39,79 1-5,46-15,12,10Period: 3 Time: 16:11 fiveOnFive  Scorer: Rantanen Assists: Thomas Harley 31-6,92-11,22,9 1-23,4-95,96,53Period: 3 Time: 19:28 homeEN_notTrue  Scorer: Johnston Assists: Matt Duchene -8-10,11,22,9,96 1-46,55-14,95,53",
+        "username": "added more data",
+        "tip": "goal #5 is actually home EN",
+        "topic": "UX",
+        "tip_id": "ba5d"
+    },
+    {
+        "title": "You are watching stats for PHI at MTL game # 2025020521 on 2025-12-16. Period: 1 Time: 19:00 fiveOnFive  Scorer: Texier Assists: Jake Evans, Josh Anderson 80-36,9-22,11,46 32-45,48-17,71,85Period: 1 Time: 19:39 fiveOnFive  Scorer: Grundstrom Assists: Owen Tippett, Sean Couturier 80-55,6-14,91,74 32-45,48-17,14,85Period: 2 Time: 06:26 fiveOnFive  Scorer: Zegras Assists: Travis Konecny, Emil Andrae 80-36,9-22,11,46 32-45,48-91,20,93Period: 2 Time: 19:10 fiveOnFive  Scorer: Brink Assists: Matvei Michkov 80-6,8-27,10,39 32-53,48-91,20,93Period: 3 Time: 18:25 homeSixOnFive  Scorer: Konecny Assists: Christian Dvorak, Sean Couturier 80-24,55-14,22,11 -45,42-11,85,76,91",
+        "username": "added data",
+        "tip": "another wrong data. last goal is away EN goal",
+        "topic": "UX",
+        "tip_id": "5538"
     }
 ]
