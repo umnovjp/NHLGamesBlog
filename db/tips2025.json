@@ -1174,5 +1174,12 @@
         "tip": "recording this game because it has a SH goal scored by Abols but it is recorded as home PP goal",
         "topic": "UX",
         "tip_id": "ef2f"
+    },
+    {
+        "title": "You are watching stats for WPG at COL game # 2025020546 on 2025-12-19. Period: 1 Time: 09:45 fiveOnFive  Scorer: Burns Assists: Josh Manson, Joel Kiviranta 37-24,64-62,7,91 41-84,42-17,18,94Period: 1 Time: 15:05 fiveOnFive  Scorer: Necas Assists: Nathan MacKinnon, Artturi Lehkonen 37-24,64-62,7,91 41-84,42-62,29,88Period: 2 Time: 19:22 HomePP_AwayPK  Scorer: Barron Assists: Alex Iafallo 37-54,4-9,36 41-8-11,92,29,13Period: 3 Time: 01:58 fiveOnFive  Scorer: Kelly Assists: Josh Manson, Valeri Nichushkin 37-2,44-55,81,13 41-42,49-13,17,18Period: 3 Time: 03:38 HomePK_AwayPP  Scorer: Scheifele Assists: Gustav Nyquist 37-44-14,55,81,13 41-84,42-17,18",
+        "username": "added more data",
+        "tip": "again incorrect because wpg scored ppg and sh goals but goal #3 is counted as home ppg",
+        "topic": "UX",
+        "tip_id": "8149"
     }
 ]
