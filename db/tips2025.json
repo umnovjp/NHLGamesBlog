@@ -1181,5 +1181,12 @@
         "tip": "again incorrect because wpg scored ppg and sh goals but goal #3 is counted as home ppg",
         "topic": "UX",
         "tip_id": "8149"
+    },
+    {
+        "title": "You are watching stats for COL at MIN game # 2025020563 on 2025-12-21. Period: 1 Time: 18:28 fiveOnFive  Scorer: Necas Assists: Cale Makar, Gabriel Landeskog 39-7,8-92,29,88 30-43,7-36,97,22Period: 2 Time: 13:37 HomePK_AwayPP  Scorer: MacKinnon Assists: Brock Nelson, Cale Makar 39-8-11,92,29,88 30-25,7-13,78Period: 2 Time: 18:33 HomePK_AwayPP  Scorer: Makar Assists: Brock Nelson, Gabriel Landeskog 39-8-11,92,29,88 30-46,5-14,12Period: 3 Time: 05:15 fiveOnFive  Scorer: Hartman Assists: Jonas Brodin, Kirill Kaprizov 39-49,70-20,17,54 30-25,43-36,38,97Period: 3 Time: 15:52 fiveOnFive  Scorer: Nelson Assists: Samuel Girard, Valeri Nichushkin 39-49,70-11,62,13 30-46,25-91,13,22Period: 3 Time: 17:35 homeSixOnFive  Scorer: MacKinnon Assists: Devon Toews, Valeri Nichushkin 39-7,8-92,29,13 -43-36,91,14,97,12",
+        "username": "will probably start new script",
+        "tip": "again last goal is empty netter. but recorded as 6x5",
+        "topic": "UX",
+        "tip_id": "c7ef"
     }
 ]
