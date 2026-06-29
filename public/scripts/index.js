@@ -97,7 +97,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             document.getElementById('gameInfo').appendChild(lineups);
             fullLineup = [[],[]] // will use it later
             for (i=0;i<data.rosterSpots.length;i++) { 
-              const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: [0,0], HomePP_awayPK: [0.0], homePK_awayPP: [0.0], specialTeams: [0,0], homeEN: [0,0], homeSixOnFive: [0,0], 
+              const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: [0,0], PP: [0.0], PK: [0.0], specialTeams: [0,0], fiveOnSix: [0,0], SixOnFive: [0,0], 
                 something: [0,0], overtime: [0,0], shootout: [0]}
             if (data.rosterSpots[i].teamId===data.awayTeam.id) { fullLineup[1].push(obj) }
             else {fullLineup[0].push(obj) }
@@ -155,10 +155,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     goalTime2[0].sort((a,b) => a-b);
                                         
                     var goalType4;
-                    if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[0][2].length===5)&&(whoScored==='homeGoal'))
-                      {goalType4='fiveOnFiveHome'}
-                    else if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[0][2].length===5)&&(whoScored==='awayGoal'))
-                      {goalType4='fiveOnFiveAway'}
+                    if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[1][2].length===5)&&(whoScored==='homeGoal')) {goalType4='fiveOnFiveHome'}
+                    else if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[1][2].length===5)&&(whoScored==='awayGoal')) {goalType4='fiveOnFiveAway'}
                     else if ((data1.data[i].period===5)&&(gameType='regular')) {goalType4='shootout'} // need to add a loop to add different players to shutout not just one scorer
                     else if ((data1.data[i].period===4)&&(gameType='regular')&&(goalType5[0][1].length+goalType5[0][2].length===goalType5[1][1].length+goalType5[1][2].length)) {goalType4='overtime'}
                     else if ((goalType5[0][0].length+goalType5[0][1].length+goalType5[0][2].length>goalType5[1][0].length+goalType5[1][1].length+goalType5[1][2].length)&&(whoScored==='homeGoal')) {goalType4='HomePP_AwayPK'}
@@ -173,7 +171,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[1][2].length<5)&&(goalType5[1][1].length+goalType5[1][2].length===goalType5[0][1].length+goalType5[0][2].length)&&(gameType='playoff')) {goalType4='SpecialTeams'}
                     else {goalType4='something else'} // end if loop
                     goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4);
-                    console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2, 'goalType6', goalType6);
+                    console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2, 'goalType6', goalType6, 'goalType5Number', goalType5[0][1].length+goalType5[0][2].length, '+', goalType5[1][1].length+goalType5[1][2].length);
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) {if (onIceArray[j]==='newGoal') {goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1} // why do I need goalTime if I have goalTime2? 
                   } // end short j loop
