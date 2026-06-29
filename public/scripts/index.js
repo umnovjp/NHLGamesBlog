@@ -155,28 +155,20 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     goalTime2[0].sort((a,b) => a-b);
                                         
                     var goalType4;
-                    if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[0][2].length===5))
-                      {goalType4='fiveOnFive'}
-                      //  if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[0][2].length===5))
-                      // {goalType4='fiveOnFiveAway'}
+                    if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[0][2].length===5)&&(whoScored==='homeGoal'))
+                      {goalType4='fiveOnFiveHome'}
+                    else if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[0][2].length===5)&&(whoScored==='awayGoal'))
+                      {goalType4='fiveOnFiveAway'}
                     else if ((data1.data[i].period===5)&&(gameType='regular')) {goalType4='shootout'} // need to add a loop to add different players to shutout not just one scorer
                     else if ((data1.data[i].period===4)&&(gameType='regular')&&(goalType5[0][1].length+goalType5[0][2].length===goalType5[1][1].length+goalType5[1][2].length)) {goalType4='overtime'}
-                    // else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length>goalType5[1][1].length+goalType5[1][2].length)&&(whoScored='homeGoal')) {goalType4='HomePP_AwayPK'}
                     else if ((goalType5[0][0].length+goalType5[0][1].length+goalType5[0][2].length>goalType5[1][0].length+goalType5[1][1].length+goalType5[1][2].length)&&(whoScored==='homeGoal')) {goalType4='HomePP_AwayPK'}
-                    // else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length>goalType5[1][1].length+goalType5[1][2].length)&&(whoScored='awayGoal')) {goalType4='AwaySH'}
                     else if ((goalType5[0][0].length+goalType5[0][1].length+goalType5[0][2].length>goalType5[1][0].length+goalType5[1][1].length+goalType5[1][2].length)&&(whoScored==='awayGoal')) {goalType4='AwaySH'}
-                    // else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<goalType5[1][1].length+goalType5[1][2].length)&&(whoScored='awayGoal')) {goalType4='HomePK_AwayPP'}
                     else if ((goalType5[0][0].length+goalType5[0][1].length+goalType5[0][2].length<goalType5[1][0].length+goalType5[1][1].length+goalType5[1][2].length)&&(whoScored==='awayGoal')) {goalType4='HomePK_AwayPP'}
-                    // else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<goalType5[1][1].length+goalType5[1][2].length)&&(whoScored='homeGoal')) {goalType4='HomeSH'}
                     else if ((goalType5[0][0].length+goalType5[0][1].length+goalType5[0][2].length<goalType5[1][0].length+goalType5[1][1].length+goalType5[1][2].length)&&(whoScored==='homeGoal')) {goalType4='HomeSH'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===0)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][1].length+goalType5[1][2].length===6)&&(whoScored==='homeGoal')) {goalType4='homeEN'}
                     else if ((goalType5[1][0].length===1)&&(goalType5[0][0].length===0)&&(goalType5[1][1].length+goalType5[1][2].length===5)&&(goalType5[0][1].length+goalType5[0][2].length===6)&&(whoScored==='awayGoal')) {goalType4='awayEN'}
-
                     else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===0)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][1].length+goalType5[1][2].length===6)&&(whoScored==='awayGoal')) {goalType4='awaySixOnFive'}
-                    else if ((goalType5[1][0].length===1)&&(goalType5[0][0].length===0)&&(goalType5[1][1].length+goalType5[1][2].length===5)&&(goalType5[0][1].length+goalType5[0][2].length===6)&&(whoScored==='homeGoal')) {goalType4='homeSixOnFive'}
-                    // else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===0)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][1].length+goalType5[1][2].length===6)&&(whoScored='homeGoal')) {goalType4='homeEN'}
-                    // else if ((goalType5[1][0].length===1)&&(goalType5[0][0].length===0)&&(goalType5[1][1].length+goalType5[1][2].length===5)&&(goalType5[0][1].length+goalType5[0][2].length===6)&&(whoScored='awayGoal')) {goalType4='awayEN'}
-                    
+                    else if ((goalType5[1][0].length===1)&&(goalType5[0][0].length===0)&&(goalType5[1][1].length+goalType5[1][2].length===5)&&(goalType5[0][1].length+goalType5[0][2].length===6)&&(whoScored==='homeGoal')) {goalType4='homeSixOnFive'}                    
                     else if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[1][2].length<5)&&(goalType5[1][1].length+goalType5[1][2].length===goalType5[0][1].length+goalType5[0][2].length)&&(gameType='regular')&&(data1.data[i].period<4)) {goalType4='SpecialTeams'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[1][2].length<5)&&(goalType5[1][1].length+goalType5[1][2].length===goalType5[0][1].length+goalType5[0][2].length)&&(gameType='playoff')) {goalType4='SpecialTeams'}
                     else {goalType4='something else'} // end if loop
