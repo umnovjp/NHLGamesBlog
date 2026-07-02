@@ -115,7 +115,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                 { var whoScored ='whichTeam';
                   if (data1.data[i].teamAbbrev===data.awayTeam.abbrev) {whoScored='awayGoal'}
                   else if (data1.data[i].teamAbbrev===data.homeTeam.abbrev) {whoScored='homeGoal'}
-                    console.log(data1.data[i].teamAbbrev, data.awayTeam.abbrev, data.homeTeam.abbrev, whoScored);
+                  //   console.log(data1.data[i].teamAbbrev, data.awayTeam.abbrev, data.homeTeam.abbrev, whoScored);
                   periodNumber = data1.data[i].period; goalsNumber.push(i); goalTime = data1.data[i].startTime;
                   goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
                   goalTimeSecondsAbsolute=goalTimeSeconds+(periodNumber-1)*1200; onIceArray.push('newGoal', goalTimeSecondsAbsolute);
@@ -136,7 +136,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.homeTeam.id) {goalType[0].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}
                   else if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.awayTeam.id) {goalType[1].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}
                   }
-                  console.log(goalType)
+                  // console.log(goalType)
                   goalType2=[[],[]];
                   for (j=0;j<data.rosterSpots.length;j++) {for (k=0;k<2;k++) // k is home or away team
                     { for (l=1;l<goalType[k].length+1;l++) {if ((goalType[k][0]===data.homeTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)&&(data.rosterSpots[j].teamId===data.homeTeam.id)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
@@ -171,7 +171,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[1][2].length<5)&&(goalType5[1][1].length+goalType5[1][2].length===goalType5[0][1].length+goalType5[0][2].length)&&(gameType='playoff')) {goalType4='SpecialTeams'}
                     else {goalType4='something else'} // end if loop
                     goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4);
-                    console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2, 'goalType6', goalType6, 'goalType5Number', goalType5[0][1].length+goalType5[0][2].length, '+', goalType5[1][1].length+goalType5[1][2].length);
+                    console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2, 'goalType6', goalType6);
+                    for (j=0;j<2;j++) {for (k=0;k<fullLineup[j].length;k++) {if ((goalType5[j][1].includes(fullLineup[j][k].number))&&(goalType4='fiveOnFiveHome')) {fullLineup[j][k].fiveOnFive[0]=fullLineup[j][k].fiveOnFive[0]+1}}}
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) {if (onIceArray[j]==='newGoal') {goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1} // why do I need goalTime if I have goalTime2? 
                   } // end short j loop
@@ -180,7 +181,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
-                    console.log(goalType7, goalTime, goalTime2);
+                    console.log(goalType7, goalTime, goalTime2, 'fullLineup', fullLineup);
                     for (i=0;i<2;i++) {for (j=0;j<goalTime2[0].length;j++) {if (goalTime[i][j]===goalTime2[i][j]) {}
                   else {console.log('not equal', goalTime[i][j], goalTime2[i][j])}}}
                   for (i=0;i<goalsNumber.length;i++) { var newGoal3 = document.createElement('span');
@@ -240,7 +241,7 @@ const handleFormSubmit = (e) => {
 
   // get the value of the username and save it to a variable
   const tipUsername = document.getElementById('tipUsername').value.trim();
-  console.log(tipTitle)
+  // console.log(tipTitle)
 
   // Create an object with the tip and username
   const newTip = {
