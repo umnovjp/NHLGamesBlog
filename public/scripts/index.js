@@ -172,12 +172,23 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else {goalType4='something else'} // end if loop
                     goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4);
                     console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2, 'goalType6', goalType6);
-                    for (j=0;j<2;j++) {for (k=0;k<fullLineup[j].length;k++) {
-                      if (((goalType5[j][1].includes(fullLineup[j][k].number))||(goalType5[j][2].includes(fullLineup[j][k].number)))&&(goalType4==='fiveOnFiveHome'))
-                        {fullLineup[0][k].fiveOnFive[0]=fullLineup[0][k].fiveOnFive[0]+1; fullLineup[1][k].fiveOnFive[1]=fullLineup[1][k].fiveOnFive[1]+1}
+                    // for (j=0;j<2;j++) {for (k=0;k<fullLineup[j].length;k++) {
+                    //   if (((goalType5[j][1].includes(fullLineup[j][k].number))||(goalType5[j][2].includes(fullLineup[j][k].number)))&&(goalType4==='fiveOnFiveHome'))
+                    //     {fullLineup[0][k].fiveOnFive[0]=fullLineup[0][k].fiveOnFive[0]+1; fullLineup[1][k].fiveOnFive[1]=fullLineup[1][k].fiveOnFive[1]+1}
                     // else if (((goalType5[j][1].includes(fullLineup[j][k].number))||(goalType5[j][2].includes(fullLineup[j][k].number)))&&(goalType4==='fiveOnFiveAway'))
                     //     {fullLineup[j][k].fiveOnFive[1]=fullLineup[j][k].fiveOnFive[1]+1; fullLineup[j][k].fiveOnFive[0]=fullLineup[j][k].fiveOnFive[0]+1}
-                    }}
+                    // }}
+
+                    if (goalType4==='fiveOnFiveHome') {for (j=0;j<fullLineup[0].length;j++) {for (k=1;k<goalType[0].length;k++) {
+                      if (fullLineup[0][j]===goalType[0][k]) {fullLineup[0][j].fiveOnFive[0]=fullLineup[0][j].fiveOnFive[0]+1}
+                      if (fullLineup[1][j]===goalType[1][k]) {fullLineup[1][j].fiveOnFive[1]=fullLineup[1][j].fiveOnFive[1]+1}
+                    }}}
+                    else if (goalType4==='fiveOnFiveAway') {
+                      for (j=0;j<2;j++) {for (k=0;k<fullLineup[j].length;k++) {for (l=1;l<goalType[j].length;l++) {
+                        if (fullLineup[j][k]===goalType[j][l]) {'to be added'}
+                      }}}
+                    }
+                      {for (j=0;j<fullLineup[0].length;j++) {for (k=1;k<goalType[0].length;k++) {fullLineup[0][j].fiveOnFive[0]=fullLineup[0][j].fiveOnFive[0]+1; fullLineup[1][j].fiveOnFive[1]=fullLineup[1][j].fiveOnFive[1]+1}}}
 
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) {if (onIceArray[j]==='newGoal') {goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1} // why do I need goalTime if I have goalTime2? 
