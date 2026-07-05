@@ -183,11 +183,12 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       if (fullLineup[0][j]===goalType[0][k]) {fullLineup[0][j].fiveOnFive[0]=fullLineup[0][j].fiveOnFive[0]+1}
                       if (fullLineup[1][j]===goalType[1][k]) {fullLineup[1][j].fiveOnFive[1]=fullLineup[1][j].fiveOnFive[1]+1}
                     }}}
-                    else if (goalType4==='fiveOnFiveAway') {
-                      for (j=0;j<2;j++) {for (k=0;k<fullLineup[j].length;k++) {for (l=1;l<goalType[j].length;l++) {
-                        if (fullLineup[j][k]===goalType[j][l]) {'to be added'}
-                      }}}
-                    }
+                    // else if (goalType4==='fiveOnFiveAway') {
+                    //   for (j=0;j<2;j++) {for (k=0;k<fullLineup[j].length;k++) {for (l=1;l<goalType[j].length;l++) {
+                    //     if (fullLineup[0][j]===goalType[0][k]) {fullLineup[0][j].fiveOnFive[1]=fullLineup[0][j].fiveOnFive[1]+1}
+                    //     if (fullLineup[1][j]===goalType[1][k]) {fullLineup[1][j].fiveOnFive[0]=fullLineup[1][j].fiveOnFive[0]+1}
+                    //   }}}
+                    // }
                       {for (j=0;j<fullLineup[0].length;j++) {for (k=1;k<goalType[0].length;k++) {fullLineup[0][j].fiveOnFive[0]=fullLineup[0][j].fiveOnFive[0]+1; fullLineup[1][j].fiveOnFive[1]=fullLineup[1][j].fiveOnFive[1]+1}}}
 
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
