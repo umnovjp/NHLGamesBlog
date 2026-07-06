@@ -179,10 +179,15 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     //     {fullLineup[j][k].fiveOnFive[1]=fullLineup[j][k].fiveOnFive[1]+1; fullLineup[j][k].fiveOnFive[0]=fullLineup[j][k].fiveOnFive[0]+1}
                     // }}
 
-                    if (goalType4==='fiveOnFiveHome') {for (j=0;j<fullLineup[0].length;j++) {for (k=1;k<goalType[0].length;k++) {
-                      if (fullLineup[0][j]===goalType[0][k]) {fullLineup[0][j].fiveOnFive[0]=fullLineup[0][j].fiveOnFive[0]+1}
-                      if (fullLineup[1][j]===goalType[1][k]) {fullLineup[1][j].fiveOnFive[1]=fullLineup[1][j].fiveOnFive[1]+1}
-                    }}}
+                    // if (goalType4==='fiveOnFiveHome') {for (j=0;j<fullLineup[0].length;j++) {for (k=1;k<goalType[0].length;k++) {
+                    //   if (fullLineup[0][j]===goalType[0][k]) {fullLineup[0][j].fiveOnFive[0]=fullLineup[0][j].fiveOnFive[0]+1}
+                    //   if (fullLineup[1][j]===goalType[1][k]) {fullLineup[1][j].fiveOnFive[1]=fullLineup[1][j].fiveOnFive[1]+1}
+                    // }}}
+
+                    if (goalType4==='fiveOnFiveHome') {for (j=0;j<fullLineup[0].length;j++) { if ((goalType[0].includes(fullLineup[0][j]))&&(goalType[0].lastIndexOf(fullLineup[0][j])>0))
+                      {fullLineup[0][j].fiveOnFive[0]=fullLineup[0][j].fiveOnFive[0]+1}                     
+                  }
+                  }
                     // else if (goalType4==='fiveOnFiveAway') {
                     //   for (j=0;j<2;j++) {for (k=0;k<fullLineup[j].length;k++) {for (l=1;l<goalType[j].length;l++) {
                     //     if (fullLineup[0][j]===goalType[0][k]) {fullLineup[0][j].fiveOnFive[1]=fullLineup[0][j].fiveOnFive[1]+1}
