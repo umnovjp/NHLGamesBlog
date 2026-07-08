@@ -185,17 +185,29 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     //   if (fullLineup[1][j]===goalType[1][k]) {fullLineup[1][j].fiveOnFive[1]=fullLineup[1][j].fiveOnFive[1]+1}
                     // }}}
 
-                    if (goalType4==='fiveOnFiveHome') {for (j=0;j<fullLineup[0].length;j++) { if ((goalType[0].includes(fullLineup[0][j]))&&(goalType[0].lastIndexOf(fullLineup[0][j])>0))
-                      {fullLineup[0][j].fiveOnFive[0]=fullLineup[0][j].fiveOnFive[0]+1}                     
+                    if (goalType4==='fiveOnFiveHome') {
+                      console.log('fiveOnFiveHome', goalType[0], fullLineup[0].length)
+                      for (j=0;j<fullLineup[0].length;j++) { if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0)) // &&(goalType[0].lastIndexOf(fullLineup[0][j])>0)
+                      { fullLineup[0][j].fiveOnFive[0]=fullLineup[0][j].fiveOnFive[0]+1 }}
+                      for (j=0;j<fullLineup[1].length;j++) { if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) // &&(goalType[0].lastIndexOf(fullLineup[0][j])>0)
+                      { fullLineup[1][j].fiveOnFive[1]=fullLineup[1][j].fiveOnFive[1]+1 }}
                   }
-                  }
+
+                  if (goalType4==='fiveOnFiveAway') {
+                      // console.log('fiveOnFiveHome', goalType[0], fullLineup[0].length)
+                      for (j=0;j<fullLineup[0].length;j++) { if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0)) // &&(goalType[0].lastIndexOf(fullLineup[0][j])>0)
+                      { fullLineup[0][j].fiveOnFive[1]=fullLineup[0][j].fiveOnFive[1]+1 }}
+                      for (j=0;j<fullLineup[1].length;j++) { if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) // &&(goalType[0].lastIndexOf(fullLineup[0][j])>0)
+                      { fullLineup[1][j].fiveOnFive[0]=fullLineup[1][j].fiveOnFive[0]+1 }}
+                  
+     
                     // else if (goalType4==='fiveOnFiveAway') {
                     //   for (j=0;j<2;j++) {for (k=0;k<fullLineup[j].length;k++) {for (l=1;l<goalType[j].length;l++) {
                     //     if (fullLineup[0][j]===goalType[0][k]) {fullLineup[0][j].fiveOnFive[1]=fullLineup[0][j].fiveOnFive[1]+1}
                     //     if (fullLineup[1][j]===goalType[1][k]) {fullLineup[1][j].fiveOnFive[0]=fullLineup[1][j].fiveOnFive[0]+1}
                     //   }}}
                     // }
-                      {for (j=0;j<fullLineup[0].length;j++) {for (k=1;k<goalType[0].length;k++) {fullLineup[0][j].fiveOnFive[0]=fullLineup[0][j].fiveOnFive[0]+1; fullLineup[1][j].fiveOnFive[1]=fullLineup[1][j].fiveOnFive[1]+1}}}
+                    //  {for (j=0;j<fullLineup[0].length;j++) {for (k=1;k<goalType[0].length;k++) {fullLineup[0][j].fiveOnFive[0]=fullLineup[0][j].fiveOnFive[0]+1; fullLineup[1][j].fiveOnFive[1]=fullLineup[1][j].fiveOnFive[1]+1}}}
 
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) {if (onIceArray[j]==='newGoal') {goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1} // why do I need goalTime if I have goalTime2? 
