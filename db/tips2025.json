@@ -1167,5 +1167,12 @@
         "tip": "this time, COL won 5:2. 5x5 score was 4:1. #8, #29 were 3:0, #62 3:1",
         "topic": "UX",
         "tip_id": "fe26"
+    },
+    {
+        "title": "You are watching stats for COL at DET game # 2025020860 on 2026-01-31. Period: 1 Time: 06:44 fiveOnFiveAway  Scorer: Burns Assists: Nathan MacKinnon, Valeri Nichushkin 39-84,70-62,29,13 36-53,20-71,23,92Period: 1 Time: 10:03 fiveOnFiveAway  Scorer: MacKinnon Assists: Artturi Lehkonen 39-8,70-62,29,13 36-53,20-37,22,58Period: 2 Time: 01:24 fiveOnFiveAway  Scorer: Colton Assists: Brock Nelson, Josh Manson 39-84,42-11,95,20 36-8,25-88,18,93Period: 2 Time: 13:33 fiveOnFiveAway  Scorer: MacKinnon Assists: Artturi Lehkonen 39-8,70-62,29,13 36-8,25-71,23,92Period: 3 Time: 07:35 fiveOnFiveAway  Scorer: Kelly Assists: Joel Kiviranta, Jack Drury 39-8,70-17,18,94 39-56,44-37,22,58",
+        "username": "I thought I completed 5x5 cycles but script does not work correctly",
+        "tip": "seems like 5:0 COL. All goals scored 5x5. But here is wrong result. COL #11 was on ice 1:0 but script shows 0,2. Same was last game on 1/19/26 when #11 was 2:1 but script had 2,2. ",
+        "topic": "UX",
+        "tip_id": "1507"
     }
 ]
