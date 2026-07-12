@@ -1174,5 +1174,12 @@
         "tip": "seems like 5:0 COL. All goals scored 5x5. But here is wrong result. COL #11 was on ice 1:0 but script shows 0,2. Same was last game on 1/19/26 when #11 was 2:1 but script had 2,2. ",
         "topic": "UX",
         "tip_id": "1507"
+    },
+    {
+        "title": "You are watching stats for DET at COL game # 2025020883 on 2026-02-02. Period: 1 Time: 00:33 fiveOnFiveAway  Scorer: Kasper Assists: Lucas Raymond, Dylan Larkin 36-25,53-71,23,92 39-7,8-62,29,13Period: 3 Time: 19:29 awayEN  Scorer: Raymond Assists: Dylan Larkin 36-8,53-37,71,23 -8-11,62,29,13,54",
+        "username": "another great code update today. Next step is to add data not sure if that's possible on server",
+        "tip": "seems like DET COL played home and home over two days. Verified that SixOnFive is recorded correctly. #29, #62, #13, #8 were 0:2",
+        "topic": "UX",
+        "tip_id": "2307"
     }
 ]
