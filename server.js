@@ -82,8 +82,7 @@ app.post('/api/tips', (req, res) => {
       username,
       tip,
       topic,
-      tip_id: uuid(),
-      // gameId
+      tip_id: uuid()
     };
 
     readAndAppend(newTip, './db/tips2025.json');

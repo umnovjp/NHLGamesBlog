@@ -1181,5 +1181,12 @@
         "tip": "seems like DET COL played home and home over two days. Verified that SixOnFive is recorded correctly. #29, #62, #13, #8 were 0:2",
         "topic": "UX",
         "tip_id": "2307"
+    },
+    {
+        "title": "You are watching stats for SJS at COL game # 2025020897 on 2026-02-04. Period: 2 Time: 01:05 fiveOnFiveHome  Scorer: Lehkonen Assists: Valeri Nichushkin, Cale Makar 30-9,3-21,2,51 39-7,8-62,29,13Period: 2 Time: 15:47 fiveOnFiveHome  Scorer: Lehkonen Assists: Nathan MacKinnon, Valeri Nichushkin 30-9,3-73,72,77 39-84,42-62,29,13Period: 3 Time: 00:43 fiveOnFiveAway  Scorer: Liljegren Assists: Alexander Wennberg, John Klingberg 30-38,37-21,44,96 39-7,8-17,18,94Period: 3 Time: 03:34 fiveOnFiveAway  Scorer: Kurashev Assists:  30-9,37-21,96,51 39-49,70-17,18,94Period: 3 Time: 12:44 SpecialTeams  Scorer: Manson Assists: Valeri Nichushkin, Nathan MacKinnon 30-38,37-72,77 39-42,7-29,13Period: 3 Time: 18:43 homeEN  Scorer: Nelson Assists:  -3-21,44,72,2,71 39-7,8-11,29,13",
+        "username": "COL was in control all game. Code has an error. Fixed that",
+        "tip": "for some reason, fiveOnFiveHome goals are not counted as minuses for away team. Need to check code. #9 should be 1,2 but #73 should be 0,1, then #3 should be 0,2. But they are not counted, they are 1,0, 0,0, 0,0 respectively",
+        "topic": "UX",
+        "tip_id": "951e"
     }
 ]
