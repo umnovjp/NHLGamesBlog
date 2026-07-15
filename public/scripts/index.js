@@ -129,13 +129,11 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     } // end j loop
                     const goalType = [[],[]];
                     goalType[0].push(data.homeTeam.id); goalType[1].push(data.awayTeam.id);
-                    const lastIndexOfOnIceArray = onIceArray.lastIndexOf('newGoal'); // that is wrong when a goal is scored in shutout
+                    const lastIndexOfOnIceArray = onIceArray.lastIndexOf('newGoal'); // that is wrong when a goal is scored in shootout
                     
                     for (j=0;j<(onIceArray.length-2-lastIndexOfOnIceArray)/4;j++) {
                       if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.homeTeam.id) {goalType[0].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}
-                  else if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.awayTeam.id) {goalType[1].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}
-                  }
-                  // console.log(goalType)
+                  else if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.awayTeam.id) {goalType[1].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}}
                   goalType2=[[],[]];
                   for (j=0;j<data.rosterSpots.length;j++) {for (k=0;k<2;k++) // k is home or away team
                     { for (l=1;l<goalType[k].length+1;l++) {if ((goalType[k][0]===data.homeTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)&&(data.rosterSpots[j].teamId===data.homeTeam.id)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
@@ -173,7 +171,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     (gameType='playoff')) {goalType4='SpecialTeams'}
                     else {goalType4='something else'} // end if loop
                     goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4);
-                    console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2, 'goalType6', goalType6);
+                    console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2);
     
                     if (goalType4==='fiveOnFiveHome') {for (j=0;j<fullLineup[0].length;j++) {if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0))
                       { fullLineup[0][j].fiveOnFive[0]=fullLineup[0][j].fiveOnFive[0]+1 }}
@@ -184,21 +182,21 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) 
                       { fullLineup[1][j].fiveOnFive[0]=fullLineup[1][j].fiveOnFive[0]+1 }}}
                     else if (goalType4==='HomePK_AwayPP') {for (j=0;j<fullLineup[0].length;j++) {if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0)) 
-                      { fullLineup[0][j].PK[1]=fullLineup[0][j].PK[1]+1; console.log('added home') }}
+                      { fullLineup[0][j].PK[1]=fullLineup[0][j].PK[1]+1 }}
                       for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
-                      fullLineup[1][j].PP[0]=fullLineup[1][j].PP[0]+1; console.log('added away') }}}
+                      fullLineup[1][j].PP[0]=fullLineup[1][j].PP[0]+1 }}}
                     else if (goalType4==='HomePP_AwayPK') { for (j=0;j<fullLineup[0].length;j++) {if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0)) {
-                      fullLineup[0][j].PP[0]=fullLineup[0][j].PP[0]+1; console.log('added home') }}
+                      fullLineup[0][j].PP[0]=fullLineup[0][j].PP[0]+1 }}
                       for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
-                      fullLineup[1][j].PK[1]=fullLineup[1][j].PK[1]+1; console.log('added away') }}}
+                      fullLineup[1][j].PK[1]=fullLineup[1][j].PK[1]+1 }}}
                     else if (goalType4==='HomeSH') { for (j=0;j<fullLineup[0].length;j++) {if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0)) {
-                      fullLineup[0][j].PK[0]=fullLineup[0][j].PK[0]+1; console.log('added home') }}
+                      fullLineup[0][j].PK[0]=fullLineup[0][j].PK[0]+1 }}
                       for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
-                      fullLineup[1][j].PP[1]=fullLineup[1][j].PP[1]+1; console.log('added away') }}}
+                      fullLineup[1][j].PP[1]=fullLineup[1][j].PP[1]+1 }}}
                     else if (goalType4==='AwaySH') { for (j=0;j<fullLineup[0].length;j++) {if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0)) {
-                      fullLineup[0][j].PP[1]=fullLineup[0][j].PP[1]+1; console.log('added home') }}
+                      fullLineup[0][j].PP[1]=fullLineup[0][j].PP[1]+1 }}
                     for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
-                      fullLineup[1][j].PK[0]=fullLineup[1][j].PK[0]+1; console.log('added away') }}}
+                      fullLineup[1][j].PK[0]=fullLineup[1][j].PK[0]+1 }}}
                     else if (goalType4==='homeEN') { for (j=0;j<fullLineup[0].length;j++) {if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0)) {
                       fullLineup[0][j].FiveOnSix[0]=fullLineup[0][j].FiveOnSix[0]+1 }}
                     for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
