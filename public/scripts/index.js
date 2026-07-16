@@ -113,6 +113,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             .then(function (data1) { console.log('I am in third then', data1);
                for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
                 { var whoScored ='whichTeam';
+                  // console.log(data1.data[i])
+                  if (data1.data[i].eventDescription==='Shootout') {console.log(data1.data[i].lastName)}
                   if (data1.data[i].teamAbbrev===data.awayTeam.abbrev) {whoScored='awayGoal'}
                   else if (data1.data[i].teamAbbrev===data.homeTeam.abbrev) {whoScored='homeGoal'}
                   periodNumber = data1.data[i].period; goalsNumber.push(i); goalTime = data1.data[i].startTime;
@@ -129,10 +131,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     } // end j loop
                     const goalType = [[],[]];
                     goalType[0].push(data.homeTeam.id); goalType[1].push(data.awayTeam.id);
-                    const lastIndexOfOnIceArray = onIceArray.lastIndexOf('newGoal'); // that is wrong when a goal is scored in shootout
+                    const lastIndexOfOnIceArray = onIceArray.lastIndexOf('newGoal'); // that is wrong when a goal is scored in shootout but started working on that
                     
-                    for (j=0;j<(onIceArray.length-2-lastIndexOfOnIceArray)/4;j++) {
-                      if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.homeTeam.id) {goalType[0].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}
+                    for (j=0;j<(onIceArray.length-2-lastIndexOfOnIceArray)/4;j++) { if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.homeTeam.id) {goalType[0].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}
                   else if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.awayTeam.id) {goalType[1].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}}
                   goalType2=[[],[]];
                   for (j=0;j<data.rosterSpots.length;j++) {for (k=0;k<2;k++) // k is home or away team
@@ -195,31 +196,31 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       fullLineup[1][j].PP[1]=fullLineup[1][j].PP[1]+1 }}}
                     else if (goalType4==='AwaySH') { for (j=0;j<fullLineup[0].length;j++) {if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0)) {
                       fullLineup[0][j].PP[1]=fullLineup[0][j].PP[1]+1 }}
-                    for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
+                      for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
                       fullLineup[1][j].PK[0]=fullLineup[1][j].PK[0]+1 }}}
                     else if (goalType4==='homeEN') { for (j=0;j<fullLineup[0].length;j++) {if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0)) {
                       fullLineup[0][j].FiveOnSix[0]=fullLineup[0][j].FiveOnSix[0]+1 }}
-                    for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
+                      for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
                       fullLineup[1][j].SixOnFive[1]=fullLineup[1][j].SixOnFive[1]+1 }}}
                     else if (goalType4==='awaySixOnFive') { for (j=0;j<fullLineup[0].length;j++) {if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0)) {
                       fullLineup[0][j].FiveOnSix[1]=fullLineup[0][j].FiveOnSix[1]+1 }}
-                    for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
+                      for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
                       fullLineup[1][j].SixOnFive[0]=fullLineup[1][j].SixOnFive[0]+1 }}}
                     else if (goalType4==='awayEN') { for (j=0;j<fullLineup[0].length;j++) {if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0)) {
                       fullLineup[0][j].SixOnFive[1]=fullLineup[0][j].SixOnFive[1]+1 }}
-                    for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
+                      for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
                       fullLineup[1][j].FiveOnSix[0]=fullLineup[1][j].FiveOnSix[0]+1 }}}
                     else if (goalType4==='homeSixOnFive') { for (j=0;j<fullLineup[0].length;j++) {if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0)) {
                       fullLineup[0][j].SixOnFive[0]=fullLineup[0][j].SixOnFive[0]+1 }}
-                    for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
+                      for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
                       fullLineup[1][j].FiveOnSix[1]=fullLineup[1][j].FiveOnSix[1]+1 }}}
                     else if (goalType4==='OTHome') { for (j=0;j<fullLineup[0].length;j++) {if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0)) {
                       fullLineup[0][j].overtime[0]=fullLineup[0][j].overtime[0]+1 }}
-                    for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
+                      for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
                       fullLineup[1][j].overtime[1]=fullLineup[1][j].overtime[1]+1 }}}
                     else if (goalType4==='OTAway') { for (j=0;j<fullLineup[0].length;j++) {if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0)) {
                       fullLineup[0][j].overtime[1]=fullLineup[0][j].overtime[1]+1 }}
-                    for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
+                      for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
                       fullLineup[1][j].overtime[0]=fullLineup[1][j].overtime[0]+1 }}}
 
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
