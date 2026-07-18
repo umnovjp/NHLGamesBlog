@@ -1202,5 +1202,12 @@
         "tip": "another division game after 03/06 game in DAL. Verified that SH goal is counted correctly. COL #84 was 0:2 but #8, #29 were 1:0 each",
         "topic": "UX",
         "tip_id": "348f"
+    },
+    {
+        "title": "You are watching stats for EDM at COL game # 2025021023 on 2026-03-10. Period: 1 Time: 00:32 fiveOnFiveHome  Scorer: Colton Assists: Brock Nelson 39-25,49-29,28,92 39-42,7-11,13,20Period: 1 Time: 08:13 HomePK_AwayPP  Scorer: Nugent-Hopkins Assists: Connor McDavid, Evan Bouchard 39-2-18,93,29,97 39-84,42-17,18Period: 1 Time: 15:41 HomePP_AwayPK  Scorer: Necas Assists:  39-25,49-93,22 39-8-91,11,29,88Period: 1 Time: 19:35 fiveOnFiveAway  Scorer: Roslovic Assists: Leon Draisaitl 39-25,2-29,28,92 39-84,42-91,29,88Period: 2 Time: 04:15 fiveOnFiveAway  Scorer: Nugent-Hopkins Assists: Darnell Nurse, Zach Hyman 39-25,2-18,93,97 39-7,8-10,20,88Period: 3 Time: 07:04 fiveOnFiveHome  Scorer: Nichushkin Assists: Sam Malinski 35-5,96-29,28,92 39-27,70-11,13,93Period: 3 Time: 09:03 HomePK_AwayPP  Scorer: McDavid Assists: Leon Draisaitl, Evan Bouchard 35-2-18,93,29,97 39-7,8-11,13",
+        "username": "looking for a new concept. no code update but looking what is next step",
+        "tip": "5x5 score was 2:2 but EDM scored 2 on PP COL scored 1 on PP. #84 was 0:2, #8, #88 1:2, #11 was 3:1, #29 1:1, #62 did not play again. ",
+        "topic": "UX",
+        "tip_id": "4c5e"
     }
 ]
