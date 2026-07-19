@@ -1209,5 +1209,12 @@
         "tip": "5x5 score was 2:2 but EDM scored 2 on PP COL scored 1 on PP. #84 was 0:2, #8, #88 1:2, #11 was 3:1, #29 1:1, #62 did not play again. ",
         "topic": "UX",
         "tip_id": "4c5e"
+    },
+    {
+        "title": "You are watching stats for COL at SEA game # 2025021040 on 2026-03-12. Period: 1 Time: 03:45 fiveOnFiveAway  Scorer: Necas Assists: Devon Toews, Nathan MacKinnon 41-7,8-91,29,88 35-6,29-9,89,20Period: 1 Time: 12:54 fiveOnFiveAway  Scorer: MacKinnon Assists: Martin Necas, Devon Toews 41-27,70-91,29,88 35-6,24-9,89,63Period: 1 Time: 18:48 HomePK_AwayPP  Scorer: Roy Assists: Brock Nelson, Nathan MacKinnon 41-8-91,11,29,10 35-6,55-89,59Period: 2 Time: 13:36 HomeSH  Scorer: Evans Assists: Chandler Stephenson 41-84,7-13,10,54 31-62,41-9,20Period: 2 Time: 17:11 fiveOnFiveAway  Scorer: Kadri Assists: Sam Malinski, Nathan MacKinnon 41-27,70-91,29,88 31-62,29-7,19,10Period: 3 Time: 12:41 fiveOnFiveAway  Scorer: Kiviranta Assists: Josh Manson, Parker Kelly 41-84,42-17,18,94 31-24,41-7,19,10",
+        "username": "worked to make shootout goals displayed. Though I do not think I care",
+        "tip": "5:1 is the score SEA was able to score just one SH goal. Verified that SH count works correctly",
+        "topic": "UX",
+        "tip_id": "8867"
     }
 ]
