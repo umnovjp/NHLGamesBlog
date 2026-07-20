@@ -1216,5 +1216,12 @@
         "tip": "5:1 is the score SEA was able to score just one SH goal. Verified that SH count works correctly",
         "topic": "UX",
         "tip_id": "8867"
+    },
+    {
+        "title": "You are watching stats for COL at WPG game # 2025021045 on 2026-03-14. Period: 2 Time: 02:05 fiveOnFiveHome  Scorer: Connor Assists: Mark Scheifele 39-7,8-91,29,88 37-2,44-55,81,9Period: 2 Time: 11:52 fiveOnFiveHome  Scorer: Iafallo Assists: Mark Scheifele, Kyle Connor 39-84,42-17,93,54 37-78,57-55,81,9Period: 3 Time: 18:44 awaySixOnFive  Scorer: Necas Assists: Nathan MacKinnon, Cale Makar -8-91,11,29,13,88 37-54,57-55,81,36Period: 3 Time: 19:18 homeEN  Scorer: Perfetti Assists:  -8-91,11,29,13,88 37-2,44-17,9,91",
+        "username": "no real code update as I was watching world cup final",
+        "tip": "another rare COL loss. Score was 0:2 late in 3rd then COL scored 6x5 then WPG scored EN. #8, #29, #88 1:2",
+        "topic": "UX",
+        "tip_id": "252c"
     }
 ]
