@@ -173,6 +173,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else {goalType4='something else'} // end if loop
                     goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4);
                     console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2);
+                    // console.log(../db/tips2025.json)
     
                     if (goalType4==='fiveOnFiveHome') {for (j=0;j<fullLineup[0].length;j++) {if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0))
                       { fullLineup[0][j].fiveOnFive[0]=fullLineup[0][j].fiveOnFive[0]+1 }}
