@@ -2,7 +2,9 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const util = require('util');
-// const tips = require('./db/tips2025.json')
+const tips = require('./db/tips2025.json')
+
+// console.log(tips)
 
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');
@@ -18,7 +20,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // GET Route for homepage
-app.get('/', (req, res) =>
+app.get('/', 
+  (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 

@@ -70,11 +70,11 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
         var gameId = data2.gameWeek[0].games[gameNumber].id;
         var gameIdSplit = String(gameId).split(''); var gameType;
         
-        console.log(gameId, gameIdSplit);
+        // console.log(gameId, gameIdSplit);
         if (gameIdSplit[5]==='3') {gameType='playoff'}
         else if ((gameIdSplit[5]==='2')||(gameIdSplit[5]==='1')) {gameType='regular'}
         else {gameType='who knows'}
-        console.log(gameId, gameIdSplit, gameType);
+        // console.log(gameId, gameIdSplit, gameType);
         var requestURL = 'https://cors-anywhere.herokuapp.com/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
         // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play'; to select game on certain date
         // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
