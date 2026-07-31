@@ -69,6 +69,15 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
         idxArray = idxString.split(':'); idxNumber = idxArray[0].split(' '); gameNumber = idxNumber[1];
         var gameId = data2.gameWeek[0].games[gameNumber].id;
         var gameIdSplit = String(gameId).split(''); var gameType;
+
+        var ifGameIsThere = async () => {
+          const result = await fetch ('C:/Users/umnov/OneDrive/Documents/Code/NHLGamesBlog/db/tips2025.json', {
+            method: 'GET', 
+          })
+          .then (response => response.json() )
+          .then (data2 => console.log(data2))
+          console.log(data2)
+        }
         
         // console.log(gameId, gameIdSplit);
         if (gameIdSplit[5]==='3') {gameType='playoff'}
@@ -113,7 +122,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             .then(function (data1) { console.log('I am in third then', data1);
                for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
                 { var whoScored ='whichTeam';
-                  // console.log(data1.data[i])
                   if (data1.data[i].eventDescription==='Shootout') {console.log(data1.data[i].lastName)}
                   if (data1.data[i].teamAbbrev===data.awayTeam.abbrev) {whoScored='awayGoal'}
                   else if (data1.data[i].teamAbbrev===data.homeTeam.abbrev) {whoScored='homeGoal'}
