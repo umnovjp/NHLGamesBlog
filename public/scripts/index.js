@@ -71,15 +71,14 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
         var gameIdSplit = String(gameId).split(''); var gameType;
 
         var ifGameIsThere = async () => {
-          const result = await fetch ('C:/Users/umnov/OneDrive/Documents/Code/NHLGamesBlog/db/tips2025.json', {
+          const result = await fetch ('/', {
             method: 'GET', 
           })
           .then (response => response.json() )
           .then (data2 => console.log(data2))
           console.log(data2)
         }
-        
-        // console.log(gameId, gameIdSplit);
+        // console.log('C:/Users/umnov/OneDrive/Documents/Code/NHLGamesBlog/db/tips2025.json')
         if (gameIdSplit[5]==='3') {gameType='playoff'}
         else if ((gameIdSplit[5]==='2')||(gameIdSplit[5]==='1')) {gameType='regular'}
         else {gameType='who knows'}
