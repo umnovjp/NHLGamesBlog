@@ -79,15 +79,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
         //   console.log(data2)
         // }
 
-        var ifGameIsThere = () => {fetch ('/api/tips', 
-          // {
-          //    method: 'GET', 
-          //  }
-          )
-          .then(function(response) {return(response.json())})
-          .then(function(data3) {console.log(data3)})
-          console.log('I am in checking loop')
-          }
+
         // console.log('C:/Users/umnov/OneDrive/Documents/Code/NHLGamesBlog/db/tips2025.json')
         if (gameIdSplit[5]==='3') {gameType='playoff'}
         else if ((gameIdSplit[5]==='2')||(gameIdSplit[5]==='1')) {gameType='regular'}
@@ -130,7 +122,22 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             })
             .then(function (data1) { console.log('I am in third then', data1);
                for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
-                { var whoScored ='whichTeam';
+                { 
+          //                 var ifGameIsThere = () => {fetch ('/api/tips', 
+          // // {
+          // //    method: 'GET', 
+          // //  }
+          // )
+          // .then(function(response) {return(response.json())})
+          // .then(function(data3) {console.log(data3)})
+          // console.log('I am in checking loop')
+          // console.log(data3, ifGameIsThere)
+          // }
+          const ifGameIsThere = async () => {const result = await fetch ('/api/tips', {method: 'GET',});
+        const json = await result.json();
+        return json;
+        }
+                  var whoScored ='whichTeam';
                   if (data1.data[i].eventDescription==='Shootout') {console.log(data1.data[i].lastName)}
                   if (data1.data[i].teamAbbrev===data.awayTeam.abbrev) {whoScored='awayGoal'}
                   else if (data1.data[i].teamAbbrev===data.homeTeam.abbrev) {whoScored='homeGoal'}
