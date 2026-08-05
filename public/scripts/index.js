@@ -96,6 +96,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           })
           .then(function (data) { console.log('I am in second then', data.awayTeam.abbrev, data.homeTeam.abbrev);
             console.log(data);
+            const gameIdNumber = document.createElement('section'); gameIdNumber.setAttribute('id', 'gameIdNumber');
+            gameIdNumber.innerHTML=gameId;
+            document.getElementById('schedule').appendChild(gameIdNumber);
             const gameInfo = document.createElement('section'); gameInfo.setAttribute('id', 'gameInfo');
             document.getElementById('schedule').appendChild(gameInfo);
             const gameInfoHome = document.createElement('section');
@@ -121,22 +124,25 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           .then(function (response) { return response.json()
             })
             .then(function (data1) { console.log('I am in third then', data1);
+// https://cors-anywhere.herokuapp.com/https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=2025021274
+fetch ('/api/tips', 
+          {
+             'method': 'GET'
+           }
+          )
+          .then(function(response) {return(response.json())})
+          .then(function(data3) {console.log(data3)})
+          console.log('I am in checking loop')
+        
+
+
                for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
                 { 
-          //                 var ifGameIsThere = () => {fetch ('/api/tips', 
-          // // {
-          // //    method: 'GET', 
-          // //  }
-          // )
-          // .then(function(response) {return(response.json())})
-          // .then(function(data3) {console.log(data3)})
-          // console.log('I am in checking loop')
-          // console.log(data3, ifGameIsThere)
-          // }
-          const ifGameIsThere = async () => {const result = await fetch ('/api/tips', {method: 'GET',});
-        const json = await result.json();
-        return json;
-        }
+                          
+        //   const ifGameIsThere = async () => {const result = await fetch ('/api/tips', {method: 'GET',});
+        // const json = await result.json();
+        // return json;
+        // }
                   var whoScored ='whichTeam';
                   if (data1.data[i].eventDescription==='Shootout') {console.log(data1.data[i].lastName)}
                   if (data1.data[i].teamAbbrev===data.awayTeam.abbrev) {whoScored='awayGoal'}
@@ -317,12 +323,13 @@ const handleFormSubmit = (e) => {
   // get the value of the username and save it to a variable
   const tipUsername = document.getElementById('tipUsername').value.trim();
   // console.log(tipTitle)
+  const tipIdNumber = document.getElementById('gameIdNumber').textContent
 
   // Create an object with the tip and username
   const newTip = {
     title: tipTitle,
     username: tipUsername,
-    topic: 'UX',
+    topic: tipIdNumber,
     tip: tipContent,
     // gameId: gameIdNumber
   };
