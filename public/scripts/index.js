@@ -82,7 +82,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
         if (gameIdSplit[5]==='3') {gameType='playoff'}
         else if ((gameIdSplit[5]==='2')||(gameIdSplit[5]==='1')) {gameType='regular'}
         else {gameType='who knows'}
-        // console.log(gameId, gameIdSplit, gameType);
         var requestURL = 'https://cors-anywhere.herokuapp.com/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
         // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play'; to select game on certain date
         // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/gamecenter/' + gameId + '/play-by-play';
@@ -278,6 +277,8 @@ const getTips = () =>
       console.error('Error:', error);
     });
 
+    
+
 // Post a new tip to the page
 const postTip = (tip) =>
   fetch('api/tips', {
@@ -319,8 +320,7 @@ const handleFormSubmit = (e) => {
     title: tipTitle,
     username: tipUsername,
     topic: tipIdNumber,
-    tip: tipContent,
-    // gameId: gameIdNumber
+    tip: tipContent
   };
   // Make a fetch POST request to the server
   postTip(newTip);
