@@ -2,15 +2,12 @@ const tipForm = document.getElementById('tip-form');
 const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
 onIceArray = []; // onIceArray2 = []; 
-goalsNumber = []; var gameId; const plusMinusArray = [[[],[],[]],[[],[],[]]]; var goalType6=[]; var goalTime2=[[],[]]
+goalsNumber = []; var gameId; const plusMinusArray = [[[],[],[]],[[],[],[]]]; var goalType6=[]; var goalTime2=[[],[]]; // const data3 = []; 
 var game0 = document.getElementById('game0');
 const frequency = (arr, item) => {let count = 0;
   for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
   return count;
 };
-
-// const ticket = localStorage.getItem('AA_FlightSearch')
-// console.log(ticket)
 
 const createCard = (tip) => { // Create card
   const cardEl = document.createElement('section');
@@ -107,6 +104,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             const lineups = document.createElement('section');
             document.getElementById('gameInfo').appendChild(lineups);
             fullLineup = [[],[]] // will use it later
+            console.log(data3, gameIdNumber)
+            for (i=0;i<data3.length;i++) {if (data3[i].topic===gameIdNumber) {console.log('already there')}}
             for (i=0;i<data.rosterSpots.length;i++) { 
               const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: [0,0], PP: [0,0], PK: [0,0], specialTeams: [0,0], FiveOnSix: [0,0], SixOnFive: [0,0], overtime: [0,0]}
             if (data.rosterSpots[i].teamId===data.awayTeam.id) { fullLineup[1].push(obj) }
@@ -279,7 +278,9 @@ const getTips = () =>
 
     
 
-// Post a new tip to the page
+// Post a new tip to the page if it does not exist yet
+console.log('data3', data3)
+for (i=0;i<data3.length;i++) {if (data3[i].topic===gameIdNumber) {console.log('record exists')}}
 const postTip = (tip) =>
   fetch('api/tips', {
     method: 'POST',
