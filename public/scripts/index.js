@@ -2,7 +2,7 @@ const tipForm = document.getElementById('tip-form');
 const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
 onIceArray = []; // onIceArray2 = []; 
-goalsNumber = []; var gameId; const plusMinusArray = [[[],[],[]],[[],[],[]]]; var goalType6=[]; var goalTime2=[[],[]]; // const data3 = []; 
+goalsNumber = []; var gameId; const plusMinusArray = [[[],[],[]],[[],[],[]]]; var goalType6=[]; var goalTime2=[[],[]];  const data3 = []; 
 var game0 = document.getElementById('game0');
 const frequency = (arr, item) => {let count = 0;
   for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
@@ -67,15 +67,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
         var gameId = data2.gameWeek[0].games[gameNumber].id;
         var gameIdSplit = String(gameId).split(''); var gameType;
 
-        // var ifGameIsThere = async () => {
-        //   const result = await fetch ('/api/tips', {
-        //     method: 'GET', 
-        //   })
-        //   .then (response => response.json() )
-        //   .then (data2 => console.log(data2))
-        //   console.log(data2)
-        // }
-
         if (gameIdSplit[5]==='3') {gameType='playoff'}
         else if ((gameIdSplit[5]==='2')||(gameIdSplit[5]==='1')) {gameType='regular'}
         else {gameType='who knows'}
@@ -104,8 +95,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             const lineups = document.createElement('section');
             document.getElementById('gameInfo').appendChild(lineups);
             fullLineup = [[],[]] // will use it later
-            console.log(data3, gameIdNumber)
-            for (i=0;i<data3.length;i++) {if (data3[i].topic===gameIdNumber) {console.log('already there')}}
+
             for (i=0;i<data.rosterSpots.length;i++) { 
               const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: [0,0], PP: [0,0], PK: [0,0], specialTeams: [0,0], FiveOnSix: [0,0], SixOnFive: [0,0], overtime: [0,0]}
             if (data.rosterSpots[i].teamId===data.awayTeam.id) { fullLineup[1].push(obj) }
@@ -126,8 +116,14 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
            }
           )
           .then(function(response) {return(response.json())})
-          .then(function(data3) {console.log(data3)})
+          .then(function(data3) {console.log(data3)
+       
+
+          })
           console.log('I am in checking loop')
+                 console.log(data3, gameIdNumber)
+            for (i=0;i<data3.length;i++) {if (data3[i].topic===gameIdNumber) {console.log('already there')}}
+        
 
                for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
                 { var whoScored ='whichTeam';
@@ -279,8 +275,6 @@ const getTips = () =>
     
 
 // Post a new tip to the page if it does not exist yet
-console.log('data3', data3)
-for (i=0;i<data3.length;i++) {if (data3[i].topic===gameIdNumber) {console.log('record exists')}}
 const postTip = (tip) =>
   fetch('api/tips', {
     method: 'POST',
