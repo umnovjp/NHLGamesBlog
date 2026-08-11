@@ -2,7 +2,7 @@ const tipForm = document.getElementById('tip-form');
 const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
 onIceArray = []; // onIceArray2 = []; 
-goalsNumber = []; var gameId; const plusMinusArray = [[[],[],[]],[[],[],[]]]; var goalType6=[]; var goalTime2=[[],[]];  const data3 = []; 
+goalsNumber = []; var gameId; const plusMinusArray = [[[],[],[]],[[],[],[]]]; var goalType6=[]; var goalTime2=[[],[]];  // const data3 = []; 
 var game0 = document.getElementById('game0');
 const frequency = (arr, item) => {let count = 0;
   for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
@@ -96,6 +96,17 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             document.getElementById('gameInfo').appendChild(lineups);
             fullLineup = [[],[]] // will use it later
 
+            fetch ('/api/tips', 
+          {
+             'method': 'GET'
+           }
+          )
+          .then(function(response) {return(response.json())})
+          .then(function(data3) { console.log(data3, gameId)
+            for (i=0;i<data3.length;i++) {if (parseInt(data3[i].topic)===gameId) {console.log('game already there')}}
+          })
+          console.log('I am in checking loop')   
+            
             for (i=0;i<data.rosterSpots.length;i++) { 
               const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: [0,0], PP: [0,0], PK: [0,0], specialTeams: [0,0], FiveOnSix: [0,0], SixOnFive: [0,0], overtime: [0,0]}
             if (data.rosterSpots[i].teamId===data.awayTeam.id) { fullLineup[1].push(obj) }
@@ -110,20 +121,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           .then(function (response) { return response.json()
             })
             .then(function (data1) { console.log('I am in third then', data1);
-            fetch ('/api/tips', 
-          {
-             'method': 'GET'
-           }
-          )
-          .then(function(response) {return(response.json())})
-          .then(function(data3) {console.log(data3)
-       
-
-          })
-          console.log('I am in checking loop')
-                 console.log(data3, gameIdNumber)
-            for (i=0;i<data3.length;i++) {if (data3[i].topic===gameIdNumber) {console.log('already there')}}
-        
 
                for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
                 { var whoScored ='whichTeam';
