@@ -97,13 +97,16 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             fullLineup = [[],[]] // will use it later
 
             fetch ('/api/tips', 
-          {
-             'method': 'GET'
+          {'method': 'GET'
            }
           )
           .then(function(response) {return(response.json())})
           .then(function(data3) { console.log(data3, gameId)
-            for (i=0;i<data3.length;i++) {if (parseInt(data3[i].topic)===gameId) {console.log('game already there')}}
+            topicArray =[];
+            for (i=0;i<data3.length;i++) {topicArray.push(parseInt(data3[i].topic))}
+            if (topicArray.includes(gameId)) {console.log('game already there')}
+          else {console.log('game is not there')}
+          
           })
           console.log('I am in checking loop')   
             
@@ -182,8 +185,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     (gameType='playoff')) {goalType4='SpecialTeams'}
                     else {goalType4='something else'} // end if loop
                     goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4);
-                    console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2);
-                    // console.log(../db/tips2025.json)
+                    // console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2);
     
                     if (goalType4==='fiveOnFiveHome') {for (j=0;j<fullLineup[0].length;j++) {if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0))
                       { fullLineup[0][j].fiveOnFive[0]=fullLineup[0][j].fiveOnFive[0]+1 }}
@@ -250,7 +252,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+goalType7[3*i+1][1][0]+'-'+goalType7[3*i+1][1][1]+'-'+goalType7[3*i+1][1][2]+' '+goalType7[3*i+1][0][0]+'-'+goalType7[3*i+1][0][1]+'-'+goalType7[3*i+1][0][2];
                   document.getElementById('gameInfo').appendChild(newGoal3)}
                   }); // end third second .then
-                  });
+                  }); // end second second .then
                   } // end function displayGamedata
                 } // end first second .then
     )} // end function selectGame
