@@ -105,9 +105,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             topicArray =[];
             for (i=0;i<data3.length;i++) {topicArray.push(parseInt(data3[i].topic))}
             if (topicArray.includes(gameId)) {console.log('game already there')}
-          else {console.log('game is not there')}
-          
-          })
+          else {console.log('game is not there');
           console.log('I am in checking loop')   
             
             for (i=0;i<data.rosterSpots.length;i++) { 
@@ -252,6 +250,11 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+goalType7[3*i+1][1][0]+'-'+goalType7[3*i+1][1][1]+'-'+goalType7[3*i+1][1][2]+' '+goalType7[3*i+1][0][0]+'-'+goalType7[3*i+1][0][1]+'-'+goalType7[3*i+1][0][2];
                   document.getElementById('gameInfo').appendChild(newGoal3)}
                   }); // end third second .then
+
+          }
+          
+          })
+
                   }); // end second second .then
                   } // end function displayGamedata
                 } // end first second .then

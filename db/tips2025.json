@@ -1342,5 +1342,12 @@
         "tip": "adding this game second time for test",
         "topic": "2025021312",
         "tip_id": "c601"
+    },
+    {
+        "title": "You are watching stats for DAL at BUF game # 2025021301 on 2026-04-15. Period: 1 Time: 02:19 fiveOnFiveAway  Scorer: Bourque Assists: Esa Lindell, Ilya Lyubushkin 29-23,46-95,21,22 92-25,73-70,19,22Period: 1 Time: 12:48 fiveOnFiveHome  Scorer: Norris Assists: Zach Benson, Owen Power 29-23,46-95,96,18 92-8,25-9,91,6Period: 2 Time: 03:32 HomeSH  Scorer: Benson Assists: Tyson Kozak 29-55-95,96,21,53 92-5,73-48,6Period: 2 Time: 04:24 HomePK_AwayPP  Scorer: Lindell Assists: Jamie Benn, Justin Hryckowian 29-23,5-14,22,49 92-64,73-48,6Period: 2 Time: 11:09 fiveOnFiveHome  Scorer: Tuch Assists: Tanner Pearson, Owen Power 29-57,6-95,21,22 92-8,25-70,89,19Period: 2 Time: 16:00 fiveOnFiveAway  Scorer: Hryckowian Assists:  29-57,6-14,58,49 92-4,73-29,44,48Period: 5 Time: 00:00 shootout  Scorer: Duchene Assists:  -- --Period: 5 Time: 00:00 shootout  Scorer: Duchene Assists:  -- --Period: 5 Time: 00:00 shootout  Scorer: Duchene Assists:  -- --Period: 5 Time: 00:00 shootout  Scorer: Duchene Assists:  -- --Period: 5 Time: 00:00 shootout  Scorer: Duchene Assists:  -- --",
+        "username": "need to create a file with all players having games combined for a season",
+        "tip": "new cycle works now. Game is added only if it is not there",
+        "topic": "2025021301",
+        "tip_id": "5c3f"
     }
 ]
