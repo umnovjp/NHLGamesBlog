@@ -3,7 +3,7 @@ const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
 onIceArray = []; // onIceArray2 = []; 
 goalsNumber = []; var gameId; const plusMinusArray = [[[],[],[]],[[],[],[]]]; var goalType6=[]; var goalTime2=[[],[]];  // const data3 = []; 
-var game0 = document.getElementById('game0');
+var game0 = document.getElementById('game0'); 
 const frequency = (arr, item) => {let count = 0;
   for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
   return count;
@@ -105,7 +105,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             topicArray =[];
             for (i=0;i<data3.length;i++) {topicArray.push(parseInt(data3[i].topic))}
             if (topicArray.includes(gameId)) {console.log('game already there')}
-          else {console.log('game is not there');
+          else {console.log('game is not there')}
+          
+          })
           console.log('I am in checking loop')   
             
             for (i=0;i<data.rosterSpots.length;i++) { 
@@ -250,11 +252,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+goalType7[3*i+1][1][0]+'-'+goalType7[3*i+1][1][1]+'-'+goalType7[3*i+1][1][2]+' '+goalType7[3*i+1][0][0]+'-'+goalType7[3*i+1][0][1]+'-'+goalType7[3*i+1][0][2];
                   document.getElementById('gameInfo').appendChild(newGoal3)}
                   }); // end third second .then
-
-          }
-          
-          })
-
                   }); // end second second .then
                   } // end function displayGamedata
                 } // end first second .then
@@ -275,7 +272,7 @@ const getTips = () =>
     });
 
     
-
+console.log(gameIdNumber)
 // Post a new tip to the page if it does not exist yet
 const postTip = (tip) =>
   fetch('api/tips', {
