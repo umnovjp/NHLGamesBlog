@@ -296,7 +296,6 @@ getTips().then((data) => data.forEach((tip) => createCard(tip)));
 const handleFormSubmit = (e) => {
   e.preventDefault();
   console.log('Form submit invoked');
-  console.log('456')
 
   const tipTitle = document.getElementById('gameInfo').textContent;
 
@@ -307,12 +306,9 @@ const handleFormSubmit = (e) => {
   const tipUsername = document.getElementById('tipUsername').value.trim();
   // console.log(tipTitle)
   const tipIdNumber = document.getElementById('gameIdNumber').textContent;
-  
-  console.log('123')
 
   // Create an object with the tip and username
-  const newTip = {
-    title: tipTitle,
+  const newTip = { title: tipTitle,
     username: tipUsername,
     topic: tipIdNumber,
     tip: tipContent
