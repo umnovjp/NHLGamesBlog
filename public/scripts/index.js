@@ -97,24 +97,19 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             fullLineup = [[],[]] // will use it later
 
             fetch ('/api/tips', 
-          {'method': 'GET'
-           }
+          {'method': 'GET'}
           )
           .then(function(response) {return(response.json())})
           .then(function(data3) { console.log(data3, gameId)
             topicArray =[];
             for (i=0;i<data3.length;i++) {topicArray.push(parseInt(data3[i].topic))}
             if (topicArray.includes(gameId)) {console.log('game already there')}
-          else {console.log('game is not there')}
-          
-          })
-          console.log('I am in checking loop')   
+          else {console.log('game is not there')}          
+          }) 
             
-            for (i=0;i<data.rosterSpots.length;i++) { 
-              const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: [0,0], PP: [0,0], PK: [0,0], specialTeams: [0,0], FiveOnSix: [0,0], SixOnFive: [0,0], overtime: [0,0]}
+            for (i=0;i<data.rosterSpots.length;i++) { const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: [0,0], PP: [0,0], PK: [0,0], specialTeams: [0,0], FiveOnSix: [0,0], SixOnFive: [0,0], overtime: [0,0]}
             if (data.rosterSpots[i].teamId===data.awayTeam.id) { fullLineup[1].push(obj) }
-            else {fullLineup[0].push(obj) }
-            }
+            else {fullLineup[0].push(obj) }}
             console.log(fullLineup) // did not use fullLineup anywhere yet maybe need to change position
                    
           var requestURL1 = 'https://cors-anywhere.herokuapp.com/https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId; // charts to find which players were on ice
