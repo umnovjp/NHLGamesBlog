@@ -90,7 +90,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             gameInfoHome.setAttribute('id', 'gameInfoHome');
             document.getElementById('schedule').appendChild(gameInfoHome);
             var gameTitle = document.createElement('h2'); gameTitle.textContent = '';
-            gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game # ' + gameId + ' on ' + formatted + '. ';
+            gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' on ' + formatted + '. ';
             document.getElementById('gameInfo').appendChild(gameTitle);
             const lineups = document.createElement('section');
             document.getElementById('gameInfo').appendChild(lineups);
@@ -105,8 +105,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             topicArray =[];
             for (i=0;i<data3.length;i++) {topicArray.push(parseInt(data3[i].topic))}
             if (topicArray.includes(gameId)) {console.log('game already there')}
-          else {console.log('game is not there')}
-          
+          else {console.log('game is not there')}          
           })
           console.log('I am in checking loop')   
             
