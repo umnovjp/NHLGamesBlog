@@ -310,8 +310,7 @@ const handleFormSubmit = (e) => {
   const newTip = { title: tipTitle,
     username: tipUsername,
     topic: tipIdNumber,
-    tip: tipContent,
-    gamedata: tipIdNumber
+    tip: tipContent
   };
   // Make a fetch POST request to the server
   postTip(newTip);

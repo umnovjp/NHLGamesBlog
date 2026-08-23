@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const util = require('util');
-const tips = require('./db/tips2025.json')
+const tips = require('./db/tips2026.json')
 
 // console.log(tips)
 
@@ -69,20 +69,20 @@ const readAndAppend = (content, file) => {
 
 // GET Route for retrieving existing db json file
 app.get('/db', (req, res) =>
-  res.sendFile(path.join(__dirname, 'db/tips2025.json'))
+  res.sendFile(path.join(__dirname, 'db/tips2026.json'))
 );
 
 // GET Route for retrieving all the tips
 app.get('/api/tips', (req, res) => {
   console.info(`${req.method} request received for review`);
-  readFromFile('./db/tips2025.json').then((data) => res.json(JSON.parse(data)))
+  readFromFile('./db/tips2026.json').then((data) => res.json(JSON.parse(data)))
 });
 
 // POST Route for a new UX/UI tip
 app.post('/api/tips', (req, res) => {
   console.info(`${req.method} request received to add a tip`);
 
-  const { title, username, topic, tip, tip_id } = req.body;
+  const { title, username, topic, tip, gamedata, tip_id } = req.body;
 
   if (req.body) {
     const newTip = {
@@ -90,10 +90,11 @@ app.post('/api/tips', (req, res) => {
       username,
       tip,
       topic,
+      gamedata,
       tip_id: uuid()
     };
 
-    readAndAppend(newTip, './db/tips2025.json');
+    readAndAppend(newTip, './db/tips2026.json');
     res.json(`Review added successfully 🚀`);
   } else {
     res.error('Error in adding review');
