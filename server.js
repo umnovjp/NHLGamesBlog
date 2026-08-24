@@ -82,7 +82,7 @@ app.get('/api/tips', (req, res) => {
 app.post('/api/tips', (req, res) => {
   console.info(`${req.method} request received to add a tip`);
 
-  const { title, username, topic, tip, gamedata, tip_id } = req.body;
+  const { title, username, topic, tip, seasonData, tip_id } = req.body;
 
   if (req.body) {
     const newTip = {
@@ -90,7 +90,7 @@ app.post('/api/tips', (req, res) => {
       username,
       tip,
       topic,
-      gamedata,
+      seasonData,
       tip_id: uuid()
     };
 
