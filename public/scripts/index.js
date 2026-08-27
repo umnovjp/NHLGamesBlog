@@ -107,14 +107,14 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           else {console.log('game is not there')} 
           console.log(data3[1].seasonData)
           })
-          console.log('I am in checking loop');
+          console.log('I am in checking loop', data3);
             
             for (i=0;i<data.rosterSpots.length;i++) { 
               const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: [0,0], PP: [0,0], PK: [0,0], specialTeams: [0,0], FiveOnSix: [0,0], SixOnFive: [0,0], overtime: [0,0]}
             if (data.rosterSpots[i].teamId===data.awayTeam.id) { fullLineup[1].push(obj) }
             else {fullLineup[0].push(obj) }
             }
-            // console.log(fullLineup) // did not use fullLineup anywhere yet maybe need to change position
+            // console.log(fullLineup) // fullLineup was used later
                    
           var requestURL1 = 'https://cors-anywhere.herokuapp.com/https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId; // charts to find which players were on ice
           // var requestURL1 = 'https://corsproxy.io/?key=2ddedfd8&url=https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
@@ -182,9 +182,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     (gameType='regular')&&(data1.data[i].period<4)) {goalType4='SpecialTeams'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[1][2].length<5)&&(goalType5[1][1].length+goalType5[1][2].length===goalType5[0][1].length+goalType5[0][2].length)&&
                     (gameType='playoff')) {goalType4='SpecialTeams'}
-                    else {goalType4='something else'} // end if loop
+                    else {goalType4='something else'} // end if loop goalType4
                     goalType6.push('newGoal', goalTimeSecondsAbsolute, goalType5, goalType4);
-                    // console.log('goalType', goalType, 'goalType3', goalType3, 'goalType5', goalType5, 'goalType', goalType, 'goalTime2', goalTime2);
     
                     if (goalType4==='fiveOnFiveHome') {for (j=0;j<fullLineup[0].length;j++) {if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0))
                       { fullLineup[0][j].fiveOnFive[0]=fullLineup[0][j].fiveOnFive[0]+1 }}
@@ -233,7 +232,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else if (goalType4==='OTAway') { for (j=0;j<fullLineup[0].length;j++) {if ((goalType[0].includes(fullLineup[0][j].number))&&(goalType[0].lastIndexOf(fullLineup[0][j].number)>0)) {
                       fullLineup[0][j].overtime[1]=fullLineup[0][j].overtime[1]+1 }}
                       for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
-                      fullLineup[1][j].overtime[0]=fullLineup[1][j].overtime[0]+1 }}}
+                      fullLineup[1][j].overtime[0]=fullLineup[1][j].overtime[0]+1 }}} // fullLineup ends here
 
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) {if (onIceArray[j]==='newGoal') {goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1} // why do I need goalTime if I have goalTime2? 
@@ -244,6 +243,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
                     console.log(goalType7, goalTime2, 'fullLineup', fullLineup); // deleted goalTime not sure why it shows an error
+                    console.log('end of the line', data1, data3)
                     for (i=0;i<2;i++) {for (j=0;j<goalTime2[0].length;j++) {if (goalTime[i][j]===goalTime2[i][j]) {}
                   else {console.log('not equal', goalTime[i][j], goalTime2[i][j])}}}
                   for (i=0;i<goalsNumber.length;i++) { var newGoal3 = document.createElement('span');
