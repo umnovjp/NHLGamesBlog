@@ -106,8 +106,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             if (topicArray.includes(gameId)) {console.log('game already there')}
           else {console.log('game is not there')} 
           console.log(data3[1].seasonData)
-          })
-          console.log('I am in checking loop', data3);
+          // }) temporary
+          console.log('I am in checking loop');
             
             for (i=0;i<data.rosterSpots.length;i++) { 
               const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: [0,0], PP: [0,0], PK: [0,0], specialTeams: [0,0], FiveOnSix: [0,0], SixOnFive: [0,0], overtime: [0,0]}
@@ -243,13 +243,14 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
                     console.log(goalType7, goalTime2, 'fullLineup', fullLineup); // deleted goalTime not sure why it shows an error
-                    console.log('end of the line', data1, data3)
+                    console.log('end of the line', data3);
                     for (i=0;i<2;i++) {for (j=0;j<goalTime2[0].length;j++) {if (goalTime[i][j]===goalTime2[i][j]) {}
                   else {console.log('not equal', goalTime[i][j], goalTime2[i][j])}}}
                   for (i=0;i<goalsNumber.length;i++) { var newGoal3 = document.createElement('span');
                   newGoal3.innerHTML='<br>'+'Period: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period+' Time: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].startTime+' '+goalType7[3*i+2]+' '+' Scorer: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].lastName+
                   ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+goalType7[3*i+1][1][0]+'-'+goalType7[3*i+1][1][1]+'-'+goalType7[3*i+1][1][2]+' '+goalType7[3*i+1][0][0]+'-'+goalType7[3*i+1][0][1]+'-'+goalType7[3*i+1][0][2];
                   document.getElementById('gameInfo').appendChild(newGoal3)}
+                  })
                   }); // end third second .then
                   }); // end second second .then
                   } // end function displayGamedata
