@@ -42,6 +42,12 @@ function displayGameData 65
 end 3rd second .then 109 
 4th second .then 123 data1 shiftcharts
 
+start 505 is statement 127
+
+final result for fullLineup 235 
+
+end 505 if statement 241 
+
 end 4rd second .then 253
 end 2nd second .then 254
 end finction displayGameData 255
