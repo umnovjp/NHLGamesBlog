@@ -237,9 +237,15 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       for (j=0;j<data3.length;j++) { if (data3[j].teamId === data.awayTeam.id) {
                         if (data3[j].roster.length=0) {data3[j].roster = fullLineup[1]}
                         else if (data3[j].roster.length>0) {for (k=0;k<data3[j].roster.length;k++) {for (l=0;l<fullLineup[1].length;l++) {
-                          
-                        }}} // to add staff here
-                      }
+                          if (data3[j].roster[k]===fullLineup[l].playerId) { for (m=0;m<2;m++) {                            
+                            data3[j].roster[k].FiveOnSix[m]=data3[j].roster[k].FiveOnSix[m]+fullLineup[l].FiveOnSix[m]
+                            data3[j].roster[k].PK[m]=data3[j].roster[k].PK[m]+fullLineup[l].PK[m]
+                            data3[j].roster[k].PP[m]=data3[j].roster[k].PP[m]+fullLineup[l].PP[m]
+                            data3[j].roster[k].SixOnFive[m]=data3[j].roster[k].SixOnFive[m]+fullLineup[l].SixOnFive[m]
+                            data3[j].roster[k].overtime[m]=data3[j].roster[k].overtime[m]+fullLineup[l].overtime[m]
+                            data3[j].roster[k].specialTeams[m]=data3[j].roster[k].specialTeams[m]+fullLineup[l].specialTeams[m]
+                          }}
+                        }}}}
                     else {}}
 
                       console.log(data3[data3.length-1].seasonData)
