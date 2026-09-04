@@ -2,7 +2,7 @@ const tipForm = document.getElementById('tip-form');
 const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
 onIceArray = []; // onIceArray2 = []; 
-goalsNumber = []; var gameId; const plusMinusArray = [[[],[],[]],[[],[],[]]]; var goalType6=[]; var goalTime2=[[],[]];  // const data3 = []; 
+goalsNumber = []; var gameId; const plusMinusArray = [[[],[],[]],[[],[],[]]]; var goalType6=[]; var goalTime2=[[],[]]; seasonData=[]; // const data3 = []; 
 var game0 = document.getElementById('game0'); 
 const frequency = (arr, item) => {let count = 0;
   for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
@@ -238,10 +238,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                         if (data3[j].roster.length=0) {seasonData = fullLineup[1]} // or 0 if home team to add later
                         else if (data3[j].roster.length>0) {for (k=0;k<data3[j].roster.length;k++) {for (l=0;l<fullLineup[1].length;l++) {
                           if (data3[j].roster[k]===fullLineup[l].playerId) { for (m=0;m<2;m++) { 
-                            seasonData=[]
-                            seasonData[j].playerId=data3[j].playerId;
-                            seasonData[j].teamId=data3[j].teamId;
-                            seasonData[j].position=data3[j].position;
+                            
+                            seasonData.push(data3[j].playerId, data3[j].teamId, data3[j].position);
+                            // seasonData[j].teamId=data3[j].teamId;
+                            // seasonData[j].position=data3[j].position;
                             seasonData[j].FiveOnSix[m]=data3[j].roster[k].FiveOnSix[m]+fullLineup[l].FiveOnSix[m];
                             data3[j].roster[k].PK[m]=data3[j].roster[k].PK[m]+fullLineup[l].PK[m]
                             data3[j].roster[k].PP[m]=data3[j].roster[k].PP[m]+fullLineup[l].PP[m]
@@ -253,6 +253,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else {}}
 
                       console.log(data3[data3.length-1].seasonData)
+                      console.log(seasonData)
 
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) {if (onIceArray[j]==='newGoal') {goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1} // why do I need goalTime if I have goalTime2? 
