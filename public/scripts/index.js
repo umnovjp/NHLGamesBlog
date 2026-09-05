@@ -238,16 +238,18 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                         if (data3[j].roster.length=0) {seasonData = fullLineup[1]} // or 0 if home team to add later
                         else if (data3[j].roster.length>0) {for (k=0;k<data3[j].roster.length;k++) {for (l=0;l<fullLineup[1].length;l++) {
                           if (data3[j].roster[k]===fullLineup[l].playerId) { for (m=0;m<2;m++) { 
-                            
-                            seasonData.push(data3[j].playerId, data3[j].teamId, data3[j].position);
+                            const obj1={playerId: data3[j].playerId, teamId: data3[j].teamId, position: data3[j].position, FiveOnSix: fullLineup[l].FiveOnSix[m]+data3[j].FiveOnSix[m], fiveOnFive: fullLineup[l].fiveOnFive[m]+data3[j].fiveOnFive[m], 
+                              SixOnFive: fullLineup[l].SixOnFive[m]+data3[j].SixOnFive[m], PK: fullLineup[l].PK[m]+data3[j].PK[m], PP: fullLineup[l].PP[m]+data3[j].PP[m], overtime: fullLineup[l].overtime[m]+data3[j].overtime[m], specialTeams: fullLineup[l].specialTeams[m]+data3[j].specialTeams[m],
+                            }
+                            seasonData.push(obj1);
                             // seasonData[j].teamId=data3[j].teamId;
                             // seasonData[j].position=data3[j].position;
-                            seasonData[j].FiveOnSix[m]=data3[j].roster[k].FiveOnSix[m]+fullLineup[l].FiveOnSix[m];
-                            data3[j].roster[k].PK[m]=data3[j].roster[k].PK[m]+fullLineup[l].PK[m]
-                            data3[j].roster[k].PP[m]=data3[j].roster[k].PP[m]+fullLineup[l].PP[m]
-                            data3[j].roster[k].SixOnFive[m]=data3[j].roster[k].SixOnFive[m]+fullLineup[l].SixOnFive[m]
-                            data3[j].roster[k].overtime[m]=data3[j].roster[k].overtime[m]+fullLineup[l].overtime[m]
-                            data3[j].roster[k].specialTeams[m]=data3[j].roster[k].specialTeams[m]+fullLineup[l].specialTeams[m]
+                            // seasonData[j].FiveOnSix[m]=data3[j].roster[k].FiveOnSix[m]+fullLineup[l].FiveOnSix[m];
+                            // data3[j].roster[k].PK[m]=data3[j].roster[k].PK[m]+fullLineup[l].PK[m]
+                            // data3[j].roster[k].PP[m]=data3[j].roster[k].PP[m]+fullLineup[l].PP[m]
+                            // data3[j].roster[k].SixOnFive[m]=data3[j].roster[k].SixOnFive[m]+fullLineup[l].SixOnFive[m]
+                            // data3[j].roster[k].overtime[m]=data3[j].roster[k].overtime[m]+fullLineup[l].overtime[m]
+                            // data3[j].roster[k].specialTeams[m]=data3[j].roster[k].specialTeams[m]+fullLineup[l].specialTeams[m]
                           }}
                         }}}}
                     else {}}
@@ -333,7 +335,7 @@ const handleFormSubmit = (e) => {
     username: tipUsername,
     topic: tipIdNumber,
     tip: tipContent,
-    seasonData: tipIdNumber
+    seasonData: seasonData
   };
   // Make a fetch POST request to the server
   postTip(newTip);
