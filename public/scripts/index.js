@@ -1,7 +1,7 @@
 const tipForm = document.getElementById('tip-form');
-const gameData = document.getElementById('gameData');
+// const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
-onIceArray = []; // onIceArray2 = []; 
+onIceArray = [];
 goalsNumber = []; var gameId; const plusMinusArray = [[[],[],[]],[[],[],[]]]; var goalType6=[]; var goalTime2=[[],[]]; seasonData=[]; // const data3 = []; 
 var game0 = document.getElementById('game0'); 
 const frequency = (arr, item) => {let count = 0;
@@ -233,6 +233,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       fullLineup[0][j].overtime[1]=fullLineup[0][j].overtime[1]+1 }}
                       for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
                       fullLineup[1][j].overtime[0]=fullLineup[1][j].overtime[0]+1 }}} // fullLineup ends here
+
+                      console.log(data3[data3.length-2].seasonData)
 
                       for (j=0;j<data3.length;j++) { if (data3[j].teamId === data.awayTeam.id) {
                         if (data3[j].roster.length=0) {seasonData = fullLineup[1]} // or 0 if home team to add later
