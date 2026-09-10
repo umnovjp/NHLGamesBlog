@@ -234,7 +234,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
                       fullLineup[1][j].overtime[0]=fullLineup[1][j].overtime[0]+1 }}} // fullLineup ends here
 
-                      console.log(data3[data3.length-2].seasonData)
+                      // console.log(data3[data3.length-2].seasonData)
 
                       for (j=0;j<data3.length;j++) { if (data3[j].teamId === data.awayTeam.id) {
                         if (data3[j].roster.length=0) {seasonData = fullLineup[1]} // or 0 if home team to add later
@@ -243,7 +243,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                             const obj1={playerId: data3[j].playerId, teamId: data3[j].teamId, position: data3[j].position, FiveOnSix: fullLineup[l].FiveOnSix[m]+data3[j].FiveOnSix[m], fiveOnFive: fullLineup[l].fiveOnFive[m]+data3[j].fiveOnFive[m], 
                               SixOnFive: fullLineup[l].SixOnFive[m]+data3[j].SixOnFive[m], PK: fullLineup[l].PK[m]+data3[j].PK[m], PP: fullLineup[l].PP[m]+data3[j].PP[m], overtime: fullLineup[l].overtime[m]+data3[j].overtime[m], specialTeams: fullLineup[l].specialTeams[m]+data3[j].specialTeams[m],
                             }
-                            seasonData.push(obj1);
+                            seasonData.push(obj1);  
                           }}
                         }}}}
                     else {}}
