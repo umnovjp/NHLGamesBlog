@@ -234,19 +234,20 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
                       fullLineup[1][j].overtime[0]=fullLineup[1][j].overtime[0]+1 }}} // fullLineup ends here
 
-                      // console.log(data3[data3.length-2].seasonData)
+                    //   for (j=0;j<data3.length;j++) { if (data3[j].teamId === data.awayTeam.id) {
+                    //     if (data3[j].roster.length=0) {seasonData = fullLineup[1]} // or 0 if home team to add later
+                    //     else if (data3[j].roster.length>0) {for (k=0;k<data3[j].roster.length;k++) {for (l=0;l<fullLineup[1].length;l++) {
+                    //       if (data3[j].roster[k]===fullLineup[l].playerId) { for (m=0;m<2;m++) { 
+                    //         const obj1={playerId: data3[j].playerId, teamId: data3[j].teamId, position: data3[j].position, FiveOnSix: fullLineup[l].FiveOnSix[m]+data3[j].FiveOnSix[m], fiveOnFive: fullLineup[l].fiveOnFive[m]+data3[j].fiveOnFive[m], 
+                    //           SixOnFive: fullLineup[l].SixOnFive[m]+data3[j].SixOnFive[m], PK: fullLineup[l].PK[m]+data3[j].PK[m], PP: fullLineup[l].PP[m]+data3[j].PP[m], overtime: fullLineup[l].overtime[m]+data3[j].overtime[m], specialTeams: fullLineup[l].specialTeams[m]+data3[j].specialTeams[m],
+                    //         }
+                    //         seasonData.push(obj1);  
+                    //       }}
+                    //     }}}}
+                    // else {}}
 
-                      for (j=0;j<data3.length;j++) { if (data3[j].teamId === data.awayTeam.id) {
-                        if (data3[j].roster.length=0) {seasonData = fullLineup[1]} // or 0 if home team to add later
-                        else if (data3[j].roster.length>0) {for (k=0;k<data3[j].roster.length;k++) {for (l=0;l<fullLineup[1].length;l++) {
-                          if (data3[j].roster[k]===fullLineup[l].playerId) { for (m=0;m<2;m++) { 
-                            const obj1={playerId: data3[j].playerId, teamId: data3[j].teamId, position: data3[j].position, FiveOnSix: fullLineup[l].FiveOnSix[m]+data3[j].FiveOnSix[m], fiveOnFive: fullLineup[l].fiveOnFive[m]+data3[j].fiveOnFive[m], 
-                              SixOnFive: fullLineup[l].SixOnFive[m]+data3[j].SixOnFive[m], PK: fullLineup[l].PK[m]+data3[j].PK[m], PP: fullLineup[l].PP[m]+data3[j].PP[m], overtime: fullLineup[l].overtime[m]+data3[j].overtime[m], specialTeams: fullLineup[l].specialTeams[m]+data3[j].specialTeams[m],
-                            }
-                            seasonData.push(obj1);  
-                          }}
-                        }}}}
-                    else {}}
+                      console.log(data3[data3.length-2].seasonData)
+                      if (data3[data3.length-1].seasonData.keys.length=0) {console.log('newArray')}
 
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) {if (onIceArray[j]==='newGoal') {goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1} // why do I need goalTime if I have goalTime2? 
