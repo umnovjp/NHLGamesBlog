@@ -246,8 +246,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     //     }}}}
                     // else {}}
 
-                      console.log(data3[data3.length-2].seasonData)
-                      if (data3[data3.length-1].seasonData.keys.length=0) {console.log('newArray')}
+                      console.log(data3[data3.length-1].seasonData.keys.length)
+                      if (data3[data3.length-1].seasonData.keys.length===0) {
+                        if (centralDivisionTeams.includes(data.awayTeam.id)) {console.log('newArray')}
+                      }
 
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) {if (onIceArray[j]==='newGoal') {goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1} // why do I need goalTime if I have goalTime2? 
