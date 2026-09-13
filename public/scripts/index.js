@@ -246,9 +246,13 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     //     }}}}
                     // else {}}
 
-                      console.log(data3[data3.length-1].seasonData.keys.length)
+                      console.log(data3[data3.length-1].seasonData.keys)
+
                       if (data3[data3.length-1].seasonData.keys.length===0) {
-                        if (centralDivisionTeams.includes(data.awayTeam.id)) {console.log('newArray')}
+                        if (centralDivisionTeams.includes(data.awayTeam.id)) {console.log('newArray')
+                          if (data3[data3.length-1].seasonData.keys.includes(data.awayTeam.id)) {}
+                          else {}
+                        }
                       }
 
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
