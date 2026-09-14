@@ -2,7 +2,7 @@ const tipForm = document.getElementById('tip-form');
 // const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
 onIceArray = []; centralDivisionTeams = [21,25,30];
-goalsNumber = []; var gameId; const plusMinusArray = [[[],[],[]],[[],[],[]]]; var goalType6=[]; var goalTime2=[[],[]]; seasonData=[]; // const data3 = []; 
+goalsNumber = []; var gameId; const plusMinusArray = [[[],[],[]],[[],[],[]]]; var goalType6=[]; var goalTime2=[[],[]]; seasonData={} // const data3 = []; 
 var game0 = document.getElementById('game0'); 
 const frequency = (arr, item) => {let count = 0;
   for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
@@ -250,7 +250,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
 
                       if (data3[data3.length-1].seasonData.keys.length===0) {
                         if (centralDivisionTeams.includes(data.awayTeam.id)) {console.log('newArray')
-                          if (data3[data3.length-1].seasonData.keys.includes(data.awayTeam.id)) {}
+                          if (!data3[data3.length-1].seasonData.keys.includes(data.awayTeam.id)) {const obj2={teamId: data.awayTeam.id, seasonData: fullLineup }
+                          console.log(seasonData)
+                          }
+                          
                           else {}
                         }
                       }
