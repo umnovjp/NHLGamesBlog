@@ -245,9 +245,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     //       }}
                     //     }}}}
                     // else {}}
-
-                      console.log(data3[data3.length-1].seasonData)
-
+                      
                       // if (data3[data3.length-1].seasonData.keys.length===0) {
                       //   if (centralDivisionTeams.includes(data.awayTeam.id)) {console.log('newArray')
                       //     if (!data3[data3.length-1].seasonData.keys.includes(data.awayTeam.id)) {const obj2={teamId: data.awayTeam.id, seasonData: fullLineup }
@@ -263,6 +261,9 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   } // end short j loop 
                   goalTime[0].sort((a,b) => a-b)
                     }} // end goal if 505 statement and i loop
+
+                    console.log(Object.keys(data3[data3.length-1].seasonData), data3[data3.length-1].seasonData)
+                    if ((Object.keys(data3[data3.length-1].seasonData).length===0)&&(centralDivisionTeams.includes(data.awayTeam.id))) {console.log('newArrayAway')}
                     
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
