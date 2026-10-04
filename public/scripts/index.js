@@ -53,7 +53,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
     "method": "GET", "headers": {}
   })
     .then(function (response) {return response.json()})
-    .then(function (data2) { // console.log('I am in schedule then', data2);
+    .then(function (data2) { console.log('I am in schedule then', data2);
       var numberOfGames = data2.gameWeek[0].games.length;
       for (var i = 0; i < numberOfGames; i++) { var gameName = document.createElement('button');
         gameName.setAttribute('id', 'game' + i); var idx = gameName.getAttribute('id');
@@ -95,7 +95,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             const lineups = document.createElement('section');
             document.getElementById('gameInfo').appendChild(lineups);
             fullLineup = [[],[]] // will use it later
-            fetch ('/api/tips', 
+            fetch ('/api/tips',
           {'method': 'GET'
            }
           )
@@ -106,7 +106,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             if (topicArray.includes(gameId)) {console.log('game already there')}
           else {console.log('game is not there')} 
           console.log(data3[1].seasonData)
-          // }) temporary
           console.log('I am in checking loop');
             
             for (i=0;i<data.rosterSpots.length;i++) { 
@@ -114,7 +113,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             if (data.rosterSpots[i].teamId===data.awayTeam.id) { fullLineup[1].push(obj) }
             else {fullLineup[0].push(obj) }
             }
-            // console.log(fullLineup) // fullLineup was used later
                    
           var requestURL1 = 'https://cors-anywhere.herokuapp.com/https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId; // charts to find which players were on ice
           // var requestURL1 = 'https://corsproxy.io/?key=2ddedfd8&url=https://api.nhle.com/stats/rest/en/shiftcharts?cayenneExp=gameId=' + gameId;
@@ -233,28 +231,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       fullLineup[0][j].overtime[1]=fullLineup[0][j].overtime[1]+1 }}
                       for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
                       fullLineup[1][j].overtime[0]=fullLineup[1][j].overtime[0]+1 }}} // fullLineup ends here
-
-                    //   for (j=0;j<data3.length;j++) { if (data3[j].teamId === data.awayTeam.id) {
-                    //     if (data3[j].roster.length=0) {seasonData = fullLineup[1]} // or 0 if home team to add later
-                    //     else if (data3[j].roster.length>0) {for (k=0;k<data3[j].roster.length;k++) {for (l=0;l<fullLineup[1].length;l++) {
-                    //       if (data3[j].roster[k]===fullLineup[l].playerId) { for (m=0;m<2;m++) { 
-                    //         const obj1={playerId: data3[j].playerId, teamId: data3[j].teamId, position: data3[j].position, FiveOnSix: fullLineup[l].FiveOnSix[m]+data3[j].FiveOnSix[m], fiveOnFive: fullLineup[l].fiveOnFive[m]+data3[j].fiveOnFive[m], 
-                    //           SixOnFive: fullLineup[l].SixOnFive[m]+data3[j].SixOnFive[m], PK: fullLineup[l].PK[m]+data3[j].PK[m], PP: fullLineup[l].PP[m]+data3[j].PP[m], overtime: fullLineup[l].overtime[m]+data3[j].overtime[m], specialTeams: fullLineup[l].specialTeams[m]+data3[j].specialTeams[m],
-                    //         }
-                    //         seasonData.push(obj1);  
-                    //       }}
-                    //     }}}}
-                    // else {}}
-                      
-                      // if (data3[data3.length-1].seasonData.keys.length===0) {
-                      //   if (centralDivisionTeams.includes(data.awayTeam.id)) {console.log('newArray')
-                      //     if (!data3[data3.length-1].seasonData.keys.includes(data.awayTeam.id)) {const obj2={teamId: data.awayTeam.id, seasonData: fullLineup }
-                      //     console.log(seasonData)
-                      //     }
-                          
-                      //     else {}
-                      //   }
-                      // }
 
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) {if (onIceArray[j]==='newGoal') {goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1} // why do I need goalTime if I have goalTime2? 
