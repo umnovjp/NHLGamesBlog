@@ -122,18 +122,14 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             })
             .then(function (data1) { console.log('I am in third then', data1);
 
-               for (i=0;i<data.plays.length;i++) { if (data.plays[i].typeCode===505) // goal loop
+               for (i=0;i<data1.data.length;i++) { if (data1.data[i].typeCode===505) // goal loop
                 { var whoScored ='whichTeam';
-                  if (data.plays[i].eventDescription==='Shootout') {console.log(data.plays[i].lastName)}
-                  if (data.plays[i].details.eventOwnerTeamId===data.awayTeam.id) {whoScored='awayGoal'}
-                  else if (data.plays[i].details.eventOwnerTeamId===data.homeTeam.id) {whoScored='homeGoal'}
-                  
-                  periodNumber=data.plays[i].periodDescriptor.number; goalTime=data.plays[i].timeInPeriod
-                  // periodNumber = data1.data[i].period; goalsNumber.push(i); goalTime = data1.data[i].startTime;
+                  if (data1.data[i].eventDescription==='Shootout') {console.log(data1.data[i].lastName)}
+                  if (data1.data[i].teamAbbrev===data.awayTeam.abbrev) {whoScored='awayGoal'}
+                  else if (data1.data[i].teamAbbrev===data.homeTeam.abbrev) {whoScored='homeGoal'}
+                  periodNumber = data1.data[i].period; goalsNumber.push(i); goalTime = data1.data[i].startTime;
                   goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
-                  goalTimeSecondsAbsolute=goalTimeSeconds+(periodNumber-1)*1200; 
-                  
-                  onIceArray.push('newGoal', goalTimeSecondsAbsolute);
+                  goalTimeSecondsAbsolute=goalTimeSeconds+(periodNumber-1)*1200; onIceArray.push('newGoal', goalTimeSecondsAbsolute);
                   for (j=0; j<data1.data.length;j++) { // j loop counts all shifts and checks if a player was on ice when a goal was scored
                   shiftStart = data1.data[j].startTime.split(":"); shiftStartSeconds=Number(shiftStart[0])*60+Number(shiftStart[1]);
                   shiftEnd = data1.data[j].endTime.split(':'); shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);
@@ -143,7 +139,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     onIceArray.push(data.rosterSpots[k].teamId, data.rosterSpots[k].sweaterNumber, shiftStartSeconds, shiftEndSeconds);
                   }}} // end if and end k loop
                     } // end j loop
-                    console.log(data.plays[i], whoScored, goalTimeSecondsAbsolute, onIceArray)
                     const goalType = [[],[]];
                     goalType[0].push(data.homeTeam.id); goalType[1].push(data.awayTeam.id);
                     const lastIndexOfOnIceArray = onIceArray.lastIndexOf('newGoal'); // that is wrong when a goal is scored in shootout but started working on that
