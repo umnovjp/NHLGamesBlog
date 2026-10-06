@@ -240,10 +240,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) {if (onIceArray[j]==='newGoal') {goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1} // why do I need goalTime if I have goalTime2? 
                   } // end short j loop 
-                  goalTime[0].sort((a,b) => a-b)
+                  goalTime[0].sort((a,b) => a-b) // will not be necessary
                     }} // end goal if 505 statement and i loop
 
-                    console.log(Object.keys(data3[data3.length-1].seasonData), data3[data3.length-1].seasonData)
+                    // console.log(Object.keys(data3[data3.length-1].seasonData), data3[data3.length-1].seasonData)
                     if ((Object.keys(data3[data3.length-1].seasonData).length===0)&&(centralDivisionTeams.includes(data.awayTeam.id))) {console.log('newArrayAway')}
                     
                   goalType7=[];
