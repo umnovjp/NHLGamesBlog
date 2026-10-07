@@ -139,11 +139,12 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   shiftEnd = data1.data[j].endTime.split(':'); shiftEndSeconds=Number(shiftEnd[0]*60) + Number(shiftEnd[1]);
                   
                   if ((shiftStartSeconds<goalTimeSeconds)&&(shiftEndSeconds>=goalTimeSeconds)&&(data1.data[j].period===periodNumber)) {
-                    for (k=0;k<data.rosterSpots.length;k++) {if (data.rosterSpots[k].playerId===data1.data[j].playerId) {
-                    onIceArray.push(data.rosterSpots[k].teamId, data.rosterSpots[k].sweaterNumber, shiftStartSeconds, shiftEndSeconds);
+                    for (k=0;k<data.rosterSpots.length;k++) {if (data.rosterSpots[k].playerId===data1.data[j].playerId) { onIceArray.push(data.rosterSpots[k].teamId, data.rosterSpots[k].sweaterNumber, shiftStartSeconds, shiftEndSeconds);
                   }}} // end if and end k loop
                     } // end j loop
                     console.log(data.plays[i], whoScored, goalTimeSecondsAbsolute, onIceArray)
+                    // onIceArray structure: newGoal string follows by time of the goal in seconds, teamId, sweaterNumber, shiftSratSeconds, shiftEndSeconds
+                    // game vs BUF on 04/15/26 is example of a game with multiple SO goals
                     const goalType = [[],[]];
                     goalType[0].push(data.homeTeam.id); goalType[1].push(data.awayTeam.id);
                     const lastIndexOfOnIceArray = onIceArray.lastIndexOf('newGoal'); // that is wrong when a goal is scored in shootout but started working on that
