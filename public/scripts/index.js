@@ -2,7 +2,7 @@ const tipForm = document.getElementById('tip-form');
 // const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
 onIceArray = []; centralDivisionTeams = [21,25,30];
-goalsNumber = []; var gameId; const plusMinusArray = [[[],[],[]],[[],[],[]]]; var goalType6=[]; var goalTime2=[[],[]]; seasonData={} // const data3 = []; 
+goalsNumber = []; var gameId; const plusMinusArray = [[[],[],[]],[[],[],[]]]; var goalType6=[]; var goalTime2=[[],[]]; seasonData={};
 var game0 = document.getElementById('game0'); 
 const frequency = (arr, item) => {let count = 0;
   for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
@@ -151,12 +151,14 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     
                     for (j=0;j<(onIceArray.length-2-lastIndexOfOnIceArray)/4;j++) { if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.homeTeam.id) {goalType[0].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}
                   else if (onIceArray[lastIndexOfOnIceArray+2+4*j]===data.awayTeam.id) {goalType[1].push(onIceArray[lastIndexOfOnIceArray+3+4*j])}}
+                  // console.log(goalType)
                   goalType2=[[],[]];
                   for (j=0;j<data.rosterSpots.length;j++) {for (k=0;k<2;k++) // k is home or away team
                     { for (l=1;l<goalType[k].length+1;l++) {if ((goalType[k][0]===data.homeTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)&&(data.rosterSpots[j].teamId===data.homeTeam.id)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
                   else if ((goalType[k][0]===data.awayTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)&&(data.rosterSpots[j].teamId===data.awayTeam.id)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
                   }}}
-                  // goalType is array of players on ice but goalType2 is array of their positions like G or D or C or L or R goalType3 is number of G, D, F on both sides like 1-2-3-6 if that was 5x5
+                  console.log(goalType, goalType2)
+                  // goalType is array of players on ice, but goalType2 is array of their positions like G or D or C or L or R goalType3 is number of G, D, F on both sides like 1-2-3-6 if that was 5x5
                   // goalType5 is array of numbers by position who was on ice during the goal 
                     goalType3=[[0,0,0,0],[0,0,0,0]]; goalType5 = [[[],[],[]],[[],[],[]]]; // do not need to count D and F separately, just total number and if a goalie was present
                     for (j=0;j<2;j++) {for (k=0;k<goalType2[j].length;k++) {
