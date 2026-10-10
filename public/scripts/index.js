@@ -123,7 +123,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             .then(function (data1) { console.log('I am in third then', data1);
 
                for (i=0;i<data.plays.length;i++) { if (data.plays[i].typeCode===505) // goal loop
-                { var whoScored ='whichTeam';
+                { // console.log(data.plays[i])
+                  var whoScored ='whichTeam';
                   if (data.plays[i].eventDescription==='Shootout') {console.log(data.plays[i].lastName)}
                   if (data.plays[i].details.eventOwnerTeamId===data.awayTeam.id) {whoScored='awayGoal'}
                   else if (data.plays[i].details.eventOwnerTeamId===data.homeTeam.id) {whoScored='homeGoal'}
@@ -142,7 +143,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     for (k=0;k<data.rosterSpots.length;k++) {if (data.rosterSpots[k].playerId===data1.data[j].playerId) { onIceArray.push(data.rosterSpots[k].teamId, data.rosterSpots[k].sweaterNumber, shiftStartSeconds, shiftEndSeconds);
                   }}} // end if and end k loop
                     } // end j loop
-                    console.log(data.plays[i], whoScored, goalTimeSecondsAbsolute, onIceArray)
+                    console.log(data.plays[i], data.plays[i].periodDescriptor, whoScored, goalTimeSecondsAbsolute, onIceArray)
                     // onIceArray structure: newGoal string follows by time of the goal in seconds, teamId, sweaterNumber, shiftSratSeconds, shiftEndSeconds
                     // game vs BUF on 04/15/26 is example of a game with multiple SO goals/ Score was 3:3 but shootout was 3:2 Stars
                     const goalType = [[],[]];
@@ -157,28 +158,28 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     { for (l=1;l<goalType[k].length+1;l++) {if ((goalType[k][0]===data.homeTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)&&(data.rosterSpots[j].teamId===data.homeTeam.id)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
                   else if ((goalType[k][0]===data.awayTeam.id)&&(goalType[k][l]===data.rosterSpots[j].sweaterNumber)&&(data.rosterSpots[j].teamId===data.awayTeam.id)) {goalType2[k].push(data.rosterSpots[j].positionCode)}
                   }}}
-                  // console.log(goalType, goalType2)
                   // goalType is array of players on ice, but goalType2 is array of their positions like G or D or C or L or R goalType3 is number of G, D, F on both sides like 1-2-3-6 if that was 5x5
-                  // goalType5 is array of numbers by position who was on ice during the goal 
-                  // goalType3 is array of positions when a goal was scored. Like normal 5x5 would be [1,2,3,6] it should be deleted tomorrow
-                   goalType3=[[0,0,0,0],[0,0,0,0]]; 
+                  // goalType5 is array of numbers by position who was on ice during the goal
+                  // goalType3=[[0,0,0,0],[0,0,0,0]]; 
                     goalType5 = [[[],[],[]],[[],[],[]]]; // do not need to count D and F separately, just total number and if a goalie was present
                     for (j=0;j<2;j++) {for (k=0;k<goalType2[j].length;k++) {
-                      if (goalType2[j][k]==='G') {goalType3[j][0]=goalType3[j][0]+1; goalType3[j][3]=goalType3[j][3]+1; goalType5[j][0].push(goalType[j][k+1])}
-                      else if (goalType2[j][k]==='D') {goalType3[j][1]=goalType3[j][1]+1; goalType3[j][3]=goalType3[j][3]+1; goalType5[j][1].push(goalType[j][k+1])}
-                      else if ((goalType2[j][k]==='C')||(goalType2[j][k]==='R')||(goalType2[j][k]==='L')) {goalType3[j][2]=goalType3[j][2]+1; goalType3[j][3]=goalType3[j][3]+1; goalType5[j][2].push(goalType[j][k+1])}
+                      if (goalType2[j][k]==='G') {// goalType3[j][0]=goalType3[j][0]+1; goalType3[j][3]=goalType3[j][3]+1; 
+                        goalType5[j][0].push(goalType[j][k+1])}
+                      else if (goalType2[j][k]==='D') {// goalType3[j][1]=goalType3[j][1]+1; goalType3[j][3]=goalType3[j][3]+1; 
+                        goalType5[j][1].push(goalType[j][k+1])}
+                      else if ((goalType2[j][k]==='C')||(goalType2[j][k]==='R')||(goalType2[j][k]==='L')) {// goalType3[j][2]=goalType3[j][2]+1; goalType3[j][3]=goalType3[j][3]+1; 
+                        goalType5[j][2].push(goalType[j][k+1])}
                     }}
-                    // goalType5 should be solution to count goal as 5x5 or other not sure why I need this line here
+                    // goalType5 should be solution to count goal as 5x5 or other
                     for (j=0;j<2;j++) {goalTime2[j].push(goalTimeSecondsAbsolute)} // goalTime2[0] and goalTime2[1] are arrays of when a goal was scored. But goalTime2[0] is an ordered array
-                    goalTime2[0].sort((a,b) => a-b);
-                    console.log(goalType, goalType2, goalTime2)
+                    goalTime2[0].sort((a,b) => a-b); // do not need it anymore
                                         
                     var goalType4;
                     if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[1][2].length===5)&&(whoScored==='homeGoal')) {goalType4='fiveOnFiveHome'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[1][2].length===5)&&(whoScored==='awayGoal')) {goalType4='fiveOnFiveAway'}
-                    else if ((data1.data[i].period===5)&&(gameType='regular')) {goalType4='shootout'} // need to add a loop to add different players to shutout not just one scorer
-                    else if ((data1.data[i].period===4)&&(gameType='regular')&&(goalType5[0][1].length+goalType5[0][2].length===goalType5[1][1].length+goalType5[1][2].length)&&(whoScored==='homeGoal')) {goalType4='OTHome'}
-                    else if ((data1.data[i].period===4)&&(gameType='regular')&&(goalType5[0][1].length+goalType5[0][2].length===goalType5[1][1].length+goalType5[1][2].length)&&(whoScored==='awayGoal')) {goalType4='OTAway'}
+                    else if ((data.plays[i].periodDescriptor.number===5)&&(gameType='regular')) {goalType4='shootout'} // need to add a loop to add different players to shutout not just one scorer
+                    else if ((data.plays[i].periodDescriptor.number===4)&&(gameType='regular')&&(goalType5[0][1].length+goalType5[0][2].length===goalType5[1][1].length+goalType5[1][2].length)&&(whoScored==='homeGoal')) {goalType4='OTHome'}
+                    else if ((data.plays[i].periodDescriptor.number===4)&&(gameType='regular')&&(goalType5[0][1].length+goalType5[0][2].length===goalType5[1][1].length+goalType5[1][2].length)&&(whoScored==='awayGoal')) {goalType4='OTAway'}
                     else if ((goalType5[0][0].length+goalType5[0][1].length+goalType5[0][2].length>goalType5[1][0].length+goalType5[1][1].length+goalType5[1][2].length)&&(whoScored==='homeGoal')) {goalType4='HomePP_AwayPK'}
                     else if ((goalType5[0][0].length+goalType5[0][1].length+goalType5[0][2].length>goalType5[1][0].length+goalType5[1][1].length+goalType5[1][2].length)&&(whoScored==='awayGoal')) {goalType4='AwaySH'}
                     else if ((goalType5[0][0].length+goalType5[0][1].length+goalType5[0][2].length<goalType5[1][0].length+goalType5[1][1].length+goalType5[1][2].length)&&(whoScored==='awayGoal')) {goalType4='HomePK_AwayPP'}
@@ -188,7 +189,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else if ((goalType5[0][0].length===1)&&(goalType5[1][0].length===0)&&(goalType5[0][1].length+goalType5[0][2].length===5)&&(goalType5[1][1].length+goalType5[1][2].length===6)&&(whoScored==='awayGoal')) {goalType4='awaySixOnFive'}
                     else if ((goalType5[1][0].length===1)&&(goalType5[0][0].length===0)&&(goalType5[1][1].length+goalType5[1][2].length===5)&&(goalType5[0][1].length+goalType5[0][2].length===6)&&(whoScored==='homeGoal')) {goalType4='homeSixOnFive'}                    
                     else if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[1][2].length<5)&&(goalType5[1][1].length+goalType5[1][2].length===goalType5[0][1].length+goalType5[0][2].length)&&
-                    (gameType='regular')&&(data1.data[i].period<4)) {goalType4='SpecialTeams'}
+                    (gameType='regular')&&(data.plays[i].periodDescriptor.number<4)) {goalType4='SpecialTeams'}
                     else if ((goalType5[0][0].length===1)&&(goalType5[0][1].length+goalType5[0][2].length<5)&&(goalType5[1][0].length===1)&&(goalType5[1][1].length+goalType5[1][2].length<5)&&(goalType5[1][1].length+goalType5[1][2].length===goalType5[0][1].length+goalType5[0][2].length)&&
                     (gameType='playoff')) {goalType4='SpecialTeams'}
                     else {goalType4='something else'} // end if loop goalType4
@@ -249,7 +250,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   goalTime[0].sort((a,b) => a-b) // will not be necessary
                     }} // end goal if 505 statement and i loop
 
-                    // console.log(Object.keys(data3[data3.length-1].seasonData), data3[data3.length-1].seasonData)
                     if ((Object.keys(data3[data3.length-1].seasonData).length===0)&&(centralDivisionTeams.includes(data.awayTeam.id))) {console.log('newArrayAway')}
                     
                   goalType7=[];
