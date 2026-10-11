@@ -250,12 +250,12 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   goalTime[0].sort((a,b) => a-b) // will not be necessary
                     }} // end goal if 505 statement and i loop
 
-                    if ((Object.keys(data3[data3.length-1].seasonData).length===0)&&(centralDivisionTeams.includes(data.awayTeam.id))) {console.log('newArrayAway')}
+                   // if ((Object.keys(data3[data3.length-1].seasonData).length===0)&&(centralDivisionTeams.includes(data.awayTeam.id))) {console.log('newArrayAway')}
                     
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
                     console.log(goalType7, goalTime2, 'fullLineup', fullLineup); // deleted goalTime not sure why it shows an error
-                    console.log('end of the line', data3);
+                    console.log('end of the line', data3, data1.data);
                     for (i=0;i<2;i++) {for (j=0;j<goalTime2[0].length;j++) {if (goalTime[i][j]===goalTime2[i][j]) {}
                   else {console.log('not equal', goalTime[i][j], goalTime2[i][j])}}}
                   for (i=0;i<goalsNumber.length;i++) { var newGoal3 = document.createElement('span');
