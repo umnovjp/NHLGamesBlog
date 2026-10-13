@@ -143,7 +143,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     for (k=0;k<data.rosterSpots.length;k++) {if (data.rosterSpots[k].playerId===data1.data[j].playerId) { onIceArray.push(data.rosterSpots[k].teamId, data.rosterSpots[k].sweaterNumber, shiftStartSeconds, shiftEndSeconds);
                   }}} // end if and end k loop
                     } // end j loop
-                    console.log(data.plays[i], data.plays[i].periodDescriptor, whoScored, goalTimeSecondsAbsolute)
+                    console.log(whoScored, goalTimeSecondsAbsolute)
                     // onIceArray structure: newGoal string follows by time of the goal in seconds, teamId, sweaterNumber, shiftSratSeconds, shiftEndSeconds
                     // game vs BUF on 04/15/26 is example of a game with multiple SO goals/ Score was 3:3 but shootout was 3:2 Stars
                     const goalType = [[],[]];
@@ -246,24 +246,27 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   goalTime[0].sort((a,b) => a-b) // will not be necessary
                     }} // end goal if 505 statement and i loop
 
-                   // if ((Object.keys(data3[data3.length-1].seasonData).length===0)&&(centralDivisionTeams.includes(data.awayTeam.id))) {console.log('newArrayAway')}
-                    
+                  if ((Object.keys(data3[data3.length-1].seasonData).length===0)&&(centralDivisionTeams.includes(data.awayTeam.id))) {console.log('newArrayAway')}
+                  // console.log(Object.keys(data3)) 
+                   
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
-                    console.log(goalType7, goalTime2, 'fullLineup', fullLineup); // deleted goalTime not sure why it shows an error
+                    console.log(goalType7, 'fullLineup', fullLineup); // deleted goalTime not sure why it shows an error
                     console.log('end of the line', data3, goalsNumber, data.plays);
-                    for (i=0;i<2;i++) {for (j=0;j<goalTime2[0].length;j++) {if (goalTime[i][j]===goalTime2[i][j]) {}
-                  else {console.log('not equal', goalTime[i][j], goalTime2[i][j])}}}
-                  for (i=0;i<goalsNumber.length;i++) { var newGoal3 = document.createElement('span');
-                  // data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].period
-                  for (j=0;j<data.rosterSpots.length;j++) { // console.log(data.plays[goalsNumber[i]].details.scoringPlayerId)
-                    if (data.rosterSpots[j].playerId===data.plays[goalsNumber[i]].details.scoringPlayerId) {console.log(data.rosterSpots[j].firstName.default, data.rosterSpots[j].lastName.default, typeof data.rosterSpots[j].firstName.default )
+                  //   for (i=0;i<2;i++) {for (j=0;j<goalTime2[0].length;j++) {if (goalTime[i][j]===goalTime2[i][j]) {}
+                  // else {console.log('not equal', goalTime[i][j], goalTime2[i][j])}}}
+                  for (i=0;i<goalsNumber.length;i++) { var newGoal3 = document.createElement('span'); var assists1 = ''; var assists2 = '';
+                  for (j=0;j<data.rosterSpots.length;j++) { 
+                    if (data.rosterSpots[j].playerId===data.plays[goalsNumber[i]].details.scoringPlayerId) { //console.log(data.rosterSpots[j].firstName.default, data.rosterSpots[j].lastName.default, typeof data.rosterSpots[j].firstName.default )
                       var scorer = data.rosterSpots[j].firstName.default + ' ' + data.rosterSpots[j].lastName.default}
-
+                    if (data.plays[goalsNumber[i]].details.assist1PlayerId) { if (data.rosterSpots[j].playerId===data.plays[goalsNumber[i]].details.assist1PlayerId) {
+                        var assists1 = data.rosterSpots[j].firstName.default + ' ' + data.rosterSpots[j].lastName.default }}
+                      if (data.plays[goalsNumber[i]].details.assist2PlayerId) { if (data.rosterSpots[j].playerId===data.plays[goalsNumber[i]].details.assist2PlayerId) {
+                          var assists2 = data.rosterSpots[j].firstName.default + ' ' + data.rosterSpots[j].lastName.default }}
                     }
                   
                   newGoal3.innerHTML='<br>'+'Period: '+data.plays[goalsNumber[i]].periodDescriptor.number+' Time: '+data.plays[goalsNumber[i]].timeInPeriod+' '+goalType7[3*i+2]+' '+' Scorer: '+ scorer +
-                  ' Assists: '+data1.data[goalsNumber[goalTime[1].indexOf(goalTime[0][i])]].eventDetails+' '+goalType7[3*i+1][1][0]+'-'+goalType7[3*i+1][1][1]+'-'+goalType7[3*i+1][1][2]+' '+goalType7[3*i+1][0][0]+'-'+goalType7[3*i+1][0][1]+'-'+goalType7[3*i+1][0][2];
+                  ' Assists:' + assists1 + ' ' + assists2;
                   document.getElementById('gameInfo').appendChild(newGoal3)}
                   })
                   }); // end third second .then
