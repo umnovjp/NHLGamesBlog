@@ -1,7 +1,8 @@
 const tipForm = document.getElementById('tip-form');
-// const gameData = document.getElementById('gameData');
 const tipsContainer = document.getElementById('tip-container');
-onIceArray = []; centralDivisionTeams = [21,25,30]; goalsNumber = []; var gameId; const plusMinusArray = [[[],[],[]],[[],[],[]]]; var goalType6=[]; var goalTime2=[[],[]]; seasonData={};
+onIceArray = []; centralDivisionTeams = [21,25,30,52]; goalsNumber = []; var gameId; // const plusMinusArray = [[[],[],[]],[[],[],[]]]; 
+// 52 Jets, 25 Stars, 21 COL, 30 MIN, 54 vegas, 68 utah
+var goalType6=[]; var goalTime2=[[],[]]; seasonData={21: [], 25: [], 30: [], 52: [], 54: [], 68: []};
 var game0 = document.getElementById('game0'); 
 const frequency = (arr, item) => {let count = 0;
   for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
@@ -104,7 +105,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             for (i=0;i<data3.length;i++) {topicArray.push(parseInt(data3[i].topic))}
             if (topicArray.includes(gameId)) {console.log('game already there')}
           else {console.log('game is not there')} 
-          console.log(data3[1].seasonData)
+          // console.log(data3[1].seasonData)
           console.log('I am in checking loop');
             
             for (i=0;i<data.rosterSpots.length;i++) { 
@@ -242,17 +243,19 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) {if (onIceArray[j]==='newGoal') {goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1} // why do I need goalTime if I have goalTime2? 
                   } // end short j loop 
-                  goalTime[0].sort((a,b) => a-b) // will delete it
+                  goalTime[0].sort((a,b) => a-b) // will delete it need to get rid of index 0
                     }} // end goal if 505 statement and i loop
 
-                  if ((Object.keys(data3[data3.length-1].seasonData).length===0)&&(centralDivisionTeams.includes(data.awayTeam.id))) {console.log('newArrayAway')}
+                  if ((Object.keys(data3[data3.length-1].seasonData).length===0)&&(centralDivisionTeams.includes(data.awayTeam.id))) {
+                    teamValue = data.awayTeam.id
+                    seasonData = {teamValue: fullLineup }
+                    console.log('newArrayAway', seasonData);
+                  }
                    
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
                     console.log(goalType7, 'fullLineup', fullLineup);
                     console.log('end of the line', data3, goalsNumber, data.plays);
-                  //   for (i=0;i<2;i++) {for (j=0;j<goalTime2[0].length;j++) {if (goalTime[i][j]===goalTime2[i][j]) {}
-                  // else {console.log('not equal', goalTime[i][j], goalTime2[i][j])}}}
                   for (i=0;i<goalsNumber.length;i++) { var newGoal3 = document.createElement('span'); var assists1 = ''; var assists2 = '';
                   for (j=0;j<data.rosterSpots.length;j++) { 
                     if (data.rosterSpots[j].playerId===data.plays[goalsNumber[i]].details.scoringPlayerId) { 
