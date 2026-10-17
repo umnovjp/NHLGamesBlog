@@ -1,13 +1,14 @@
 const tipForm = document.getElementById('tip-form');
 const tipsContainer = document.getElementById('tip-container');
-onIceArray = []; centralDivisionTeams = [21,25,30,52]; goalsNumber = []; var gameId; // const plusMinusArray = [[[],[],[]],[[],[],[]]]; 
+onIceArray = []; // centralDivisionTeams = [21,25,30,52]; 
+goalsNumber = []; var gameId; // const plusMinusArray = [[[],[],[]],[[],[],[]]]; 
 // 52 Jets, 25 Stars, 21 COL, 30 MIN, 54 vegas, 68 utah
 var goalType6=[]; var goalTime2=[[],[]]; seasonData={21: [], 25: [], 30: [], 52: [], 54: [], 68: []};
 var game0 = document.getElementById('game0'); 
-const frequency = (arr, item) => {let count = 0;
-  for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
-  return count;
-};
+// const frequency = (arr, item) => {let count = 0;
+//   for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
+//   return count;
+// };
 
 const createCard = (tip) => { // Create card
   const cardEl = document.createElement('section');
@@ -246,11 +247,20 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   goalTime[0].sort((a,b) => a-b) // will delete it need to get rid of index 0
                     }} // end goal if 505 statement and i loop
 
-                  if ((Object.keys(data3[data3.length-1].seasonData).length===0)&&(centralDivisionTeams.includes(data.awayTeam.id))) {
-                    teamValue = data.awayTeam.id
-                    seasonData = {teamValue: fullLineup }
-                    console.log('newArrayAway', seasonData);
-                  }
+                  // if ((Object.keys(data3[data3.length-1].seasonData).length===0)&&(centralDivisionTeams.includes(data.awayTeam.id))) {
+                  //   teamValue = data.awayTeam.id
+                  //   seasonData = {teamValue: fullLineup }
+                  //   console.log('newArrayAway', seasonData);
+                  // }
+                  // console.log(Object.keys(seasonData));
+                  if (Object.keys(seasonData).includes(data.awayTeam.id)) { data.awayTeam.id === awayTeamId;
+                    Object.assign(seasonData, {awayTeamId: fullLineup[1]})
+                    }
+                    if (Object.keys(seasonData).includes(data.homeTeam.id)) { data.homeTeam.id === homeTeamId;
+                      Obkect.assign(seasonData, {homeTeamId: fullLineup[0]})
+                    homeTeamId: fullLineup[1]}
+
+                    console.log(seasonData)
                    
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
