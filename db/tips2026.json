@@ -278,5 +278,38 @@
         "topic": "2026020107 25 21",
         "seasonData": {},
         "tip_id": "6ec1"
+    },
+    {
+        "title": "You are watching stats for DAL at COL game # 2026020107 on 2026-10-14. Period: 2 Time: 04:55 fiveOnFiveHome  Scorer: Gabriel Landeskog Assists:Nazem Kadri Sam Malinski1-5,55-91,96,18 41-8,70-91,11,92Period: 2 Time: 15:03 fiveOnFiveAway  Scorer: Miro Heiskanen Assists:Mikko Rantanen Thomas Harley1-4,55-96,24,21 41-27,70-11,92,88Period: 3 Time: 01:20 AwaySH  Scorer: Arttu Hyry Assists: 1-23,4-18,25 41-8-91,71,29,13Period: 3 Time: 08:21 fiveOnFiveHome  Scorer: Brock Nelson Assists:Artturi Lehkonen Nazem Kadri1-5,55-91,96,24 41-8,70-91,11,62Period: 5 Time: 00:00 shootout  Scorer: Jason Robertson Assists: -- --Period: 5 Time: 00:00 shootout  Scorer: Nazem Kadri Assists: -- --Period: 5 Time: 00:00 shootout  Scorer: Roope Hintz Assists: -- --",
+        "username": "no major code update as I watched CHI game",
+        "tip": "I think I did it right this time with seasonData being an array of objects and not an object. will see if data are added correctly",
+        "topic": "2026020107 25 21",
+        "seasonData": [
+            {
+                "team": "WPG",
+                "lineup": []
+            },
+            {
+                "team": "DAL",
+                "lineup": []
+            },
+            {
+                "team": "COL",
+                "lineup": []
+            },
+            {
+                "team": "MIN",
+                "lineup": []
+            },
+            {
+                "team": "VGK",
+                "lineup": []
+            },
+            {
+                "team": "UTA",
+                "lineup": []
+            }
+        ],
+        "tip_id": "c4c5"
     }
 ]

@@ -1,9 +1,9 @@
 const tipForm = document.getElementById('tip-form');
 const tipsContainer = document.getElementById('tip-container');
-onIceArray = []; // centralDivisionTeams = [21,25,30,52]; 
-goalsNumber = []; var gameId; // const plusMinusArray = [[[],[],[]],[[],[],[]]]; 
+onIceArray = []; goalsNumber = []; var gameId;
 // 52 Jets, 25 Stars, 21 COL, 30 MIN, 54 vegas, 68 utah
-var goalType6=[]; var goalTime2=[[],[]]; seasonData={21: [], 25: [], 30: [], 52: [], 54: [], 68: []};
+var goalType6=[]; var goalTime2=[[],[]]; // seasonData={21: [], 25: [], 30: [], 52: [], 54: [], 68: []};
+seasonData = [{team: 'WPG', lineup: []}, {team: 'DAL', lineup: []}, {team: 'COL', lineup: []}, {team: 'MIN', lineup: []}, {team: 'VGK', lineup: []}, {team: 'UTA', lineup: []}];
 var game0 = document.getElementById('game0'); 
 // const frequency = (arr, item) => {let count = 0;
 //   for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
@@ -257,8 +257,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     Object.assign(seasonData, {awayTeamId: fullLineup[1]})
                     }
                     if (Object.keys(seasonData).includes(data.homeTeam.id)) { data.homeTeam.id === homeTeamId;
-                      Obkect.assign(seasonData, {homeTeamId: fullLineup[0]})
-                    homeTeamId: fullLineup[1]}
+                      Object.assign(seasonData, {homeTeamId: fullLineup[0]})
+                    }
 
                     console.log(seasonData)
                    
