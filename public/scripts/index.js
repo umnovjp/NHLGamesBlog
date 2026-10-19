@@ -1,6 +1,6 @@
 const tipForm = document.getElementById('tip-form');
 const tipsContainer = document.getElementById('tip-container');
-onIceArray = []; goalsNumber = []; var gameId;
+onIceArray = []; goalsNumber = []; var gameId; // var Data3Global;
 // 52 Jets, 25 Stars, 21 COL, 30 MIN, 54 vegas, 68 utah
 var goalType6=[]; var goalTime2=[[],[]]; // seasonData={21: [], 25: [], 30: [], 52: [], 54: [], 68: []};
 seasonData = [{team: 'WPG', lineup: []}, {team: 'DAL', lineup: []}, {team: 'COL', lineup: []}, {team: 'MIN', lineup: []}, {team: 'VGK', lineup: []}, {team: 'UTA', lineup: []}];
@@ -54,7 +54,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
     "method": "GET", "headers": {}
   })
     .then(function (response) {return response.json()})
-    .then(function (data2) { console.log('I am in schedule then', data2);
+    .then(function (data2) { // console.log('I am in schedule then', data2);
       var numberOfGames = data2.gameWeek[0].games.length;
       for (var i = 0; i < numberOfGames; i++) { var gameName = document.createElement('button');
         gameName.setAttribute('id', 'game' + i); var idx = gameName.getAttribute('id');
@@ -102,11 +102,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           )
           .then(function(response) {return(response.json())})
           .then(function(data3) { console.log(data3, gameId)
-            topicArray =[];
+            topicArray =[]; // Data3Global = data3;
             for (i=0;i<data3.length;i++) {topicArray.push(parseInt(data3[i].topic))}
             if (topicArray.includes(gameId)) {console.log('game already there')}
-          else {console.log('game is not there')} 
-          // console.log(data3[1].seasonData)
+          else {console.log('game is not there')}
           console.log('I am in checking loop');
             
             for (i=0;i<data.rosterSpots.length;i++) { 
@@ -247,20 +246,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   goalTime[0].sort((a,b) => a-b) // will delete it need to get rid of index 0
                     }} // end goal if 505 statement and i loop
 
-                  // if ((Object.keys(data3[data3.length-1].seasonData).length===0)&&(centralDivisionTeams.includes(data.awayTeam.id))) {
-                  //   teamValue = data.awayTeam.id
-                  //   seasonData = {teamValue: fullLineup }
-                  //   console.log('newArrayAway', seasonData);
-                  // }
-                  // console.log(Object.keys(seasonData));
-                  if (Object.keys(seasonData).includes(data.awayTeam.id)) { data.awayTeam.id === awayTeamId;
-                    Object.assign(seasonData, {awayTeamId: fullLineup[1]})
-                    }
-                    if (Object.keys(seasonData).includes(data.homeTeam.id)) { data.homeTeam.id === homeTeamId;
-                      Object.assign(seasonData, {homeTeamId: fullLineup[0]})
-                    }
+                  for (j=0;j<seasonData.length;j++) {if (data.awayTeam.abbrev===seasonData[j].team) {console.log('homeTeam')}}
+                  for (j=0;j<seasonData.length;j++) {if (data.homeTeam.abbrev===seasonData[j].team) {console.log('awayTeam')}}
 
-                    console.log(seasonData)
+                    console.log(seasonData, data3, data3[data3.length-1].seasonData)
                    
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
