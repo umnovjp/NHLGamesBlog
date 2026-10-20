@@ -1,14 +1,9 @@
 const tipForm = document.getElementById('tip-form');
 const tipsContainer = document.getElementById('tip-container');
-onIceArray = []; goalsNumber = []; var gameId; // var Data3Global;
-// 52 Jets, 25 Stars, 21 COL, 30 MIN, 54 vegas, 68 utah
-var goalType6=[]; var goalTime2=[[],[]]; // seasonData={21: [], 25: [], 30: [], 52: [], 54: [], 68: []};
+onIceArray = []; goalsNumber = []; var gameId;
+var goalType6=[]; var goalTime2=[[],[]];
 seasonData = [{team: 'WPG', lineup: []}, {team: 'DAL', lineup: []}, {team: 'COL', lineup: []}, {team: 'MIN', lineup: []}, {team: 'VGK', lineup: []}, {team: 'UTA', lineup: []}];
 var game0 = document.getElementById('game0'); 
-// const frequency = (arr, item) => {let count = 0;
-//   for (let i = 0; i < arr.length; i++) {if (arr[i] === item) {count++}}
-//   return count;
-// };
 
 const createCard = (tip) => { // Create card
   const cardEl = document.createElement('section');
@@ -49,7 +44,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
   var formatted = date[2] + '-' + date[0] + '-' + date[1];
   // var requestURL = 'https://corsproxy.io/https://api-web.nhle.com/v1/schedule/'+ formatted; // date games displayed formatted example 2025-11-14
   var requestURL = 'https://cors-anywhere.herokuapp.com/https://api-web.nhle.com/v1/schedule/'+ formatted; 
-  // console.log(requestURL);
   fetch(requestURL, {
     "method": "GET", "headers": {}
   })
@@ -249,7 +243,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   for (j=0;j<seasonData.length;j++) {if (data.awayTeam.abbrev===seasonData[j].team) {console.log('homeTeam')}}
                   for (j=0;j<seasonData.length;j++) {if (data.homeTeam.abbrev===seasonData[j].team) {console.log('awayTeam')}}
 
-                    console.log(seasonData, data3, data3[data3.length-1].seasonData)
+                    console.log(seasonData, data3[data3.length-1].seasonData)
+                    // need to figure out how to check if any goals were scored by this team before
                    
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
