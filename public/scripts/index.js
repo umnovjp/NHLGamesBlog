@@ -81,15 +81,12 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
             document.getElementById('schedule').appendChild(gameIdNumber);
             const gameInfo = document.createElement('section'); gameInfo.setAttribute('id', 'gameInfo');
             document.getElementById('schedule').appendChild(gameInfo);
-            // const gameInfoHome = document.createElement('section');
-            // gameInfoHome.setAttribute('id', 'gameInfoHome');
-            // document.getElementById('schedule').appendChild(gameInfoHome);
             var gameTitle = document.createElement('h2'); gameTitle.textContent = '';
             gameTitle.innerHTML = 'You are watching stats for ' + data.awayTeam.abbrev + ' at ' + data.homeTeam.abbrev + ' game # ' + gameId + ' on ' + formatted + '. ';
             document.getElementById('gameInfo').appendChild(gameTitle);
             const lineups = document.createElement('section');
             document.getElementById('gameInfo').appendChild(lineups);
-            fullLineup = [[],[]] // will use it later
+            fullLineup = [[],[]];
             fetch ('/api/tips',
           {'method': 'GET'
            }
@@ -98,8 +95,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           .then(function(data3) { console.log(data3, gameId)
             topicArray =[]; // Data3Global = data3;
             for (i=0;i<data3.length;i++) {topicArray.push(parseInt(data3[i].topic))}
-            if (topicArray.includes(gameId)) {console.log('game already there')}
-          else {console.log('game is not there')}
+          //   if (topicArray.includes(gameId)) {console.log('game already there')}
+          // else {console.log('game is not there')}
           console.log('I am in checking loop');
             
             for (i=0;i<data.rosterSpots.length;i++) { 
@@ -243,8 +240,10 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   for (j=0;j<seasonData.length;j++) {if (data.awayTeam.abbrev===seasonData[j].team) {console.log('homeTeam')}}
                   for (j=0;j<seasonData.length;j++) {if (data.homeTeam.abbrev===seasonData[j].team) {console.log('awayTeam')}}
 
-                    console.log(seasonData, data3[data3.length-1].seasonData)
-                    // need to figure out how to check if any goals were scored by this team before
+                    console.log(seasonData, data3[data3.length-1].seasonData, topicArray, data.id)
+                    if (topicArray.includes(data.id)) {console.log('gane is there')}
+                    else (console.log('add me'))
+                    // need to figure out how to check if any goals were scored by this team before. Probably check if game is there already
                    
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
