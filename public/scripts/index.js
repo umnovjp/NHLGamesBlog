@@ -93,10 +93,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
           )
           .then(function(response) {return(response.json())})
           .then(function(data3) { console.log(data3, gameId)
-            topicArray =[]; // Data3Global = data3;
+            topicArray =[]; 
             for (i=0;i<data3.length;i++) {topicArray.push(parseInt(data3[i].topic))}
-          //   if (topicArray.includes(gameId)) {console.log('game already there')}
-          // else {console.log('game is not there')}
           console.log('I am in checking loop');
             
             for (i=0;i<data.rosterSpots.length;i++) { 
@@ -134,7 +132,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     for (k=0;k<data.rosterSpots.length;k++) {if (data.rosterSpots[k].playerId===data1.data[j].playerId) { onIceArray.push(data.rosterSpots[k].teamId, data.rosterSpots[k].sweaterNumber, shiftStartSeconds, shiftEndSeconds);
                   }}} // end if and end k loop
                     } // end j loop
-                    console.log(whoScored, goalTimeSecondsAbsolute)
+                    // console.log(whoScored, goalTimeSecondsAbsolute)
                     // onIceArray structure: newGoal string follows by time of the goal in seconds, teamId, sweaterNumber, shiftSratSeconds, shiftEndSeconds
                     // game vs BUF on 04/15/26 is example of a game with multiple SO goals/ Score was 3:3 but shootout was 3:2 Stars
                     const goalType = [[],[]];
@@ -237,12 +235,15 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   goalTime[0].sort((a,b) => a-b) // will delete it need to get rid of index 0
                     }} // end goal if 505 statement and i loop
 
-                  for (j=0;j<seasonData.length;j++) {if (data.awayTeam.abbrev===seasonData[j].team) {console.log('homeTeam')}}
-                  for (j=0;j<seasonData.length;j++) {if (data.homeTeam.abbrev===seasonData[j].team) {console.log('awayTeam')}}
+                  // for (j=0;j<seasonData.length;j++) {if (data.awayTeam.abbrev===seasonData[j].team) {console.log('homeTeam')}}
+                  // for (j=0;j<seasonData.length;j++) {if (data.homeTeam.abbrev===seasonData[j].team) {console.log('awayTeam')}}
 
                     console.log(seasonData, data3[data3.length-1].seasonData, topicArray, data.id)
                     if (topicArray.includes(data.id)) {console.log('gane is there')}
-                    else (console.log('add me'))
+                    else {console.log('add me')
+                      for (j=0;j<data3[data3.length-1].seasonData.length;j++) {if (data.awayTeam.abbrev===seasonData[j].team) {console.log('awayTeam')}}
+                      for (j=0;j<data3[data3.length-1].seasonData.length;j++) {if (data.homeTeam.abbrev===seasonData[j].team) {console.log('homeTeam')}}
+                    }
                     // need to figure out how to check if any goals were scored by this team before. Probably check if game is there already
                    
                   goalType7=[];
