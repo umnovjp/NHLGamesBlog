@@ -235,9 +235,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   goalTime[0].sort((a,b) => a-b) // will delete it need to get rid of index 0
                     }} // end goal if 505 statement and i loop
 
-                  // for (j=0;j<seasonData.length;j++) {if (data.awayTeam.abbrev===seasonData[j].team) {console.log('homeTeam')}}
-                  // for (j=0;j<seasonData.length;j++) {if (data.homeTeam.abbrev===seasonData[j].team) {console.log('awayTeam')}}
-
                     console.log(seasonData, data3[data3.length-1].seasonData, topicArray, data.id)
                     if (topicArray.includes(data.id)) {console.log('gane is there')}
                     else {console.log('add me')
