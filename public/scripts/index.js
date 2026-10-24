@@ -92,13 +92,12 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
            }
           )
           .then(function(response) {return(response.json())})
-          .then(function(data3) { console.log(data3, gameId)
+          .then(function(data3) { console.log(gameId)
             topicArray =[]; 
             for (i=0;i<data3.length;i++) {topicArray.push(parseInt(data3[i].topic))}
           console.log('I am in checking loop');
             
-            for (i=0;i<data.rosterSpots.length;i++) { 
-              const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: [0,0], PP: [0,0], PK: [0,0], specialTeams: [0,0], FiveOnSix: [0,0], SixOnFive: [0,0], overtime: [0,0]}
+            for (i=0;i<data.rosterSpots.length;i++) { const obj = {playerId: data.rosterSpots[i].playerId, teamId: data.rosterSpots[i].teamId, number: data.rosterSpots[i].sweaterNumber, position: data.rosterSpots[i].positionCode, fiveOnFive: [0,0], PP: [0,0], PK: [0,0], specialTeams: [0,0], FiveOnSix: [0,0], SixOnFive: [0,0], overtime: [0,0]}
             if (data.rosterSpots[i].teamId===data.awayTeam.id) { fullLineup[1].push(obj) }
             else {fullLineup[0].push(obj) }
             }
@@ -236,12 +235,21 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     }} // end goal if 505 statement and i loop
 
                     console.log(seasonData, data3[data3.length-1].seasonData, topicArray, data.id)
-                    if (topicArray.includes(data.id)) {console.log('gane is there')}
-                    else {console.log('add me')
-                      for (j=0;j<data3[data3.length-1].seasonData.length;j++) {if (data.awayTeam.abbrev===seasonData[j].team) {console.log('awayTeam')}}
-                      for (j=0;j<data3[data3.length-1].seasonData.length;j++) {if (data.homeTeam.abbrev===seasonData[j].team) {console.log('homeTeam')}}
+                    if (topicArray.includes(data.id)) {console.log('game is there')}
+                    else {console.log('add me');
+                      for (j=0;j<data3[data3.length-1].seasonData.length;j++) {if (data.awayTeam.abbrev===seasonData[j].team) {// console.log('awayTeam')
+                        awayIndex=j;
+                      console.log('awayTeam ', awayIndex, data3[data3.length-1].seasonData[awayIndex].lineup, 'fullLineup', fullLineup, seasonData[awayIndex].lineup)
+                      if (data3[data3.length-1].seasonData[awayIndex].lineup.length=0) {seasonData[awayIndex].lineup===fullLineup[1][0]}
+                      }}
+                      for (j=0;j<data3[data3.length-1].seasonData.length;j++) {if (data.homeTeam.abbrev===seasonData[j].team) {
+                        homeIndex=j;
+                        console.log('homeTeam ', homeIndex, data3[data3.length-1].seasonData[homeIndex].lineup)
+                        if (data3[data3.length-1].seasonData[homeIndex].lineup.length=0) {seasonData[homeIndex].lineup===fullLineup[0]}
+                      }                    
                     }
-                    // need to figure out how to check if any goals were scored by this team before. Probably check if game is there already
+                    console.log('seasonData', seasonData)
+                    }
                    
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
