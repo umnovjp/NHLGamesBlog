@@ -239,22 +239,32 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else {console.log('add me');
                       for (j=0;j<data3[data3.length-1].seasonData.length;j++) {if (data.awayTeam.abbrev===seasonData[j].team) {// console.log('awayTeam')
                         awayIndex=j;
-                      console.log('awayTeam ', awayIndex, data3[data3.length-1].seasonData[awayIndex].lineup, 'fullLineup', fullLineup, seasonData[awayIndex].lineup)
-                      if (data3[data3.length-1].seasonData[awayIndex].lineup.length=0) {seasonData[awayIndex].lineup===fullLineup[1][0]}
-                      }}
-                      for (j=0;j<data3[data3.length-1].seasonData.length;j++) {if (data.homeTeam.abbrev===seasonData[j].team) {
-                        homeIndex=j;
-                        console.log('homeTeam ', homeIndex, data3[data3.length-1].seasonData[homeIndex].lineup)
-                        if (data3[data3.length-1].seasonData[homeIndex].lineup.length=0) {seasonData[homeIndex].lineup===fullLineup[0]}
-                      }                    
-                    }
+                      console.log('awayTeam ', awayIndex, data3[data3.length-1].seasonData[awayIndex].lineup, 'fullLineup', fullLineup, seasonData[awayIndex].lineup);
+                      // console.log('assign seasodata', data3[data3.length-1].seasonData[awayIndex].lineup, data3[data3.length-1].seasonData[awayIndex].lineup.length)
+                      if (data3[data3.length-1].seasonData[awayIndex].lineup.length===0) { console.log('line 244', seasonData[awayIndex]);
+                       // seasonData[awayIndex].lineup===fullLineup[1][0]
+                        for (k=0;k<fullLineup[1].length;k++) {seasonData[awayIndex].lineup.push(fullLineup[1][k])}}
+                        else if (data3[data3.length-1].seasonData[awayIndex].lineup.length>0) {for (k=0;k<fullLineup[1].length;k++) {
+                          for (l=0;l<data3[data3.length-1].seasonData[awayIndex].lineup.length;l++) {if (fullLineup[1][k].playerId===data3[data3.length-1].seasonData[awayIndex].lineup.playerId) {
+                            seasonData[awayIndex].lineup[l].fiveOnFive[0]=fullLineup[1][k].lineup.fiveOnFive[0]+data3[data3.length-1].seasonData[awayIndex].lineup[l].fiveOnFive[0]
+                            // that needs to be verified multiple times
+                          }}
+                        }}
+                      }} // end away j loop
+                    //   for (j=0;j<data3[data3.length-1].seasonData.length;j++) {if (data.homeTeam.abbrev===seasonData[j].team) {
+                    //     homeIndex=j;
+                    //     console.log('homeTeam ', homeIndex, data3[data3.length-1].seasonData[homeIndex].lineup)
+                    //     if (data3[data3.length-1].seasonData[homeIndex].lineup.length=0) {seasonData[homeIndex].lineup===fullLineup[0]}
+                    //   }                    
+                    // }
+                    
+                    } // end else statement
                     console.log('seasonData', seasonData)
-                    }
                    
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
                     console.log(goalType7, 'fullLineup', fullLineup);
-                    console.log('end of the line', data3, goalsNumber, data.plays);
+                    // console.log('end of the line', data3, goalsNumber, data.plays);
                   for (i=0;i<goalsNumber.length;i++) { var newGoal3 = document.createElement('span'); var assists1 = ''; var assists2 = '';
                   for (j=0;j<data.rosterSpots.length;j++) { 
                     if (data.rosterSpots[j].playerId===data.plays[goalsNumber[i]].details.scoringPlayerId) { 
