@@ -303,5 +303,719 @@
             }
         ],
         "tip_id": "c4c5"
+    },
+    {
+        "title": "You are watching stats for COL at NSH game # 2026020183 on 2026-10-25. Period: 1 Time: 04:01 HomePP_AwayPK  Scorer: Filip Forsberg Assists:Roman Josi Steven Stamkos41-84,42-25,9 29-59-91,90,81,9Period: 1 Time: 10:48 fiveOnFiveHome  Scorer: Steven Stamkos Assists:Ryan O'Reilly Mavrik Bourque41-27,8-71,9,13 29-59,48-91,90,22Period: 2 Time: 06:38 HomePP_AwayPK  Scorer: Ryan O'Reilly Assists:Roman Josi Filip Forsberg41-42,27-17,25 29-59-91,90,81,9Period: 2 Time: 16:36 fiveOnFiveHome  Scorer: Jack Drury Assists:Ross Colton Brady Skjei41-27,70-62,29,88 29-76,2-79,18,84Period: 2 Time: 17:29 HomePP_AwayPK  Scorer: Ryan O'Reilly Assists:Jonathan Marchessault Filip Forsberg41-7,8-25,9 29-59-91,90,81,9Period: 2 Time: 17:55 fiveOnFiveAway  Scorer: Artturi Lehkonen Assists:Martin Necas Nathan MacKinnon41-84,42-62,29,88 29-59,2-79,18,84Period: 3 Time: 02:43 SpecialTeams  Scorer: Devon Toews Assists:Sam Malinski Martin Necas41-7,70-11,88 29-59,2-14,22Period: 3 Time: 10:24 HomePP_AwayPK  Scorer: Steven Stamkos Assists:Ryan O'Reilly Roman Josi41-7-11,62 29-59-91,90,81,9",
+        "username": "no real code update tonight. Busy with other staff",
+        "tip": "Surprising result. NSH scored 4 goals on 7 PPs. COL scored 0 on 4 PPs. 5x5 score was 2:1 COL and NSH scored one goal on 4x4. Line 62-29-88 was 1:1 5x5 as a line. And #8 is 1:1 as well total",
+        "topic": "2026020183 21 18",
+        "seasonData": [
+            {
+                "team": "WPG",
+                "lineup": []
+            },
+            {
+                "team": "DAL",
+                "lineup": []
+            },
+            {
+                "team": "COL",
+                "lineup": [
+                    {
+                        "playerId": 8470613,
+                        "teamId": 21,
+                        "number": 84,
+                        "position": "D",
+                        "fiveOnFive": [
+                            1,
+                            0
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            1
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8475172,
+                        "teamId": 21,
+                        "number": 91,
+                        "position": "C",
+                        "fiveOnFive": [
+                            0,
+                            0
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            0
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8475754,
+                        "teamId": 21,
+                        "number": 11,
+                        "position": "C",
+                        "fiveOnFive": [
+                            0,
+                            0
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            1
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8475768,
+                        "teamId": 21,
+                        "number": 71,
+                        "position": "L",
+                        "fiveOnFive": [
+                            0,
+                            1
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            0
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8475809,
+                        "teamId": 21,
+                        "number": 41,
+                        "position": "G",
+                        "fiveOnFive": [
+                            1,
+                            2
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            4
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8476312,
+                        "teamId": 21,
+                        "number": 42,
+                        "position": "D",
+                        "fiveOnFive": [
+                            1,
+                            0
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            2
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8476455,
+                        "teamId": 21,
+                        "number": 92,
+                        "position": "L",
+                        "fiveOnFive": [
+                            0,
+                            0
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            0
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8476967,
+                        "teamId": 21,
+                        "number": 27,
+                        "position": "D",
+                        "fiveOnFive": [
+                            0,
+                            2
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            1
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8477476,
+                        "teamId": 21,
+                        "number": 62,
+                        "position": "L",
+                        "fiveOnFive": [
+                            1,
+                            1
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            1
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8477492,
+                        "teamId": 21,
+                        "number": 29,
+                        "position": "C",
+                        "fiveOnFive": [
+                            1,
+                            1
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            0
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8478038,
+                        "teamId": 21,
+                        "number": 7,
+                        "position": "D",
+                        "fiveOnFive": [
+                            0,
+                            0
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            2
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8478406,
+                        "teamId": 21,
+                        "number": 39,
+                        "position": "G",
+                        "fiveOnFive": [
+                            0,
+                            0
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            0
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8480039,
+                        "teamId": 21,
+                        "number": 88,
+                        "position": "C",
+                        "fiveOnFive": [
+                            1,
+                            1
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            0
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8480069,
+                        "teamId": 21,
+                        "number": 8,
+                        "position": "D",
+                        "fiveOnFive": [
+                            0,
+                            1
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            1
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8480448,
+                        "teamId": 21,
+                        "number": 17,
+                        "position": "C",
+                        "fiveOnFive": [
+                            0,
+                            0
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            1
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8481186,
+                        "teamId": 21,
+                        "number": 25,
+                        "position": "R",
+                        "fiveOnFive": [
+                            0,
+                            0
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            3
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8482768,
+                        "teamId": 21,
+                        "number": 9,
+                        "position": "C",
+                        "fiveOnFive": [
+                            0,
+                            1
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            2
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8482953,
+                        "teamId": 21,
+                        "number": 16,
+                        "position": "L",
+                        "fiveOnFive": [
+                            0,
+                            0
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            0
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8484258,
+                        "teamId": 21,
+                        "number": 70,
+                        "position": "D",
+                        "fiveOnFive": [
+                            0,
+                            1
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            0
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "playerId": 8486171,
+                        "teamId": 21,
+                        "number": 13,
+                        "position": "R",
+                        "fiveOnFive": [
+                            0,
+                            1
+                        ],
+                        "PP": [
+                            0,
+                            0
+                        ],
+                        "PK": [
+                            0,
+                            0
+                        ],
+                        "specialTeams": [
+                            0,
+                            0
+                        ],
+                        "FiveOnSix": [
+                            0,
+                            0
+                        ],
+                        "SixOnFive": [
+                            0,
+                            0
+                        ],
+                        "overtime": [
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "team": "MIN",
+                "lineup": []
+            },
+            {
+                "team": "VGK",
+                "lineup": []
+            },
+            {
+                "team": "UTA",
+                "lineup": []
+            }
+        ],
+        "tip_id": "f2af"
     }
 ]

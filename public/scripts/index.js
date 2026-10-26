@@ -240,9 +240,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       for (j=0;j<data3[data3.length-1].seasonData.length;j++) {if (data.awayTeam.abbrev===seasonData[j].team) {// console.log('awayTeam')
                         awayIndex=j;
                       console.log('awayTeam ', awayIndex, data3[data3.length-1].seasonData[awayIndex].lineup, 'fullLineup', fullLineup, seasonData[awayIndex].lineup);
-                      // console.log('assign seasodata', data3[data3.length-1].seasonData[awayIndex].lineup, data3[data3.length-1].seasonData[awayIndex].lineup.length)
                       if (data3[data3.length-1].seasonData[awayIndex].lineup.length===0) { console.log('line 244', seasonData[awayIndex]);
-                       // seasonData[awayIndex].lineup===fullLineup[1][0]
                         for (k=0;k<fullLineup[1].length;k++) {seasonData[awayIndex].lineup.push(fullLineup[1][k])}}
                         else if (data3[data3.length-1].seasonData[awayIndex].lineup.length>0) {for (k=0;k<fullLineup[1].length;k++) {
                           for (l=0;l<data3[data3.length-1].seasonData[awayIndex].lineup.length;l++) {if (fullLineup[1][k].playerId===data3[data3.length-1].seasonData[awayIndex].lineup.playerId) {
