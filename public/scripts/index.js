@@ -244,8 +244,16 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                         for (k=0;k<fullLineup[1].length;k++) {seasonData[awayIndex].lineup.push(fullLineup[1][k])}}
                         else if (data3[data3.length-1].seasonData[awayIndex].lineup.length>0) {for (k=0;k<fullLineup[1].length;k++) {
                           for (l=0;l<data3[data3.length-1].seasonData[awayIndex].lineup.length;l++) {if (fullLineup[1][k].playerId===data3[data3.length-1].seasonData[awayIndex].lineup.playerId) {
-                            seasonData[awayIndex].lineup[l].fiveOnFive[0]=fullLineup[1][k].lineup.fiveOnFive[0]+data3[data3.length-1].seasonData[awayIndex].lineup[l].fiveOnFive[0]
-                            // that needs to be verified multiple times
+                            for (m=0;m<2;m++){
+                            seasonData[awayIndex].lineup.fiveOnFive[m].push(fullLineup[1][k].lineup.fiveOnFive[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].fiveOnFive[m])
+                            seasonData[awayIndex].lineup.PP[m].push(fullLineup[1][k].lineup.PP[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].PP[m])
+                            seasonData[awayIndex].lineup.PK[m].push(fullLineup[1][k].lineup.PK[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].PK[m])
+                            seasonData[awayIndex].lineup.specialTeams[m].push(fullLineup[1][k].lineup.specialTeams[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].specialTeams[m])
+                            seasonData[awayIndex].lineup.FiveOnSix[m].push(fullLineup[1][k].lineup.FiveOnSix[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].FiveOnSix[m])
+                            seasonData[awayIndex].lineup.SixOnFive[m].push(fullLineup[1][k].lineup.SixOnFive[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].SixOnFive[m])
+                            seasonData[awayIndex].lineup.overtime[m].push(fullLineup[1][k].lineup.overtime[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].overtime[m])
+                            }
+                            // fullLineup[x] format: {playerId: X, teamId: Y, position: Z, number: A, fiveOnFive: [B,C], PP: [D,E], PK: [F,G], specialTeams: [H.I], FiveOnSix: [J,K], SixOnFive: [L,M], overtime: [O,p]}
                           }}
                         }}
                       }} // end away j loop
