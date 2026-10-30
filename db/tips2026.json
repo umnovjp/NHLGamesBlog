@@ -303,5 +303,38 @@
             }
         ],
         "tip_id": "c4c5"
+    },
+    {
+        "title": "You are watching stats for MTL at DAL game # 2026020209 on 2026-10-29. Period: 1 Time: 07:24 fiveOnFiveAway  Scorer: Cole Caufield Assists:Phillip Danault Alexandre Carrier75-45,21-24,13,20 29-5,6-15,43,49Period: 1 Time: 12:53 HomePP_AwayPK  Scorer: Wyatt Johnston Assists:Mikko Rantanen Miro Heiskanen75-45,21-77,15 29-4-96,24,21,53Period: 1 Time: 16:05 fiveOnFiveAway  Scorer: Alex Newhook Assists:Noah Dobson Lane Hutson75-53,48-13,15,20 29-4,55-14,22,25Period: 1 Time: 16:32 fiveOnFiveAway  Scorer: Cole Caufield Assists:Adam Engstrom Juraj Slafkovský75-72,42-13,15,20 29-5,6-14,22,25Period: 2 Time: 06:11 fiveOnFiveAway  Scorer: Alex Newhook Assists:Chris Kreider Noah Dobson75-53-22,85,15,91 29-57,6-15,18,25Period: 2 Time: 08:52 fiveOnFiveHome  Scorer: Jamie Benn Assists:Mikko Rantanen Wyatt Johnston75-53,48-13,15,20 29-57,6-14,96,53Period: 3 Time: 19:12 awayEN  Scorer: Phillip Danault Assists:Jake Evans 75-45,21-24,17,71 -4-91,96,24,21,53",
+        "username": "No code update tonight as I watched Stars loss to MTL.",
+        "tip": "will delete this review later. WPG DAL game on 10/22 does not have data anymore. ",
+        "topic": "2026020209 8 25",
+        "seasonData": [
+            {
+                "team": "WPG",
+                "lineup": []
+            },
+            {
+                "team": "DAL",
+                "lineup": []
+            },
+            {
+                "team": "COL",
+                "lineup": []
+            },
+            {
+                "team": "MIN",
+                "lineup": []
+            },
+            {
+                "team": "VGK",
+                "lineup": []
+            },
+            {
+                "team": "UTA",
+                "lineup": []
+            }
+        ],
+        "tip_id": "433b"
     }
 ]
