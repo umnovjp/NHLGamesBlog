@@ -234,17 +234,19 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   goalTime[0].sort((a,b) => a-b) // will delete it need to get rid of index 0
                     }} // end goal if 505 statement and i loop
 
-                    console.log(seasonData, data3[data3.length-1].seasonData, topicArray, data.id)
+                    console.log(seasonData, topicArray, data.id)
                     if (topicArray.includes(data.id)) {console.log('game is there')}
                     else {console.log('add me');
                       for (j=0;j<data3[data3.length-1].seasonData.length;j++) {if (data.awayTeam.abbrev===seasonData[j].team) {// console.log('awayTeam')
                         awayIndex=j;
-                      console.log('awayTeam ', awayIndex, data3[data3.length-1].seasonData[awayIndex].lineup, 'fullLineup', fullLineup, seasonData[awayIndex].lineup);
-                      if (data3[data3.length-1].seasonData[awayIndex].lineup.length===0) { console.log('line 244', seasonData[awayIndex]);
+                      console.log('awayTeam ', awayIndex, data3[data3.length-1].seasonData[awayIndex].lineup, 'fullLineup', fullLineup);
+                      if (data3[data3.length-1].seasonData[awayIndex].lineup.length===0) { console.log('line 243', seasonData[awayIndex]);
                         for (k=0;k<fullLineup[1].length;k++) {seasonData[awayIndex].lineup.push(fullLineup[1][k])}}
-                        else if (data3[data3.length-1].seasonData[awayIndex].lineup.length>0) {for (k=0;k<fullLineup[1].length;k++) {
+                        else if (data3[data3.length-1].seasonData[awayIndex].lineup.length>0) { console.log('second condition')
+                          for (k=0;k<fullLineup[1].length;k++) {
                           for (l=0;l<data3[data3.length-1].seasonData[awayIndex].lineup.length;l++) {if (fullLineup[1][k].playerId===data3[data3.length-1].seasonData[awayIndex].lineup.playerId) {
-                             seasonDataObject = {};
+                             const seasonDataObject = { playerId=fullLineup[l].playerId, teamId=fullLineup[l].teamId, position=fullLineup[l].position, number=fullLineup[l].number };
+                                   // seasonDataObject
                               seasonDataObject.playerId=fullLineup[l].playerId;
                               seasonDataObject.teamId=fullLineup[l].teamId;
                               seasonDataObject.position=fullLineup[l].position;
@@ -276,7 +278,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     // }
                     
                     } // end else statement
-                    console.log('seasonData', seasonData)
+                    console.log('seasonData', seasonData, 'seasonDataObject', seasonDataObject)
                    
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
