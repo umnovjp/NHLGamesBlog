@@ -3,8 +3,8 @@ const tipsContainer = document.getElementById('tip-container');
 onIceArray = []; goalsNumber = []; var gameId;
 var goalType6=[]; var goalTime2=[[],[]];
 seasonData = [{team: 'WPG', lineup: []}, {team: 'DAL', lineup: []}, {team: 'COL', lineup: []}, {team: 'MIN', lineup: []}, {team: 'VGK', lineup: []}, {team: 'UTA', lineup: []}];
-seasonDataObject = { playerId: 123, teamId: '', position: '', number: 14, fiveOnFive: [] }
-var game0 = document.getElementById('game0'); 
+// seasonDataObject = { playerId: 123, teamId: '', position: '', number: 14, fiveOnFive: [] }
+// var game0 = document.getElementById('game0'); 
 
 const createCard = (tip) => { // Create card
   const cardEl = document.createElement('section');
@@ -235,27 +235,29 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   goalTime[0].sort((a,b) => a-b) // will delete it need to get rid of index 0
                     }} // end goal if 505 statement and i loop
 
-                    console.log(seasonData, topicArray, data.id)
+                    // console.log(topicArray, data.id)
                     if (topicArray.includes(data.id)) {console.log('game is there')}
                     else {console.log('add me');
                       for (j=0;j<data3[data3.length-1].seasonData.length;j++) {if (data.awayTeam.abbrev===seasonData[j].team) {// console.log('awayTeam')
                         awayIndex=j;
-                      console.log('awayTeam ', awayIndex, data3[data3.length-1].seasonData[awayIndex].lineup, 'fullLineup', fullLineup);
-                      if (data3[data3.length-1].seasonData[awayIndex].lineup.length===0) { console.log('line 243', seasonData[awayIndex]);
+                      console.log('awayTeam ', awayIndex, 'data3', data3[data3.length-1].seasonData[awayIndex].lineup, 'fullLineup', fullLineup[1], 'equality', fullLineup[1][0].playerId, data3[data3.length-1].seasonData[awayIndex].lineup[0].playerId);
+                      if (data3[data3.length-1].seasonData[awayIndex].lineup.length===0) { console.log('line 244', seasonData[awayIndex]);
                         for (k=0;k<fullLineup[1].length;k++) {seasonData[awayIndex].lineup.push(fullLineup[1][k])}}
-                        else if (data3[data3.length-1].seasonData[awayIndex].lineup.length>0) { console.log('second condition')
+                        else if (data3[data3.length-1].seasonData[awayIndex].lineup.length>0) { // console.log('second condition')
                           for (k=0;k<fullLineup[1].length;k++) {
-                          for (l=0;l<data3[data3.length-1].seasonData[awayIndex].lineup.length;l++) {if (fullLineup[1][k].playerId===data3[data3.length-1].seasonData[awayIndex].lineup.playerId) {
+                          for (l=0;l<data3[data3.length-1].seasonData[awayIndex].lineup.length;l++) {if (fullLineup[1][k].playerId===data3[data3.length-1].seasonData[awayIndex].lineup[l].playerId) { console.log('fulllineup equal')
                             fiveOnFiveArray =[]
                             for (m=0;m<2;m++) {
-                              fiveOnFiveArray.push(fullLineup[l].fiveOnFive[m])
-                             const seasonDataObject = { playerId: fullLineup[l].playerId, teamId: fullLineup[l].teamId, position: fullLineup[l].position, number: fullLineup[l].number, fiveOnFive: fiveOnFiveArray }
+                              fiveOnFiveArray.push(fullLineup[1][k].fiveOnFive[m])
+                             // const seasonDataObject = { playerId: fullLineup[l][k].playerId, teamId: fullLineup[l][k].teamId, position: fullLineup[l][k].position, number: fullLineup[l][k].number, fiveOnFive: fiveOnFiveArray }
+                              const seasonDataObject = { playerId: 123 }
                             }
+                            seasonData[awayIndex].lineup.push(seasonDataObject)
                                    // seasonDataObject
-                              seasonDataObject.playerId=fullLineup[l].playerId;
-                              seasonDataObject.teamId=fullLineup[l].teamId;
-                              seasonDataObject.position=fullLineup[l].position;
-                              seasonDataObject.number=fullLineup[l].number;
+                              // seasonDataObject.playerId=fullLineup[l].playerId;
+                              // seasonDataObject.teamId=fullLineup[l].teamId;
+                              // seasonDataObject.position=fullLineup[l].position;
+                              // seasonDataObject.number=fullLineup[l].number;
                             // for (m=0;m<2;m++){ seasonDataObject.fiveOnFive[m]=fullLineup[1][k].lineup.fiveOnFive[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].fiveOnFive[m];
                             //   seasonDataObject.PP[m]=fullLineup[1][k].lineup.PP[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].PP[m]
                             //   seasonDataObject.PK[m]=fullLineup[1][k].lineup.PK[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].PK[m]
@@ -269,12 +271,12 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                             // seasonData[awayIndex].lineup.FiveOnSix[m].push(fullLineup[1][k].lineup.FiveOnSix[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].FiveOnSix[m])
                             // seasonData[awayIndex].lineup.SixOnFive[m].push(fullLineup[1][k].lineup.SixOnFive[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].SixOnFive[m])
                             // seasonData[awayIndex].lineup.overtime[m].push(fullLineup[1][k].lineup.overtime[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].overtime[m])
-                            // }
-                            seasonData[awayIndex].lineup.push(seasonDataObject)
+                            // }                              seasonDataObject
+                            
                             console.log('seasonData', seasonData, 'seasonDataObject', seasonDataObject)
                             // fullLineup[x] format: {playerId: X, teamId: Y, position: Z, number: A, fiveOnFive: [B,C], PP: [D,E], PK: [F,G], specialTeams: [H.I], FiveOnSix: [J,K], SixOnFive: [L,M], overtime: [O,p]}
                           }}
-                        }}
+                        }} // end k loop, end second condition if
                       }} // end away j loop
                     //   for (j=0;j<data3[data3.length-1].seasonData.length;j++) {if (data.homeTeam.abbrev===seasonData[j].team) {
                     //     homeIndex=j;
@@ -283,8 +285,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     //   }
                     // }
                     } // end else statement
-                    console.log('seasonData', seasonData, 'seasonDataObject', seasonDataObject
-                    )
+                    // console.log('seasonData', seasonData, 'seasonDataObject', seasonDataObject )
                    
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
