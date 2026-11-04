@@ -1050,38 +1050,5 @@
             }
         ],
         "tip_id": "66f9"
-    },
-    {
-        "title": "You are watching stats for WPG at FLA game # 2026020215 on 2026-10-30. Period: 1 Time: 18:15 HomePP_AwayPK  Scorer: Sam Reinhart Assists:Carter Verhaeghe Seth Jones35-54,4-17,9 40-3-23,13,19,8Period: 2 Time: 02:38 fiveOnFiveHome  Scorer: Anton Lundell Assists:Seth Jones 35-2,38-81,19,61 40-3,77-20,27,15Period: 2 Time: 09:51 HomePK_AwayPP  Scorer: Kyle Connor Assists:Mark Scheifele Neal Pionk35-4-55,81,13,91 40-3,77-20Period: 2 Time: 15:24 HomePP_AwayPK  Scorer: Seth Jones Assists:Sam Reinhart 35-2,38-17,9 40-3-23,13,19,8Period: 3 Time: 08:46 fiveOnFiveAway  Scorer: Morgan Barron Assists:Dawson Mercer Dylan DeMelo35-2,24-36,19,91 40-7,6-23,13,95Period: 3 Time: 13:33 fiveOnFiveHome  Scorer: Anton Lundell Assists:Lars Eller Eetu Luostarinen35-54,4-55,81,13 40-5,42-20,27,15Period: 3 Time: 18:21 homeEN  Scorer: Anton Lundell Assists:Eetu Luostarinen -54,4-55,81,13,91 40-3,77-20,27,15",
-        "username": "bla-bla",
-        "tip": "bla-bla-bla",
-        "topic": "2026020215 52 13",
-        "seasonData": [
-            {
-                "team": "WPG",
-                "lineup": []
-            },
-            {
-                "team": "DAL",
-                "lineup": []
-            },
-            {
-                "team": "COL",
-                "lineup": []
-            },
-            {
-                "team": "MIN",
-                "lineup": []
-            },
-            {
-                "team": "VGK",
-                "lineup": []
-            },
-            {
-                "team": "UTA",
-                "lineup": []
-            }
-        ],
-        "tip_id": "b0fb"
     }
 ]

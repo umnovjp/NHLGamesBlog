@@ -3,8 +3,7 @@ const tipsContainer = document.getElementById('tip-container');
 onIceArray = []; goalsNumber = []; var gameId;
 var goalType6=[]; var goalTime2=[[],[]];
 seasonData = [{team: 'WPG', lineup: []}, {team: 'DAL', lineup: []}, {team: 'COL', lineup: []}, {team: 'MIN', lineup: []}, {team: 'VGK', lineup: []}, {team: 'UTA', lineup: []}];
-// seasonDataObject = { playerId: 123, teamId: '', position: '', number: 14, fiveOnFive: [] }
-// var game0 = document.getElementById('game0'); 
+// seasonDataObject = { }
 
 const createCard = (tip) => { // Create card
   const cardEl = document.createElement('section');
@@ -258,12 +257,15 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                               }
                             const seasonDataObject = { playerId: fullLineup[1][k].playerId, teamId: fullLineup[1][k].teamId, position: fullLineup[1][k].position, fiveOnFive: fiveOnFiveArray, PP: PPArray, 
                               PK: PKArray, specialTeams: specialTeamsArray, fiveOnSix: fiveOnSixArray, SixOnFive: sixOnFiveArray, overtime: overtimeArray }
-                              console.log('seasonData', seasonData, 'seasonDataObject', seasonDataObject)
+                              
                             // fullLineup[x] format: {playerId: X, teamId: Y, position: Z, number: A, fiveOnFive: [B,C], PP: [D,E], PK: [F,G], specialTeams: [H.I], FiveOnSix: [J,K], SixOnFive: [L,M], overtime: [O,p]}
+                            console.log('seasonData', seasonData, 'seasonDataObject', seasonDataObject)
                           }}
                         }} // end k loop, end second condition if
                       }} // end away j loop
-                     } // end else statement
+                      
+                     } // end else add me statement
+                     
                                        
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
