@@ -258,25 +258,16 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                               }
                             const seasonDataObject = { playerId: fullLineup[1][k].playerId, teamId: fullLineup[1][k].teamId, position: fullLineup[1][k].position, fiveOnFive: fiveOnFiveArray, PP: PPArray, 
                               PK: PKArray, specialTeams: specialTeamsArray, fiveOnSix: fiveOnSixArray, SixOnFive: sixOnFiveArray, overtime: overtimeArray }
-                                                                            
-                            console.log('seasonData', seasonData, 'seasonDataObject', seasonDataObject)
+                              console.log('seasonData', seasonData, 'seasonDataObject', seasonDataObject)
                             // fullLineup[x] format: {playerId: X, teamId: Y, position: Z, number: A, fiveOnFive: [B,C], PP: [D,E], PK: [F,G], specialTeams: [H.I], FiveOnSix: [J,K], SixOnFive: [L,M], overtime: [O,p]}
                           }}
                         }} // end k loop, end second condition if
                       }} // end away j loop
-                    //   for (j=0;j<data3[data3.length-1].seasonData.length;j++) {if (data.homeTeam.abbrev===seasonData[j].team) {
-                    //     homeIndex=j;
-                    //     console.log('homeTeam ', homeIndex, data3[data3.length-1].seasonData[homeIndex].lineup)
-                    //     if (data3[data3.length-1].seasonData[homeIndex].lineup.length=0) {seasonData[homeIndex].lineup===fullLineup[0]}
-                    //   }
-                    // }
-                    } // end else statement
-                    // console.log('seasonData', seasonData, 'seasonDataObject', seasonDataObject )
-                   
+                     } // end else statement
+                                       
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
                     console.log('goalType7', goalType7);
-                    // console.log('end of the line', data3, goalsNumber, data.plays);
                   for (i=0;i<goalsNumber.length;i++) { var newGoal3 = document.createElement('span'); var assists1 = ''; var assists2 = '';
                   for (j=0;j<data.rosterSpots.length;j++) { 
                     if (data.rosterSpots[j].playerId===data.plays[goalsNumber[i]].details.scoringPlayerId) { 
