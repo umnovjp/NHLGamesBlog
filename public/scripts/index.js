@@ -227,7 +227,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       fullLineup[0][j].overtime[1]=fullLineup[0][j].overtime[1]+1 }}
                       for (j=0;j<fullLineup[1].length;j++) {if ((goalType[1].includes(fullLineup[1][j].number))&&(goalType[1].lastIndexOf(fullLineup[1][j].number)>0)) {
                       fullLineup[1][j].overtime[0]=fullLineup[1][j].overtime[0]+1 }}} // fullLineup ends here
-
                     goalTime=[[],[]]; //goalTime[0] and goalTime[1] are array of times when each goal was scored [0] is ordered chronologically
                     for (j=0;j<onIceArray.length;j++) {if (onIceArray[j]==='newGoal') {goalTime[0].push(onIceArray[j+1]); goalTime[1].push(onIceArray[j+1]); k=k+1} // why do I need goalTime if I have goalTime2? 
                   } // end short j loop 
@@ -239,7 +238,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else {console.log('add me');
                       for (j=0;j<data3[data3.length-1].seasonData.length;j++) {if (data.awayTeam.abbrev===seasonData[j].team) {// console.log('awayTeam')
                         awayIndex=j;
-                      console.log('awayTeam ', awayIndex, 'data3', data3[data3.length-1].seasonData[awayIndex].lineup, 'fullLineup', fullLineup[1], 'equality', fullLineup[1][0].playerId, data3[data3.length-1].seasonData[awayIndex].lineup[0].playerId);
+                      console.log('awayTeam ', awayIndex, 'data3', data3[data3.length-1].seasonData[awayIndex], 'fullLineup', fullLineup[1], 'equality', fullLineup[1][0].playerId, data3[data3.length-1].seasonData[awayIndex].lineup);
                       if (data3[data3.length-1].seasonData[awayIndex].lineup.length===0) { console.log('line 244', seasonData[awayIndex]);
                         for (k=0;k<fullLineup[1].length;k++) {seasonData[awayIndex].lineup.push(fullLineup[1][k])}}
                         else if (data3[data3.length-1].seasonData[awayIndex].lineup.length>0) { // console.log('second condition')
@@ -249,7 +248,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                             for (m=0;m<2;m++) {
                                 fiveOnFiveArray.push(fullLineup[1][k].fiveOnFive[m]);
                                 PPArray.push(fullLineup[1][k].PP[m])
-                                PKArray.push(fullLineup[1][k].PP[m])
+                                PKArray.push(fullLineup[1][k].PK[m])
                                 specialTeamsArray.push(fullLineup[1][k].specialTeams[m])
                                 fiveOnSixArray.push(fullLineup[1][k].FiveOnSix[m])
                                 sixOnFiveArray.push(fullLineup[1][k].SixOnFive[m])
@@ -262,10 +261,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                             console.log('seasonData', seasonData, 'seasonDataObject', seasonDataObject)
                           }}
                         }} // end k loop, end second condition if
-                      }} // end away j loop
-                      
-                     } // end else add me statement
-                     
+                      }} // end away j loop                      
+                     } // end else add me statement                     
                                        
                   goalType7=[];
                   for (j=0;j<goalTime2[0].length;j++) { goalType7.push(goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+1], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+2], goalType6[4*goalTime2[1].indexOf(goalTime2[0][j])+3]) }
