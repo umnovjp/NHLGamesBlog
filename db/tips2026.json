@@ -1052,10 +1052,10 @@
         "tip_id": "66f9"
     },
     {
-        "title": "You are watching stats for SJS at MIN game # 2026020263 on 2026-11-06. Period: 1 Time: 07:55 HomePP_AwayPK  Scorer: Kirill Kaprizov Assists:Quinn Hughes Matt Boldy30-65,25-23 30-43-14,97,12,49Period: 2 Time: 12:11 fiveOnFiveAway  Scorer: Macklin Celebrini Assists:Dmitry Orlov Will Smith30-9,48-2,71,77 30-25,43-10,22,49Period: 2 Time: 14:15 HomePP_AwayPK  Scorer: Maxim Shabanov Assists:Kirill Kaprizov Quinn Hughes30-25,7-44,63 30-43-14,97,12,49Period: 3 Time: 06:54 fiveOnFiveHome  Scorer: Quinn Hughes Assists:Kirill Kaprizov Jonas Brodin30-25,7-2,71,77 30-25,43-14,97,12Period: 3 Time: 13:58 fiveOnFiveHome  Scorer: Zach Bogosian Assists:Joel Eriksson Ek Kirill Kaprizov30-65,6-27,44,51 30-24,3-14,97,12",
-        "username": "will be deleted tomorrow",
-        "tip": "temporary as i did not code tonight",
-        "topic": "2026020263 28 30",
+        "title": "You are watching stats for SJS at DAL game # 2026020272 on 2026-11-07. Period: 1 Time: 07:22 fiveOnFiveAway  Scorer: Michael Misa Assists:Macklin Celebrini Will Smith33-65,6-2,71,77 29-55,6-24,22,25Period: 1 Time: 09:16 HomePP_AwayPK  Scorer: Roope Hintz Assists:Wyatt Johnston Thomas Harley33-25,7-23 29-55-24,21,53Period: 1 Time: 15:17 fiveOnFiveHome  Scorer: Jamie Benn Assists:Roope Hintz 33-25,7-2,71,77 29-23,6-14,91,24Period: 1 Time: 16:51 HomePP_AwayPK  Scorer: Jason Robertson Assists:Mikko Rantanen Thomas Harley33-65,25-23,10 29-55-96,24,21,53Period: 2 Time: 02:47 fiveOnFiveAway  Scorer: Ivar Stenberg Assists:Macklin Celebrini Eric Pohlkamp33-9,6-73,71,41 29-57,55-91,18,49Period: 2 Time: 14:30 HomePP_AwayPK  Scorer: Thomas Harley Assists:Wyatt Johnston Mikko Rantanen33-65,25-23,51 29-55-96,21,53,49Period: 2 Time: 17:02 HomePK_AwayPP  Scorer: Will Smith Assists:Mason Marchment Macklin Celebrini33--73,27,2,71,41 29-57,23-18",
+        "username": "no real code update but I realized I do not need seasonDataObject as it was defined",
+        "tip": "#55 3:2, #24 3:1, #6, #23 . #49, #91 1:1, #57 0:2, #18 #53, #21 3:0, #96 2:0",
+        "topic": "2026020272 28 25",
         "seasonData": [
             {
                 "team": "WPG",
@@ -1082,6 +1082,6 @@
                 "lineup": []
             }
         ],
-        "tip_id": "b8e7"
+        "tip_id": "22ab"
     }
 ]
