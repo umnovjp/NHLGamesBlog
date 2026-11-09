@@ -240,9 +240,12 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       console.log('awayTeam ', awayIndex, 'data3', data3[data3.length-1].seasonData[awayIndex], 'fullLineup', fullLineup[1], 'equality', fullLineup[1][0].playerId, data3[data3.length-1].seasonData[awayIndex].lineup);
                       if (data3[data3.length-1].seasonData[awayIndex].lineup.length===0) { console.log('line 244', seasonData[awayIndex]);
                         for (k=0;k<fullLineup[1].length;k++) {seasonData[awayIndex].lineup.push(fullLineup[1][k])}}
-                        else if (data3[data3.length-1].seasonData[awayIndex].lineup.length>0) { // console.log('second condition')
+                        else if (data3[data3.length-1].seasonData[awayIndex].lineup.length>0) { 
+                          
                           for (k=0;k<fullLineup[1].length;k++) {
-                          for (l=0;l<data3[data3.length-1].seasonData[awayIndex].lineup.length;l++) {if (fullLineup[1][k].playerId===data3[data3.length-1].seasonData[awayIndex].lineup[l].playerId) { console.log('fulllineup equal')
+                          for (l=0;l<data3[data3.length-1].seasonData[awayIndex].lineup.length;l++) {if (fullLineup[1][k].playerId===data3[data3.length-1].seasonData[awayIndex].lineup[l].playerId) { 
+                            console.log('fullLineup this game', fullLineup[1][k], 'exists already', data3[data3.length-1].seasonData[awayIndex].lineup[l] )
+
                             fiveOnFiveArray=[], PPArray=[]; PKArray=[]; specialTeamsArray=[]; fiveOnSixArray=[]; sixOnFiveArray=[]; overtimeArray=[]
                             for (m=0;m<2;m++) {
                                 fiveOnFiveArray.push(fullLineup[1][k].fiveOnFive[m]);
@@ -258,7 +261,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
 
                               // do not really need seasonDataObject. Will create another object tomorrow 
                             // fullLineup[x] format: {playerId: X, teamId: Y, position: Z, number: A, fiveOnFive: [B,C], PP: [D,E], PK: [F,G], specialTeams: [H.I], FiveOnSix: [J,K], SixOnFive: [L,M], overtime: [O,p]}
-                            console.log('seasonData', seasonData, 'seasonDataObject', seasonDataObject)
+                            // console.log('seasonData', seasonData, 'seasonDataObject', seasonDataObject)
                           }}
                         }} // end k loop, end second condition if
                       }} // end away j loop                      
