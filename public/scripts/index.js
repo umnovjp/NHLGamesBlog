@@ -3,7 +3,6 @@ const tipsContainer = document.getElementById('tip-container');
 onIceArray = []; goalsNumber = []; var gameId;
 var goalType6=[]; var goalTime2=[[],[]];
 seasonData = [{team: 'WPG', lineup: []}, {team: 'DAL', lineup: []}, {team: 'COL', lineup: []}, {team: 'MIN', lineup: []}, {team: 'VGK', lineup: []}, {team: 'UTA', lineup: []}];
-// seasonDataObject = { }
 
 const createCard = (tip) => { // Create card
   const cardEl = document.createElement('section');
@@ -246,15 +245,17 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                           for (l=0;l<data3[data3.length-1].seasonData[awayIndex].lineup.length;l++) {if (fullLineup[1][k].playerId===data3[data3.length-1].seasonData[awayIndex].lineup[l].playerId) { 
                             console.log('fullLineup this game', fullLineup[1][k], 'exists already', data3[data3.length-1].seasonData[awayIndex].lineup[l] )
 
+                            // const seasonDataObject = {playerId: fullLineup[1][k].playerId, teamId: fullLineup[1][k].teamId, position: fullLineup[1][k].position, fiveOnFive: , PP: PPArray, 
+                            //    PK: PKArray, specialTeams: specialTeamsArray, fiveOnSix: fiveOnSixArray, SixOnFive: sixOnFiveArray, overtime: overtimeArray}
                             fiveOnFiveArray=[], PPArray=[]; PKArray=[]; specialTeamsArray=[]; fiveOnSixArray=[]; sixOnFiveArray=[]; overtimeArray=[]
                             for (m=0;m<2;m++) {
-                                fiveOnFiveArray.push(fullLineup[1][k].fiveOnFive[m]);
-                                PPArray.push(fullLineup[1][k].PP[m])
-                                PKArray.push(fullLineup[1][k].PK[m])
-                                specialTeamsArray.push(fullLineup[1][k].specialTeams[m])
-                                fiveOnSixArray.push(fullLineup[1][k].FiveOnSix[m])
-                                sixOnFiveArray.push(fullLineup[1][k].SixOnFive[m])
-                                overtimeArray.push(fullLineup[1][k].overtime[m])
+                                fiveOnFiveArray.push(fullLineup[1][k].fiveOnFive[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].fiveOnFive[m]);
+                                PPArray.push(fullLineup[1][k].PP[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].PP[m])
+                                PKArray.push(fullLineup[1][k].PK[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].PK[m])
+                                specialTeamsArray.push(fullLineup[1][k].specialTeams[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].specialTeams[m])
+                                fiveOnSixArray.push(fullLineup[1][k].FiveOnSix[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].FiveOnSix[m])
+                                sixOnFiveArray.push(fullLineup[1][k].SixOnFive[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].SixOnFive[m])
+                                overtimeArray.push(fullLineup[1][k].overtime[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].overtime[m])
                               }
                             const seasonDataObject = { playerId: fullLineup[1][k].playerId, teamId: fullLineup[1][k].teamId, position: fullLineup[1][k].position, fiveOnFive: fiveOnFiveArray, PP: PPArray, 
                               PK: PKArray, specialTeams: specialTeamsArray, fiveOnSix: fiveOnSixArray, SixOnFive: sixOnFiveArray, overtime: overtimeArray }
