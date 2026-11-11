@@ -1050,5 +1050,38 @@
             }
         ],
         "tip_id": "66f9"
+    },
+    {
+        "title": "You are watching stats for WPG at DAL game # 2026020161 on 2026-10-22. Period: 2 Time: 01:17 something else  Scorer: Wyatt Johnston Assists:Mikko Rantanen Jason Robertson-- --Period: 2 Time: 10:50 something else  Scorer: Gabriel Vilardi Assists:Dylan Samberg Alex Iafallo-- --Period: 2 Time: 12:38 something else  Scorer: Kyle Connor Assists:Neal Pionk -- --Period: 3 Time: 18:00 something else  Scorer: Roope Hintz Assists:Mikko Rantanen Wyatt Johnston-- --Period: 4 Time: 03:47 OTHome  Scorer: Roope Hintz Assists:Miro Heiskanen Jason Robertson-- --",
+        "username": "no code update",
+        "tip": "this game is back online again. i can try this one tomorrow ",
+        "topic": "2026020161 52 25",
+        "seasonData": [
+            {
+                "team": "WPG",
+                "lineup": []
+            },
+            {
+                "team": "DAL",
+                "lineup": []
+            },
+            {
+                "team": "COL",
+                "lineup": []
+            },
+            {
+                "team": "MIN",
+                "lineup": []
+            },
+            {
+                "team": "VGK",
+                "lineup": []
+            },
+            {
+                "team": "UTA",
+                "lineup": []
+            }
+        ],
+        "tip_id": "a89e"
     }
 ]
