@@ -2,7 +2,7 @@ const tipForm = document.getElementById('tip-form');
 const tipsContainer = document.getElementById('tip-container');
 onIceArray = []; goalsNumber = []; var gameId;
 var goalType6=[]; var goalTime2=[[],[]];
-seasonData = [{team: 'WPG', lineup: []}, {team: 'DAL', lineup: []}, {team: 'COL', lineup: []}, {team: 'MIN', lineup: []}, {team: 'VGK', lineup: []}, {team: 'UTA', lineup: []}];
+seasonData = [{team: 'WPG', lineup: []}, {team: 'DAL', lineup: []}, {team: 'COL', lineup: []}, {team: 'MIN', lineup: []}, {team: 'VGK', lineup: []}, {team: 'UTA', lineup: []}, {team: 'EDM', lineup: []}];
 
 const createCard = (tip) => { // Create card
   const cardEl = document.createElement('section');
@@ -261,6 +261,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                               }
                             const seasonDataObject = { playerId: fullLineup[1][k].playerId, teamId: fullLineup[1][k].teamId, position: fullLineup[1][k].position, number: fullLineup[1][k].number, fiveOnFive: fiveOnFiveArray, PP: PPArray, 
                               PK: PKArray, specialTeams: specialTeamsArray, fiveOnSix: fiveOnSixArray, SixOnFive: sixOnFiveArray, overtime: overtimeArray }
+                              seasonData[awayIndex].lineup.push(seasonDataObject)
                               // seasonData.push(seasonDataObject)
                               // do not really need seasonDataObject. Will create another object tomorrow 
                             // fullLineup[x] format: {playerId: X, teamId: Y, position: Z, number: A, fiveOnFive: [B,C], PP: [D,E], PK: [F,G], specialTeams: [H.I], FiveOnSix: [J,K], SixOnFive: [L,M], overtime: [O,p]}
