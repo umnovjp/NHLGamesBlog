@@ -249,6 +249,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                             //    PK: PKArray, specialTeams: specialTeamsArray, fiveOnSix: fiveOnSixArray, SixOnFive: sixOnFiveArray, overtime: overtimeArray}
                             fiveOnFiveArray=[], PPArray=[]; PKArray=[]; specialTeamsArray=[]; fiveOnSixArray=[]; sixOnFiveArray=[]; overtimeArray=[]
                             for (m=0;m<2;m++) {
+                              // seasonDataObject = {playerId: fullLineup[1][k].playerId, teamId: fullLineup[1][k].teamId, fiveOnFive[m]: fullLineup[1][k].fiveOnFive[m] + data3[data3.length-1].seasonData[awayIndex].lineup.fiveOnFive[m]}
                                 fiveOnFiveArray.push(fullLineup[1][k].fiveOnFive[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].fiveOnFive[m]);
                                 PPArray.push(fullLineup[1][k].PP[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].PP[m])
                                 PKArray.push(fullLineup[1][k].PK[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].PK[m])
@@ -256,13 +257,14 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                                 fiveOnSixArray.push(fullLineup[1][k].FiveOnSix[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].FiveOnSix[m])
                                 sixOnFiveArray.push(fullLineup[1][k].SixOnFive[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].SixOnFive[m])
                                 overtimeArray.push(fullLineup[1][k].overtime[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].overtime[m])
+                                                                
                               }
-                            const seasonDataObject = { playerId: fullLineup[1][k].playerId, teamId: fullLineup[1][k].teamId, position: fullLineup[1][k].position, fiveOnFive: fiveOnFiveArray, PP: PPArray, 
+                            const seasonDataObject = { playerId: fullLineup[1][k].playerId, teamId: fullLineup[1][k].teamId, position: fullLineup[1][k].position, number: fullLineup[1][k].number, fiveOnFive: fiveOnFiveArray, PP: PPArray, 
                               PK: PKArray, specialTeams: specialTeamsArray, fiveOnSix: fiveOnSixArray, SixOnFive: sixOnFiveArray, overtime: overtimeArray }
-
+                              // seasonData.push(seasonDataObject)
                               // do not really need seasonDataObject. Will create another object tomorrow 
                             // fullLineup[x] format: {playerId: X, teamId: Y, position: Z, number: A, fiveOnFive: [B,C], PP: [D,E], PK: [F,G], specialTeams: [H.I], FiveOnSix: [J,K], SixOnFive: [L,M], overtime: [O,p]}
-                            // console.log('seasonData', seasonData, 'seasonDataObject', seasonDataObject)
+                            console.log('seasonDataObject', seasonDataObject)
                           }}
                         }} // end k loop, end second condition if
                       }} // end away j loop                      
