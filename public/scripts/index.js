@@ -254,7 +254,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                                 PPArray.push(fullLineup[1][k].PP[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].PP[m])
                                 PKArray.push(fullLineup[1][k].PK[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].PK[m])
                                 specialTeamsArray.push(fullLineup[1][k].specialTeams[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].specialTeams[m])
-                                fiveOnSixArray.push(fullLineup[1][k].FiveOnSix[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].FiveOnSix[m])
+                                fiveOnSixArray.push(fullLineup[1][k].FiveOnSix[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].fiveOnSix[m])
                                 sixOnFiveArray.push(fullLineup[1][k].SixOnFive[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].SixOnFive[m])
                                 overtimeArray.push(fullLineup[1][k].overtime[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].overtime[m])
                                                                 
