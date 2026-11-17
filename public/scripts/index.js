@@ -116,7 +116,6 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                   if (data.plays[i].details.eventOwnerTeamId===data.awayTeam.id) {whoScored='awayGoal'}
                   else if (data.plays[i].details.eventOwnerTeamId===data.homeTeam.id) {whoScored='homeGoal'}
                   
-                  // periodNumber=data.plays[i].periodDescriptor.number; 
                   goalTime=data.plays[i].timeInPeriod
                   periodNumber = data.plays[i].periodDescriptor.number; goalsNumber.push(i); // goalTime = data.plays[i].startTime;
                   goalTimeSeconds=Number(goalTime.split(':')[0])*60 + Number(goalTime.split(':')[1]);
@@ -237,7 +236,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                     else {console.log('add me');
                       for (j=0;j<data3[data3.length-1].seasonData.length;j++) {if (data.awayTeam.abbrev===seasonData[j].team) {// this loop is to determine if team from array of 7 played as away team 
                         awayIndex=j;
-                      console.log('awayTeam ', awayIndex, 'data3', data3[data3.length-1].seasonData[awayIndex], 'fullLineup', fullLineup[1], 'equality', fullLineup[1][0].playerId, data3[data3.length-1].seasonData[awayIndex].lineup);
+                      console.log('awayTeam ', awayIndex, 'data3', data3[data3.length-1].seasonData[awayIndex], 'fullLineup', fullLineup[1], 'equality', data3[data3.length-1].seasonData[awayIndex].lineup);
                       if (data3[data3.length-1].seasonData[awayIndex].lineup.length===0) { console.log('line 244', seasonData[awayIndex]);
                         for (k=0;k<fullLineup[1].length;k++) {seasonData[awayIndex].lineup.push(fullLineup[1][k])}}
                         else if (data3[data3.length-1].seasonData[awayIndex].lineup.length>0) { // this loop runs if this is not first game of the season therefore array has some elements 
@@ -258,14 +257,11 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                                 specialTeamsArray.push(fullLineup[1][k].specialTeams[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].specialTeams[m])
                                 fiveOnSixArray.push(fullLineup[1][k].FiveOnSix[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].fiveOnSix[m])
                                 sixOnFiveArray.push(fullLineup[1][k].SixOnFive[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].SixOnFive[m])
-                                overtimeArray.push(fullLineup[1][k].overtime[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].overtime[m])
-                                
-                                                                
+                                overtimeArray.push(fullLineup[1][k].overtime[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].overtime[m])                                                                
                               }
                             const seasonDataObject = { playerId: fullLineup[1][k].playerId, teamId: fullLineup[1][k].teamId, position: fullLineup[1][k].position, number: fullLineup[1][k].number, fiveOnFive: fiveOnFiveArray, PP: PPArray, 
                               PK: PKArray, specialTeams: specialTeamsArray, fiveOnSix: fiveOnSixArray, SixOnFive: sixOnFiveArray, overtime: overtimeArray, GP: 1 } //GP means games played
                               seasonData[awayIndex].lineup.push(seasonDataObject);
-                              // do not really need seasonDataObject. Will create another object tomorrow 
                             // fullLineup[x] format: {playerId: X, teamId: Y, position: Z, number: A, fiveOnFive: [B,C], PP: [D,E], PK: [F,G], specialTeams: [H.I], FiveOnSix: [J,K], SixOnFive: [L,M], overtime: [O,p]}
                             console.log('seasonDataObject', seasonDataObject)
                           }}
