@@ -241,8 +241,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                         for (k=0;k<fullLineup[1].length;k++) {seasonData[awayIndex].lineup.push(fullLineup[1][k])}}
                         else if (data3[data3.length-1].seasonData[awayIndex].lineup.length>0) { // this loop runs if this is not first game of the season therefore array has some elements 
                           
-                          for (k=0;k<fullLineup[1].length;k++) {
-                          for (l=0;l<data3[data3.length-1].seasonData[awayIndex].lineup.length;l++) {if (fullLineup[1][k].playerId===data3[data3.length-1].seasonData[awayIndex].lineup[l].playerId) { 
+                          for (k=0;k<fullLineup[1].length;k++) { tempIndex=0;
+                          for (l=0;l<data3[data3.length-1].seasonData[awayIndex].lineup.length;l++) {if (fullLineup[1][k].playerId===data3[data3.length-1].seasonData[awayIndex].lineup[l].playerId) { tempIndex=1
                             console.log('fullLineup this game', fullLineup[1][k], 'exists already', data3[data3.length-1].seasonData[awayIndex].lineup[l] )
 
                             // const seasonDataObject = {playerId: fullLineup[1][k].playerId, teamId: fullLineup[1][k].teamId, position: fullLineup[1][k].position, fiveOnFive: , PP: PPArray, 
@@ -264,7 +264,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                               seasonData[awayIndex].lineup.push(seasonDataObject);
                             // fullLineup[x] format: {playerId: X, teamId: Y, position: Z, number: A, fiveOnFive: [B,C], PP: [D,E], PK: [F,G], specialTeams: [H.I], FiveOnSix: [J,K], SixOnFive: [L,M], overtime: [O,p]}
                             console.log('seasonDataObject', seasonDataObject)
-                          }}
+                          }} if (tempIndex=0) { console.log('new player');
+                            seasonData[awayIndex].lineup.push(fullLineup[1][k])}
                         }} // end k to repeat cycle for home team, end second condition if
                       }} // end away j loop                      
                      } // end else add me statement                     
