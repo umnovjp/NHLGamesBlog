@@ -263,8 +263,8 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                               PK: PKArray, specialTeams: specialTeamsArray, fiveOnSix: fiveOnSixArray, SixOnFive: sixOnFiveArray, overtime: overtimeArray, GP: 1 } //GP means games played
                               seasonData[awayIndex].lineup.push(seasonDataObject);
                             // fullLineup[x] format: {playerId: X, teamId: Y, position: Z, number: A, fiveOnFive: [B,C], PP: [D,E], PK: [F,G], specialTeams: [H.I], FiveOnSix: [J,K], SixOnFive: [L,M], overtime: [O,p]}
-                            console.log('seasonDataObject', seasonDataObject)
-                          }} if (tempIndex=0) { console.log('new player');
+                            console.log('seasonDataObject', seasonDataObject, 'tempIndex', tempIndex)
+                          }} if (tempIndex===0) { console.log('new player');
                             seasonData[awayIndex].lineup.push(fullLineup[1][k])}
                         }} // end k to repeat cycle for home team, end second condition if
                       }} // end away j loop                      
