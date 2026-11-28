@@ -47,8 +47,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
     "method": "GET", "headers": {}
   })
     .then(function (response) {return response.json()})
-    .then(function (data2) { // console.log('I am in schedule then', data2);
-      var numberOfGames = data2.gameWeek[0].games.length;
+    .then(function (data2) { var numberOfGames = data2.gameWeek[0].games.length;
       for (var i = 0; i < numberOfGames; i++) { var gameName = document.createElement('button');
         gameName.setAttribute('id', 'game' + i); var idx = gameName.getAttribute('id');
         gameName.innerHTML = 'Game ' + i + ': ' + data2.gameWeek[0].games[i].awayTeam.abbrev + ' ' + data2.gameWeek[0].games[i].homeTeam.abbrev;
@@ -237,7 +236,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                       for (j=0;j<data3[data3.length-1].seasonData.length;j++) {if (data.awayTeam.abbrev===seasonData[j].team) {// this loop is to determine if team from array of 7 played as away team 
                         awayIndex=j;
                       console.log('awayTeam ', awayIndex, 'data3', data3[data3.length-1].seasonData[awayIndex], 'fullLineup', fullLineup[1], 'equality', data3[data3.length-1].seasonData[awayIndex].lineup);
-                      if (data3[data3.length-1].seasonData[awayIndex].lineup.length===0) { console.log('line 244', seasonData[awayIndex]);
+                      if (data3[data3.length-1].seasonData[awayIndex].lineup.length===0) { console.log('line 244, first game of the season', seasonData[awayIndex]);
                         for (k=0;k<fullLineup[1].length;k++) {seasonData[awayIndex].lineup.push(fullLineup[1][k])}}
                         else if (data3[data3.length-1].seasonData[awayIndex].lineup.length>0) { // this loop runs if this is not first game of the season therefore array has some elements 
                           
@@ -255,7 +254,7 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                                 PPArray.push(fullLineup[1][k].PP[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].PP[m])
                                 PKArray.push(fullLineup[1][k].PK[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].PK[m])
                                 specialTeamsArray.push(fullLineup[1][k].specialTeams[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].specialTeams[m])
-                                fiveOnSixArray.push(fullLineup[1][k].FiveOnSix[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].fiveOnSix[m])
+                                fiveOnSixArray.push(fullLineup[1][k].FiveOnSix[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].FiveOnSix[m])
                                 sixOnFiveArray.push(fullLineup[1][k].SixOnFive[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].SixOnFive[m])
                                 overtimeArray.push(fullLineup[1][k].overtime[m]+data3[data3.length-1].seasonData[awayIndex].lineup[l].overtime[m])                                                                
                               }
@@ -266,7 +265,13 @@ function selectGame() {var inputVal = document.getElementById('datepicker').valu
                             console.log('seasonDataObject', seasonDataObject, 'tempIndex', tempIndex)
                           }} if (tempIndex===0) { console.log('new player');
                             seasonData[awayIndex].lineup.push(fullLineup[1][k])}
-                        }} // end k to repeat cycle for home team, end second condition if
+                        } // end k loop that I will rewrite
+                      
+                        idArray = [];
+                        for (k=0; k<data3[data3.length-1].seasonData[awayIndex].lineup.length; k++) {idArray.push(data3[data3.length-1].seasonData[awayIndex].lineup[k].playerId)}
+                      console.log(idArray)
+                      for (k=0;k<idArray.length;k++) {}
+                      } // end second condition if
                       }} // end away j loop                      
                      } // end else add me statement                     
                                        
